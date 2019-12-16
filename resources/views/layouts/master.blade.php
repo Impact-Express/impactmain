@@ -2,8 +2,6 @@
 
 @section('master')
 
-<div class="container">
-    
     <div class="top-strip"></div>
     <nav class="main-nav">
 
@@ -26,7 +24,6 @@
     <footer>
         
     </footer>
-</div>
 
 <div class="mobile-nav">
     <ul class="mobile-nav-items">
