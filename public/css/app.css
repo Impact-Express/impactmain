@@ -488,7 +488,7 @@
 .pane {
   display: inline-block;
   height: 300px;
-  width: 50%;
+  width: 100%;
   background: #F2ECEC;
 }
 
@@ -499,34 +499,10 @@
 
 .account-pane-container {
   width: 100%;
-  display: -webkit-box;
-  display: flex;
+  display: block;
 }
 
 /* Personal Account Pane Text Styles */
-
-.personal-account {
-  position: relative;
-  top: 12em;
-  left: 25rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.personal-title {
-  text-align: center;
-  font-size: 5rem;
-  margin: 0.1em;
-  color: #707070;
-}
-
-.personal-subtitle {
-  text-align: center;
-  font-size: 0.9rem;
-  margin: 0.1em;
-  color: #707070;
-}
 
 .pane-left {
   background-size: cover;
@@ -547,13 +523,12 @@
 
 .service-box-container {
   width: 100%;
-  display: -webkit-box;
-  display: flex;
+  display: block;
 }
 
 .service-box {
-  width: 25%;
-  height: 100px;
+  width: 100%;
+  height: 320px;
 }
 
 .service-box-odd {
@@ -569,26 +544,23 @@
 .dhl-service-partner {
   background: #FECE00;
   position: relative;
-  width: 85%;
+  width: 100%;
   margin: auto;
   bottom: 15px;
 }
 
 .dhl-srv-logo {
-  width: 30em;
-  padding: 30px 30px 16px 90px;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 0px;
 }
 
 .dhl-srv-logo-text {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1.8em;
-  margin-left: auto;
-  margin-right: 66%;
-  margin-top: 0;
-  margin-bottom: 0;
+  display: block;
+  width: 81%;
+  font-size: 0.9em;
+  margin: auto;
 }
 
 @media (min-width: 768px) {
@@ -761,6 +733,58 @@
 
   .service-box-even {
     background: #D3CFCF;
+  }
+
+  /* DHL Service Partner Styles */
+
+  .dhl-service-partner {
+    background: #FECE00;
+    position: relative;
+    width: 85%;
+    margin: auto;
+    bottom: 15px;
+  }
+
+  .dhl-srv-logo {
+    width: 30em;
+    padding: 30px 30px 16px 90px;
+  }
+
+  .dhl-srv-logo-text {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1.8em;
+    margin-left: auto;
+    margin-right: 66%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* Personal Account Pane Text Styles */
+
+  .personal-account {
+    position: relative;
+    top: 12em;
+    left: 25rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .personal-title {
+    text-align: center;
+    font-size: 5rem;
+    margin: 0.1em;
+    color: #707070;
+  }
+
+  .personal-subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0.1em;
+    color: #707070;
   }
 }
 

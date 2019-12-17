@@ -26,6 +26,13 @@
     <div>
         <img class="dhl-srv-logo" src="img/dhl-logo.png" alt="DHL Authorised Service Partner">
         <h3 class="dhl-srv-logo-text">DHL Authorised Service Partner</h3>
+        <h3>Our Partnership</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        </p>
+        <p>
+            Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+        </p>
     </div>
 </div>
 
