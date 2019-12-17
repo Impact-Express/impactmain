@@ -19247,6 +19247,7 @@ var App = function App() {
 App.prototype.mobileNav = function () {
   var hamburgerButton = document.querySelector('.hamburger');
   var mobileNav = document.querySelector('.mobile-nav');
+  var html = document.querySelector('body');
 
   function openMobile() {
     mobileNav.classList.add('open');

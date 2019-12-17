@@ -2,12 +2,12 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .container {
     margin-left:auto;
     margin-right:auto;
 }
 
+/* Button Styles */
 .button-main {
     border:none;
     text-transform: uppercase;
@@ -15,7 +15,22 @@ body {
     background: #FECE00;
     border-radius: 10px;
 }
-
+.button-alt {
+    border:none;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F2ECEC;
+    padding: 10px 25px;
+    background: #707070;
+    border-radius: 10px;
+}
+.button-white {
+    border:none;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    background: #F2ECEC;
+    border-radius: 10px;
+}
 .button-square {
     border:none;
     text-transform: uppercase;
@@ -24,6 +39,7 @@ body {
     border-radius: 5px;
 }
 
+/* Mobile Navigation */
 .mobile-nav {
     position:fixed;
     top:0;
@@ -31,7 +47,7 @@ body {
     height: 100vh;
     width: 80vw;
     color: #2D3332;
-    display:flex;
+    display:block;
     // justify-content: center;
     // align-items: center;
     // text-align: center;
@@ -39,19 +55,49 @@ body {
     transform: translateX(-100%);
     transition: transform 500ms;
 }
-
 .mobile-nav-items {
     width:100%;
     list-style-type: none;
     padding:0;
 }
-
 .mobile-nav-item {
     // width:100%;
     padding:10px 20px 10px 20px;
+    margin-top: -1px;
     border-bottom:0.5px solid #2D3332;
     border-right:0.5px solid #2D3332;
+    border-top:0.5px solid #2D3332;
 }
+.mobile-nav-item-top {
+    // width:100%;
+    padding: 10px 20px 10px 20px;
+    display: table-cell;
+    width: inherit;
+    margin-left: -4px;
+    white-space: nowrap;
+    border-bottom: 0.5px solid #2D3332;
+    border-right: 0.5px solid #2D3332;
+    border-top: 0.5px solid #2D3332;
+}
+.mobile-nav-img {
+    padding: 10px 20px 10px 20px;
+    display: table-cell;
+    width: inherit;
+    margin-left: -4px;
+    white-space: nowrap;
+}
+.hamburger-container {
+    display:inline-block;
+    position: absolute;
+    right: 17px;
+    top: 26px;
+}
+.open {
+    display: flex;
+    transform: translateX(0);
+}
+
+/* DHL Authorised Service Partner Strip*/
 .top-strip {
     width:100%;
     height:20px;
@@ -62,52 +108,63 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+/* Navigation Bar */
 .navbar-logo {
 
 }
 .nav-logo-img {
     width: 260px;
 }
-.open {
-    display: flex;
-    transform: translateX(0);
-}
 
 .nav-items {
     display:none;
 }
 
-.hamburger-container {
-    display:inline-block;
-    position: absolute;
-    right: 17px;
-    top: 26px;
-}
 
-.account-pane-container {
-    width:100%;
-    display:flex;
-}
-
+/* Main Pane Styles */
 .pane {
     display:inline-block;
     height:300px;
     width:50%;
     background:#F2ECEC;
 }
-
 .pane:hover {
     -webkit-filter:none;
     filter:none;
 }
+.account-pane-container {
+    width:100%;
+    display:flex;
+}
 
+/* Personal Account Pane Text Styles */
+.personal-account {
+    position: relative;
+    top: 12em;
+    left: 25rem;
+    width: fit-content;
+}
+.personal-title {
+    text-align: center;
+    font-size: 5rem;
+    margin: 0.1em;
+    color: #707070;
+}
+.personal-subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0.1em;
+    color: #707070;
+}
 .pane-left {
-    background:url('img/cat1.jpg');
+    // background:url('img/cat1.jpg');
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(.2);
     filter:greyscale(1) opacity(.2);
 }
 
+/* Business Account Pane Styles */
 .pane-right {
     background:url('img/cat2.jpg');
     background-size: cover;
@@ -115,6 +172,8 @@ body {
     filter:greyscale(1) opacity(.2);
 }
 
+
+/* Service Box Styles */
 .service-box-container {
     width:100%;
     display:flex;
@@ -133,6 +192,86 @@ body {
     background: #D3CFCF;
 }
 
+/* DHL Service Partner Styles */
+.dhl-service-partner {
+    background: #FECE00;
+    position: relative;
+    width: 85%;
+    margin: auto;
+    bottom: 15px;
+}
+.dhl-srv-logo {
+    width: 30em;
+    padding: 30px 30px 16px 90px;
+}
+.dhl-srv-logo-text {
+    position: relative;
+    width: fit-content;
+    font-size: 1.8em;
+    margin-left: auto;
+    margin-right: 66%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .account-pane-container {
+        width:100%;
+        display:flex;
+    }
+    
+    .pane {
+        display:inline-block;
+        height:320px;
+        width:50%;
+        background:#F2ECEC;
+    }
+    
+    .pane:hover {
+        -webkit-filter:none;
+        filter:none;
+    }
+    
+    .pane-left {
+        // background:url('img/cat1.jpg');
+        background-size: cover;
+        -webkit-filter: grayscale(1) opacity(.2);
+        filter:greyscale(1) opacity(.2);
+    }
+    
+    .pane-right {
+        background:url('img/cat2.jpg');
+        background-size: cover;
+        -webkit-filter: grayscale(1) opacity(.2);
+        filter:greyscale(1) opacity(.2);
+    }
+    
+    .service-box-container {
+        width:100%;
+        display:flex;
+    }
+    
+    .service-box {
+        width:25%;
+        height:180px;
+    }
+    
+    .service-box-odd {
+        background: #E3E3E3;
+    }
+    
+    .service-box-even {
+        background: #D3CFCF;
+    }
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        background: white;
+        height: 100vh;
+        width: 45vw;
+        color: #2D3332;
+    }
+}
 @media (min-width: 992px) {
     body {
         background:#2D3332;
@@ -206,7 +345,7 @@ body {
     }
     
     .pane-left {
-        background:url('img/cat1.jpg');
+        // background:url('img/cat1.jpg');
         -webkit-filter: grayscale(1) opacity(.2);
         filter:greyscale(1) opacity(.2);
     }
@@ -235,54 +374,4 @@ body {
         background: #D3CFCF;
     }
     
-}
-@media (min-width: 768px) {
-    .account-pane-container {
-        width:100%;
-        display:flex;
-    }
-    
-    .pane {
-        display:inline-block;
-        height:320px;
-        width:50%;
-        background:#F2ECEC;
-    }
-    
-    .pane:hover {
-        -webkit-filter:none;
-        filter:none;
-    }
-    
-    .pane-left {
-        background:url('img/cat1.jpg');
-        background-size: cover;
-        -webkit-filter: grayscale(1) opacity(.2);
-        filter:greyscale(1) opacity(.2);
-    }
-    
-    .pane-right {
-        background:url('img/cat2.jpg');
-        background-size: cover;
-        -webkit-filter: grayscale(1) opacity(.2);
-        filter:greyscale(1) opacity(.2);
-    }
-    
-    .service-box-container {
-        width:100%;
-        display:flex;
-    }
-    
-    .service-box {
-        width:25%;
-        height:180px;
-    }
-    
-    .service-box-odd {
-        background: #E3E3E3;
-    }
-    
-    .service-box-even {
-        background: #D3CFCF;
-    }
 }
