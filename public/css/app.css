@@ -362,7 +362,7 @@
 .button-main {
   border: none;
   text-transform: uppercase;
-  padding: 10px 25px;
+  padding: 15px 25px;
   background: #FECE00;
   border-radius: 10px;
 }
@@ -372,7 +372,7 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #F2ECEC;
-  padding: 10px 25px;
+  padding: 15px 25px;
   background: #707070;
   border-radius: 10px;
 }
@@ -380,7 +380,7 @@
 .button-white {
   border: none;
   text-transform: uppercase;
-  padding: 10px 25px;
+  padding: 15px 25px;
   background: #F2ECEC;
   border-radius: 10px;
 }
@@ -505,6 +505,7 @@
 /* Personal Account Pane Text Styles */
 
 .pane-left {
+  background: url(/images/cat1.jpg?80922903bcf4359e65207a123b182102);
   background-size: cover;
   -webkit-filter: grayscale(1) opacity(0.2);
   filter: greyscale(1) opacity(0.2);
@@ -517,50 +518,6 @@
   background-size: cover;
   -webkit-filter: grayscale(1) opacity(0.2);
   filter: greyscale(1) opacity(0.2);
-}
-
-/* Service Box Styles */
-
-.service-box-container {
-  width: 100%;
-  display: block;
-}
-
-.service-box {
-  width: 100%;
-  height: 320px;
-}
-
-.service-box-odd {
-  background: #E3E3E3;
-}
-
-.service-box-even {
-  background: #D3CFCF;
-}
-
-/* DHL Service Partner Styles */
-
-.dhl-service-partner {
-  background: #FECE00;
-  position: relative;
-  width: 100%;
-  margin: auto;
-  bottom: 15px;
-}
-
-.dhl-srv-logo {
-  width: 50%;
-  display: block;
-  margin: 0 auto;
-  padding: 15px 0px;
-}
-
-.dhl-srv-logo-text {
-  display: block;
-  width: 81%;
-  font-size: 0.9em;
-  margin: auto;
 }
 
 @media (min-width: 768px) {
@@ -583,6 +540,7 @@
   }
 
   .pane-left {
+    background: url(/images/cat1.jpg?80922903bcf4359e65207a123b182102);
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
     filter: greyscale(1) opacity(0.2);
@@ -633,6 +591,8 @@
     max-width: 1400px;
   }
 
+  /* HIDE BORGAR */
+
   .hamburger {
     display: none;
   }
@@ -650,7 +610,7 @@
     float: right;
   }
 
-  /* Navigation Bar */
+  /* Navigation Bar Styles*/
 
   .main-nav {
     display: -webkit-box;
@@ -687,6 +647,8 @@
     text-transform: uppercase;
   }
 
+  /* Account Panes Styles */
+
   .account-pane-container {
     width: 100%;
     display: -webkit-box;
@@ -706,6 +668,7 @@
   }
 
   .pane-left {
+    background: url(/images/cat1.jpg?80922903bcf4359e65207a123b182102);
     -webkit-filter: grayscale(1) opacity(0.2);
     filter: greyscale(1) opacity(0.2);
   }
@@ -716,6 +679,8 @@
     filter: greyscale(1) opacity(0.2);
   }
 
+  /* Services Boxes Styles */
+
   .service-box-container {
     width: 100%;
     display: -webkit-box;
@@ -724,7 +689,7 @@
 
   .service-box {
     width: 25%;
-    height: 230px;
+    height: 340px;
   }
 
   .service-box-odd {
@@ -735,11 +700,47 @@
     background: #D3CFCF;
   }
 
+  .service-box-img {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: #FECE00;
+    border: 3px solid #FFFFFF;
+  }
+
+  .service-img {
+    margin: 8px;
+    display: block;
+  }
+
+  .service-box-title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-top: 10px;
+    margin: auto;
+  }
+
+  .service-box-excerpt {
+    width: 86%;
+    padding-top: 10px;
+    margin: auto;
+  }
+
   /* DHL Service Partner Styles */
 
   .dhl-service-partner {
     background: #FECE00;
     position: relative;
+    display: -webkit-box;
+    display: flex;
+    height: 180px;
     width: 85%;
     margin: auto;
     bottom: 15px;
@@ -756,10 +757,16 @@
     width: -moz-fit-content;
     width: fit-content;
     font-size: 1.8em;
+    font-weight: 100;
     margin-left: auto;
-    margin-right: 66%;
+    margin-right: 25%;
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  .dhl-srv-logo-text-bold {
+    font-size: 1.4em;
+    font-weight: bold;
   }
 
   /* Personal Account Pane Text Styles */
@@ -767,7 +774,7 @@
   .personal-account {
     position: relative;
     top: 12em;
-    left: 25rem;
+    margin: auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -776,15 +783,54 @@
   .personal-title {
     text-align: center;
     font-size: 5rem;
-    margin: 0.1em;
+    font-weight: 100;
     color: #707070;
+    margin: 0;
   }
 
   .personal-subtitle {
     text-align: center;
-    font-size: 0.9rem;
-    margin: 0.1em;
+    font-size: 1rem;
+    margin: 0;
     color: #707070;
+  }
+
+  .personal-button {
+    position: relative;
+    top: 7em;
+    left: 4.5em;
+  }
+
+  /* Business Account Pane Text Styles */
+
+  .business-account {
+    position: relative;
+    top: 12em;
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .business-title {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    color: #F2ECEC;
+    margin: 0;
+  }
+
+  .business-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    color: #F2ECEC;
+  }
+
+  .business-button {
+    position: relative;
+    top: 7em;
+    left: 4.5em;
   }
 }
 
