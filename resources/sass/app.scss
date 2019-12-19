@@ -11,6 +11,7 @@ body {
 .button-main {
     border:none;
     text-transform: uppercase;
+    text-decoration: none;
     padding: 15px 25px;
     background: #FECE00;
     border-radius: 10px;
@@ -27,6 +28,7 @@ body {
 .button-white {
     border:none;
     text-transform: uppercase;
+    text-decoration: none;
     padding: 15px 25px;
     background: #F2ECEC;
     border-radius: 10px;
@@ -34,6 +36,7 @@ body {
 .button-square {
     border:none;
     text-transform: uppercase;
+    text-decoration: none;
     padding: 10px 10px;
     background: #FECE00;
     border-radius: 5px;
@@ -114,7 +117,7 @@ body {
 
 }
 .nav-logo-img {
-    width: 260px;
+    width: auto;
 }
 .nav-items {
     display:none;
@@ -228,7 +231,7 @@ body {
     .container {
         max-width: 1400px;
     }
-    
+
     /* HIDE BORGAR */
     .hamburger {
         display: none;
@@ -253,7 +256,7 @@ body {
         background:white;
         align-items: center;
         justify-content: space-between;
-        box-shadow: 0 7px 4px 0 rgba(0, 0, 0, 0.19);
+        //box-shadow: 0 7px 4px 0 rgba(0, 0, 0, 0.19);
         // padding:0 10%;
     }
     .nav-logo-img {
@@ -274,6 +277,10 @@ body {
         text-decoration: none;
         text-transform: uppercase;
     }
+/* Navigation Bar */
+    .navbar-logo {
+        height: 60px;
+    }
     
 /* Account Panes Styles */
     .account-pane-container {
@@ -286,19 +293,27 @@ body {
         width:50%;
         background:#F2ECEC;
     }
-    .pane:hover {
+    .pane-left {
+        background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url("img/personal-account.jpg");
+        background-size: cover;
+        -webkit-filter: grayscale(1) opacity(.2);
+        filter:greyscale(1) opacity(.2);
+        height: 100%;
+    }
+    .pane-left:hover {
         -webkit-filter:none;
         filter:none;
     }
-    .pane-left {
-        background:url('img/cat1.jpg');
-        -webkit-filter: grayscale(1) opacity(.2);
-        filter:greyscale(1) opacity(.2);
-    }
     .pane-right {
-        background:url('img/cat2.jpg');
+        background: linear-gradient(to top, transparent, rgba(66, 66, 66, 0.47)), url("img/business-account.jpg");
+        background-size: cover;
         -webkit-filter: grayscale(1) opacity(.2);
         filter:greyscale(1) opacity(.2);
+        height: 100%;
+    }
+    .pane-right:hover {
+        -webkit-filter:none;
+        filter:none;
     }
 
 /* Services Boxes Styles */
@@ -341,6 +356,9 @@ body {
         padding-top: 10px;
         margin: auto;
     }
+    #service-section {
+        height: 340px;
+    }
 
 /* DHL Service Partner Styles */
     .dhl-service-partner {
@@ -351,6 +369,7 @@ body {
         width: 85%;
         margin: auto;
         bottom: 15px;
+        box-shadow: 0 2px 11px 3px rgba(0, 0, 0, 0.19);
     }
     .dhl-srv-logo {
         width: 30em;
@@ -423,5 +442,96 @@ body {
         left: 4.5em;
     }
 
+/* About Us Section Styles */
+    .about-us {
+        background: #FFF;
+        z-index: -1;
+        height: 500px;
+    }
+    .about-us-title {
+        font-size: 5.2em;
+        margin: auto;
+        margin-left: 8.2em;
+        width: fit-content;
+        position: relative;
+        top: 240px;
+        font-weight: 100;
+    }
+    .about-arrow {
+        width: fit-content;
+        margin: auto;
+        top: 240px;
+    }
+    .caret {
+        position: relative;
+        width: 60px;
+        height: 30px;
+    }
+    .caret:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 30px solid #000000;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+    }
+    .caret:after {
+        content: '';
+        position: absolute;
+        left: 1px;
+        top: 0;
+        border-top: 29px solid #000000;
+        border-left: 29px solid transparent;
+        border-right: 29px solid transparent;
+    }
 
+/*Business Quote Page Styles*/
+    .quote-login {
+        background: #F2ECEC;
+        height: 550px;
+    }
+    .create-account {
+        background: #F2ECEC;
+        height: 700px;
+    }
+    .caret-quote {
+        position: relative;
+        width: 60px;
+        margin: auto;
+    }
+    .login-box {
+        width: 1390px;
+        height: 500px;
+        margin: auto;
+        background: #fece2e;
+    }
+    .create-account-box {
+        width: 1390px;
+        height: 650px;
+        margin: auto;
+        background: #fece2e;
+    }
+    .box-seperator{
+        background: #F2ECEC;
+        height: 50px;
+    }
+    .caret-quote:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 30px solid #FFFFFF;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+    }
+    .caret-quote:after {
+        content: '';
+        position: absolute;
+        left: 1px;
+        top: 0;
+        border-top: 29px solid #FFFFFF;
+        border-left: 29px solid transparent;
+        border-right: 29px solid transparent;
+    }
 }

@@ -10,7 +10,13 @@ class PagesController extends Controller
         return view('home');
     }
 
-    public function business_quote() {
+    public function businessQuote() {
         return view('business-quote');
+    }
+    public function businessLogin() {
+        return view('login');
+    }
+    public function contactUs() {
+        return view('contact');
     }
 }

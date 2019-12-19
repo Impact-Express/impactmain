@@ -3,20 +3,24 @@
 @section('content')
 <section id="account-pane">
     <div class="account-pane-container">
-        <div class="pane pane-left">
-            <div class="personal-account">
-                <h1 class="personal-title">personal</h1>
-                <h3 class="personal-subtitle">Lorem ipsum dolor sit amet, consectetu</h3>
-                <a href="#" class="personal-button button-alt">Send Parcel</a>
+    <span class="pane personal">
+        <div class="pane-left">
+                <div class="personal-account">
+                    <h1 class="personal-title">personal</h1>
+                    <h3 class="personal-subtitle">Lorem ipsum dolor sit amet, consectetu</h3>
+                    <a href="#" class="personal-button button-alt">Send Parcel</a>
+                </div>
             </div>
-        </div>
-        <div class="pane pane-right">
-            <div class="business-account">
-                <h1 class="business-title">business</h1>
-                <h3 class="business-subtitle">Lorem ipsum dolor sit amet, consectetu</h3>
-                <a href="#" class="business-button button-alt">Send Parcel</a>
+        </span>
+        <span class="pane business">
+            <div class="pane-right">
+                <div class="business-account">
+                    <h1 class="business-title">business</h1>
+                    <h3 class="business-subtitle">Lorem ipsum dolor sit amet, consectetu</h3>
+                    <a href="#" class="business-button button-white">Create Account</a>
+                </div>
             </div>
-        </div>    
+        </span>    
     </div>
 </section>
 
@@ -83,18 +87,16 @@
             </p>
         </div>
     </div>
-</section>
-
-<div class="dhl-service-partner">
-    <div style="width: 54%;">
-        <img class="dhl-srv-logo" src="img/dhl-logo.png" alt="DHL Authorised Service Partner">
-            <h3 class="dhl-srv-logo-text">
-                <b class="dhl-srv-logo-text-bold">DHL </b>
-                Authorised Service Partner
-            </h3>
-    </div>
-    <div>
-    <h3>Our Partnership</h3>
+    <div class="dhl-service-partner">
+        <div style="width: 54%;">
+            <img class="dhl-srv-logo" src="img/dhl-logo.png" alt="DHL Authorised Service Partner">
+                <h3 class="dhl-srv-logo-text">
+                    <b class="dhl-srv-logo-text-bold">DHL </b>
+                    Authorised Service Partner
+                </h3>
+        </div>
+        <div>
+        <h3>Our Partnership</h3>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         </p>
@@ -103,7 +105,11 @@
         </p>
     </div>
 </div>
+</section>
+
+
 <section class="about-us" id="about-us">
-    
+    <h1 class="about-us-title">About Us</h1>
+    <div class="caret"></div>
 </section>
 @endsection

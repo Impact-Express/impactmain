@@ -6,7 +6,7 @@
         <img class="top-strip-img" src="img/dhl-strip-img.png" alt="DHL Authorised Service Partner">
     </div>
     <nav class="main-nav">
-        <a class="navbar-logo" href="#">
+        <a class="navbar-logo" href="<?= route('home'); ?>">
             <img class="nav-logo-img" src="img/navbar-logo.png" alt="Impact Express Logo">
         </a>
         <div class="hamburger-container">
@@ -15,12 +15,12 @@
             </button>
         </div>
         <ul class="nav-items">
-            <li class="nav-item"><a class="nav-link" href="#">Track My Parcel</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Shipping</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= route('business-quote'); ?>">Track My Parcel</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Shipping</a></li>
             <li class="nav-item"><a class="nav-link" href="#">News & Events</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-            <li class="nav-item"><a class="nav-link button-main" href="#">Get a Quote</a></li>
-            <li class="nav-item"><a class="nav-link button-main" href="#">Log in</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= route('contact'); ?>">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link button-main" href="<?= route('business-quote'); ?>">Get a Quote</a></li>
+            <li class="nav-item"><a class="nav-link button-main" href="<?= route('login'); ?>">Log in</a></li>
         </ul>
     </nav>
     <main>

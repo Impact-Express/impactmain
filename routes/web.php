@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'PagesController@home')->name('home');
+Route::get('/quote', 'PagesController@businessQuote')->name('business-quote');
+Route::get('/contact', 'PagesController@contactUs')->name('contact');
+Route::get('/login', function () {return redirect()->away("http://wordpress/");})->name('login');
