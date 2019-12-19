@@ -96,11 +96,11 @@
                 </h3>
         </div>
         <div>
-        <h3>Our Partnership</h3>
-        <p>
+        <h3 class="partnership-title">Our Partnership</h3>
+        <p class="partnership-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         </p>
-        <p>
+        <p class="partnership-text">
             Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
         </p>
     </div>
@@ -110,6 +110,6 @@
 
 <section class="about-us" id="about-us">
     <h1 class="about-us-title">About Us</h1>
-    <div class="caret"></div>
+    <div class="about-arrow caret"></div>
 </section>
 @endsection

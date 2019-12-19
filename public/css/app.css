@@ -594,13 +594,17 @@
     max-width: 1400px;
   }
 
-  /* HIDE BORGAR */
+  /***********************************
+      *? HIDE BORGAR
+  ***********************************/
 
   .hamburger {
     display: none;
   }
 
-  /* Top "Authorised Service Partner" Strip */
+  /***********************************************
+      *? Top "Authorised Service Partner" Strip
+  ************************************************/
 
   .top-strip {
     width: 100%;
@@ -613,7 +617,9 @@
     float: right;
   }
 
-  /* Navigation Bar Styles*/
+  /***********************************
+      *? Navigation Bar Styles
+  ***********************************/
 
   .main-nav {
     display: -webkit-box;
@@ -649,13 +655,17 @@
     text-transform: uppercase;
   }
 
-  /* Navigation Bar */
+  /***********************************
+      *? Navigation Bar 
+  ***********************************/
 
   .navbar-logo {
     height: 60px;
   }
 
-  /* Account Panes Styles */
+  /***********************************
+      *? Account Panes Styles
+  ***********************************/
 
   .account-pane-container {
     width: 100%;
@@ -698,7 +708,9 @@
     filter: none;
   }
 
-  /* Services Boxes Styles */
+  /***********************************
+      *? Services Boxes Styles
+  ***********************************/
 
   .service-box-container {
     width: 100%;
@@ -756,23 +768,25 @@
     height: 340px;
   }
 
-  /* DHL Service Partner Styles */
+  /***********************************
+      *? DHL Service Partner Styles
+  ***********************************/
 
   .dhl-service-partner {
     background: #FECE00;
     position: relative;
     display: -webkit-box;
     display: flex;
-    height: 180px;
-    width: 85%;
+    height: 260px;
+    width: 94%;
     margin: auto;
     bottom: 15px;
     box-shadow: 0 2px 11px 3px rgba(0, 0, 0, 0.19);
   }
 
   .dhl-srv-logo {
-    width: 30em;
-    padding: 30px 30px 16px 90px;
+    width: 36em;
+    padding: 55px 30px 16px 150px;
   }
 
   .dhl-srv-logo-text {
@@ -780,10 +794,10 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    font-size: 1.8em;
+    font-size: 2.2em;
     font-weight: 100;
     margin-left: auto;
-    margin-right: 25%;
+    margin-right: 27.5%;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -793,7 +807,25 @@
     font-weight: bold;
   }
 
-  /* Personal Account Pane Text Styles */
+  .partnership-title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 3em;
+    margin-top: 30px;
+    margin-bottom: 12px;
+  }
+
+  .partnership-text {
+    width: 705px;
+    font-size: 1.2em;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  /*****************************************
+      *? Personal Account Pane Text Styles
+  *****************************************/
 
   .personal-account {
     position: relative;
@@ -825,7 +857,9 @@
     left: 4.5em;
   }
 
-  /* Business Account Pane Text Styles */
+  /*****************************************
+      *? Business Account Pane Text Styles
+  *****************************************/
 
   .business-account {
     position: relative;
@@ -857,7 +891,9 @@
     left: 4.5em;
   }
 
-  /* About Us Section Styles */
+  /*********************************
+      *? About Us Section Styles 
+  *********************************/
 
   .about-us {
     background: #FFF;
@@ -866,14 +902,14 @@
   }
 
   .about-us-title {
-    font-size: 5.2em;
+    font-size: 5em;
     margin: auto;
-    margin-left: 8.2em;
+    margin-left: 41%;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     position: relative;
-    top: 240px;
+    top: 270px;
     font-weight: 100;
   }
 
@@ -882,7 +918,7 @@
     width: -moz-fit-content;
     width: fit-content;
     margin: auto;
-    top: 240px;
+    top: 270px;
   }
 
   .caret {
@@ -911,11 +947,15 @@
     border-right: 29px solid transparent;
   }
 
-  /*Business Quote Page Styles*/
+  /***********************************
+      *? Business Quote Page Styles 
+  ***********************************/
+
+  /* Login and form Section Styles */
 
   .quote-login {
     background: #F2ECEC;
-    height: 550px;
+    height: 500px;
   }
 
   .create-account {
@@ -927,25 +967,6 @@
     position: relative;
     width: 60px;
     margin: auto;
-  }
-
-  .login-box {
-    width: 1390px;
-    height: 500px;
-    margin: auto;
-    background: #fece2e;
-  }
-
-  .create-account-box {
-    width: 1390px;
-    height: 650px;
-    margin: auto;
-    background: #fece2e;
-  }
-
-  .box-seperator {
-    background: #F2ECEC;
-    height: 50px;
   }
 
   .caret-quote:before {
@@ -966,6 +987,174 @@
     border-top: 29px solid #FFFFFF;
     border-left: 29px solid transparent;
     border-right: 29px solid transparent;
+  }
+
+  /* Login Box Styles */
+
+  .login-box {
+    width: 1390px;
+    height: 450px;
+    margin: auto;
+    background: #fece2e;
+  }
+
+  .login-box-title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    font-size: 5em;
+    top: 80px;
+    font-weight: 100;
+    color: #FFF;
+  }
+
+  .login-box-title-bold {
+    font-weight: bold;
+  }
+
+  .login-box-text {
+    position: relative;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+    top: 90px;
+    font-size: 0.9em;
+    color: #000;
+  }
+
+  .login-text {
+    position: relative;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+    margin-right: 35%;
+    top: 200px;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #FFF;
+  }
+
+  .login-button {
+    position: relative;
+    text-align: center;
+    margin-left: 62%;
+    top: 180px;
+  }
+
+  /* Account Creation Form Box Styles */
+
+  .create-account-box {
+    width: 1390px;
+    height: 650px;
+    margin: auto;
+    background: #fece2e;
+  }
+
+  .create-account-box-title {
+    position: relative;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+    top: 60px;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+  .create-account-box-text {
+    position: relative;
+    width: 600px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    top: 60px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .create-account-form {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    top: 80px;
+  }
+
+  /* Form Input Styles */
+
+  #quote-email-address {
+    width: 61.7%;
+  }
+
+  #quote-delivery-destinations {
+    width: 61.7%;
+  }
+
+  #quote-comments {
+    width: 95%;
+    height: 165px;
+    resize: none;
+  }
+
+  /*****************************
+      *? Form Styles (GLOBAL)
+  *****************************/
+
+  .form-text {
+    border: 0px;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    width: 300px;
+  }
+
+  .form-email {
+    border: 0px;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    width: 300px;
+  }
+
+  .form-number {
+    border: 0px;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    width: 300px;
+  }
+
+  .form-textarea {
+    border: 0px;
+    padding: 15px;
+    text-transform: uppercase;
+    width: 300px;
+  }
+
+  .form-checkbox {
+    border: 0px;
+    padding: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+  }
+
+  .form-submit {
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F2ECEC;
+    padding: 15px 25px;
+    background: #707070;
+    border-radius: 10px;
   }
 }
 

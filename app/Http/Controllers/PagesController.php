@@ -9,10 +9,6 @@ class PagesController extends Controller
     public function home() {
         return view('home');
     }
-
-    public function businessQuote() {
-        return view('business-quote');
-    }
     public function businessLogin() {
         return view('login');
     }

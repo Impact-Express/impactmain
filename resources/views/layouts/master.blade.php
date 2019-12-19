@@ -15,11 +15,11 @@
             </button>
         </div>
         <ul class="nav-items">
-            <li class="nav-item"><a class="nav-link" href="<?= route('business-quote'); ?>">Track My Parcel</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= route('quote.index'); ?>">Track My Parcel</a></li>
             <li class="nav-item"><a class="nav-link" href="">Shipping</a></li>
             <li class="nav-item"><a class="nav-link" href="#">News & Events</a></li>
             <li class="nav-item"><a class="nav-link" href="<?= route('contact'); ?>">Contact Us</a></li>
-            <li class="nav-item"><a class="nav-link button-main" href="<?= route('business-quote'); ?>">Get a Quote</a></li>
+            <li class="nav-item"><a class="nav-link button-main" href="<?= route('quote.index'); ?>">Get a Quote</a></li>
             <li class="nav-item"><a class="nav-link button-main" href="<?= route('login'); ?>">Log in</a></li>
         </ul>
     </nav>
