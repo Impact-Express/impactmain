@@ -11,8 +11,12 @@
 |
 */
 
+    use Illuminate\Support\Facades\Mail;
+    use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'PagesController@home')->name('home');
 Route::get('/contact', 'PagesController@contactUs')->name('contact');
 Route::get('/login', function () {return redirect()->away("http://wordpress/");})->name('login');
 
 Route::resource('/quote', 'QuotesController');
+Route::post('/quote/send', 'QuotesController@send');

@@ -348,7 +348,9 @@
   [hidden] {
     display: none;
   }
-  body {
+  @charset "UTF-8";
+
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -656,7 +658,7 @@
   }
 
   /***********************************
-      *? Navigation Bar 
+      *? Navigation Bar
   ***********************************/
 
   .navbar-logo {
@@ -892,7 +894,7 @@
   }
 
   /*********************************
-      *? About Us Section Styles 
+      *? About Us Section Styles
   *********************************/
 
   .about-us {
@@ -948,7 +950,7 @@
   }
 
   /***********************************
-      *? Business Quote Page Styles 
+      *? Business Quote Page Styles
   ***********************************/
 
   /* Login and form Section Styles */
@@ -960,7 +962,7 @@
 
   .create-account {
     background: #F2ECEC;
-    height: 700px;
+    height: 800px;
   }
 
   .caret-quote {
@@ -1047,7 +1049,7 @@
 
   .create-account-box {
     width: 1390px;
-    height: 650px;
+    height: 750px;
     margin: auto;
     background: #fece2e;
   }
@@ -1074,6 +1076,25 @@
     font-size: 1em;
     font-weight: 600;
     color: #000;
+  }
+
+  .create-account-tcs-text {
+    position: relative;
+    margin: auto;
+    left: 40px;
+    top: 19px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .create-account-tcs-link {
+    position: relative;
+    margin: auto;
+    font-size: 1em;
+    font-weight: 600;
+    color: #FFF;
+    text-decoration: none;
   }
 
   .create-account-form {
@@ -1139,12 +1160,42 @@
     width: 300px;
   }
 
+  .form-checkbox > input {
+    position: absolute;
+    top: 445px;
+    height: 25px;
+    width: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border-radius: 4px;
+    outline: none;
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+    background-color: #FFF;
+    cursor: pointer;
+  }
+
+  .form-checkbox > input:checked {
+    background-color: #34495E;
+  }
+
+  .form-checkbox > input:checked + span::before {
+    content: "\2713";
+    display: block;
+    text-align: center;
+    color: #FECE00;
+    position: absolute;
+    left: -2em;
+    top: 0em;
+  }
+
   .form-checkbox {
     border: 0px;
     padding: 15px;
     width: 30px;
     height: 30px;
-    background-color: #eee;
   }
 
   .form-submit {
@@ -1155,6 +1206,52 @@
     padding: 15px 25px;
     background: #707070;
     border-radius: 10px;
+    margin: auto;
+    margin-top: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: block;
+  }
+
+  /* Form Alerts */
+
+  .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+    width: 20%;
+    margin: auto;
+    margin-left: 63.6%;
+  }
+
+  .alert-success {
+    background-color: #4CAF50;
+  }
+
+  .alert-info {
+    background-color: #2196F3;
+  }
+
+  .alert-warning {
+    background-color: #ff9800;
+  }
+
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
   }
 }
 
