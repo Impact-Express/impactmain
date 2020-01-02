@@ -29,7 +29,7 @@ class QuoteSent extends Mailable
     public function build()
     {
         return $this->subject('Quote Request Received From: ')
-                    ->from('testmail@codecameron.dev', 'Cameron\'s Testing Email')
+                    ->from('put-email-here', 'Impact Express')
                     ->view('emails.quote-sent')
                     ->with('data', $this->data);
     }
