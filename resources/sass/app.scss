@@ -5,6 +5,7 @@ body {
 .container {
     margin-left:auto;
     margin-right:auto;
+
 }
 
 /* Button Styles */
@@ -229,7 +230,7 @@ body {
         background:#2D3332;
     }
     .container {
-        max-width: 1400px;
+        max-width: 1800px;
     }
 
 /***********************************
@@ -255,6 +256,7 @@ body {
 /***********************************
     *? Navigation Bar Styles
 ***********************************/
+/* Reset */
     .main-nav {
         display:flex;
         width:100%;
@@ -279,10 +281,68 @@ body {
         margin-left:40px;
         padding: 10px;
     }
+
     .nav-link {
         text-decoration: none;
         text-transform: uppercase;
+        color: #000;
     }
+ /* Mega Menu */
+    .nav-dropdown button:hover+.mega-menu,{
+	    display:block;
+    }
+    .nav-dropdown {
+        margin-left:40px;
+        padding: 10px;
+        float: left;
+    }
+
+
+/*colums */
+    .column-xs {
+        float: left;
+        width: 15%;
+        padding: 10px;
+        height: fit-content;
+    }
+    .column-sm {
+        float: left;
+        width: 21%;
+        padding: 10px;
+        height: fit-content;
+    }
+    .column-md {
+        float: left;
+        width: 30%;
+        padding: 10px;
+        height: fit-content;
+    }
+    .column-lg {
+        float: left;
+        width: 44%;
+        padding: 10px;
+        height: fit-content;
+    }
+    .column-xl {
+        float: left;
+        width: 60%;
+        padding: 10px;
+        height: fit-content;
+    }
+
+/* Dropdown button */
+.nav-dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    background-color: inherit;
+    font: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+    padding-bottom: 10px;
+    padding-top: 0px;
+  }
+
 
 /***********************************
     *? Navigation Bar
@@ -380,40 +440,39 @@ body {
         background: #FECE00;
         position: relative;
         display: flex;
-        height: 260px;
-        width: 94%;
+        height: 130px;
+        width: 90%;
         margin: auto;
         bottom: 15px;
         box-shadow: 0 2px 11px 3px rgba(0, 0, 0, 0.19);
     }
     .dhl-srv-logo {
-        width: 36em;
-        padding: 55px 30px 16px 150px;
+        width: 15em;
+        padding: 20px 343px;
     }
     .dhl-srv-logo-text {
         position: relative;
         width: fit-content;
-        font-size: 2.2em;
+        font-size: 1.6em;
         font-weight: 100;
         margin-left: auto;
-        margin-right: 27.5%;
+        margin-right: 30.5%;
         margin-top: 0;
         margin-bottom: 0;
     }
     .dhl-srv-logo-text-bold {
-        font-size: 1.4em;
+        font-size: 1em;
         font-weight: bold;
     }
     .partnership-title {
         width: fit-content;
-        font-size: 3em;
-        margin-top: 30px;
-        margin-bottom: 12px;
+        font-size: 1.5em;
+        margin-top: 15px;
+        margin-bottom: 10px;
     }
     .partnership-text {
         width: 705px;
-        font-size: 1.2em;
-        margin-top: 24px;
+        font-size: 1em;
         margin-bottom: 24px;
     }
 
@@ -487,13 +546,20 @@ body {
         margin-left: 41%;
         width: fit-content;
         position: relative;
-        top: 270px;
+        top: 150px;
         font-weight: 100;
+    }
+    .about-us-text {
+        position: relative;
+        width: 83%;
+        margin: auto;
+        font-size: 1.2em;
+        top: 192px;
     }
     .about-arrow {
         width: fit-content;
         margin: auto;
-        top: 270px;
+        top: 160px;
     }
     .caret {
         position: relative;
@@ -505,18 +571,40 @@ body {
         position: absolute;
         top: 0;
         left: 0;
-        border-top: 30px solid #000000;
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
+        border-top: 20px solid #000000;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
     }
     .caret:after {
         content: '';
         position: absolute;
         left: 1px;
         top: 0;
-        border-top: 29px solid #000000;
-        border-left: 29px solid transparent;
-        border-right: 29px solid transparent;
+        border-top: 19px solid #000000;
+        border-left: 19px solid transparent;
+        border-right: 19px solid transparent;
+    }
+    .caret-sm {
+        position: relative;
+        right: 6px;
+    }
+    .caret-sm:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 7px solid #000000;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+    }
+    .caret-sm:after {
+        content: '';
+        position: absolute;
+        left: 1px;
+        top: 0;
+        border-top: 6px solid #fff;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
     }
 
 /***********************************
@@ -749,6 +837,28 @@ body {
         width: fit-content;
         display: block;
     }
+    .form-email-footer {
+        padding: 6px 12px;
+        background-color: #2d3332;
+        border: 1px solid #666869;
+        border-right: 0;
+        color: #e0e0e0;
+    }
+    .form-email-footer-link {
+        padding: 11px 11px;
+        background-color: #2d3332;
+        border: 1px solid #666869;
+        border-left: 0;
+        color: #e0e0e0;
+    }
+    .input-group {
+        display: flex;
+        width: fit-content;
+    }
+    .footer-text {
+        width: 75%;
+        font-size: 13px;
+    }
 
 /* Form Alerts */
     .alert {
@@ -776,5 +886,55 @@ body {
     }
     .closebtn:hover {
         color: black;
+    }
+
+/************************
+    *? Footer Styles
+*************************/
+    .main-footer {
+        height: 270px;
+        background: #2d3332;
+        color: #999b9c;
+        padding: 64px 0;
+    }
+    .main-footer h4 {
+        color: #e0e0e0;
+    }
+    .copyrights {
+        border-left: 1px solid #4c5151;
+        padding-left: 8px; 
+    }
+
+/****************************
+    *? Service Page Styles
+****************************/
+    .quote-box {
+        margin-top: -20px;
+        height: 700px;
+        background: #F2ECEC;
+    }
+    .main-text {
+        display: inline-block;
+        margin-right: -5px;
+        width: 50%;
+        height: 250px;
+        background: #F2ECEC;
+    }
+    .service-infogfx {
+        display: inline-block;
+        margin-right: -5px;
+        width: 50%;
+        height: 250px;
+        background: #F2ECEC;
+    }
+    .tab {
+        height: 450px;
+        background: #F2ECEC;
+    }
+    .service-title {
+        margin-left: 5%;
+    }
+    .service-text {
+        margin-left: 5%;
     }
 }

@@ -3,11 +3,11 @@
 @section('master')
 
     <div class="top-strip">
-        <img class="top-strip-img" src="img/dhl-strip-img.png" alt="DHL Authorised Service Partner">
+        <img class="top-strip-img" src="/img/dhl-strip-img.png" alt="DHL Authorised Service Partner">
     </div>
     <nav class="main-nav">
         <a class="navbar-logo" href="<?= route('home'); ?>">
-            <img class="nav-logo-img" src="img/navbar-logo.png" alt="Impact Express Logo">
+            <img class="nav-logo-img" src="/img/navbar-logo.png" alt="Impact Express Logo">
         </a>
         <div class="hamburger-container">
             <button class="hamburger button-square" type="button">
@@ -15,19 +15,61 @@
             </button>
         </div>
         <ul class="nav-items">
-            <li class="nav-item"><a class="nav-link" href="<?= route('quote.index'); ?>">Track My Parcel</a></li>
-            <li class="nav-item"><a class="nav-link" href="">Shipping</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">News & Events</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= route('contact'); ?>">Contact Us</a></li>
-            <li class="nav-item"><a class="nav-link button-main" href="<?= route('quote.index'); ?>">Get a Quote</a></li>
-            <li class="nav-item"><a class="nav-link button-main" href="<?= route('login'); ?>">Log in</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= route('quote.index'); ?>">Track My Parcel</a>
+            </li>
+             
+            <li class="nav-dropdown">
+                <a class="nav-link" href="<?= route('services'); ?>">Shipping</a>
+            </li>
+             
+            <li class="nav-dropdown">
+                <a class="nav-link" href="#">News & Events</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= route('contact'); ?>">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link button-main" href="<?= route('quote.index'); ?>">Get a Quote</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link button-main" href="<?= route('login'); ?>">Log in</a>
+            </li>
         </ul>
     </nav>
     <main>
         @yield('content')
     </main>
-    <footer>
-        
+    <footer class="main-footer">
+        <div class="container">
+            <div class="column-sm">
+                <h4>Subscribe</h4>
+                <form action="//impactexpress.us2.list-manage.com/subscribe/post?u=4d790aba1fda36ef88d81225e&amp;id=4f5fd23105" method="post">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-email-footer" name="EMAIL" id="i-subscribe-email" placeholder="E-mail">
+                            <input type="hidden" value="Subscribe" name="subscribe">
+                            <button class="form-email-footer-link">
+                                Send <i class="fa fa-angle-right"></i>
+                            </button>
+                        </div>
+                        <p class="footer-text">We like to keep you up to date with our latest news so please subscribe to our newsletter.</p>
+                    </div>
+                </form>
+            </div>
+            <div class="column-md">
+               <h4>Explore</h4>
+
+            </div>
+            <div class="column-sm">
+                <h4>Services</h4>
+
+            </div>
+            <div class="column-sm">
+               <p class="copyrights">© <?= date('Y'); ?>, Impact Express Wholesale Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 
 <div class="mobile-nav">

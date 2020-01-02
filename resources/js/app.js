@@ -22,7 +22,6 @@ App.prototype.mobileNav = function() {
     hamburgerButton.addEventListener('click', openMobile);
     mobileNav.addEventListener('click', closeMobile);
 };
-
 new App();
 
 let close = document.getElementsByClassName("closebtn");
