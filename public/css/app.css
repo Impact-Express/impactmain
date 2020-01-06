@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Play&display=swap);/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -351,12 +351,16 @@
   @charset "UTF-8";
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Play", sans-serif;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
+}
+
+.toUpper {
+  text-transform: uppercase;
 }
 
 /* Button Styles */
@@ -1353,7 +1357,9 @@ body {
     font-size: 13px;
   }
 
-  /* Form Alerts */
+  /************************
+      *? Form Alerts
+  *************************/
 
   .alert {
     padding: 20px;
@@ -1417,31 +1423,61 @@ body {
       *? Service Page Styles
   ****************************/
 
+  .flex-center {
+    margin: auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: center;
+            justify-content: center;
+    width: 1800px;
+  }
+
+  .flex {
+    margin: auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    width: 1800px;
+  }
+
   .quote-box {
     margin-top: -20px;
     height: 700px;
     background: #F2ECEC;
   }
 
+  .service-information {
+    display: -webkit-box;
+    display: flex;
+    background: #d9d9d9;
+  }
+
   .main-text {
     display: inline-block;
-    margin-right: -5px;
     width: 50%;
-    height: 250px;
-    background: #F2ECEC;
+    border-right: 5px solid #ccc;
   }
 
   .service-infogfx {
     display: inline-block;
-    margin-right: -5px;
     width: 50%;
-    height: 250px;
-    background: #F2ECEC;
+  }
+
+  .infogfx-title {
+    margin-left: 5%;
+    margin-bottom: 0px;
+    margin-top: 20px;
   }
 
   .tab {
     height: 450px;
     background: #F2ECEC;
+    padding-top: 40px;
   }
 
   .service-title {
@@ -1450,6 +1486,139 @@ body {
 
   .service-text {
     margin-left: 5%;
+    margin-bottom: 0;
+    width: 810px;
+  }
+
+  .service-list {
+    padding-left: 100px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .tablink {
+    padding: 5px;
+    display: inline-block;
+    width: -webkit-fill-available;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  div:hover.hover-light-grey {
+    background-color: #e2e2e2;
+  }
+
+  .bottombar {
+    border-bottom: 6px solid #ccc !important;
+  }
+
+  .bottombar-active {
+    border-bottom: 6px solid #fece2e !important;
+  }
+
+  .tab-button {
+    width: 45%;
+  }
+
+  .tab-contents {
+    padding-top: 10px;
+    padding-left: 150px;
+  }
+
+  /* Infographic Classes to style the images as needed */
+
+  .express-infogfx {
+    float: right;
+    width: 660px;
+    height: 400px;
+    margin-top: -240px;
+    background-image: url("/img/cat1.jpg");
+  }
+
+  .economy-infogfx {
+    width: 660px;
+    height: 400px;
+    background-image: url("/img/cat1.jpg");
+  }
+
+  .overnight-infogfx {
+    width: 660px;
+    height: 400px;
+    background-image: url("/img/cat1.jpg");
+  }
+
+  .imports-infogfx {
+    width: 660px;
+    height: 400px;
+    background-image: url("/img/cat1.jpg");
+  }
+
+  /* Request Consultation Partial */
+
+  .button-left {
+    float: left !important;
+  }
+
+  .req-consultation {
+    background-color: #7c7287;
+    color: #000;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    padding-left: 100px;
+    height: 340px;
+  }
+
+  .vr {
+    float: left;
+    position: relative;
+    border: 1px black solid;
+    height: 340px;
+    width: 0;
+    right: -775px;
+    padding: 0;
+    bottom: 250px;
+  }
+
+  .left-side {
+    margin-right: 80px;
+    padding-right: 50px;
+    width: 710px;
+  }
+
+  .right-side {
+    display: -webkit-inline-box;
+    display: inline-flex;
+    height: 215px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+    left: 830px;
+    bottom: 220px;
+  }
+
+  .tel-no {
+    display: inline;
+    margin-left: 5px;
+    font-family: play;
+    font-weight: 300;
+    font-size: 18px;
+    vertical-align: middle;
+  }
+
+  .office-email {
+    display: inline;
+    margin-left: 5px;
+    font-family: play;
+    font-weight: 300;
+    font-size: 18px;
+    vertical-align: middle;
   }
 }
 

@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'Business Quote')
+
 @section('content')
     <section class="quote-login">
         <div class="caret-quote"></div>

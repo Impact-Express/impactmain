@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'Home')
+
 @section('content')
 <section id="account-pane">
     <div class="account-pane-container">
