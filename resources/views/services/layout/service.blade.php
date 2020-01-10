@@ -12,8 +12,6 @@
             @yield('infographic')
         </div>
     </div>
-
-
     <div class="tab">
         <div class="container flex-center">
             <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
@@ -65,8 +63,14 @@
                     Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
                 </p>
             </div>
-
         </div>
     </div>
+    <div class="other-destinations">
+        <h4 class="destinations-title">Popular Shipping Destinations</h4>
+        <div class="destinations">
+            @yield('destinations-boxes')
+        </div>
+    </div>
+
     @include('services.partials.consultation-pane')
 @endsection

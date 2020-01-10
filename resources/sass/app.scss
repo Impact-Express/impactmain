@@ -4,6 +4,14 @@ body {
     // font-family: Arial, Helvetica, sans-serif;
     font-family: 'Play', sans-serif;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: #535353;
+}
 .container {
     margin-left:auto;
     margin-right:auto;
@@ -17,6 +25,7 @@ body {
     border:none;
     text-transform: uppercase;
     text-decoration: none;
+    font-weight: 600;
     padding: 15px 25px;
     background: #FECE00;
     border-radius: 10px;
@@ -302,7 +311,7 @@ body {
     }
 
 
-/*colums */
+/* Columns */
     .column-xs {
         float: left;
         width: 15%;
@@ -312,12 +321,12 @@ body {
     .column-sm {
         float: left;
         width: 21%;
-        padding: 10px;
+        padding: 13px;
         height: fit-content;
     }
     .column-md {
         float: left;
-        width: 30%;
+        width: 28%;
         padding: 10px;
         height: fit-content;
     }
@@ -755,6 +764,18 @@ body {
         height: 165px;
         resize: none;
     }
+    #consultation-email-address {
+        width: 125%;
+        margin-bottom: 10px;
+    }
+    #consultation-contact-name {
+        width: 125%;
+        margin-bottom: 10px;
+    }
+    #consultation-tel-no {
+        width: 125%;
+        margin: 0;
+    }
 
 /*****************************
     *? Form Styles (GLOBAL)
@@ -789,7 +810,6 @@ body {
         text-transform: uppercase;
         width: 300px;
     }
-
     .form-checkbox > input{
         position: absolute;
         top: 445px;
@@ -872,6 +892,11 @@ body {
         margin: auto;
         margin-left: 63.6%;
     }
+    #consultation {
+        position: absolute;
+        top: 240px;
+        width: 250px;
+    }
     .alert-success {background-color: #4CAF50;}
     .alert-info {background-color: #2196F3;}
     .alert-warning {background-color: #ff9800;}
@@ -903,7 +928,8 @@ body {
     }
     .copyrights {
         border-left: 1px solid #4c5151;
-        padding-left: 8px; 
+        padding-left: 8px;
+        width: 75%;
     }
 
 /****************************
@@ -994,28 +1020,107 @@ body {
     }
 
 /* Infographic Classes to style the images as needed */
+    .service-infogfx-text {
+        margin-left: 2.7%;
+        width: fit-content;
+    }
     .express-infogfx {
         float: right;
-        width: 660px;
+        background-size: cover;
+        width: 750px;
         height: 400px;
         margin-top: -240px;
         background-image: url('/img/cat1.jpg');
     }
     .economy-infogfx {
-        width: 660px;
+        float: right;
+        background-size: cover;
+        width: 750px;
         height: 400px;
+        margin-top: -240px;
         background-image: url('/img/cat1.jpg');
     }
     .overnight-infogfx {
-        width: 660px;
+        float: right;
+        background-size: cover;
+        width: 750px;
         height: 400px;
+        margin-top: -240px;
         background-image: url('/img/cat1.jpg');
     }
     .imports-infogfx {
-        width: 660px;
+        float: right;
+        background-size: cover;
+        width: 750px;
         height: 400px;
+        margin-top: -240px;
         background-image: url('/img/cat1.jpg');
     }
+
+/* Popular Destinations Classes */
+    .other-destinations {
+        height: 330px;
+        width: 100%;
+        background: #d9d9d9;
+        display: inline-block;
+    }
+    .destinations {
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .destinations-title {
+        width: fit-content;
+        margin: auto;
+        font-size: 28px;
+        padding-top: 15px;
+    }
+    .box {
+        width: 220px;
+        height: 220px;
+        border-radius: 5px;
+        box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.23);
+        overflow: hidden;
+    }
+    .destination:hover {
+        transform: scale(1.2);
+    }
+    .destination {
+        transition: all .2s ease-in-out;
+    }
+    .destination1 {
+        background-image: url(/img/cat1.jpg);
+        background-size: cover;
+        width: fit-content;
+        border-radius: 5px;
+        width: 220px;
+        height: 220px;
+    }
+    .destination2 {
+        background-image: url(/img/cat2.jpg);
+        background-size: cover;
+        width: fit-content;
+        border-radius: 5px;
+        width: 220px;
+        height: 220px;
+    }
+    .destination3 {
+        background-image: url(/img/cat1.jpg);
+        background-size: cover;
+        width: fit-content;
+        border-radius: 5px;
+        width: 220px;
+        height: 220px;
+    }
+    .destination4 {
+        background-image: url(/img/cat2.jpg);
+        background-size: cover;
+        width: fit-content;
+        border-radius: 5px;
+        width: 220px;
+        height: 220px;
+    }
+
 /* Request Consultation Partial */
     .button-left {
         float: left !important;
@@ -1023,10 +1128,22 @@ body {
     .req-consultation {
         background-color: #7c7287;
         color: #000;
-        padding-top: 50px;
-        padding-bottom: 0px;
+        padding-top: 25px;
+        padding-bottom: 30px;
         padding-left: 100px;
         height: 340px;
+    }
+    .consultation_title {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .consultation_desc {
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 1.1;
+        color: inherit;
     }
     .vr {
         float: left;
@@ -1067,4 +1184,5 @@ body {
         font-size: 18px;
         vertical-align: middle;
     }
+
 }

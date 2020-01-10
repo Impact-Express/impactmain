@@ -31,6 +31,28 @@
 </div>
 @endsection
 @section('infographic')
-<h2 class="service-title" style="margin-top: 193px;">How It Works</h2>
+<h2 class="service-infogfx-text" style="margin-top: 193px;">How It Works</h2>
     <div class="express-infogfx"></div>
+@endsection
+@section('destinations-boxes')
+    <div class="box">
+        <div class="destination destination1">
+
+        </div>
+    </div>
+    <div class="box">
+        <div class="destination destination2">
+            
+        </div>
+    </div>
+    <div class="box">
+        <div class="destination destination3">
+            
+        </div>
+    </div>
+    <div class="box">
+        <div class="destination destination4">
+            
+        </div>
+    </div>
 @endsection

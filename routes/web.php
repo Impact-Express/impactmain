@@ -24,6 +24,7 @@ Route::post('/quote/send', 'QuotesController@send');
 // Services Routes
 Route::get('/services', 'ServicesController@index')->name('services');
 Route::get('/services/express', 'ServicesController@express')->name('express');
+Route::post('/services/express/send', 'ServicesController@send');
 Route::get('/services/economy', 'ServicesController@economy')->name('economy');
 Route::get('/services/ukovernight', 'ServicesController@overnight')->name('overnight');
 Route::get('/services/imports', 'ServicesController@imports')->name('imports');
