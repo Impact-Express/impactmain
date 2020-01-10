@@ -29,7 +29,7 @@ class ConsultationSent extends Mailable
     public function build()
     {
         return $this->subject('Consultation Request Received From: ')
-                    ->from('testmail@codecameron.dev', 'Cameron\'s Testing Email')
+                    ->from('put-email-here', 'Impact Express')
                     ->view('emails.consultation-sent')
                     ->with('data', $this->data);
     }
