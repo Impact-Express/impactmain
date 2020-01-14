@@ -2,7 +2,10 @@
 @section('title', 'Express Delivery')
 
 @section('quotebox')
-<h2 class="quote-box-title"></h2>
+<div class="container">
+    <h2 class="quote-box-title">Get a Quote</h2>
+    <p class="quote-box-subtitle">Send from any UK Postcode</p>
+</div>
 @endsection
 
 @section('maintext')
@@ -37,22 +40,18 @@
 @section('destinations-boxes')
     <div class="box">
         <div class="destination destination1">
-
         </div>
     </div>
     <div class="box">
         <div class="destination destination2">
-            
         </div>
     </div>
     <div class="box">
         <div class="destination destination3">
-            
         </div>
     </div>
     <div class="box">
         <div class="destination destination4">
-            
         </div>
     </div>
 @endsection
