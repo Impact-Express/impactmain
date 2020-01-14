@@ -33,6 +33,7 @@
             </div>
             <div class="pull-right">
                 <form action="/contact" method="post">
+                    @csrf
                     <textarea class="form-textarea" name=contactMessage"" id="contactMessage" cols="10" rows="10" tabindex="1" placeholder="MESSAGE"></textarea>
                     <input class="form-text" type="text" name="contactFullName" id="contactFullName" tabindex="3" placeholder="FULL NAME">
                     <input class="form-email" type="email" name="contactEmailAddr" id="contactEmailAddr" tabindex="2" placeholder="EMAIL ADDRESS">

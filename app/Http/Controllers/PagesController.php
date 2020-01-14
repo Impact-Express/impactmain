@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactSent;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
@@ -15,15 +17,15 @@ class PagesController extends Controller
     public function contactUs() {
         return view('contact');
     }
-    public function send()
+    public function send(Request $request)
     {
         $data = array(
-            'contact-name' => $request->contactName,
-            'email-address' => $request->emailAddress,
-            'comments' => $request->comments
+            'contact-name' => $request->contactFullName,
+            'email-address' => $request->contactEmailAddr,
+            'contact-message' => $request->contactMessage
         );
 //        dd($data);
-    Mail::to('cameron@impactexpress.co.uk')->send(new QuoteSent($data));
+    Mail::to('cameron@impactexpress.co.uk')->send(new ContactSent($data));
     return back()->with('success', 'Thank you for contacting us');
     }
 }
