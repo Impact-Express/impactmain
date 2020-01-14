@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Play&display=swap);/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -348,8 +348,20 @@
   [hidden] {
     display: none;
   }
-  body {
-  font-family: Arial, Helvetica, sans-serif;
+  @charset "UTF-8";
+
+body {
+  font-family: "Play", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #535353;
 }
 
 .container {
@@ -357,21 +369,51 @@
   margin-right: auto;
 }
 
+.toUpper {
+  text-transform: uppercase;
+}
+
+/* Button Styles */
+
 .button-main {
   border: none;
   text-transform: uppercase;
-  padding: 10px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 15px 25px;
   background: #FECE00;
-  border-radius: 15px;
+  border-radius: 10px;
+}
+
+.button-alt {
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #F2ECEC;
+  padding: 15px 25px;
+  background: #707070;
+  border-radius: 10px;
+}
+
+.button-white {
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 25px;
+  background: #F2ECEC;
+  border-radius: 10px;
 }
 
 .button-square {
   border: none;
   text-transform: uppercase;
-  padding: 15px 15px;
+  text-decoration: none;
+  padding: 10px 10px;
   background: #FECE00;
   border-radius: 5px;
 }
+
+/* Mobile Navigation */
 
 .mobile-nav {
   position: fixed;
@@ -380,8 +422,7 @@
   height: 100vh;
   width: 80vw;
   color: #2D3332;
-  display: -webkit-box;
-  display: flex;
+  display: block;
   z-index: 999;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -399,8 +440,36 @@
 
 .mobile-nav-item {
   padding: 10px 20px 10px 20px;
+  margin-top: -1px;
   border-bottom: 0.5px solid #2D3332;
   border-right: 0.5px solid #2D3332;
+  border-top: 0.5px solid #2D3332;
+}
+
+.mobile-nav-item-top {
+  padding: 10px 20px 10px 20px;
+  display: table-cell;
+  width: inherit;
+  margin-left: -4px;
+  white-space: nowrap;
+  border-bottom: 0.5px solid #2D3332;
+  border-right: 0.5px solid #2D3332;
+  border-top: 0.5px solid #2D3332;
+}
+
+.mobile-nav-img {
+  padding: 10px 20px 10px 20px;
+  display: table-cell;
+  width: inherit;
+  margin-left: -4px;
+  white-space: nowrap;
+}
+
+.hamburger-container {
+  display: inline-block;
+  position: absolute;
+  right: 17px;
+  top: 26px;
 }
 
 .open {
@@ -410,12 +479,127 @@
           transform: translateX(0);
 }
 
+/* DHL Authorised Service Partner Strip*/
+
+.top-strip {
+  width: 100%;
+  height: 20px;
+  background: #FECE00;
+}
+
+.top-strip-img {
+  height: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Navigation Bar */
+
+.nav-logo-img {
+  width: auto;
+}
+
 .nav-items {
   display: none;
 }
 
-.hamburger-container {
+/* Main Pane Styles */
+
+.pane {
   display: inline-block;
+  height: 300px;
+  width: 100%;
+  background: #F2ECEC;
+}
+
+.pane:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.account-pane-container {
+  width: 100%;
+  display: block;
+}
+
+/* Personal Account Pane Text Styles */
+
+.pane-left {
+  background: url(/images/cat1.jpg?80922903bcf4359e65207a123b182102);
+  background-size: cover;
+  -webkit-filter: grayscale(1) opacity(0.2);
+  filter: greyscale(1) opacity(0.2);
+}
+
+/* Business Account Pane Styles */
+
+.pane-right {
+  background: url(/images/cat2.jpg?b87e0bf276295a6de3ba99a54016549b);
+  background-size: cover;
+  -webkit-filter: grayscale(1) opacity(0.2);
+  filter: greyscale(1) opacity(0.2);
+}
+
+@media (min-width: 768px) {
+  .account-pane-container {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+  }
+
+  .pane {
+    display: inline-block;
+    height: 320px;
+    width: 50%;
+    background: #F2ECEC;
+  }
+
+  .pane:hover {
+    -webkit-filter: none;
+    filter: none;
+  }
+
+  .pane-left {
+    background: url(/images/cat1.jpg?80922903bcf4359e65207a123b182102);
+    background-size: cover;
+    -webkit-filter: grayscale(1) opacity(0.2);
+    filter: greyscale(1) opacity(0.2);
+  }
+
+  .pane-right {
+    background: url(/images/cat2.jpg?b87e0bf276295a6de3ba99a54016549b);
+    background-size: cover;
+    -webkit-filter: grayscale(1) opacity(0.2);
+    filter: greyscale(1) opacity(0.2);
+  }
+
+  .service-box-container {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+  }
+
+  .service-box {
+    width: 25%;
+    height: 180px;
+  }
+
+  .service-box-odd {
+    background: #E3E3E3;
+  }
+
+  .service-box-even {
+    background: #D3CFCF;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    background: white;
+    height: 100vh;
+    width: 45vw;
+    color: #2D3332;
+  }
 }
 
 @media (min-width: 992px) {
@@ -424,12 +608,20 @@
   }
 
   .container {
-    max-width: 1400px;
+    max-width: 1800px;
   }
+
+  /***********************************
+      *? HIDE BORGAR
+  ***********************************/
 
   .hamburger {
     display: none;
   }
+
+  /***********************************************
+      *? Top "Authorised Service Partner" Strip
+  ************************************************/
 
   .top-strip {
     width: 100%;
@@ -437,11 +629,22 @@
     background: #FECE00;
   }
 
+  .top-strip-img {
+    height: 20px;
+    float: right;
+  }
+
+  /***********************************
+      *? Navigation Bar Styles
+  ***********************************/
+
+  /* Reset */
+
   .main-nav {
     display: -webkit-box;
     display: flex;
     width: 100%;
-    height: 130px;
+    height: 100px;
     background: white;
     -webkit-box-align: center;
             align-items: center;
@@ -469,7 +672,95 @@
   .nav-link {
     text-decoration: none;
     text-transform: uppercase;
+    color: #000;
   }
+
+  /* Mega Menu */
+
+  .nav-dropdown button:hover + .mega-menu {
+    display: block;
+  }
+
+  .nav-dropdown {
+    margin-left: 40px;
+    padding: 10px;
+    float: left;
+  }
+
+  /* Columns */
+
+  .column-xs {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .column-sm {
+    float: left;
+    width: 21%;
+    padding: 13px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .column-md {
+    float: left;
+    width: 28%;
+    padding: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .column-lg {
+    float: left;
+    width: 44%;
+    padding: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .column-xl {
+    float: left;
+    width: 60%;
+    padding: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  /* Dropdown button */
+
+  .nav-dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    background-color: inherit;
+    font: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+    padding-bottom: 10px;
+    padding-top: 0px;
+  }
+
+  /***********************************
+      *? Navigation Bar
+  ***********************************/
+
+  .navbar-logo {
+    height: 60px;
+  }
+
+  /***********************************
+      *? Account Panes Styles
+  ***********************************/
 
   .account-pane-container {
     width: 100%;
@@ -484,22 +775,37 @@
     background: #F2ECEC;
   }
 
-  .pane:hover {
+  .pane-left {
+    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(230, 230, 230, 0.47))), url(/images/personal-account.jpg?d346e671310bc4b7e8c6aa1840abdab2);
+    background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url(/images/personal-account.jpg?d346e671310bc4b7e8c6aa1840abdab2);
+    background-size: cover;
+    -webkit-filter: grayscale(1) opacity(0.2);
+    filter: greyscale(1) opacity(0.2);
+    height: 100%;
+  }
+
+  .pane-left:hover {
     -webkit-filter: none;
     filter: none;
   }
 
-  .pane-left {
-    background: url(/images/cat1.jpg?80922903bcf4359e65207a123b182102);
+  .pane-right {
+    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(66, 66, 66, 0.47))), url(/images/business-account.jpg?31bd79ef30fbfa2be3b19825ef994770);
+    background: linear-gradient(to top, transparent, rgba(66, 66, 66, 0.47)), url(/images/business-account.jpg?31bd79ef30fbfa2be3b19825ef994770);
+    background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
     filter: greyscale(1) opacity(0.2);
+    height: 100%;
   }
 
-  .pane-right {
-    background: url(/images/cat2.jpg?b87e0bf276295a6de3ba99a54016549b);
-    -webkit-filter: grayscale(1) opacity(0.2);
-    filter: greyscale(1) opacity(0.2);
+  .pane-right:hover {
+    -webkit-filter: none;
+    filter: none;
   }
+
+  /***********************************
+      *? Services Boxes Styles
+  ***********************************/
 
   .service-box-container {
     width: 100%;
@@ -509,7 +815,7 @@
 
   .service-box {
     width: 25%;
-    height: 230px;
+    height: 340px;
   }
 
   .service-box-odd {
@@ -518,6 +824,953 @@
 
   .service-box-even {
     background: #D3CFCF;
+  }
+
+  .service-box-img {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: #FECE00;
+    border: 3px solid #FFFFFF;
+  }
+
+  .service-img {
+    margin: 8px;
+    display: block;
+  }
+
+  .service-box-title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-top: 10px;
+    margin: auto;
+  }
+
+  .service-box-excerpt {
+    width: 86%;
+    padding-top: 10px;
+    margin: auto;
+  }
+
+  #service-section {
+    height: 340px;
+  }
+
+  /***********************************
+      *? DHL Service Partner Styles
+  ***********************************/
+
+  .dhl-service-partner {
+    background: #FECE00;
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    height: 130px;
+    width: 90%;
+    margin: auto;
+    bottom: 15px;
+    box-shadow: 0 2px 11px 3px rgba(0, 0, 0, 0.19);
+  }
+
+  .dhl-srv-logo {
+    width: 15em;
+    padding: 20px 343px;
+  }
+
+  .dhl-srv-logo-text {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1.6em;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: 30.5%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .dhl-srv-logo-text-bold {
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .partnership-title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .partnership-text {
+    width: 705px;
+    font-size: 1em;
+    margin-bottom: 24px;
+  }
+
+  /*****************************************
+      *? Personal Account Pane Text Styles
+  *****************************************/
+
+  .personal-account {
+    position: relative;
+    top: 12em;
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .personal-title {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 100;
+    color: #707070;
+    margin: 0;
+  }
+
+  .personal-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    color: #707070;
+  }
+
+  .personal-button {
+    position: relative;
+    top: 7em;
+    left: 4.5em;
+  }
+
+  /*****************************************
+      *? Business Account Pane Text Styles
+  *****************************************/
+
+  .business-account {
+    position: relative;
+    top: 12em;
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .business-title {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    color: #F2ECEC;
+    margin: 0;
+  }
+
+  .business-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    color: #F2ECEC;
+  }
+
+  .business-button {
+    position: relative;
+    top: 7em;
+    left: 4.5em;
+  }
+
+  /*********************************
+      *? About Us Section Styles
+  *********************************/
+
+  .about-us {
+    background: #FFF;
+    z-index: -1;
+    height: 500px;
+  }
+
+  .about-us-title {
+    font-size: 5em;
+    margin: auto;
+    margin-left: 41%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+    top: 150px;
+    font-weight: 100;
+  }
+
+  .about-us-text {
+    position: relative;
+    width: 83%;
+    margin: auto;
+    font-size: 1.2em;
+    top: 192px;
+  }
+
+  .about-arrow {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    top: 160px;
+  }
+
+  .caret {
+    position: relative;
+    width: 60px;
+    height: 30px;
+  }
+
+  .caret:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 20px solid #000000;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+
+  .caret:after {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 0;
+    border-top: 19px solid #000000;
+    border-left: 19px solid transparent;
+    border-right: 19px solid transparent;
+  }
+
+  .caret-sm {
+    position: relative;
+    right: 6px;
+  }
+
+  .caret-sm:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 7px solid #000000;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+
+  .caret-sm:after {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 0;
+    border-top: 6px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+  }
+
+  /***********************************
+      *? Business Quote Page Styles
+  ***********************************/
+
+  /* Login and form Section Styles */
+
+  .quote-login {
+    background: #F2ECEC;
+    height: 500px;
+  }
+
+  .create-account {
+    background: #F2ECEC;
+    height: 800px;
+  }
+
+  .caret-quote {
+    position: relative;
+    width: 60px;
+    margin: auto;
+  }
+
+  .caret-quote:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 30px solid #FFFFFF;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+  }
+
+  .caret-quote:after {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 0;
+    border-top: 29px solid #FFFFFF;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+  }
+
+  /* Login Box Styles */
+
+  .login-box {
+    width: 1390px;
+    height: 450px;
+    margin: auto;
+    background: #fece2e;
+  }
+
+  .login-box-title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    font-size: 5em;
+    top: 80px;
+    font-weight: 100;
+    color: #FFF;
+  }
+
+  .login-box-title-bold {
+    font-weight: bold;
+  }
+
+  .login-box-text {
+    position: relative;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+    top: 90px;
+    font-size: 0.9em;
+    color: #000;
+  }
+
+  .login-text {
+    position: relative;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+    margin-right: 35%;
+    top: 200px;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #FFF;
+  }
+
+  .login-button {
+    position: relative;
+    text-align: center;
+    margin-left: 62%;
+    top: 180px;
+  }
+
+  /* Account Creation Form Box Styles */
+
+  .create-account-box {
+    width: 1390px;
+    height: 750px;
+    margin: auto;
+    background: #fece2e;
+  }
+
+  .create-account-box-title {
+    position: relative;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+    top: 60px;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+  .create-account-box-text {
+    position: relative;
+    width: 600px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    top: 60px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .create-account-tcs-text {
+    position: relative;
+    margin: auto;
+    left: 40px;
+    top: 19px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .create-account-tcs-link {
+    position: relative;
+    margin: auto;
+    font-size: 1em;
+    font-weight: 600;
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  .create-account-form {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    top: 80px;
+  }
+
+  /* Form Input Styles */
+
+  #quote-email-address {
+    width: 61.7%;
+  }
+
+  #quote-delivery-destinations {
+    width: 61.7%;
+  }
+
+  #quote-comments {
+    width: 95%;
+    height: 165px;
+    resize: none;
+  }
+
+  #consultation-email-address {
+    width: 125%;
+    margin-bottom: 10px;
+  }
+
+  #consultation-contact-name {
+    width: 125%;
+    margin-bottom: 10px;
+  }
+
+  #consultation-tel-no {
+    width: 125%;
+    margin: 0;
+  }
+
+  /*****************************
+      *? Form Styles (GLOBAL)
+  *****************************/
+
+  .form-text {
+    border: 0px;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    width: 300px;
+  }
+
+  .form-email {
+    border: 0px;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    width: 300px;
+  }
+
+  .form-number {
+    border: 0px;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    width: 300px;
+  }
+
+  .form-textarea {
+    border: 0px;
+    padding: 15px;
+    text-transform: uppercase;
+    width: 300px;
+  }
+
+  .form-checkbox > input {
+    position: absolute;
+    top: 445px;
+    height: 25px;
+    width: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border-radius: 4px;
+    outline: none;
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+    background-color: #FFF;
+    cursor: pointer;
+  }
+
+  .form-checkbox > input:checked {
+    background-color: #34495E;
+  }
+
+  .form-checkbox > input:checked + span::before {
+    content: "\2713";
+    display: block;
+    text-align: center;
+    color: #FECE00;
+    position: absolute;
+    left: -2em;
+    top: 0em;
+  }
+
+  .form-checkbox {
+    border: 0px;
+    padding: 15px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .form-submit {
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F2ECEC;
+    padding: 15px 25px;
+    background: #707070;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: block;
+  }
+
+  .form-email-footer {
+    padding: 6px 12px;
+    background-color: #2d3332;
+    border: 1px solid #666869;
+    border-right: 0;
+    color: #e0e0e0;
+  }
+
+  .form-email-footer-link {
+    padding: 11px 11px;
+    background-color: #2d3332;
+    border: 1px solid #666869;
+    border-left: 0;
+    color: #e0e0e0;
+  }
+
+  .input-group {
+    display: -webkit-box;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .footer-text {
+    width: 75%;
+    font-size: 13px;
+  }
+
+  /************************
+      *? Form Alerts
+  *************************/
+
+  .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+    width: 20%;
+    margin: auto;
+    margin-left: 63.6%;
+  }
+
+  #consultation {
+    position: absolute;
+    top: 240px;
+    width: 250px;
+  }
+
+  .alert-success {
+    background-color: #4CAF50;
+  }
+
+  .alert-info {
+    background-color: #2196F3;
+  }
+
+  .alert-warning {
+    background-color: #ff9800;
+  }
+
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
+  }
+
+  /************************
+      *? Footer Styles
+  *************************/
+
+  .main-footer {
+    height: 270px;
+    background: #2d3332;
+    color: #999b9c;
+    padding: 64px 0;
+  }
+
+  .main-footer h4 {
+    color: #e0e0e0;
+  }
+
+  .copyrights {
+    border-left: 1px solid #4c5151;
+    padding-left: 8px;
+    width: 75%;
+  }
+
+  /****************************
+      *? Service Page Styles
+  ****************************/
+
+  .flex-center {
+    margin: auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: center;
+            justify-content: center;
+    width: 1800px;
+  }
+
+  .flex {
+    margin: auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    width: 1800px;
+  }
+
+  .quote-box {
+    margin-top: -20px;
+    height: 700px;
+    background: #F2ECEC;
+  }
+
+  .service-information {
+    display: -webkit-box;
+    display: flex;
+    background: #d9d9d9;
+  }
+
+  .main-text {
+    display: inline-block;
+    width: 50%;
+    border-right: 5px solid #ccc;
+  }
+
+  .service-infogfx {
+    display: inline-block;
+    width: 50%;
+  }
+
+  .infogfx-title {
+    margin-left: 5%;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+
+  .tab {
+    height: 450px;
+    background: #F2ECEC;
+    padding-top: 40px;
+  }
+
+  .service-title {
+    margin-left: 5%;
+  }
+
+  .service-text {
+    margin-left: 5%;
+    margin-bottom: 0;
+    width: 810px;
+  }
+
+  .service-list {
+    padding-left: 100px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .tablink {
+    padding: 5px;
+    display: inline-block;
+    width: -webkit-fill-available;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  div:hover.hover-light-grey {
+    background-color: #e2e2e2;
+  }
+
+  .bottombar {
+    border-bottom: 6px solid #ccc !important;
+  }
+
+  .bottombar-active {
+    border-bottom: 6px solid #fece2e !important;
+  }
+
+  .tab-button {
+    width: 45%;
+  }
+
+  .tab-contents {
+    padding-top: 10px;
+    padding-left: 150px;
+  }
+
+  /* Infographic Classes to style the images as needed */
+
+  .service-infogfx-text {
+    margin-left: 2.7%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .express-infogfx {
+    float: right;
+    background-size: cover;
+    width: 750px;
+    height: 400px;
+    margin-top: -240px;
+    background-image: url("/img/cat1.jpg");
+  }
+
+  .economy-infogfx {
+    float: right;
+    background-size: cover;
+    width: 750px;
+    height: 400px;
+    margin-top: -240px;
+    background-image: url("/img/cat1.jpg");
+  }
+
+  .overnight-infogfx {
+    float: right;
+    background-size: cover;
+    width: 750px;
+    height: 400px;
+    margin-top: -240px;
+    background-image: url("/img/cat1.jpg");
+  }
+
+  .imports-infogfx {
+    float: right;
+    background-size: cover;
+    width: 750px;
+    height: 400px;
+    margin-top: -240px;
+    background-image: url("/img/cat1.jpg");
+  }
+
+  /* Popular Destinations Classes */
+
+  .other-destinations {
+    height: 330px;
+    width: 100%;
+    background: #d9d9d9;
+    display: inline-block;
+  }
+
+  .destinations {
+    padding-top: 25px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+
+  .destinations-title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    font-size: 28px;
+    padding-top: 15px;
+  }
+
+  .box {
+    width: 220px;
+    height: 220px;
+    border-radius: 5px;
+    box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.23);
+    overflow: hidden;
+  }
+
+  .destination:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+
+  .destination {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .destination1 {
+    background-image: url(/img/cat1.jpg);
+    background-size: cover;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 5px;
+    width: 220px;
+    height: 220px;
+  }
+
+  .destination2 {
+    background-image: url(/img/cat2.jpg);
+    background-size: cover;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 5px;
+    width: 220px;
+    height: 220px;
+  }
+
+  .destination3 {
+    background-image: url(/img/cat1.jpg);
+    background-size: cover;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 5px;
+    width: 220px;
+    height: 220px;
+  }
+
+  .destination4 {
+    background-image: url(/img/cat2.jpg);
+    background-size: cover;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 5px;
+    width: 220px;
+    height: 220px;
+  }
+
+  /* Request Consultation Partial */
+
+  .button-left {
+    float: left !important;
+  }
+
+  .req-consultation {
+    background-color: #7c7287;
+    color: #000;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    height: 340px;
+  }
+
+  .consultation_title {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .consultation_desc {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.1;
+    color: inherit;
+  }
+
+  .vr {
+    float: left;
+    position: relative;
+    border: 1px black solid;
+    height: 340px;
+    width: 0;
+    right: -775px;
+    padding: 0;
+    bottom: 250px;
+  }
+
+  .left-side {
+    margin-right: 80px;
+    padding-right: 50px;
+    width: 710px;
+  }
+
+  .right-side {
+    display: -webkit-inline-box;
+    display: inline-flex;
+    height: 215px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+    left: 830px;
+    bottom: 220px;
+  }
+
+  .tel-no {
+    display: inline;
+    margin-left: 5px;
+    font-family: play;
+    font-weight: 300;
+    font-size: 18px;
+    vertical-align: middle;
+  }
+
+  .office-email {
+    display: inline;
+    margin-left: 5px;
+    font-family: play;
+    font-weight: 300;
+    font-size: 18px;
+    vertical-align: middle;
   }
 }
 
