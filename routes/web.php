@@ -17,6 +17,7 @@
 // Main Navigation Routes
 Route::get('/', 'PagesController@home')->name('home');
 Route::get('/contact', 'PagesController@contactUs')->name('contact');
+Route::post('/contact', 'PagesController@send');
 Route::get('/login', function () {return redirect()->away("http://wordpress/");})->name('login');
 Route::resource('/quote', 'QuotesController');
 Route::post('/quote/send', 'QuotesController@send');
