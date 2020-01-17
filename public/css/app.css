@@ -1379,6 +1379,15 @@ a:hover {
     display: block;
   }
 
+  .form-select {
+    border: 0px;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    width: 300px;
+  }
+
   .form-email-footer {
     padding: 6px 12px;
     background-color: #2d3332;

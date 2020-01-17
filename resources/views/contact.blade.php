@@ -32,13 +32,37 @@
                 </p>
             </div>
             <div class="pull-right">
-                <form action="/contact" method="post">
-                    @csrf
-                    <textarea class="form-textarea" name=contactMessage"" id="contactMessage" cols="10" rows="10" tabindex="1" placeholder="MESSAGE"></textarea>
-                    <input class="form-text" type="text" name="contactFullName" id="contactFullName" tabindex="3" placeholder="FULL NAME">
-                    <input class="form-email" type="email" name="contactEmailAddr" id="contactEmailAddr" tabindex="2" placeholder="EMAIL ADDRESS">
-                    <input class="button-main" id="form-btn" type="submit" tabindex="4" value="Send Message">
-                </form>
+                {{ Form::open(['url' => '/contact']) }}
+                    {{ Form::token() }}
+
+                    {{ Form::textarea('contactMessage', null ,
+                                        ['class'        => 'form-textarea', 
+                                         'id'           => 'contactMessage',
+                                         'placeholder'  => 'Message', 
+                                         'tabindex'     => '1'
+                                         ])
+                    }}
+                    {{ Form::text('contactFullName', null ,
+                                    ['class'        => 'form-text',
+                                     'id'           => 'contactFullName',
+                                     'placeholder'  => 'Full Name',
+                                     'tabindex'     => '3'
+                                    ])
+                    }}
+                    {{ Form::email('contactEmailAddr', null ,
+                                    ['class'        => 'form-email',
+                                     'id'           => 'contactEmailAddr',
+                                     'placeholder'  => 'Email Address',
+                                     'tabindex'     => '2'
+                                    ])
+                    }}
+                    {{ Form::submit('Send Message',
+                                    ['class' => 'button-main',
+                                     'id' => 'form-btn',
+                                     'tabindex' => '4'
+                                    ])
+                    }}
+                {{ Form::close() }}
             </div>
         </div>
     </div>

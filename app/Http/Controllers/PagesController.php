@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Mail;
 class PagesController extends Controller
 {
     public function home() {
-        return view('home');
+        return view('index');
     }
     public function businessLogin() {
         return view('login');
