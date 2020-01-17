@@ -29,8 +29,8 @@ class QuoteSent extends Mailable
     public function build()
     {
         return $this->subject('Quote Request Received From: ')
-                    ->from('put-email-here', 'Impact Express')
+                    ->from('testmail@codecameron.dev', 'Cameron\'s Testing Email')
                     ->view('emails.quote-sent')
                     ->with('data', $this->data);
     }
-}
+}            

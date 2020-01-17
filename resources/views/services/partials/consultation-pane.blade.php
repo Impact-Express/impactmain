@@ -13,16 +13,16 @@
     </div>
     <div class="vr"></div>
     <div class="right-side">
-        <form class="" method="POST" action="{{url('services/express/send')}}">
-            @csrf
-            <div class="form-group">
-                <input class="form-text" type="text" name="contactName" id="consultation-contact-name" placeholder="Contact Name" required>
-                <input class="form-email" type="email" name="emailAddress" id="consultation-email-address" placeholder="Email Address" required>
-                <input class="form-number" type="tel" name="telephoneNumber" id="consultation-tel-no" placeholder="Telephone Number" required>
-            </div>
-            <p class="consultation_desc">For more information on how we store your data, please refer to our <a class="consultation_desc" href="#">Privacy Policy.</a></p>
-            <input type="submit" class="button-main" value="Request Consultation">
-        </form>
+        {{ Form::open(['url' => 'services/express']) }}
+            {{ Form::token() }}
+            {{ Form::text('contactName', null, ['required', 'class' => 'form-text','id' => 'consultation-contact-name','placeholder' => 'Company Name']) }}
+            {{ Form::email('emailAddress', null, ['required', 'class' => 'form-email','id' => 'consultation-email-address','placeholder' => 'Email Address']) }}
+            {{ Form::tel('telephoneNumber', null, ['required', 'class' => 'form-number','id' => 'consultation-tel-no','placeholder' => 'Telephone Number']) }}
+            <p class="consultation_desc">
+                For more information on how we store your data, please refer to our <a class="consultation_desc" href="#">Privacy Policy.</a>
+            </p>
+            {{ Form::submit('Request Consultation',['class' => 'button-main']) }}
+        {{ Form::close() }}
         @if ($message = Session::get('success'))
             <div class="alert alert-success" id="consultation">
                 <span class="closebtn">&times;</span>

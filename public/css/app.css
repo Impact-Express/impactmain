@@ -608,7 +608,7 @@ a:hover {
   }
 
   .container {
-    max-width: 1800px;
+    max-width: 1500px;
   }
 
   /***********************************
@@ -665,7 +665,7 @@ a:hover {
   }
 
   .nav-item {
-    margin-left: 40px;
+    margin-left: 10px;
     padding: 10px;
   }
 
@@ -682,7 +682,7 @@ a:hover {
   }
 
   .nav-dropdown {
-    margin-left: 40px;
+    margin-left: 10px;
     padding: 10px;
     float: left;
   }
@@ -1262,6 +1262,31 @@ a:hover {
     margin: 0;
   }
 
+  #contactMessage {
+    position: relative;
+    top: 25px;
+    left: 580px;
+    width: 650px;
+  }
+
+  #contactFullName {
+    position: relative;
+    top: 70px;
+    left: 248px;
+  }
+
+  #contactEmailAddr {
+    position: relative;
+    top: 70px;
+    left: -456px;
+  }
+
+  #form-btn {
+    position: relative;
+    left: 1093px;
+    top: 57px;
+  }
+
   /*****************************
       *? Form Styles (GLOBAL)
   *****************************/
@@ -1352,6 +1377,15 @@ a:hover {
     width: -moz-fit-content;
     width: fit-content;
     display: block;
+  }
+
+  .form-select {
+    border: 0px;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    width: 300px;
   }
 
   .form-email-footer {
@@ -1771,6 +1805,31 @@ a:hover {
     font-weight: 300;
     font-size: 18px;
     vertical-align: middle;
+  }
+
+  /* Contact Form */
+
+  .contact-form {
+    height: 450px;
+    background: #f1f1f1;
+  }
+
+  .pull-left {
+    top: 550px;
+    right: 1200px;
+    float: left;
+    position: absolute;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .pull-right {
+    float: right;
+    position: relaative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 

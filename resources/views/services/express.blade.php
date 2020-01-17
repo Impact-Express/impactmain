@@ -2,7 +2,77 @@
 @section('title', 'Express Delivery')
 
 @section('quotebox')
-<h2 class="quote-box-title"></h2>
+<div class="container">
+    <h2 class="quote-box-title">Get a Quote</h2>
+    <p class="quote-box-subtitle">Send from any UK Postcode</p>
+
+    <div class="container">
+        {{ Form::select('countries',
+            [
+                'AE'  => 'United Arab Emirates',
+                'SEL' => 'Please Choose a Country',
+
+                'AF'  => 'Afghanistan',
+                'AL'  => 'Albania',
+                'DZ'  => 'Algeria',
+                'AS'  => 'American Samoa',
+                'AD'  => 'Andorra',
+                'AO'  => 'Angola',
+                'AI'  => 'Anguilla',
+                'AG'  => 'Antigua',
+                'AR'  => 'Argentina',
+                'AM'  => 'Armenia',
+                'AW'  => 'Aruba',
+                'AU'  => 'Australia',
+                'AT'  => 'Austria*',
+                'AZ'  => 'Azerbaijan',
+                'BS'  => 'Bahamas',
+                'BH'  => 'Bahrain',
+                'BD'  => 'Bangladesh',
+                'BB'  => 'Barbados',
+                'BY'  => 'Belarus',
+                'BE'  => 'Belgium*',
+                'BZ'  => 'Belize',
+                'BJ'  => 'Benin',
+                'BM'  => 'Bermuda',
+                'BT'  => 'Bhutan',
+                'BO'  => 'Bolivia',
+                'BQ'  => 'Bonaire',
+                'BA'  => 'Bosnia Herzegovnia',
+                'BW'  => 'Botswana',
+                'BR'  => 'Brazil',
+                'BN'  => 'Brunei',
+                'BG'  => 'Bulgaria*',
+                'BF'  => 'Burkina Faso',
+                'BI'  => 'Burundi',
+                'KH'  => 'Cambodia',
+                'CM'  => 'Cameroon',
+                'CA'  => 'Canada',
+                'IC'  => 'Canary Islands',
+                'CV'  => 'Cape Verde Islands',
+                'KY'  => 'Cayman Islands',
+                'CF'  => 'Central African Rep.',
+                'TD'  => 'Chad',
+                'GG'  => 'Channel Islands (Guernsey)',
+                'JE'  => 'Channel Islands (Jersey)',
+                'CL'  => 'Chile',
+                'CN'  => 'China, Peoples Rep.',
+                'CO'  => 'Colombia',
+                'KM'  => 'Comoros Islands',
+                'CD'  => 'Congo, Democratic Rep.',
+                'CG'  => 'Congo',
+                'CK'  => 'Cook Islands',
+                'CR'  => 'Costa Rica',
+                'HR'  => 'Croatia*',
+                'CU'  => 'Cuba',
+                'CW'  => 'Curacao',
+                'CY'  => 'Cyprus*',
+                'CZ'  => 'Czech Republic*',
+
+
+    ],'SEL', ['class' => 'form-select']) }}
+    </div>
+</div>
 @endsection
 
 @section('maintext')
@@ -37,22 +107,18 @@
 @section('destinations-boxes')
     <div class="box">
         <div class="destination destination1">
-
         </div>
     </div>
     <div class="box">
         <div class="destination destination2">
-            
         </div>
     </div>
     <div class="box">
         <div class="destination destination3">
-            
         </div>
     </div>
     <div class="box">
         <div class="destination destination4">
-            
         </div>
     </div>
 @endsection
