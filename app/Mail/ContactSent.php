@@ -29,7 +29,7 @@ class ContactSent extends Mailable
     public function build()
     {
         return $this->subject('Contact Email Received From: ')
-                    ->from('put-email-here', 'Impact Express')
+                    ->from('testmail@codecameron.dev', 'Impact Express')
                     ->view('emails.contact-sent')
                     ->with('data', $this->data);
     }
