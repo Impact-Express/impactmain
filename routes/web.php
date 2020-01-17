@@ -72,3 +72,4 @@ Route::post('/services/mobile-services', 'ServicesController@send');
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('admin');
+
