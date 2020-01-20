@@ -72,4 +72,4 @@ Route::post('/services/mobile-services', 'ServicesController@send');
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('admin');
-
+Route::get('/news', 'NewsController@index')->name('news');

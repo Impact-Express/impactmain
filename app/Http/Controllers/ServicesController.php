@@ -20,51 +20,51 @@ class ServicesController extends Controller
     }
     public function index ()
     {
-       return view('services.services');
+       return view('customer.services.services');
     }
     
     public function express ()
     {
-       return view('services.express');
+       return view('customer.services.express');
     }
     
     public function economy ()
     {
-        return view('services.economy');
+        return view('customer.services.economy');
     }
 
     public function overnight ()
     {
-        return view('services.overnight');
+        return view('customer.services.overnight');
     }
     
     public function imports ()
     {
-        return view('services.imports');
+        return view('customer.services.imports');
     }
 
     public function dangerousGoods ()
     {
-        return view('services.dangerousGoods');
+        return view('customer.services.dangerousGoods');
     }
 
     public function dangerousGoodsDryIce ()
     {
-        return view('services.dangerousGoodsDryIce');
+        return view('customer.services.dangerousGoodsDryIce');
     }
 
     public function ecommerce ()
     {
-        return view('services.ecommerce');
+        return view('customer.services.ecommerce');
     }
 
     public function fufilment ()
     {
-        return view('services.fufilment');
+        return view('customer.services.fufilment');
     }
 
     public function mobileServices ()
     {
-        return view('services.mobileServices');
+        return view('customer.services.mobileServices');
     }
 }

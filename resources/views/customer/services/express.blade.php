@@ -1,4 +1,4 @@
-@extends('services.layout.service')
+@extends('customer.services.layout.service')
 @section('title', 'Express Delivery')
 
 @section('quotebox')

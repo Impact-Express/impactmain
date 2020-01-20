@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('customer.layouts.master')
 
 @section('content')
     <div class="quote-box">
@@ -72,5 +72,5 @@
         </div>
     </div>
 
-    @include('services.partials.consultation-pane')
+    @include('customer.services.partials.consultation-pane')
 @endsection

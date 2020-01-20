@@ -40,6 +40,7 @@
     </nav>
     <main>
         @yield('content')
+        @yield('sidebar')
     </main>
     <footer class="main-footer">
         <div class="container">
