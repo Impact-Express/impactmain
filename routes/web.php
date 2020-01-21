@@ -67,9 +67,9 @@ Route::post('/services/mobile-services', 'ServicesController@send');
 
 
 
+// Authentication Routes...
+    Auth::routes();
 
 // CMS Routes
-Auth::routes();
-
-Route::get('/admin', 'HomeController@index')->name('admin');
-Route::get('/news', 'NewsController@index')->name('news');
+    Route::get('/admin', 'HomeController@index')->name('admin');
+    Route::get('/news', 'NewsController@index')->name('news');

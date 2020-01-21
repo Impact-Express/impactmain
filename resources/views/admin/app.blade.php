@@ -7,21 +7,36 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title') {{ config('app.name') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/admin.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('/css/css/all.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <section id="container">
+        <header class="topbar">
+            <div class="sidebar-nav-toggle">
+                <div class="fas fa-bars"></div>
+            </div>
+            <a class="topbar-logo" href="<?= route('admin'); ?>">Impact Express</a>
+        </header>
+        <aside class="sidenav">
+            <div id="sidebar" class="nav-collapse" tabindex="5000"></div>
+        </aside>
+        <main class="py-4">
+            @yield('content')
+        </main>
+    </section>
+    {{-- <div id="app">
+        <div class="topbar">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -70,11 +85,11 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </div>
 
         <main class="py-4">
             @yield('content')
         </main>
-    </div>
+    </div> --}}
 </body>
 </html>

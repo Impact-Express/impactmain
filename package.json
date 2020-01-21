@@ -17,7 +17,9 @@
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
-        "vue-template-compiler": "^2.6.10"
+        "vue-template-compiler": "^2.6.10",
+        "jquery": "^3.4.1",
+        "jquery-ui": "^1.12.1"
     },
     "dependencies": {
         "normalize.css": "^8.0.1"

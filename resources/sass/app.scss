@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-/* Button Styles */
+/* Button Styles ss */
 .button-main {
     border:none;
     text-transform: uppercase;
@@ -243,6 +243,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 @media (min-width: 992px) {
+    .float-left {
+        float: left !important;
+    }
+    .float-right {
+        float: right !important;
+    }
     body {
         background:#2D3332;
     }
@@ -1244,7 +1250,8 @@ h1, h2, h3, h4, h5, h6 {
 ****************************/
     .news {
         background: #F2ECEC;
-        height: 730px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     .post {
         width: 53.5%;
@@ -1267,6 +1274,7 @@ h1, h2, h3, h4, h5, h6 {
         overflow: hidden;
         font-size: 13px;
         padding: 20px;
+        color: #525252;
     }
     .post-meta-group {
         display: flex;
@@ -1275,6 +1283,14 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0;
         padding: 0;
         padding-right: 20px;
+    }
+    .post-author {
+        padding-right: 20px;
+        padding-left: 5px;
+    }
+    .post-date {
+        padding-right: 20px;
+        padding-left: 5px;
     }
     .news-search {
 

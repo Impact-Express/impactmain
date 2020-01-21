@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('customer.layouts.master')
 
 @section('content')
 <div class="container">
@@ -37,15 +37,15 @@
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <label class="form-checkbox">
-                                    {{ Form::checkbox('rememberMe', '', false, ['required', 'class' => 'form-checkbox','id' => 'remember-me']) }}
+                                    {{ Form::checkbox('rememberMe', '', false, ['class' => 'form-checkbox','id' => 'remember-me']) }}
                                     <span class="create-account-tcs-text">Remember Me</span>
                                 </label>
                             </div>
                         </div>
 
-                        {{-- <div class="form-group row mb-0">
+                        <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="button-main">
                                     {{ __('Login') }}
                                 </button>
 
@@ -53,7 +53,7 @@
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif --}}
+                                @endif
                             </div>
                         </div>
                     </form>
