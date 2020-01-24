@@ -360,12 +360,13 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #535353;
 }
 
 .container {
+  padding-top: 25px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1250px;
 }
 
 .toUpper {
@@ -466,6 +467,25 @@ h6 {
   cursor: pointer;
 }
 
+.logout {
+  position: absolute;
+  right: 50px;
+}
+
+.logout-button {
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #F2ECEC;
+  padding: 8px 15px;
+  background: #424a5d;
+  border-radius: 10px;
+}
+
+.logout-button:hover {
+  color: rgba(242, 236, 236, 0.781);
+}
+
 /* Columns */
 
 .column-xs {
@@ -517,23 +537,73 @@ h6 {
 *? Navigation SideBar
 ***********************************/
 
-#sidebar {
+.sidenav {
   width: 300px;
+}
+
+#sidebar {
+  width: 250px;
   height: 100%;
-  position: fixed;
+  position: absolute;
   background: #424a5d;
   overflow: hidden;
   outline: none;
   -webkit-transition: margin-left 0.4s ease-in-out;
   transition: margin-left 0.4s ease-in-out;
-}
-
-.sidenav {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  z-index: -1;
 }
 
 .navbar-logo {
   height: 60px;
+}
+
+.user-image {
+  height: 80px;
+  width: 80px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.avatar {
+  height: 80px;
+  width: 80px;
+}
+
+.user-name {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-top: 6px;
+  font-size: 17px;
+}
+
+.rounded {
+  border-radius: 25%;
+}
+
+.create-user {
+  width: 50%;
+  position: relative;
+  margin: 0% 11% auto auto;
+  top: 40px;
+}
+
+.form-text {
+  width: 50%;
+  border: 0px;
+  padding: 15px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  text-transform: capitalize;
+}
+
+.form-email {
+  width: 50%;
+  border: 0px;
+  padding: 15px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  text-transform: capitalize;
 }
 

@@ -7,10 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') {{ config('app.name') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/admin.js') }}" defer></script>
+    <title>@yield('title') | {{ config('app.name') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,23 +15,46 @@
 
     <!-- Styles -->
     <link href="{{asset('/css/css/all.css')}}" rel="stylesheet">
-    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('styles/kendo.common.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('styles/kendo.material-v2.min.css') }}" rel="stylesheet">
+
+        <!-- Scripts -->
+        <script src="{{ asset('js/jquery.min.js') }}" ></script>
+        <script src="{{ asset('js/kendo.all.min.js') }}" ></script>
+        <script src="{{ asset('js/admin.js') }}" ></script>
 </head>
-<body>
-    <section id="container">
+<body style="margin: 0;">
+<div class="grid">
+    <div id="toolbar">
+        <div tabindex="0" id="profileDropDown" class="k-overflow-anchor" style="visibility: visible; width: 8%; padding-right: 10px; padding-left: 10px;"><i class="k-icon k-i-user"></i><p style="position: relative; top: 36px; margin: 0;">Hello, {{Auth::user()->name}}</p></div>
+    </div>
+    <div id="drawer">
+        <div class="drawer-content">
+
+        </div>
+    </div>
+</div>
+
+
+    {{-- <section id="container">
         <header class="topbar">
-            <div class="sidebar-nav-toggle">
-                <div class="fas fa-bars"></div>
-            </div>
-            <a class="topbar-logo" href="<?= route('admin'); ?>">Impact Express</a>
+            <a class="topbar-logo" href="{{ route('admin') }}">Impact Express</a>
+            <form class="logout" id="logout-form" action="{{ route('logout') }}" method="POST">
+                @csrf
+                <input class="logout-button" type="submit" value="Logout">
+            </form>
+
         </header>
         <aside class="sidenav">
-            <div id="sidebar" class="nav-collapse" tabindex="5000"></div>
+            <div id="sidebar" tabindex="5000">
+                <h5 class="user-name">{{ Auth::user()->name }}</h5>
+            </div>
+
         </aside>
-        <main class="py-4">
+        <main id="main-content">
             @yield('content')
         </main>
-    </section>
+    </section> --}}
     {{-- <div id="app">
         <div class="topbar">
             <div class="container">
@@ -91,5 +111,26 @@
             @yield('content')
         </main>
     </div> --}}
+    
+    <script>
+        $(document).ready(function () {
+            $("#toolbar").kendoToolBar({
+            items: [
+                { type: "button", icon: "menu", attributes: { "class": "k-flat" }, click: toggleDrawer},
+                { template: "<h3 style='margin-left: 20px;'>Impact Express</h3> " }
+             ]
+            })
+        });
+    function toggleDrawer() {
+        var drawerInstance = $("#drawer").data().kendoDrawer;
+        var drawerContainer = drawerInstance.drawerContainer;
+
+        if(drawerContainer.hasClass("k-drawer-expanded")) {
+            drawerInstance.hide();
+        } else {
+            drawerInstance.show();
+        }
+    }
+    </script>
 </body>
 </html>
