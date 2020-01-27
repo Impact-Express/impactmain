@@ -4,8 +4,10 @@
 @section('content')
     <div class="news">
         <div class="container">
-            @include('customer.news.post')
-        </div>
+            @foreach ($posts as $post)
+                @include('customer.news.post')
+            @endforeach
+        </div> 
     </div>
 @endsection
 @section('sidebar')
