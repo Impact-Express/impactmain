@@ -16,7 +16,7 @@ class QuotesController extends Controller
      */
     public function index()
     {
-        return view('business-quote');
+        return view('customer.business-quote');
     }
 
     /**

@@ -9,13 +9,13 @@ use Illuminate\Support\Facades\Mail;
 class PagesController extends Controller
 {
     public function home() {
-        return view('index');
+        return view('customer.index');
     }
     public function businessLogin() {
-        return view('login');
+        return view('customer.login');
     }
     public function contactUs() {
-        return view('contact');
+        return view('customer.contact');
     }
     public function send(Request $request)
     {
