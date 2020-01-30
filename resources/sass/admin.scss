@@ -188,6 +188,29 @@ h1, h2, h3, h4, h5, h6 {
 .rounded {
     border-radius: 25%;
 }
+#drawer-content li {
+    font-size: 1.2em;
+    padding-left: .89em;
+    background: 0 0;
+    border-radius: 0;
+    border-width: 0 0 1px;
+    border-color: rgba(33, 37, 41, 0.125);
+    border-style: solid;
+    line-height: 1.5em;
+    padding: 1.09em .84em 1.23em .84em;
+}
+#drawer-content li:last-child {
+    border: 0;
+}
+.hidden {
+    display: none;
+}
+#example .demo-section {
+    max-width: 640px;
+}
+.k-toolbar .k-icon {
+    font-size: 18px;
+}
 
 
 //User Creation Form

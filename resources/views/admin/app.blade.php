@@ -17,6 +17,7 @@
     <link href="{{asset('/css/css/all.css')}}" rel="stylesheet">
     <link href="{{ asset('styles/kendo.common.min.css') }}" rel="stylesheet">
     <link href="{{ asset('styles/kendo.material-v2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 
         <!-- Scripts -->
         <script src="{{ asset('js/jquery.min.js') }}" ></script>
@@ -25,12 +26,24 @@
 </head>
 <body style="margin: 0;">
 <div class="grid">
-    <div id="toolbar">
-        <div tabindex="0" id="profileDropDown" class="k-overflow-anchor" style="visibility: visible; width: 8%; padding-right: 10px; padding-left: 10px;"><i class="k-icon k-i-user"></i><p style="position: relative; top: 36px; margin: 0;">Hello, {{Auth::user()->name}}</p></div>
-    </div>
+    <div id="toolbar"></div>
     <div id="drawer">
         <div class="drawer-content">
-
+            <div id="Dashboard">
+                hi
+            </div>
+            <div id="Media" class="hidden">
+            you're on
+            </div>
+            <div id="Posts" class="hidden">
+                a rock
+            </div>
+            <div id="pages" class="hidden">
+                floating in space
+            </div>
+            <div id="Settings" class="hidden">
+                Pretty cool huh?
+            </div>
         </div>
     </div>
 </div>
@@ -113,14 +126,6 @@
     </div> --}}
     
     <script>
-        $(document).ready(function () {
-            $("#toolbar").kendoToolBar({
-            items: [
-                { type: "button", icon: "menu", attributes: { "class": "k-flat" }, click: toggleDrawer},
-                { template: "<h3 style='margin-left: 20px;'>Impact Express</h3> " }
-             ]
-            })
-        });
     function toggleDrawer() {
         var drawerInstance = $("#drawer").data().kendoDrawer;
         var drawerContainer = drawerInstance.drawerContainer;

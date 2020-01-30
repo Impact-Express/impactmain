@@ -8,6 +8,9 @@
                 @include('customer.news.post')
             @endforeach
         </div> 
+        <nav>
+            {{ $posts->links() }}
+        </nav>
     </div>
 @endsection
 @section('sidebar')

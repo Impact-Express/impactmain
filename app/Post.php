@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    public function getImageUrlAttribute($value)
+    public function getImageUrlAttribute ($value)
     {
         $imageUrl = "";
 
@@ -16,5 +16,20 @@ class Post extends Model
             if (file_exists($imagepath)) $imageUrl = asset("img/" . $this->image);
         }
         return $imageUrl;
+    }
+    
+    public function getDateAttribute ($value)
+    {
+        return $this->created_at->diffForHumans();
+    }
+
+    public function scopeLatestFirst ($query)
+    {
+        return $query->orderBy('created_at','desc');
+    }
+
+    public function author ()
+    {
+        return $this->belongsTo(User::class);
     }
 }
