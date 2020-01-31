@@ -148,68 +148,18 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /***********************************
-*? Navigation SideBar
+*? Dashboard Styling
 ***********************************/
-.sidenav {
-    width: 300px;
+#Dashboard {
+    padding: 20px 50px 0px 50px;
+    margin-left: 0px;
 }
-#sidebar {
-    width: 250px;
-    height: 100%;
-    position: absolute;
-    background: #424a5d;
-    overflow: hidden;
-    outline: none;
-    transition: margin-left .4s ease-in-out;
-    z-index: -1;
-}
-.sidenav-link {
-
-}
-.navbar-logo {
-    height: 60px;
-}
-.user-image {
-    height: 80px;
-    width: 80px;
-    margin: auto;
-    margin-top: 15px;
-}
-.avatar {
-    height: 80px;
-    width: 80px;
-}
-.user-name {
-    width: fit-content;
-    margin: auto;
-    margin-top: 6px;
-    font-size: 17px;
-}
-.rounded {
-    border-radius: 25%;
-}
-#drawer-content li {
-    font-size: 1.2em;
-    padding-left: .89em;
-    background: 0 0;
-    border-radius: 0;
-    border-width: 0 0 1px;
-    border-color: rgba(33, 37, 41, 0.125);
-    border-style: solid;
-    line-height: 1.5em;
-    padding: 1.09em .84em 1.23em .84em;
-}
-#drawer-content li:last-child {
-    border: 0;
-}
-.hidden {
-    display: none;
-}
-#example .demo-section {
-    max-width: 640px;
-}
-.k-toolbar .k-icon {
-    font-size: 18px;
+.card-body {
+    background: white;
+    box-shadow: 0 2px 11px 3px rgba(0, 0, 0, 0.19);
+    margin: 10px;
+    width: 20%;
+    padding: 15px;
 }
 
 
