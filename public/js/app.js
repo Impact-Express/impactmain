@@ -19360,16 +19360,76 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/auth.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/auth.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/businessquote.scss":
+/*!*******************************************!*\
+  !*** ./resources/sass/businessquote.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/forms.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/forms.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/news.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/news.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/services.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/services.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*****************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ***!
-  \*****************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ./resources/sass/auth.scss ./resources/sass/forms.scss ./resources/sass/news.scss ./resources/sass/businessquote.scss ./resources/sass/services.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /var/www/impact-main/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /var/www/impact-main/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /var/www/impact-main/resources/sass/admin.scss */"./resources/sass/admin.scss");
+__webpack_require__(/*! /var/www/impact-main/resources/sass/admin.scss */"./resources/sass/admin.scss");
+__webpack_require__(/*! /var/www/impact-main/resources/sass/auth.scss */"./resources/sass/auth.scss");
+__webpack_require__(/*! /var/www/impact-main/resources/sass/forms.scss */"./resources/sass/forms.scss");
+__webpack_require__(/*! /var/www/impact-main/resources/sass/news.scss */"./resources/sass/news.scss");
+__webpack_require__(/*! /var/www/impact-main/resources/sass/businessquote.scss */"./resources/sass/businessquote.scss");
+module.exports = __webpack_require__(/*! /var/www/impact-main/resources/sass/services.scss */"./resources/sass/services.scss");
 
 
 /***/ })

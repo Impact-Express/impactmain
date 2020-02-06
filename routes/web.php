@@ -18,7 +18,7 @@
 Route::get('/', 'PagesController@home')->name('home');
 Route::get('/contact', 'PagesController@contactUs')->name('contact');
 Route::post('/contact', 'PagesController@send');
-Route::get('/login', function () {return redirect()->away("http://wordpress/");})->name('login');
+// Route::domain('')
 Route::resource('/quote', 'QuotesController');
 Route::post('/quote', 'QuotesController@send');
 
@@ -71,5 +71,4 @@ Route::post('/services/mobile-services', 'ServicesController@send');
     Auth::routes();
 
 // CMS Routes
-    Route::get('/admin', 'HomeController@index')->name('admin');
     Route::get('/news', 'NewsController@index')->name('news');

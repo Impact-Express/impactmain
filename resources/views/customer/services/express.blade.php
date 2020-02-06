@@ -1,5 +1,9 @@
 @extends('customer.services.layout.service')
 @section('title', 'Express Delivery')
+@section('css')
+<link href="{{ asset('css/forms.css') }}" rel="stylesheet">
+<link href="{{ asset('css/services.css') }}" rel="stylesheet">
+@endsection
 
 @section('quotebox')
 <div class="container">
@@ -68,9 +72,8 @@
                 'CW'  => 'Curacao',
                 'CY'  => 'Cyprus*',
                 'CZ'  => 'Czech Republic*',
-
-
-    ],'SEL', ['class' => 'form-select']) }}
+            ],
+        'SEL', ['class' => 'form-select']) }}
     </div>
 </div>
 @endsection

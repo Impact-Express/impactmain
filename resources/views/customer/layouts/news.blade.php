@@ -1,5 +1,9 @@
 @extends('customer.layouts.main')
 
+@section('css')
+    <link href="{{asset('css/news.css')}}" rel="stylesheet">
+@endsection
+
 @section('master')
 
     <div class="top-strip">

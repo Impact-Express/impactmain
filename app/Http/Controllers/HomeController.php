@@ -25,4 +25,20 @@ class HomeController extends Controller
     {
         return view('admin.dashboard.index');
     }
+    public function media()
+    {
+        return view('admin.dashboard.media');
+    }
+    public function posts()
+    {
+        return view('admin.dashboard.posts');
+    }
+    public function pages()
+    {
+        return view('admin.dashboard.pages');
+    }
+    public function settings()
+    {
+        return view('admin.dashboard.settings');
+    }
 }

@@ -2,6 +2,10 @@
 
 @section('title', 'Home')
 
+@section('css')
+    <link href="{{asset('css/forms.css')}}" rel="stylesheet">
+@endsection
+
 @section('content')
 <section id="account-pane">
     <div class="account-pane-container">

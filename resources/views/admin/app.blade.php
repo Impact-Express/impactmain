@@ -25,37 +25,17 @@
         <script src="{{ asset('js/admin.js') }}" ></script>
 </head>
 <body style="margin: 0;">
-<div class="grid">
-    <div id="toolbar"></div>
-    <div id="drawer">
-        <div class="drawer-content">
-            <div id="Dashboard">
-                hi
-            </div>
-            <div id="Media" class="hidden">
-            you're on
-            </div>
-            <div id="Posts" class="hidden">
-                a rock
-            </div>
-            <div id="pages" class="hidden">
-                floating in space
-            </div>
-            <div id="Settings" class="hidden">
-                Pretty cool huh?
-            </div>
+    <div id="toolbar">
+        <div class="profile k-overflow-anchor k-button" style="width: 13%;">
+            <label for='dropdown'>Welcome: {{ Auth::user()->name }}</label>
         </div>
     </div>
-</div>
-
+@yield('content')
 
     {{-- <section id="container">
         <header class="topbar">
             <a class="topbar-logo" href="{{ route('admin') }}">Impact Express</a>
-            <form class="logout" id="logout-form" action="{{ route('logout') }}" method="POST">
-                @csrf
-                <input class="logout-button" type="submit" value="Logout">
-            </form>
+
 
         </header>
         <aside class="sidenav">
@@ -125,7 +105,21 @@
         </main>
     </div> --}}
     
-    <script>
+<script type="text/javascript">
+       
+    $("#toolbar").kendoToolBar({
+                items: [
+                    { type: "button", icon: "menu", attributes: { "class": "k-flat" }, click: toggleDrawer},
+                    { template: "<h3 style='margin-left: 20px;'>Impact Express</h3>"},
+                    {
+                                type: "button",
+                                text: "Action",
+                                url:  "",
+                                overflow: "always"
+                            },
+                  ]
+            });
+
     function toggleDrawer() {
         var drawerInstance = $("#drawer").data().kendoDrawer;
         var drawerContainer = drawerInstance.drawerContainer;
