@@ -48,7 +48,6 @@
         mode: "push",
         mini: true,
         position: 'left',
-        minHeight: 903,
     });
 </script>
 @endsection

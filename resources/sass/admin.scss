@@ -161,7 +161,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 20%;
     padding: 15px;
 }
-
+.profile {
+    z-index: 50;
+}
 
 //User Creation Form
 .create-user {

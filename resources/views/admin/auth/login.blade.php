@@ -17,7 +17,7 @@
                     <div class="row">
                         <label class="form-checkbox">
                             {{ Form::checkbox('rememberMe', '', false, ['class' => 'form-checkbox','id' => 'remember-me']) }}
-                            <span class="create-account-tcs-text">Remember Me</span>
+                            <span class="auth-remember-text">Remember Me</span>
                         </label>
                     </div>
                     <div class="row">

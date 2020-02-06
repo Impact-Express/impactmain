@@ -9,7 +9,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('author')->latestFirst()->simplePaginate(4);
+        $posts = Post::with('author')->latestFirst()->published()->simplePaginate(4);
         return view('customer.news.index', compact('posts'));
     }
 }

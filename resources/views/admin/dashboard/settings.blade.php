@@ -6,7 +6,9 @@
     <div id="drawer">
         <div class="drawer-content">
             <div id="Dashboard">
-                <h3>a</h3>
+                <h3>General Settings</h3>
+
+                
             </div>
         </div>
     </div>
@@ -29,7 +31,7 @@
         mode: "push",
         mini: true,
         position: 'left',
-        minHeight: 903,
+        minHeight: 927,
     });
 </script>
 @endsection

@@ -1,6 +1,10 @@
 @extends('customer.layouts.master')
 
 @section('title', 'Contact Us')
+@section('css')
+    <link href="{{asset('css/forms.css')}}" rel="stylesheet">
+    <link href="{{asset('css/businessquote.css')}}" rel="stylesheet">
+@endsection
 
 @section('content')
     <div class="contact-map">

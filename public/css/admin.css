@@ -550,6 +550,10 @@ h6 {
   padding: 15px;
 }
 
+.profile {
+  z-index: 50;
+}
+
 .create-user {
   width: 50%;
   position: relative;
