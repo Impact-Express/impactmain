@@ -3,18 +3,17 @@
 
 @section('content')
     <div class="news">
-        <div class="container">
+        <div class="container leftside">
             @foreach ($posts as $post)
-                @include('customer.news.post')
+                @include('customer.news.partials.post')
             @endforeach
-        </div> 
-        <nav>
-            {{ $posts->links() }}
-        </nav>
-    </div>
-@endsection
-@section('sidebar')
-<div class="rightsite">
+            <nav>
+                {{ $posts->links() }}
+            </nav>
+        </div>
+        <aside class="rightside">
+            @include('customer.news.partials.sidebar')
+        </aside>
 
-</div>
+    </div>
 @endsection

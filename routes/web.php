@@ -69,6 +69,14 @@ Route::post('/services/mobile-services', 'ServicesController@send');
 
 // Authentication Routes...
     Auth::routes();
-
+    Route::middleware(['auth'])->group( function () {
+        Route::get('/admin', 'HomeController@index')->name('admin');
+        Route::get('/admin/media', 'HomeController@media')->name('admin-media');
+        Route::get('/admin/posts', 'HomeController@posts')->name('admin-posts');
+        Route::get('/admin/pages', 'HomeController@pages')->name('admin-pages');
+        Route::get('/admin/settings', 'HomeController@settings')->name('admin-settings');
+    });
+    
 // CMS Routes
     Route::get('/news', 'NewsController@index')->name('news');
+    Route::get('/news/{post}', 'NewsController@show')->name('news-post');

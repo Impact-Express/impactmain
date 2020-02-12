@@ -12,4 +12,9 @@ class NewsController extends Controller
         $posts = Post::with('author')->latestFirst()->published()->simplePaginate(4);
         return view('customer.news.index', compact('posts'));
     }
+
+    public function show (Post $post)
+    {
+        return view('customer.news.post', compact('post'));
+    }
 }

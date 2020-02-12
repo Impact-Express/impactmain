@@ -50,7 +50,6 @@
                 </label>
                 {{ Form::submit('Submit Form',['class' => 'form-submit', 'tabindex' => '10']) }}
             {{ Form::close() }}
-
         </div>
         @if ($message = Session::get('success'))
         <div class="alert alert-success">

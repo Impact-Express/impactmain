@@ -27,8 +27,21 @@
 <body style="margin: 0;">
     <div id="toolbar">
         <div class="profile k-overflow-anchor k-button" style="width: 13%;">
-            <label for='dropdown'>Welcome: {{ Auth::user()->name }}</label>
+            <label for='dropdown'>Logged In: {{ Auth::user()->name }}</label>
+            <div class="avatar">
+            <img src="/storage/avatars/{{ Auth::user()->avatar }}" alt="">
+            </div>
+            <div class="dropdown-content">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+            </div>
         </div>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
     </div>
 @yield('content')
 
@@ -89,9 +102,7 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
+
                                 </div>
                             </li>
                         @endguest
@@ -111,12 +122,6 @@
                 items: [
                     { type: "button", icon: "menu", attributes: { "class": "k-flat" }, click: toggleDrawer},
                     { template: "<h3 style='margin-left: 20px;'>Impact Express</h3>"},
-                    {
-                                type: "button",
-                                text: "Action",
-                                url:  "",
-                                overflow: "always"
-                            },
                   ]
             });
 
