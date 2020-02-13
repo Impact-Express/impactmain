@@ -23,9 +23,9 @@
                         </ul>
                     </div>
 
-                    <p class="post-body">
-                        {{ $post->body }}
-                    </p>
+                    <div class="post-body">
+                        {!! $post->body_html !!}
+                    </div>
 
                     <div class="backhome">
                         <a href="{{ url()->previous() }}" class="button-white">Back Home</a>
