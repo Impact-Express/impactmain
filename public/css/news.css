@@ -2,6 +2,23 @@
     *? CMS / News Styles
 ****************************/
 
+.button-white {
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 25px;
+  background: #f7f7f7;
+  border: 1px solid #F2ECEC;
+  border-radius: 10px;
+}
+
+.backhome {
+  float: right;
+  height: 50px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
 .news {
   background: #F2ECEC;
   padding-top: 30px;
@@ -86,7 +103,8 @@
 
 .leftside {
   margin-left: 150px;
-  width: 42%;
+  margin-right: 0;
+  width: 47%;
 }
 
 .rightside {
@@ -102,7 +120,7 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  margin-right: 65%;
+  padding: 0;
   list-style-type: none;
 }
 

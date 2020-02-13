@@ -7,13 +7,10 @@
             @foreach ($posts as $post)
                 @include('customer.news.partials.post')
             @endforeach
-            <nav>
-                {{ $posts->links() }}
-            </nav>
+            {{ $posts->links() }}
         </div>
         <aside class="rightside">
             @include('customer.news.partials.sidebar')
         </aside>
-
     </div>
 @endsection

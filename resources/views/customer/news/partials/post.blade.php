@@ -1,8 +1,8 @@
 <div class="post">
         @if ($post->image_url)
-        <img src="{{ $post->image_url }}">
+        <img class="post-image" src="{{ $post->image_url }}">
         @endif
-        <a href="{{ route('news-post', $post->id) }}">
+        <a href="{{ route('news-post', $post->slug) }}">
             <h1 class="post-title">{{ $post->title }}</h1>
         </a>
         <h4 class="post-subtitle">{{ $post->excerpt }}</h4>
@@ -15,7 +15,7 @@
                 </ul>
             </div>
             <div class="float-right">
-                <a href="{{ route('news-post', $post->id) }}">Continue Reading »</a>
+                <a href="{{ route('news-post', $post->slug) }}">Continue Reading »</a>
             </div>
         </div>
 </div>

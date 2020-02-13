@@ -39,7 +39,7 @@
     </div>
 </div>
 
-<div class="widget">
+{{-- <div class="widget">
     <div class="widget-heading">
         <h4>Popular Posts</h4>
     </div>
@@ -48,7 +48,7 @@
             <li>
                 <div class="post-image">
                     <a href="#">
-                        <img class="post-item-image" src="img/Post_Image_5_thumb.jpg" />
+                        <img class="post-item-image" src="/img/Post_Image_5_thumb.jpg" />
                     </a>
                 </div>
                 <div class="post-body">
@@ -61,7 +61,7 @@
             <li>
                 <div class="post-image">
                     <a href="#">
-                        <img class="post-item-image" src="img/Post_Image_4_thumb.jpg" />
+                        <img class="post-item-image" src="/img/Post_Image_5_thumb.jpg" />
                     </a>
                 </div>
                 <div class="post-body">
@@ -74,7 +74,7 @@
             <li>
                 <div class="post-image">
                     <a href="#">
-                        <img class="post-item-image" src="img/Post_Image_3_thumb.jpg" />
+                        <img class="post-item-image" src="/img/Post_Image_5_thumb.jpg" />
                     </a>
                 </div>
                 <div class="post-body">
@@ -86,7 +86,7 @@
             </li>
         </ul>
     </div>
-</div>
+</div> --}}
 
 <div class="widget">
     <div class="widget-heading">
