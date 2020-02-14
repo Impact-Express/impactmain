@@ -5,7 +5,7 @@
         <a href="{{ route('news-post', $post->slug) }}">
             <h1 class="post-title">{{ $post->title }}</h1>
         </a>
-        <h4 class="post-subtitle">{!! $post->excerpt_html !!}</h4>
+        <div class="post-subtitle">{!! $post->excerpt_html !!}</div>
         <div class="post-meta">
             <div class="float-left">
                 <ul class="post-meta-group">

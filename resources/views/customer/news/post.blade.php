@@ -13,8 +13,7 @@
             <div class="post-item-body">
                 <div class="padding-10">
                     <h1 class="post-title">{{ $post->title }}</h1>
-                    <h3 class="post-subtitle">{{ $post->excerpt }}</h3>
-
+                    <div class="post-subtitle">{!! $post->excerpt_html !!}</div>
                     <div class="post-meta">
                         <ul class="post-meta-group">
                             <li><i class="fas fa-user"><span class="post-author">{{ $post->author->name }}</span></i></li>
