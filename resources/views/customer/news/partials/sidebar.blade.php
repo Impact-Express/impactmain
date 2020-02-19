@@ -1,12 +1,11 @@
 <div class="search-widget">
-    <div class="input-group">
-      <input type="text" class="form-text" id="form-search-box" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="form-search-btn" type="button">
-            <i class="fa fa-search"></i>
-        </button>
-      </span>
-    </div><!-- /input-group -->
+    <form class="search-form" action="" method="post">
+        @csrf
+        <input type="text" class="form-text" id="form-search-box" placeholder="Search for...">
+            <button class="form-search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+    </form>
 </div>
 
 <div class="widget">
@@ -15,26 +14,14 @@
     </div>
     <div class="widget-body">
         <ul class="categories">
-            <li>
-                <a href="#"><i class="fa fa-angle-right"></i> Web Development</a>
-                <span class="badge pull-right">10</span>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-angle-right"></i> Web Design</a>
-                <span class="badge pull-right">10</span>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-angle-right"></i> General</a>
-                <span class="badge pull-right">10</span>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-angle-right"></i> DIY</a>
-                <span class="badge pull-right">10</span>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-angle-right"></i> Facebook Development</a>
-                <span class="badge pull-right">10</span>
-            </li>
+            @foreach ($categories as $category)
+            <a href="{{ route('category', $category->slug) }}">
+                <li class="category">
+                    <i class="fa fa-angle-right"></i> {{ $category->title }}
+                    <span class="badge pull-right">{{ $category->posts->count() }}</span>
+                </li>
+            </a>
+            @endforeach
         </ul>
     </div>
 </div>
@@ -94,14 +81,30 @@
     </div>
     <div class="widget-body">
         <ul class="tags">
-            <li><a href="#">PHP</a></li>
-            <li><a href="#">Codeigniter</a></li>
-            <li><a href="#">Yii</a></li>
-            <li><a href="#">Laravel</a></li>
-            <li><a href="#">Ruby on Rails</a></li>
-            <li><a href="#">jQuery</a></li>
-            <li><a href="#">Vue Js</a></li>
-            <li><a href="#">React Js</a></li>
+            <a href="#">
+                <li class="tag"><i class="fa fa-angle-right"></i>PHP</li>
+            </a>
+            <a href="#">
+                <li class="tag"><i class="fa fa-angle-right"></i>Codeigniter</li>
+            </a>
+            <a href="#">
+                <li class="tag"><i class="fa fa-angle-right"></i>Yii</li>
+            </a>
+            <a href="#">
+                <li class="tag"><i class="fa fa-angle-right"></i>Laravel</li>
+            </a>
+            <a href="#">
+                <li class="tag"><i class="fa fa-angle-right"></i>Ruby on Rails</li>
+            </a>
+            <a href="#">
+                <li class="tag"><i class="fa fa-angle-right"></i>jQuery</li>
+            </a>
+            <a href="#">
+                <li class="tag"><i class="fa fa-angle-right"></i>Vue Js</li>
+            </a>
+            <a href="#">
+                <li class="tag"><i class="fa fa-angle-right"></i>React Js</li>
+            </a>
         </ul>
     </div>
 </div>

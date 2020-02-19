@@ -9,6 +9,16 @@ use GrahamCampbell\Markdown\Facades\Markdown;
 class Post extends Model
 {
     protected $dates = [ 'published_at' ];
+    
+    public function author ()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function category ($balue='')
+    {
+        return $this->belongsTo(Category::class);
+    }
 
     public function getImageUrlAttribute ($value)
     {
@@ -43,10 +53,5 @@ class Post extends Model
     public function scopePublished($query)
     {
         return $query->where("published_at", "<=", Carbon::now());
-    }
-
-    public function author ()
-    {
-        return $this->belongsTo(User::class);
     }
 }

@@ -11,7 +11,7 @@
                 <ul class="post-meta-group">
                     <li><i class="fas fa-user"><span class="post-author">{{ $post->author->name }}</span></i></li>
                     <li><i class="far fa-clock"><span class="post-date"><time>{{ $post->date }}</time></span></i></li>
-                    <li><i class="fas fa-tags"><span class="post-date">News</span></i></li>
+                    <li><i class="fas fa-tags"><span class="post-date"><a href="{{ route('category', $post->category->slug) }}">{{ $post->category->title }}</a></span></i></li>
                 </ul>
             </div>
             <div class="float-right">

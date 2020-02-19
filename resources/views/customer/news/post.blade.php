@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="backhome">
-                        <a href="{{ url()->previous() }}" class="button-white">Back Home</a>
+                        <a href="{{ route('news') }}" class="button-white">Back Home</a>
                     </div>
                 </div>
             </div>
