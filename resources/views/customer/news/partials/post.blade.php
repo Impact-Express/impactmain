@@ -9,7 +9,7 @@
         <div class="post-meta">
             <div class="float-left">
                 <ul class="post-meta-group">
-                    <li><i class="fas fa-user"><span class="post-author">{{ $post->author->name }}</span></i></li>
+                    <li><i class="fas fa-user"><span class="post-author"><a href="{{ route('author', $post->author->slug) }}">{{ $post->author->name }}</a></span></i></li>
                     <li><i class="far fa-clock"><span class="post-date"><time>{{ $post->date }}</time></span></i></li>
                     <li><i class="fas fa-tags"><span class="post-date"><a href="{{ route('category', $post->category->slug) }}">{{ $post->category->title }}</a></span></i></li>
                 </ul>

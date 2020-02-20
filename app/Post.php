@@ -15,9 +15,9 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function category ($balue='')
+    public function category ($value='')
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class)->withDefault(['slug' => 'uncategorized']);
     }
 
     public function getImageUrlAttribute ($value)

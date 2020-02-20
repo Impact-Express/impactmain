@@ -224,3 +224,25 @@
     margin-bottom: 30px;
     border-radius: 20px;
 }
+.media-object {
+    width: 150px;
+    border-radius: 35px;
+}
+.media-left {
+    float: left;
+}
+.media-body {
+    float: right;
+    padding-top: 7px;
+    width: 75%;
+    line-height: 1.3;
+}
+.media-heading {
+    font-size: 24px;
+}
+.post-author {
+    background: #fff;
+    height: 150px;
+    border-radius: 20px;
+    padding: 22px;
+}

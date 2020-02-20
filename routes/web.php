@@ -71,3 +71,4 @@ Route::post('/quote', 'QuotesController@send');
     Route::get('/news', 'NewsController@index')->name('news');
     Route::get('/news/{post}', 'NewsController@show')->name('news-post');
     Route::get('/category/{category}', 'NewsController@category')->name('category');
+    Route::get('/author/{author}', 'NewsController@author')->name('author');

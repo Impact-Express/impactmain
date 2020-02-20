@@ -14,6 +14,11 @@
                     <p>Category: <strong>{{ $categoryName }}</strong><p>
                 </div>
             @endif
+            @if (isset($authorName))
+                <div class="alert info-alert">
+                    <p>Author: <strong>{{ $authorName }}</strong><p>
+                </div>
+            @endif
             @foreach ($posts as $post)
                 @include('customer.news.partials.post')
             @endforeach
