@@ -1,15 +1,47 @@
 /****************************
     *? CMS / News Styles
 ****************************/
+.button-white {
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 25px;
+    background: #f7f7f7;
+    border: 1px solid #F2ECEC;
+    border-radius: 10px;
+}
+.backhome {
+    float: right;
+    height: 50px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
 .news {
     background: #F2ECEC;
     padding-top: 30px;
     padding-bottom: 30px;
+    display: flex;
+}
+.news-detail {
+    width: 65%;
 }
 .post {
-    width: 53.5%;
     background: #fff;
     margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.post-detail {
+    width: 70%;
+    background: #fff;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.post-item-image {
+    width: 92%;
+}
+.post-image {
+    width: 100%;
 }
 .post-title {
     padding: 20px;
@@ -19,6 +51,11 @@
     letter-spacing: -1px;
 }
 .post-subtitle {
+    padding: 0px 20px 20px 20px;
+    font-size: 16px;
+    line-height: 1.3;
+}
+.post-body {
     padding: 0px 20px 20px 20px;
     font-size: 16px;
     line-height: 1.3;
@@ -46,12 +83,166 @@
     padding-right: 20px;
     padding-left: 5px;
 }
-.news-search {
+.leftside {
+    margin-left: 150px;
+    margin-right: 0;
+    width: 47%;
+}
+.rightside {
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+//? Pagination
+.pagination {
+    display: -webkit-box;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
 
 }
-.news-categories {
+.page-item {
+    margin-right: 6%;
+}
+.page-link {
+    background: #fff;
+    padding: 8px 16px;
+    border: 1px solid #cacaca;
+    border-radius: 15px;
+}
+.page-link:hover {
+    transition-duration: 0.4s;
+    border: 1px solid #F2ECEC;
+    background-color: #34495E;
+    color: #fff;
+}
+.disabled {
+    pointer-events: none;
+    color: #adadad;
+}
+
+//? Sidebar
+.widget {
+    margin-bottom: 30px;
+}
+.input-group {
+    width: 100%;
+}
+.search-widget {
+    margin: auto;
+    margin-bottom: 30px;
+    width: 100%;
+    border-radius: 15px;
+}
+.form-text:focus {
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px #0066ff inset;
+}
+.widget {
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    overflow: hidden;
+    /*border: 1px solid transparent;*/
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
+}
+.widget-body {
+    background: #f8f8f8;
+}
+.widget-heading {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    background: rgba(0, 0, 0, 0.116) none repeat scroll 0 0;
+}
+
+.widget-heading h4 {
+    margin: 0;
+    color: #888;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.categories {
+    list-style-type: none;
+    padding-left: 0;
+    margin: -1px;
+}
+.category {
+    padding: 15px;
+    border: 1px solid #CCC;
+    border-left: none;
+    border-right: none;
+}
+.tags {
+    list-style-type: none;
+    padding-left: 0;
+    margin: -1px;
+}
+.tag {
+    padding: 15px;
+    border: 1px solid #CCC;
+    border-left: none;
+    border-right: none;
+}
+.fa-angle-right {
+    padding-right: 10px;
+}
+
+.form-search-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    outline: none;
+    -webkit-transition-duration: 0.4s;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    background-color: #FFF;
+    border: 0;
+    padding: 15px;
+    border-radius: 15px;
 
 }
-.news-tags {
-
+#form-search-box {
+    margin-right: 0px;
+    width: 85%;
+    border-radius: 15px;
+    margin-bottom: 0;
+}
+.info-alert {
+    padding: 20px;
+    background-color: #229dd836;
+    border: 3px solid #229dd826;
+    color: #505050;
+    margin-bottom: 15px;
+    width: auto;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+.media-object {
+    width: 150px;
+    border-radius: 35px;
+}
+.media-left {
+    float: left;
+}
+.media-body {
+    float: right;
+    padding-top: 7px;
+    width: 75%;
+    line-height: 1.3;
+}
+.media-heading {
+    font-size: 24px;
+}
+.post-author {
+    background: #fff;
+    height: 150px;
+    border-radius: 20px;
+    padding: 22px;
 }

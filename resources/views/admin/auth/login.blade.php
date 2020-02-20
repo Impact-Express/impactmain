@@ -1,5 +1,9 @@
 @extends('customer.layouts.master')
 @section('title', 'Login')
+@section('css')
+    <link href="{{asset('css/forms.css')}}" rel="stylesheet">
+    <link href="{{asset('css/auth.css')}}" rel="stylesheet">
+@endsection
 @section('content')
 <div class="login-container">
     <div class="row">

@@ -1,6 +1,7 @@
 @extends('customer.layouts.main')
 
 @section('css')
+    <link href="{{asset('css/forms.css')}}" rel="stylesheet">
     <link href="{{asset('css/news.css')}}" rel="stylesheet">
 @endsection
 
@@ -42,9 +43,8 @@
             </li>
         </ul>
     </nav>
-    <main>
+    <main style="background: #F2ECEC;">
         @yield('content')
-        @yield('sidebar')
     </main>
     <footer class="main-footer">
         <div class="container">

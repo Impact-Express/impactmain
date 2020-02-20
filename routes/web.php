@@ -18,49 +18,39 @@
 Route::get('/', 'PagesController@home')->name('home');
 Route::get('/contact', 'PagesController@contactUs')->name('contact');
 Route::post('/contact', 'PagesController@send');
-// Route::domain('')
 Route::resource('/quote', 'QuotesController');
 Route::post('/quote', 'QuotesController@send');
 
 
 // Services Main Route
-Route::get('/services', 'ServicesController@index')->name('services');
-
+    Route::get('/services', 'ServicesController@index')->name('services');
 // Express
-Route::get('/services/express', 'ServicesController@express')->name('express');
-Route::post('/services/express', 'ServicesController@send');
-
+    Route::get('/services/express', 'ServicesController@express')->name('express');
+    Route::post('/services/express', 'ServicesController@send');
 // Economy
-Route::get('/services/economy', 'ServicesController@economy')->name('economy');
-Route::post('/services/economy', 'ServicesController@send');
-
+    Route::get('/services/economy', 'ServicesController@economy')->name('economy');
+    Route::post('/services/economy', 'ServicesController@send');
 // UK Overnight
-Route::get('/services/ukovernight', 'ServicesController@overnight')->name('overnight');
-Route::post('/services/ukovernight', 'ServicesController@send');
-
+    Route::get('/services/ukovernight', 'ServicesController@overnight')->name('overnight');
+    Route::post('/services/ukovernight', 'ServicesController@send');
 // Imports
-Route::get('/services/imports', 'ServicesController@imports')->name('imports');
-Route::post('/services/imports', 'ServicesController@send');
-
+    Route::get('/services/imports', 'ServicesController@imports')->name('imports');
+    Route::post('/services/imports', 'ServicesController@send');
 // Dangerous Goods
-Route::get('/services/dangerous-goods', 'ServicesController@dangerousGoods')->name('dangerousgoods');
-Route::post('/services/dangerous-goods', 'ServicesController@send');
-
+    Route::get('/services/dangerous-goods', 'ServicesController@dangerousGoods')->name('dangerousgoods');
+    Route::post('/services/dangerous-goods', 'ServicesController@send');
 // DG Dry Ice
-Route::get('/services/dangerous-goods/dry-ice', 'ServicesController@dangerousGoodsDryIce')->name('dgdryice');
-Route::post('/services/dangerous-goods/dry-ice', 'ServicesController@send');
-
+    Route::get('/services/dangerous-goods/dry-ice', 'ServicesController@dangerousGoodsDryIce')->name('dgdryice');
+    Route::post('/services/dangerous-goods/dry-ice', 'ServicesController@send');
 // E-Commerce
-Route::get('/services/ecommerce', 'ServicesController@ecommerce')->name('ecommerce');
-Route::post('/services/ecommerce', 'ServicesController@send');
-
+    Route::get('/services/ecommerce', 'ServicesController@ecommerce')->name('ecommerce');
+    Route::post('/services/ecommerce', 'ServicesController@send');
 // Fulfilment
-Route::get('/services/fufilment', 'ServicesController@fufilment')->name('fufilment');
-Route::post('/services/fufilment', 'ServicesController@send');
-
+    Route::get('/services/fufilment', 'ServicesController@fufilment')->name('fufilment');
+    Route::post('/services/fufilment', 'ServicesController@send');
 // Mobile Services
-Route::get('/services/mobile-services', 'ServicesController@mobileServices')->name('mobileservices');
-Route::post('/services/mobile-services', 'ServicesController@send');
+    Route::get('/services/mobile-services', 'ServicesController@mobileServices')->name('mobileservices');
+    Route::post('/services/mobile-services', 'ServicesController@send');
 
 
 // Shipping Destinations Routes
@@ -69,6 +59,16 @@ Route::post('/services/mobile-services', 'ServicesController@send');
 
 // Authentication Routes...
     Auth::routes();
-
+    Route::middleware(['auth'])->group( function () {
+        Route::get('/admin', 'HomeController@index')->name('admin');
+        Route::get('/admin/media', 'HomeController@media')->name('admin-media');
+        Route::get('/admin/posts', 'HomeController@posts')->name('admin-posts');
+        Route::get('/admin/pages', 'HomeController@pages')->name('admin-pages');
+        Route::get('/admin/settings', 'HomeController@settings')->name('admin-settings');
+    });
+    
 // CMS Routes
     Route::get('/news', 'NewsController@index')->name('news');
+    Route::get('/news/{post}', 'NewsController@show')->name('news-post');
+    Route::get('/category/{category}', 'NewsController@category')->name('category');
+    Route::get('/author/{author}', 'NewsController@author')->name('author');

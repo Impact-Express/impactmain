@@ -1,5 +1,10 @@
 @extends('customer.layouts.master')
 
+@section('css')
+    <link href="{{asset('css/forms.css')}}" rel="stylesheet">
+    <link href="{{asset('css/auth.css')}}" rel="stylesheet">
+@endsection
+
 @section('content')
 <div class="create-user">
     <div class="row">
