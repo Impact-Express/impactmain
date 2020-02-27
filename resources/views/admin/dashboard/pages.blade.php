@@ -3,29 +3,69 @@
 @section('content')
 <div class="grid">
     <div id="toolbar"></div>
-    <div id="drawer">
+    <div id="drawer" data-role="drawer" class="k-widget k-drawer">
         <div class="drawer-content">
+            <h3 class="cms-title">Pages</h3>
             <div id="Dashboard">
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                <div class="card-body card-posts">
+                    <div class="col-xs-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <div class="pull-left">
+                                    <a id="add-button" title="Add New" class="button-success" href=""><i class="fa fa-plus-circle"></i> Add New</a>
+                                </div>
+                                <div class="pull-right">
+                                    <form class="search-form" action="" method="post">
+                                        @csrf
+                                        <input type="text" class="form-text" id="form-search-box" placeholder="Search for...">
+                                            <button class="form-search-btn" type="submit">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                    </form>
+                                </div>
+                            </div>
+                          <!-- /.box-header -->
+                          <div class="box-body table-responsive">
+                            <table class="table table-bordered table-condesed">
+                              <thead>
+                                  <tr>
+                                    <th>Action</th>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>Category</th>
+                                    <th>Date</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td width="85" height="35">
+                                        <a title="Edit" class="button-default" href="#">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+                                        <a title="Delete" class="button-danger" href="#">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </td>
+                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                    <td>John Doe</td>
+                                    <td>Programming</td>
+                                    <td><abbr title="2016/12/04 6:32:00 PM">2016/12/04</abbr> | <span class="label label-info">Schedule</span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="card-footer clearfix">
+                              <ul class="pagination pagination-sm no-margin pull-left">
+                                <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">»</a></li>
+                              </ul>
+                            </div>
                         </div>
-                    @endif
-                    You are logged in!
+                      </div>
                 </div>
-            </div>
-            <div id="Media" class="hidden">
-            you're on
-            </div>
-            <div id="Posts" class="hidden">
-                a rock
-            </div>
-            <div id="Pages" class="hidden">
-                floating in space
-            </div>
-            <div id="Settings" class="hidden">
-                Pretty cool huh?
             </div>
         </div>
     </div>
@@ -48,6 +88,7 @@
         mode: "push",
         mini: true,
         position: 'left',
+        minHeight: 915,
     });
 </script>
 @endsection

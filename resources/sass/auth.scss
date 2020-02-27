@@ -12,7 +12,9 @@
     margin: 0 0 25px 0;
 }
 #remember-me {
-    top: 395px;
+    position: relative;
+    top: 8px;
+    right: 6px;
 }
 #login-button {
     position: relative;
@@ -26,8 +28,6 @@
 .auth-remember-text {
     position: relative;
     margin: auto;
-    left: 40px;
-    top: 5px;
     font-size: 1em;
     font-weight: 600;
     color: #000;
@@ -60,4 +60,7 @@
 }
 .card-body {
 
+}
+.help-block {
+    color: firebrick;
 }

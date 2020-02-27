@@ -31,6 +31,7 @@ class NewsController extends Controller
 
     public function show (Post $post)
     {
+        $post->increment('view_count', 1);
         return view('customer.news.post', compact('post'));
     }
 }

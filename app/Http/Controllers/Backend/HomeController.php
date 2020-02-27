@@ -1,21 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use App\Post;
 
-class HomeController extends Controller
+class HomeController extends BackendController
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Show the application dashboard.
      *
@@ -31,7 +22,8 @@ class HomeController extends Controller
     }
     public function posts()
     {
-        return view('admin.dashboard.posts');
+        $posts = Post::all();
+        return view('admin.dashboard.posts', compact('posts'));
     }
     public function pages()
     {

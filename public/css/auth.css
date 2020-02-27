@@ -14,7 +14,9 @@
 }
 
 #remember-me {
-  top: 395px;
+  position: relative;
+  top: 8px;
+  right: 6px;
 }
 
 #login-button {
@@ -27,8 +29,6 @@
 .auth-remember-text {
   position: relative;
   margin: auto;
-  left: 40px;
-  top: 5px;
   font-size: 1em;
   font-weight: 600;
   color: #000;
@@ -63,5 +63,9 @@
   padding: 0px 0px 10px 10px;
   font-size: larger;
   border-bottom: 1px solid #dbdbdb;
+}
+
+.help-block {
+  color: firebrick;
 }
 

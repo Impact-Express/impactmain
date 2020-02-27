@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "jquery-sidebar": "^3.3.2",
-        "normalize.css": "^8.0.1"
+        "normalize.css": "^8.0.1",
+        "simplemde": "^1.11.2"
     }
 }

@@ -126,7 +126,7 @@
     color: #adadad;
 }
 
-//? Sidebar
+//? Sidebar Widgets
 .widget {
     margin-bottom: 30px;
 }
@@ -159,7 +159,6 @@
     border-bottom: 1px solid #ccc;
     background: rgba(0, 0, 0, 0.116) none repeat scroll 0 0;
 }
-
 .widget-heading h4 {
     margin: 0;
     color: #888;
@@ -192,7 +191,20 @@
 .fa-angle-right {
     padding-right: 10px;
 }
+.widget-image {
+    width: 34%;
+    padding: 30px;
+}
+.widget-item-image {
+    width: 100%;
+}
+.popular-posts {
+    margin: 0;
+    padding: 20px 20px 0px 20px;
+    list-style-type: none;
+}
 
+//? Search box
 .form-search-btn {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -213,6 +225,8 @@
     border-radius: 15px;
     margin-bottom: 0;
 }
+
+//? Author Widget
 .info-alert {
     padding: 20px;
     background-color: #229dd836;
@@ -225,8 +239,9 @@
     border-radius: 20px;
 }
 .media-object {
-    width: 150px;
-    border-radius: 35px;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
 }
 .media-left {
     float: left;
@@ -242,7 +257,7 @@
 }
 .post-author {
     background: #fff;
-    height: 150px;
+    height: 180px;
     border-radius: 20px;
     padding: 22px;
 }
