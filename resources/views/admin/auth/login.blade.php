@@ -12,11 +12,23 @@
             <div class="card-body">
                 {{ Form::open(['method' => 'post', 'url' => route('login')]) }}
                     {{ Form::token() }}
-                    <div class="row">
-                        {{ Form::email('email','',['class' => 'form-email', 'id' => 'email','placeholder' => 'Email Address', 'autofocus']) }}
+                    <div class="row"> 
+                        {{-- $errors->has('email') ? ' has-error' : '' --}}
+                        {{-- $errors->has('password') ? ' has-error' : '' --}}
+                        {{ Form::email('email','',['class' => "form-email", 'id' => 'email','placeholder' => 'Email Address', 'autofocus']) }}
+                        @if ($errors->has('email'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
                     </div>
                     <div class="row">
                         {{ Form::password('password', ['class' => 'form-text', 'id' => 'password','placeholder' => 'Password']) }}
+                        @if ($errors->has('password'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                        @endif
                     </div>
                     <div class="row">
                         <label class="form-checkbox">

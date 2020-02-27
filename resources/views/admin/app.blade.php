@@ -25,13 +25,9 @@
         <script src="{{ asset('js/admin.js') }}" ></script>
 </head>
 <body style="margin: 0;">
-    <div id="toolbar">
-        <div class="profile k-overflow-anchor k-button" style="width: 13%;">
-            <label for='dropdown'>Logged In: {{ Auth::user()->name }}</label>
-            <div class="avatar">
-            <img src="/storage/avatars/{{ Auth::user()->avatar }}" alt="">
-            </div>
-            <div class="dropdown-content">
+    <div id="toolbar" class="topbar">
+        <div class="k-overflow-anchor k-button profile">
+            <div class="dropdown">           
                 <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();">
@@ -43,79 +39,13 @@
             @csrf
         </form>
     </div>
-@yield('content')
 
-    {{-- <section id="container">
-        <header class="topbar">
-            <a class="topbar-logo" href="{{ route('admin') }}">Impact Express</a>
-
-
-        </header>
-        <aside class="sidenav">
-            <div id="sidebar" tabindex="5000">
-                <h5 class="user-name">{{ Auth::user()->name }}</h5>
-            </div>
-
-        </aside>
+    <section id="container">
         <main id="main-content">
             @yield('content')
         </main>
-    </section> --}}
-    {{-- <div id="app">
-        <div class="topbar">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div> --}}
-    
+    </section>
+</body>
 <script type="text/javascript">
        
     $("#toolbar").kendoToolBar({

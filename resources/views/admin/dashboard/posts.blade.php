@@ -5,27 +5,12 @@
     <div id="toolbar"></div>
     <div id="drawer">
         <div class="drawer-content">
+            <h3 class="cms-title">Posts</h3>
             <div id="Dashboard">
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    You are logged in!
+                <div class="card-body card-posts">
+                    <div id="grid">
+                    </div>
                 </div>
-            </div>
-            <div id="Media" class="hidden">
-            you're on
-            </div>
-            <div id="Posts" class="hidden">
-                a rock
-            </div>
-            <div id="Pages" class="hidden">
-                floating in space
-            </div>
-            <div id="Settings" class="hidden">
-                Pretty cool huh?
             </div>
         </div>
     </div>
@@ -48,8 +33,38 @@
         mode: "push",
         mini: true,
         position: 'left',
-        minHeight: 927,
+        minHeight: 915,
     });
+    $("#grid").kendoGrid({
+        dataSource: {
+                            data: products,
+                            schema: {
+                                model: {
+                                    fields: {
+                                        ProductName: { type: "string" },
+                                        UnitPrice: { type: "number" },
+                                        UnitsInStock: { type: "number" },
+                                        Discontinued: { type: "boolean" }
+                                    }
+                                }
+                            },
+                    pageSize: 20
+                },
+                height: 550,
+                groupable: true,
+                sortable: true,
+                pageable: {
+                    refresh: true,
+                    pageSizes: true,
+                    buttonCount: 5
+                },
+                columns: [
+                            "ProductName",
+                            { field: "UnitPrice", title: "Unit Price", format: "{0:c}", width: "130px" },
+                            { field: "UnitsInStock", title: "Units In Stock", width: "130px" },
+                            { field: "Discontinued", width: "130px" }
+                        ]
+            });
 </script>
 @endsection
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class HomeController extends Controller
 {
@@ -31,7 +32,8 @@ class HomeController extends Controller
     }
     public function posts()
     {
-        return view('admin.dashboard.posts');
+        $posts = Post::all();
+        return view('admin.dashboard.posts', compact('posts'));
     }
     public function pages()
     {
