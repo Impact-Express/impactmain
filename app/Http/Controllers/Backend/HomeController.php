@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Page;
 
 class HomeController extends BackendController
 {
@@ -22,12 +23,13 @@ class HomeController extends BackendController
     }
     public function posts()
     {
-        $posts = Post::all();
+        $posts = Post::latest()->paginate(8);
         return view('admin.dashboard.posts', compact('posts'));
     }
     public function pages()
     {
-        return view('admin.dashboard.pages');
+        $pages = Page::latest()->paginate(8);
+        return view('admin.dashboard.pages', compact('pages'));
     }
     public function settings()
     {

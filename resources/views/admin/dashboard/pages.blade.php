@@ -37,20 +37,22 @@
                                   </tr>
                               </thead>
                               <tbody>
+                                @foreach ($pages as $page)
                                 <tr>
                                     <td width="85" height="35">
-                                        <a title="Edit" class="button-default" href="#">
+                                        <a title="Edit" class="button-default" href="{{ route('posts.edit', $page->id) }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a title="Delete" class="button-danger" href="#">
+                                        <a title="Delete" class="button-danger" href="{{ route('posts.destroy', $page->id) }}">
                                             <i class="fa fa-times"></i>
                                         </a>
                                     </td>
-                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                    <td>John Doe</td>
-                                    <td>Programming</td>
-                                    <td><abbr title="2016/12/04 6:32:00 PM">2016/12/04</abbr> | <span class="label label-info">Schedule</span></td>
+                                    <td>{{ $page->title }}</td>
+                                    <td>{{ $page->author->name }}</td>
+                                    <td>{{ $page->category->title}}</td>
+                                    <td><abbr title="{{ $page->dateFormatted(true) }}">{{ $page->dateFormatted() }}</abbr> | {!! $page->publicationlabel() !!}</td>
                                 </tr>
+                                @endforeach
                               </tbody>
                             </table>
                           </div>

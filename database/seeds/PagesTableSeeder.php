@@ -4,7 +4,8 @@ use Illuminate\Database\Seeder;
 use Faker\Factory;
 use Carbon\Carbon;
 
-class PostsTableSeeder extends Seeder
+
+class PagesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,12 +15,12 @@ class PostsTableSeeder extends Seeder
     public function run()
     {
         // Reset Database with Truncate
-        DB::table('posts')->truncate();
+        DB::table('pages')->truncate();
 
         // Generate Dummy Data
-        $posts = [];
+        $pages = [];
         $faker = Factory::create();
-        $date = Carbon::create(2019);
+        $date = Carbon::now();
 
         for ($i = 1; $i <=20; $i++) 
         {
@@ -28,20 +29,19 @@ class PostsTableSeeder extends Seeder
             $publishedDate = clone($date);
             $createdDate   = clone($date);
 
-            $posts[] = [
+            $pages[] = [
                 'author_id'     => rand(1, 3),
                 'title'         => $faker->sentence(rand(8, 12)),
-                'excerpt'       => $faker->text(rand(50, 150)),
+                'excerpt'       => $faker->text(rand(150, 200)),
                 'body'          => $faker->paragraphs(rand(10, 15), true),
                 'slug'          => $faker->slug(),
                 'image'         => rand(0, 1) == 1 ? $image : NULL,
                 'created_at'    => $createdDate,
                 'updated_at'    => $createdDate,
                 'published_at'  => $i < 5 ? $publishedDate : ( rand( 0, 1 ) == 0 ? NULL : $publishedDate->addDays(4) ),
-                'view_count'    => rand( 1, 10 ) * 10
             ];
         }
 
-        DB::table('posts')->insert($posts);
+        DB::table('pages')->insert($pages);
     }
 }
