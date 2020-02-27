@@ -71,6 +71,10 @@ class RegisterController extends Controller
     }
     public function showRegistrationForm()
     {
-        return view('admin.auth.register');
+        abort(404);
+    }
+    public function register()
+    {
+        abort(404);
     }
 }

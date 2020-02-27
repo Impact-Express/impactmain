@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*****************************
-    *? Form Styles (GLOBAL)
+//? Form Styles (GLOBAL)
 *****************************/
 
 .form-text {
@@ -131,7 +131,7 @@
 }
 
 /************************
-*? Form Alerts
+//? Form Alerts
 *************************/
 
 .alert {
@@ -176,5 +176,26 @@
 
 .closebtn:hover {
   color: black;
+}
+
+/************************
+//? Table Styles (GLOBAL)
+*************************/
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+tbody,
+tr,
+td {
+  border: 1px solid #e4dddd;
 }
 

@@ -34,15 +34,8 @@
         <ul class="popular-posts">
            @foreach ($popularPosts as $post)
             <li>
-                @if ($post->image_url)
-                <div class="widget-image">
-                    <a href="{{ route('news-post', $post->slug) }}">
-                        <img class="widget-item-image" src="{{ $post->image_thumb_url }}" />
-                    </a>
-                </div>
-                @endif
                 <div class="post-body">
-                    <h6><a href="{{ route('news-post', $post->slug) }}">{{ $post->title }}</a></h6>
+                    <h4><a href="{{ route('news-post', $post->slug) }}">{{ $post->title }}</a></h4>
                     <div class="post-meta">
                         <span> {{ $post->date }} </span>
                     </div>

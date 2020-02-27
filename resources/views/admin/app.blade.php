@@ -18,6 +18,7 @@
     <link href="{{ asset('styles/kendo.common.min.css') }}" rel="stylesheet">
     <link href="{{ asset('styles/kendo.material-v2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/forms.css') }}" rel="stylesheet">
 
         <!-- Scripts -->
         <script src="{{ asset('js/jquery.min.js') }}" ></script>
@@ -31,7 +32,7 @@
                 <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
+                    <h4>{{ __('Logout') }}</h4>
                 </a>
             </div>
         </div>
