@@ -16,9 +16,9 @@
                     <div class="post-subtitle">{!! $post->excerpt_html !!}</div>
                     <div class="post-meta">
                         <ul class="post-meta-group">
-                            <li><i class="fas fa-user"><span class="post-author">{{ $post->author->name }}</span></i></li>
+                            <li><i class="fas fa-user"><span class="post-author"><a href="{{ route('author', $post->author->slug) }}">{{ $post->author->name }}</a></span></i></li>
                             <li><i class="far fa-clock"><span class="post-date"><time>{{ $post->date }}</time></span></i></li>
-                            <li><i class="fas fa-tags"><span class="post-date">Blog</span></i></li>
+                            <li><i class="fas fa-tags"><span class="post-date"><a href="{{ route('author', $post->category->slug) }}">{{ $post->category->title }}</a></span></i></li>
                         </ul>
                     </div>
 
@@ -37,7 +37,7 @@
             <div class="media">
                 <div class="media-left">
                     <a href="{{ route('author', $post->author->slug) }}">
-                        <img alt="Author 1" src="{{ asset('img/author.jpg') }}" class="media-object">
+                        <img alt="{{ $post->author->name }}" width="150" height="150" src="{{ $post->author->gravatar() }}" class="media-object">
                     </a>
                 </div>
             <div class="media-body">
@@ -45,11 +45,11 @@
                     <div class="post-author-count">
                         <a href="{{ route('author', $post->author->slug) }}">
                             <i class="fa fa-clone"></i>
-                            <?php $postCount = $post->author->posts->count(); ?>
+                            <?php $postCount = $post->author->posts()->published()->count(); ?>
                             {{ $postCount }} {{ Str::plural('post', $postCount) }}
                         </a>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ad aut sunt cum, mollitia excepturi neque sint magnam minus aliquam, voluptatem, labore quis praesentium eum quae dolorum temporibus consequuntur! Non.</p>
+                    {!! $post->author->bio_html !!}
                 </div>
             </div>
         </article>

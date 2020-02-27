@@ -413,6 +413,38 @@ h6 {
   border-radius: 10px;
 }
 
+.button-success {
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 25px;
+  background-color: #00a65a;
+  color: #F2ECEC;
+  border-color: #008d4c;
+  border-radius: 10px;
+}
+
+.button-default {
+  border: 1px solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 5px 5px 10px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  border-color: #e9e9e9;
+  color: #444;
+}
+
+.button-danger {
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  background-color: firebrick;
+  color: #F2ECEC;
+}
+
 .button-square {
   border: none;
   text-transform: uppercase;
@@ -422,13 +454,47 @@ h6 {
   border-radius: 5px;
 }
 
+.pagination {
+  display: -webkit-box;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.page-item {
+  margin-right: 6%;
+}
+
+.page-link {
+  background: #fff;
+  padding: 8px 16px;
+  border: 1px solid #cacaca;
+  border-radius: 15px;
+}
+
+.page-link:hover {
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  border: 1px solid #F2ECEC;
+  background-color: #34495E;
+  color: #fff;
+}
+
+.disabled {
+  pointer-events: none;
+  color: #adadad;
+}
+
 /***********************************
     *? Top Bar Styles
 ***********************************/
 
 .topbar {
   display: -webkit-box;
-  display: flex;
   width: 100%;
   height: 60px;
   background: #FECE00;
@@ -533,6 +599,11 @@ h6 {
   height: fit-content;
 }
 
+.cms-title {
+  padding-top: 25px;
+  padding-left: 50px;
+}
+
 /***********************************
 *? Dashboard Styling
 ***********************************/
@@ -540,6 +611,11 @@ h6 {
 #Dashboard {
   padding: 20px 50px 0px 50px;
   margin-left: 0px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
 }
 
 .card-body {
@@ -550,8 +626,73 @@ h6 {
   padding: 15px;
 }
 
+.card-dashboard {
+  width: 50%;
+  padding: 40px;
+}
+
+.card-posts {
+  width: 100%;
+  padding: 40px;
+}
+
+.dashboard-get-started {
+  position: relative;
+  top: 41%;
+}
+
 .profile {
   z-index: 50;
+  text-align: center;
+  width: 6% !important;
+}
+
+.dropdown {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 20px;
+}
+
+#add-button {
+  position: relative;
+  top: 20px;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+  padding-bottom: 20px;
+}
+
+.card-footer {
+  height: 18px;
+  margin-top: 19px;
+}
+
+.form-search-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  outline: none;
+  -webkit-transition-duration: 0.4s;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  background-color: #F2ECEC;
+  border: 0;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+#form-search-box {
+  margin-right: 0px;
+  width: 69%;
+  border-radius: 15px;
+  margin-bottom: 0;
+  background-color: #F2ECEC;
 }
 
 .create-user {
@@ -577,5 +718,9 @@ h6 {
   margin-bottom: 15px;
   margin-top: 5px;
   text-transform: capitalize;
+}
+
+.k-drawer {
+  height: 915px !important;
 }
 

@@ -1,0 +1,30 @@
+.err {
+  background: #F2ECEC;
+  height: 455px;
+}
+
+.container {
+  padding: 50px 0;
+}
+
+.errcontainer {
+  background: #FFF;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.errornumber {
+  font-size: 95px;
+  letter-spacing: -5px;
+}
+
+.title {
+  font-size: 55px;
+  letter-spacing: -2px;
+}
+
+.desc {
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+

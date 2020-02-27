@@ -225,6 +225,21 @@
   padding-right: 10px;
 }
 
+.widget-image {
+  width: 34%;
+  padding: 30px;
+}
+
+.widget-item-image {
+  width: 100%;
+}
+
+.popular-posts {
+  margin: 0;
+  padding: 20px 20px 0px 20px;
+  list-style-type: none;
+}
+
 .form-search-btn {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -259,8 +274,9 @@
 }
 
 .media-object {
-  width: 150px;
-  border-radius: 35px;
+  width: 180px;
+  height: 180px;
+  border-radius: 100px;
 }
 
 .media-left {
@@ -280,7 +296,7 @@
 
 .post-author {
   background: #fff;
-  height: 150px;
+  height: 180px;
   border-radius: 20px;
   padding: 22px;
 }

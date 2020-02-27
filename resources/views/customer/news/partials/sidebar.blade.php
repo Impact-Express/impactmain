@@ -26,56 +26,27 @@
     </div>
 </div>
 
-{{-- <div class="widget">
+<div class="widget">
     <div class="widget-heading">
         <h4>Popular Posts</h4>
     </div>
     <div class="widget-body">
         <ul class="popular-posts">
+           @foreach ($popularPosts as $post)
             <li>
-                <div class="post-image">
-                    <a href="#">
-                        <img class="post-item-image" src="/img/Post_Image_5_thumb.jpg" />
-                    </a>
-                </div>
                 <div class="post-body">
-                    <h6><a href="#">Blog Post #5</a></h6>
+                    <h4><a href="{{ route('news-post', $post->slug) }}">{{ $post->title }}</a></h4>
                     <div class="post-meta">
-                        <span>36 minutes ago</span>
+                        <span> {{ $post->date }} </span>
                     </div>
                 </div>
             </li>
-            <li>
-                <div class="post-image">
-                    <a href="#">
-                        <img class="post-item-image" src="/img/Post_Image_5_thumb.jpg" />
-                    </a>
-                </div>
-                <div class="post-body">
-                    <h6><a href="#">Blog Post #4</a></h6>
-                    <div class="post-meta">
-                        <span>36 minutes ago</span>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="post-image">
-                    <a href="#">
-                        <img class="post-item-image" src="/img/Post_Image_5_thumb.jpg" />
-                    </a>
-                </div>
-                <div class="post-body">
-                    <h6><a href="#">Blog Post #3</a></h6>
-                    <div class="post-meta">
-                        <span>36 minutes ago</span>
-                    </div>
-                </div>
-            </li>
+           @endforeach
         </ul>
     </div>
-</div> --}}
+</div>
 
-<div class="widget">
+{{-- <div class="widget">
     <div class="widget-heading">
         <h4>Tags</h4>
     </div>
@@ -107,4 +78,4 @@
             </a>
         </ul>
     </div>
-</div>
+</div> --}}

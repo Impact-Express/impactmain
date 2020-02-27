@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use GrahamCampbell\Markdown\Facades\Markdown;
 
 class User extends Authenticatable
 {
@@ -28,6 +29,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function getBioHtmlAttribute($value)
+    {
+        return $this->bio ? Markdown::convertToHtml(e($this->bio)) : NULL;
+    }
     /**
      * The attributes that should be cast to native types.
      *
@@ -40,9 +45,16 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class, 'author_id');
     }
+    public function gravatar()
+    {
+        $email = "$this->email";
+        $default = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Missing_avatar.svg/600px-Missing_avatar.svg.png";
+        $size = 150;
+        
+        return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+    }
     public function getRouteKeyName()
     {
         return 'slug';
     }
-
 }
