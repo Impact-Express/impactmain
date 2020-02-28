@@ -8,6 +8,7 @@ use App\Page;
 
 class HomeController extends BackendController
 {
+    protected $pagelimit = 9;
     /**
      * Show the application dashboard.
      *
@@ -23,13 +24,15 @@ class HomeController extends BackendController
     }
     public function posts()
     {
-        $posts = Post::latest()->paginate(8);
-        return view('admin.dashboard.posts', compact('posts'));
+        $posts = Post::with('category', 'author')->latest()->paginate($this->pagelimit);
+        $postCount = Post::count();
+        return view('admin.dashboard.posts', compact('posts', 'postCount'));
     }
     public function pages()
     {
-        $pages = Page::latest()->paginate(8);
-        return view('admin.dashboard.pages', compact('pages'));
+        $pages = Page::latest()->paginate($this->pagelimit);
+        $pageCount = Page::count();
+        return view('admin.dashboard.pages', compact('pages', 'pageCount'));
     }
     public function settings()
     {

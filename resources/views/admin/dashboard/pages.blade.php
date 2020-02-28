@@ -57,14 +57,13 @@
                             </table>
                           </div>
                           <div class="card-footer clearfix">
-                              <ul class="pagination pagination-sm no-margin pull-left">
-                                <li class="page-item"><a class="page-link" href="#">«</a></li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">»</a></li>
-                              </ul>
+                            <div class="pull-left">
+                                {{ $pages->links() }}
                             </div>
+                            <div class="pull-right">
+                                <small>{{ $pageCount }} {{ Str::plural('Item', $pageCount) }} </small>
+                            </div>
+                        </div>
                         </div>
                       </div>
                 </div>

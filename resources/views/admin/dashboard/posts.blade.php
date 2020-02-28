@@ -56,8 +56,13 @@
                               </tbody>
                             </table>
                           </div>
-                          <div class="card-footer clearfix">
-                              {{ $posts->links() }}
+                            <div class="card-footer clearfix">
+                                <div class="pull-left">
+                                    {{ $posts->links() }}
+                                </div>
+                                <div class="pull-right">
+                                    <small>{{ $postCount }} {{ Str::plural('Item', $postCount) }} </small>
+                                </div>
                             </div>
                         </div>
                       </div>
