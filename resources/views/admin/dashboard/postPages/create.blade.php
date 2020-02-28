@@ -1,69 +1,60 @@
 @extends('admin.app')
-@section('title', 'Posts')
+@section('title', 'New Post')
+@section('css')
+    <link href="{{asset('css/forms.css')}}" rel="stylesheet">
+    <link  href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css" rel="stylesheet">
+@endsection
 @section('content')
 <div class="grid">
     <div id="toolbar"></div>
     <div id="drawer" data-role="drawer" class="k-widget k-drawer">
         <div class="drawer-content">
-            <h3 class="cms-title">Posts</h3>
+            <h3 class="cms-title">New Post</h3>
             <div id="Dashboard">
                 <div class="card-body card-posts">
                     <div class="col-xs-12">
                         <div class="box">
                             <div class="box-header">
                                 <div class="pull-left">
-                                    <a id="add-button" title="Add New" class="button-success" href="{{ route('posts.create') }}"><i class="fa fa-plus-circle"></i> Add New</a>
+                                   <div class="post-details">
+                                    {!! Form::model($post, ['method' => 'POST', 'route' => 'posts.store']) !!}
+                                    <div class="form-group">
+                                        {!! Form::label('Title') !!}
+                                        {!! Form::text('title', null , ['required', 'class' => 'form-text','id' => 'new-post-title','tabindex' => '1']) !!}
+                                    </div>
+                                    <div class="form-group">
+                                        {!! Form::label('Slug') !!}
+                                        {!! Form::text('slug', null , ['required', 'class' => 'form-text','id' => 'new-post-slug','tabindex' => '2']) !!}
+                                    </div>
+                                    <div class="form-group">
+                                        {!! Form::label('Excerpt') !!}
+                                        {!! Form::textarea('excerpt', null , ['required', 'class' => 'form-text','id' => 'new-post-excerpt','tabindex' => '3']) !!}
+                                    </div>
+                                    <div class="form-group">
+                                        {!! Form::label('Body') !!}
+                                        {!! Form::textarea('body', null , ['required', 'class' => 'form-text','id' => 'new-post-body','tabindex' => '4']) !!}
+                                    </div>
+                                    <div class="form-group">
+                                        {!! Form::label('Publication Date') !!}
+                                        {!! Form::date('published_at', null , ['required', 'class' => 'form-text','id' => 'new-post-publishdate','tabindex' => '4']) !!}
+                                    </div>
+                                    <div class="form-group">
+                                        {!! Form::label('category_id', 'Category') !!}
+                                        {!! Form::select('category_id', App\Category::pluck('title', 'id'), null , ['required', 'class' => 'form-text','id' => 'new-post-category','tabindex' => '4', 'placeholder' => 'Choose Category']) !!}
+                                    </div>
+                                    <hr>
+                                    {!! Form::submit('Create Post', ['class' => 'button-main']) !!}
+                                    {!! Form::close() !!}
+                                   </div>
                                 </div>
                                 <div class="pull-right">
-                                    <form class="search-form" action="" method="post">
-                                        @csrf
-                                        <input type="text" class="form-text" id="form-search-box" placeholder="Search for...">
-                                            <button class="form-search-btn" type="submit">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                    </form>
+                                    
                                 </div>
                             </div>
                           <!-- /.box-header -->
                           <div class="box-body table-responsive">
-                            <table class="table table-bordered table-condesed">
-                              <thead>
-                                  <tr>
-                                    <th>Action</th>
-                                    <th>Title</th>
-                                    <th>Author</th>
-                                    <th>Category</th>
-                                    <th>Date</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                @foreach ($posts as $post)
-                                <tr>
-                                    <td width="85" height="35">
-                                        <a title="Edit" class="button-default" href="{{ route('posts.edit', $post->id) }}">
-                                            <i class="fa fa-edit"></i>
-                                        </a>
-                                        <a title="Delete" class="button-danger" href="{{ route('posts.destroy', $post->id) }}">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </td>
-                                    <td>{{ $post->title }}</td>
-                                    <td>{{ $post->author->name }}</td>
-                                    <td>{{ $post->category->title}}</td>
-                                    <td><abbr title="{{ $post->dateFormatted(true) }}">{{ $post->dateFormatted() }}</abbr> | {!! $post->publicationlabel() !!}</td>
-                                </tr>
-                                @endforeach
-                              </tbody>
-                            </table>
+
                           </div>
-                            <div class="card-footer clearfix">
-                                <div class="pull-left">
-                                    {{ $posts->links() }}
-                                </div>
-                                <div class="pull-right">
-                                    <small>{{ $postCount }} {{ Str::plural('Item', $postCount) }} </small>
-                                </div>
-                            </div>
                         </div>
                       </div>
                 </div>
@@ -71,6 +62,7 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 <script>
      $("#drawer").kendoDrawer({
         template: "<ul>\
@@ -91,6 +83,8 @@
         position: 'left',
         minHeight: 915,
     });
+    var simplemde1 = new SimpleMDE({ element: document.getElementById("new-post-excerpt") });
+    var simplemde2 = new SimpleMDE({ element: document.getElementById("new-post-body") });
 </script>
 @endsection
 

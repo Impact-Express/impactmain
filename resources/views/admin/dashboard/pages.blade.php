@@ -37,32 +37,33 @@
                                   </tr>
                               </thead>
                               <tbody>
+                                @foreach ($pages as $page)
                                 <tr>
                                     <td width="85" height="35">
-                                        <a title="Edit" class="button-default" href="#">
+                                        <a title="Edit" class="button-default" href="{{ route('posts.edit', $page->id) }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a title="Delete" class="button-danger" href="#">
+                                        <a title="Delete" class="button-danger" href="{{ route('posts.destroy', $page->id) }}">
                                             <i class="fa fa-times"></i>
                                         </a>
                                     </td>
-                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                    <td>John Doe</td>
-                                    <td>Programming</td>
-                                    <td><abbr title="2016/12/04 6:32:00 PM">2016/12/04</abbr> | <span class="label label-info">Schedule</span></td>
+                                    <td>{{ $page->title }}</td>
+                                    <td>{{ $page->author->name }}</td>
+                                    <td>{{ $page->category->title}}</td>
+                                    <td><abbr title="{{ $page->dateFormatted(true) }}">{{ $page->dateFormatted() }}</abbr> | {!! $page->publicationlabel() !!}</td>
                                 </tr>
+                                @endforeach
                               </tbody>
                             </table>
                           </div>
                           <div class="card-footer clearfix">
-                              <ul class="pagination pagination-sm no-margin pull-left">
-                                <li class="page-item"><a class="page-link" href="#">«</a></li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">»</a></li>
-                              </ul>
+                            <div class="pull-left">
+                                {{ $pages->links() }}
                             </div>
+                            <div class="pull-right">
+                                <small>{{ $pageCount }} {{ Str::plural('Item', $pageCount) }} </small>
+                            </div>
+                        </div>
                         </div>
                       </div>
                 </div>
