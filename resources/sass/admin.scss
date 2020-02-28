@@ -346,5 +346,29 @@ h1, h2, h3, h4, h5, h6 {
 
 //Kendo Drawer
 .k-drawer {
-    height: 915px !important;
+    min-height: 915px !important;
+}
+
+//? New Post Form Styles
+.post-details {
+    width: 1000px;
+    padding: 20px;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 0px 10px 3px #00000040;
+}
+#new-post-title {
+    width: 97%;
+    border: 1px solid #d6d6d6;
+}
+#new-post-slug {
+    width: 97%;
+    border: 1px solid #d6d6d6;
+}
+#new-post-publishdate {
+    width: 97%;
+    border: 1px solid #d6d6d6;
+}
+#new-post-category {
+    width: 100%;
+    border: 1px solid #d6d6d6;
 }

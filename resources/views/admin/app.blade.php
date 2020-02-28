@@ -18,7 +18,7 @@
     <link href="{{ asset('styles/kendo.common.min.css') }}" rel="stylesheet">
     <link href="{{ asset('styles/kendo.material-v2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/forms.css') }}" rel="stylesheet">
+    @yield('css')
 
         <!-- Scripts -->
         <script src="{{ asset('js/jquery.min.js') }}" ></script>
