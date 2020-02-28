@@ -4,7 +4,7 @@
 
 LaraCMS (i know, how original) is a Custom Made CMS System using the web application framework Laravel. Originally designed for Impact Express, i have been slowly repurposing it in this fork for a more general use.
 
-### how to use
+### How to use
 
 If you know how to setup a Laravel Application for public use (a simple google search away if you don't!) then you can use this! You *Will* have to go through and customise the sass files and other assets at it's not got any theming capabilities right now (it was not designed for this purpose in its original form, but i may add it in later, and probably remove KendoUI as well because my god thats not fun.)
 
