@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostsController extends BackendController
 {
@@ -21,9 +22,9 @@ class PostsController extends BackendController
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Post $post)
     {
-        dd("create");
+        return view('admin.dashboard.postPages.create', compact('post'));
     }
 
     /**
