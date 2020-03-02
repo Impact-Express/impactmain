@@ -704,6 +704,27 @@ h6 {
   margin-top: 19px;
 }
 
+/************************
+//? Table Styles (GLOBAL)
+*************************/
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+tbody,
+tr,
+td {
+  border: 1px solid #e4dddd;
+}
+
 .form-search-btn {
   -webkit-appearance: none;
   -moz-appearance: none;

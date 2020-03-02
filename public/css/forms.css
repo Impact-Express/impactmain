@@ -34,8 +34,12 @@
 .form-textarea {
   border: 0px;
   padding: 15px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  margin-right: 20px;
   text-transform: uppercase;
-  width: 300px;
+  width: 97%;
+  border: 1px solid #d6d6d6;
 }
 
 .form-checkbox > input {
@@ -176,26 +180,5 @@
 
 .closebtn:hover {
   color: black;
-}
-
-/************************
-//? Table Styles (GLOBAL)
-*************************/
-
-table {
-  width: 100%;
-  text-align: center;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 10px;
-}
-
-tbody,
-tr,
-td {
-  border: 1px solid #e4dddd;
 }
 

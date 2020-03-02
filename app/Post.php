@@ -9,6 +9,7 @@ use GrahamCampbell\Markdown\Facades\Markdown;
 class Post extends Model
 {
     protected $dates = [ 'published_at' ];
+    protected $fillable = ['title','slug','excerpt','body','published_at','category_id',];
     
     public function author ()
     {
@@ -18,6 +19,11 @@ class Post extends Model
     public function category ($value='')
     {
         return $this->belongsTo(Category::class)->withDefault(['slug' => 'uncategorized']);
+    }
+
+    public function setPublishedAtAttribute($value)
+    {
+        $this->attributes['published_at'] = $value ?: NULL;
     }
 
     public function getImageUrlAttribute ($value)

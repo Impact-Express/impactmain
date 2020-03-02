@@ -295,6 +295,21 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 19px;
 
 }
+/************************
+//? Table Styles (GLOBAL)
+*************************/
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+}
+tbody, tr, td {
+    border: 1px solid #e4dddd;
+}
+
 
 //? Search box
 .form-search-btn {

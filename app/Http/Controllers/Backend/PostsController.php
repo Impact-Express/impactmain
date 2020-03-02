@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
 use App\Post;
 
 class PostsController extends BackendController
@@ -35,7 +36,8 @@ class PostsController extends BackendController
      */
     public function store(Request $request)
     {
-        //
+        $request->user()->posts()->create($request->all());
+        return redirect(route('admin-posts'));
     }
 
     /**
