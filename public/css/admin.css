@@ -803,3 +803,8 @@ td {
   border: 1px solid #d6d6d6;
 }
 
+#new-post-image {
+  margin-top: 5px;
+  width: 100%;
+}
+

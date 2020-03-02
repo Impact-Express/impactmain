@@ -24,11 +24,12 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'slug' => 'required|unique:posts',
-            'body' => 'required',
-            'category_id' => 'required',
-            'published_at' => 'date_format:Y-m-d H:i:s'
+            'title'         => 'required',
+            'slug'          => 'required|unique:posts',
+            'body'          => 'required',
+            'category_id'   => 'required',
+            'published_at'  => 'date_format:Y-m-d H:i:s',
+            'image'         => 'mimes:jpg,jpeg,bmp,png'
         ];
     }
 }

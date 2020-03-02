@@ -17,7 +17,7 @@
                             <div class="box-header">
                                 <div class="pull-left">
                                    <div class="post-details">
-                                    {!! Form::model($post, ['method' => 'POST', 'route' => 'posts.store']) !!}
+                                    {!! Form::model($post, ['method' => 'POST', 'route' => 'posts.store', 'files' => TRUE]) !!}
                                     <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
                                         {!! Form::label('Title') !!}
                                         {!! Form::text('title', null , ['required', 'class' => 'form-text','id' => 'new-post-title','tabindex' => '1']) !!}
@@ -48,16 +48,23 @@
                                     </div>
                                     <div class="form-group {{ $errors->has('published_at') ? 'has-error' : '' }}">
                                         {!! Form::label('Publication Date') !!}
-                                        {!! Form::text('published_at', NULL, ['class' => 'form-text','id' => 'new-post-publishdate','tabindex' => '4', 'placeholder' => 'Y-m-d H:i:s']) !!}
+                                        {!! Form::text('published_at', NULL, ['class' => 'form-text','id' => 'new-post-publishdate','tabindex' => '5', 'placeholder' => 'Y-m-d H:i:s']) !!}
                                         @if($errors->has('published_at'))
                                             <span class="help-block">{{ $errors->first('published_at') }}</span>
                                         @endif
                                     </div>
                                     <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
                                         {!! Form::label('category_id', 'Category') !!}
-                                        {!! Form::select('category_id', App\Category::pluck('title', 'id'), null , ['class' => 'form-text','id' => 'new-post-category','tabindex' => '4', 'placeholder' => 'Choose Category']) !!}
+                                        {!! Form::select('category_id', App\Category::pluck('title', 'id'), null , ['class' => 'form-text','id' => 'new-post-category','tabindex' => '6', 'placeholder' => 'Choose Category']) !!}
                                         @if($errors->has('category_id'))
                                             <span class="help-block">{{ $errors->first('category_id') }}</span>
+                                        @endif
+                                    </div>
+                                    <div class="form-group {{ $errors->has('image') ? 'has-error' : '' }}">
+                                        {!! Form::label('image', 'Feature Image') !!}
+                                        {!! Form::file('image',['id' => 'new-post-image','tabindex' => '7']) !!}
+                                        @if($errors->has('image'))
+                                            <span class="help-block">{{ $errors->first('image') }}</span>
                                         @endif
                                     </div>
                                     <hr>
