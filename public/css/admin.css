@@ -786,25 +786,38 @@ td {
 #new-post-title {
   width: 97%;
   border: 1px solid #d6d6d6;
+  text-transform: none;
 }
 
 #new-post-slug {
   width: 97%;
   border: 1px solid #d6d6d6;
+  text-transform: none;
 }
 
 #new-post-publishdate {
   width: 97%;
   border: 1px solid #d6d6d6;
+  text-transform: none;
 }
 
 #new-post-category {
   width: 100%;
   border: 1px solid #d6d6d6;
+  text-transform: none;
 }
 
 #new-post-image {
   margin-top: 5px;
   width: 100%;
+  text-transform: none;
+}
+
+#new-post-excerpt {
+  text-transform: none;
+}
+
+#new-post-body {
+  text-transform: none;
 }
 
