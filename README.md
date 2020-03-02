@@ -10,3 +10,5 @@ If you know how to setup a Laravel Application for public use (a simple google s
 
 ### Why?
 Why not! Doing something like this is in my opinion an awesome way to get aquianted with using a framework because you end up utilizing tons of the features that a framework offers. but if you want to go use Pyro or OctoberCMS for your Laravel CMS needs.
+
+![Laravel](https://github.com/Caboosh/LaraCMS/workflows/Laravel/badge.svg?branch=master)
