@@ -704,6 +704,27 @@ h6 {
   margin-top: 19px;
 }
 
+/************************
+//? Table Styles (GLOBAL)
+*************************/
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+tbody,
+tr,
+td {
+  border: 1px solid #e4dddd;
+}
+
 .form-search-btn {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -780,5 +801,10 @@ h6 {
 #new-post-category {
   width: 100%;
   border: 1px solid #d6d6d6;
+}
+
+#new-post-image {
+  margin-top: 5px;
+  width: 100%;
 }
 
