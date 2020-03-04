@@ -20,11 +20,13 @@
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     @yield('css')
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/jquery.min.js') }}" ></script>
-        <script src="{{ asset('js/kendo.all.min.js') }}" ></script>
-        <script src="{{ asset('js/admin.js') }}" ></script>
+    <!-- Scripts -->
+    <script src="{{ asset('js/jquery.min.js') }}" ></script>
+    @yield('js')
+    <script src="{{ asset('js/kendo.all.min.js') }}" ></script>
+    <script src="{{ asset('js/admin.js') }}" ></script>
 </head>
+
 <body style="margin: 0;">
     <div id="toolbar" class="topbar">
         <div class="k-overflow-anchor k-button profile">
@@ -48,24 +50,23 @@
     </section>
 </body>
 <script type="text/javascript">
-       
-    $("#toolbar").kendoToolBar({
-                items: [
-                    { type: "button", icon: "menu", attributes: { "class": "k-flat" }, click: toggleDrawer},
-                    { template: "<h3 style='margin-left: 20px;'>Impact Express</h3>"},
-                  ]
-            });
+        $("#toolbar").kendoToolBar({
+                    items: [
+                        { type: "button", icon: "menu", attributes: { "class": "k-flat" }, click: toggleDrawer},
+                        { template: "<h3 style='margin-left: 20px;'>Impact Express</h3>"},
+                    ]
+                });
 
-    function toggleDrawer() {
-        var drawerInstance = $("#drawer").data().kendoDrawer;
-        var drawerContainer = drawerInstance.drawerContainer;
+        function toggleDrawer() {
+            var drawerInstance = $("#drawer").data().kendoDrawer;
+            var drawerContainer = drawerInstance.drawerContainer;
 
-        if(drawerContainer.hasClass("k-drawer-expanded")) {
-            drawerInstance.hide();
-        } else {
-            drawerInstance.show();
+            if(drawerContainer.hasClass("k-drawer-expanded")) {
+                drawerInstance.hide();
+            } else {
+                drawerInstance.show();
+            }
         }
-    }
-    </script>
+</script>
 </body>
 </html>
