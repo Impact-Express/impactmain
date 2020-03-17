@@ -421,6 +421,10 @@ tbody, tr, td {
 }
 
 //? JqueryUI DatePicker Custom Styling
+.hasDatepicker {
+    width: 94%;
+    border: 1px solid #d6d6d6;
+}
 #ui-datepicker-div {
     background: #F2ECEC;
     padding: 15px;
@@ -442,4 +446,36 @@ tbody, tr, td {
 }
 .ui_tpicker_unit_hide {
     display: none;
+}
+.ui-timepicker-select {
+    width: 81%;
+
+}
+.ui_tpicker_time_label {
+    width: max-content;
+    float: left;
+}
+.ui_tpicker_time_input {
+    margin-left: 21px;
+}
+.ui_tpicker_hour_label {
+    width: max-content;
+    float: left;
+}
+.ui_tpicker_hour_slider {
+    margin-left: 21px;
+}
+.ui_tpicker_minute_label {
+    width: max-content;
+    float: left;
+}
+.ui_tpicker_minute_slider {
+    margin-left: 21px;
+}
+.ui_tpicker_second_label {
+    width: max-content;
+    float: left;
+}
+.ui_tpicker_second_slider {
+    margin-left: 21px;
 }

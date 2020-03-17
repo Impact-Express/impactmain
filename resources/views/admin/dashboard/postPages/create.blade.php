@@ -135,6 +135,7 @@
         slugInput.val(theSlug)
     });
     $("#new-post-publishdate").datetimepicker({
+        dateFormat: 'yy-mm-dd',
         timeFormat: 'HH:mm:ss',
         controlType: 'select',
         oneLine: true,
