@@ -15,14 +15,12 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->biginteger('author_id')->unsigned();
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('excerpt');
             $table->text('body');
             $table->string('image')->nullable();
             $table->timestamps();
-            $table->foreign('author_id')->references('id')->on('users')->onDelete('restrict');
             $table->timestamp('published_at')->nullable();
         });
     }

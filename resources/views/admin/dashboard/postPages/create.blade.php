@@ -51,8 +51,6 @@
                                             <span class="help-block">{{ $errors->first('body') }}</span>
                                         @endif
                                     </div>
-                                    <hr>
-                                    {!! Form::submit('Create Post', ['class' => 'button-main']) !!}
                                    </div>
                                 </div>
                                 <div class="pull-right">
@@ -82,9 +80,15 @@
                                         </div>
                                     </div>
                                     <div class="post-details-right">
-                                        <div class="form-group {{ $errors->has('image') ? 'has-error' : '' }}">
-                                            {!! Form::label('image', 'Feature Image') !!}
-                                            {!! Form::file('image',['id' => 'new-post-image','tabindex' => '7']) !!}
+                                        {!! Form::label('image', 'Feature Image') !!}
+                                            <div class="fileinput-new">
+                                                <img id="img-thumbnail" width="425" height="250">
+                                              </div>
+                                              <label class="button-image">
+                                                  Choose Image
+                                                <input type="file" class="button-image" name="image" tabindex="7" onchange="document.getElementById('img-thumbnail').src = window.URL.createObjectURL(this.files[0])">
+                                              </label>
+
                                             @if($errors->has('image'))
                                                 <span class="help-block">{{ $errors->first('image') }}</span>
                                             @endif

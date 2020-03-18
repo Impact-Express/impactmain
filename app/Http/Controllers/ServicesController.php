@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\ConsultationSent;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use App\Page;
 
 class ServicesController extends Controller
 {
@@ -18,53 +19,18 @@ class ServicesController extends Controller
         Mail::to('cameron@impactexpress.co.uk')->send(new ConsultationSent($data));
         return back()->with('success', 'Thank you for contacting us');
     }
+    
+    public function getRouteKeyName ()
+    {
+        return 'slug';
+    }
     public function index ()
     {
-       return view('customer.services.services');
-    }
-    
-    public function express ()
-    {
-       return view('customer.services.express');
-    }
-    
-    public function economy ()
-    {
-        return view('customer.services.economy');
+        return view ('customer.services.services');
     }
 
-    public function overnight ()
+    public function show (Page $page)
     {
-        return view('customer.services.overnight');
-    }
-    
-    public function imports ()
-    {
-        return view('customer.services.imports');
-    }
-
-    public function dangerousGoods ()
-    {
-        return view('customer.services.dangerousGoods');
-    }
-
-    public function dangerousGoodsDryIce ()
-    {
-        return view('customer.services.dangerousGoodsDryIce');
-    }
-
-    public function ecommerce ()
-    {
-        return view('customer.services.ecommerce');
-    }
-
-    public function fufilment ()
-    {
-        return view('customer.services.fufilment');
-    }
-
-    public function mobileServices ()
-    {
-        return view('customer.services.mobileServices');
+        return view('customer.services.service', compact('page'));
     }
 }

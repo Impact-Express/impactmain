@@ -382,6 +382,10 @@ h6 {
   margin: 0;
 }
 
+input[type=file] {
+  display: none;
+}
+
 .label {
   display: inline;
   padding: 0.2em 0.6em 0.3em;
@@ -410,6 +414,7 @@ h6 {
 /* Button Styles */
 
 .button-main {
+  cursor: pointer;
   border: none;
   text-transform: uppercase;
   text-decoration: none;
@@ -420,6 +425,7 @@ h6 {
 }
 
 .button-alt {
+  cursor: pointer;
   border: none;
   text-transform: uppercase;
   text-decoration: none;
@@ -430,6 +436,7 @@ h6 {
 }
 
 .button-white {
+  cursor: pointer;
   border: none;
   text-transform: uppercase;
   text-decoration: none;
@@ -439,6 +446,7 @@ h6 {
 }
 
 .button-success {
+  cursor: pointer;
   border: none;
   text-transform: uppercase;
   text-decoration: none;
@@ -450,6 +458,7 @@ h6 {
 }
 
 .button-default {
+  cursor: pointer;
   border: 1px solid;
   text-transform: uppercase;
   text-decoration: none;
@@ -461,6 +470,7 @@ h6 {
 }
 
 .button-danger {
+  cursor: pointer;
   border: none;
   text-transform: uppercase;
   text-decoration: none;
@@ -471,12 +481,23 @@ h6 {
 }
 
 .button-square {
+  cursor: pointer;
   border: none;
   text-transform: uppercase;
   text-decoration: none;
   padding: 10px 10px;
   background: #FECE00;
   border-radius: 5px;
+}
+
+.button-image {
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 25px;
+  background: #F2ECEC;
+  border-radius: 10px;
 }
 
 .pagination {
@@ -692,10 +713,14 @@ h6 {
 
 .pull-left {
   float: left;
+  width: 65%;
 }
 
 .pull-right {
   float: right;
+  width: 30%;
+  right: 40px;
+  position: relative;
   padding-bottom: 20px;
 }
 
@@ -777,13 +802,13 @@ td {
 }
 
 .post-details {
-  width: 1000px;
+  width: 95.4%;
   padding: 20px;
   border: 3px solid #d6d6d6;
 }
 
 .post-details-right {
-  width: 530px;
+  width: 100%;
   padding: 20px;
   margin-bottom: 20px;
   border: 3px solid #d6d6d6;
@@ -843,6 +868,16 @@ td {
   text-transform: none;
 }
 
+.excerpt {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.body {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .hasDatepicker {
   width: 94%;
   border: 1px solid #d6d6d6;
@@ -889,6 +924,22 @@ td {
   margin-left: 21px;
 }
 
+.ui_tpicker_time {
+  margin-bottom: 5px;
+}
+
+.ui_tpicker_hour {
+  margin-bottom: 5px;
+}
+
+.ui_tpicker_minute {
+  margin-bottom: 5px;
+}
+
+.ui_tpicker_second {
+  margin-bottom: 5px;
+}
+
 .ui_tpicker_hour_label {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -920,5 +971,26 @@ td {
 
 .ui_tpicker_second_slider {
   margin-left: 21px;
+}
+
+.ui-datepicker-title {
+  padding-top: 15px;
+}
+
+.ui-datepicker-current {
+  background: #d7d7d7;
+  border: 1px solid #a7a7a7;
+  padding: 5px;
+  border-radius: 7px;
+  margin-right: 8px;
+}
+
+.fileinput-new {
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 425px;
+  height: 250px;
+  margin-bottom: 25px;
+  margin-top: 5px;
 }
 

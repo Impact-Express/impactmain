@@ -24,6 +24,7 @@ Route::post('/quote', 'QuotesController@send');
 
 // Services Main Route
     Route::resource('/services', 'ServicesController');
+    Route::get('/services/express', 'ServicesController@express');
 
 // Shipping Destinations Routes
     Route::resource('/destinations', 'DestinationsController');

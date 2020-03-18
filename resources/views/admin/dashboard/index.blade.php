@@ -16,7 +16,7 @@
                     <div class="dashboard-get-started">
                         <h4>Get Started</h4>
                         <br>
-                        <a type="button" class="button-main" href="">Write a Blog Post</a>
+                        <a type="button" class="button-main" href=" {{ route('posts.create') }} ">Write a Blog Post</a>
                     </div>
                 </div>
                 <div class="card-body card-dashboard">
