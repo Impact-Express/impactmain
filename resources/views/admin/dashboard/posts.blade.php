@@ -40,10 +40,10 @@
                                 @foreach ($posts as $post)
                                 <tr>
                                     <td width="85" height="35">
-                                        <a title="Edit" class="button-default" href="{{ route('posts.edit', $post->id) }}">
+                                        <a title="Edit" class="button-default" href="{{ route('posts.edit', $post->slug) }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a title="Delete" class="button-danger" href="{{ route('posts.destroy', $post->id) }}">
+                                        <a title="Delete" class="button-danger" href="{{ route('posts.destroy', $post->slug) }}">
                                             <i class="fa fa-times"></i>
                                         </a>
                                     </td>

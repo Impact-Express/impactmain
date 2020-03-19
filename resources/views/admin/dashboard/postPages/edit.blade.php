@@ -1,5 +1,5 @@
 @extends('admin.app')
-@section('title', 'New Post')
+@section('title', 'Edit Post')
 @section('css')
     <link href="{{asset('css/simplemde.min.css')}}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css rel="stylesheet">
@@ -14,7 +14,7 @@
     <div id="toolbar"></div>
     <div id="drawer" data-role="drawer" class="k-widget k-drawer">
         <div class="drawer-content">
-            <h3 class="cms-title">New Post</h3>
+            <h3 class="cms-title">Edit Post</h3>
             <div id="Dashboard">
                 <div class="card-body card-posts">
                     <div class="col-xs-12">
@@ -22,7 +22,7 @@
                             <div class="box-header">
                                 <div class="pull-left">
                                    <div class="post-details">
-                                    {!! Form::model($post, ['method' => 'POST', 'route' => 'posts.store', 'files' => TRUE, 'id' => 'post-form']) !!}
+                                    {!! Form::model($post, ['method' => 'PUT', 'route' => ['posts.update', $post->slug], 'files' => TRUE, 'id' => 'post-form']) !!}
                                     <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
                                         {!! Form::label('Title') !!}
                                         {!! Form::text('title', null , ['required', 'class' => 'form-text','id' => 'new-post-title','tabindex' => '1']) !!}
@@ -82,7 +82,7 @@
                                     <div class="post-details-right">
                                         {!! Form::label('image', 'Feature Image') !!}
                                             <div class="fileinput-new">
-                                                <img id="img-thumbnail" width="425" height="250">
+                                                <img id="img-thumbnail" width="425" height="250" src="{{ ($post->image_thumb_url) ? $post->image_thumb_url : 'http://placehold.it/425x250&text=No+Image' }}">
                                               </div>
                                               <label class="button-image">
                                                   Choose Image
