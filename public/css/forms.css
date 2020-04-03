@@ -1,9 +1,7 @@
 @charset "UTF-8";
-
 /*****************************
 //? Form Styles (GLOBAL)
 *****************************/
-
 .form-text {
   border: 0px;
   padding: 15px;
@@ -43,8 +41,9 @@
 }
 
 .form-checkbox > input {
-  position: absolute;
-  top: 445px;
+  position: relative;
+  top: 8px;
+  left: -7px;
   height: 25px;
   width: 25px;
   -webkit-appearance: none;
@@ -137,7 +136,6 @@
 /************************
 //? Form Alerts
 *************************/
-
 .alert {
   padding: 20px;
   background-color: #f44336;
@@ -181,4 +179,3 @@
 .closebtn:hover {
   color: black;
 }
-

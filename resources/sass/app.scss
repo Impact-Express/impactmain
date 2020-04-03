@@ -12,6 +12,7 @@ a:hover {
     text-decoration: none;
     color: #535353;
 }
+
 .container {
     margin-left:auto;
     margin-right:auto;
@@ -388,7 +389,7 @@ h1, h2, h3, h4, h5, h6 {
         background:#F2ECEC;
     }
     .pane-left {
-        background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url("img/personal-account.jpg");
+        background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url("/img/personal-account.jpg");
         background-size: cover;
         -webkit-filter: grayscale(1) opacity(.2);
         filter:greyscale(1) opacity(.2);
@@ -399,7 +400,7 @@ h1, h2, h3, h4, h5, h6 {
         filter:none;
     }
     .pane-right {
-        background: linear-gradient(to top, transparent, rgba(66, 66, 66, 0.47)), url("img/business-account.jpg");
+        background: linear-gradient(to top, transparent, rgba(66, 66, 66, 0.47)), url("/img/business-account.jpg");
         background-size: cover;
         -webkit-filter: grayscale(1) opacity(.2);
         filter:greyscale(1) opacity(.2);

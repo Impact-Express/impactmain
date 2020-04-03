@@ -1,7 +1,6 @@
 /****************************
     *? Service Page Styles
 ****************************/
-
 .flex-center {
   margin: auto;
   display: -webkit-box;
@@ -111,7 +110,6 @@ div:hover.hover-light-grey {
 }
 
 /* Infographic Classes to style the images as needed */
-
 .service-infogfx-text {
   margin-left: 2.7%;
   width: -webkit-fit-content;
@@ -156,7 +154,6 @@ div:hover.hover-light-grey {
 }
 
 /* Popular Destinations Classes */
-
 .other-destinations {
   height: 330px;
   width: 100%;
@@ -244,7 +241,6 @@ div:hover.hover-light-grey {
 }
 
 /* Request Consultation Partial */
-
 .button-left {
   float: left !important;
 }
@@ -336,3 +332,143 @@ div:hover.hover-light-grey {
   margin: 0;
 }
 
+.services-container {
+  background: #F2ECEC;
+  padding: 60px;
+}
+
+.seperator {
+  margin-bottom: 20px;
+  padding: 11px;
+  border-bottom: 1px solid #00000021;
+}
+
+.express-delivery {
+  height: 420px;
+}
+
+.express-delivery-img {
+  float: left;
+  width: 45%;
+}
+
+.express-delivery-title {
+  float: left;
+  text-align: left;
+  margin-left: 175px;
+}
+
+.express-delivery-desc {
+  float: right;
+  text-align: left;
+  position: relative;
+  font-size: 15px;
+  box-sizing: content-box;
+  width: 45%;
+  height: 86%;
+  top: 20px;
+}
+
+.economy-delivery {
+  height: 420px;
+}
+
+.economy-delivery-img {
+  float: right;
+  width: 45%;
+}
+
+.economy-delivery-title {
+  float: right;
+  text-align: right;
+  margin-right: 175px;
+}
+
+.economy-delivery-desc {
+  float: left;
+  text-align: right;
+  position: relative;
+  font-size: 15px;
+  box-sizing: content-box;
+  width: 45%;
+  height: 86%;
+  top: 20px;
+}
+
+.domestic-delivery {
+  height: 420px;
+}
+
+.domestic-delivery-img {
+  float: left;
+  width: 45%;
+}
+
+.domestic-delivery-title {
+  float: left;
+  text-align: left;
+  margin-left: 175px;
+}
+
+.domestic-delivery-desc {
+  float: right;
+  text-align: left;
+  position: relative;
+  font-size: 15px;
+  box-sizing: content-box;
+  width: 45%;
+  height: 86%;
+  top: 20px;
+}
+
+.imports-delivery {
+  height: 420px;
+}
+
+.imports-delivery-img {
+  float: right;
+  width: 45%;
+}
+
+.imports-delivery-title {
+  float: right;
+  text-align: right;
+  margin-right: 175px;
+}
+
+.imports-delivery-desc {
+  float: left;
+  text-align: right;
+  position: relative;
+  font-size: 15px;
+  box-sizing: content-box;
+  width: 45%;
+  height: 86%;
+  top: 20px;
+}
+
+.ietrax-delivery {
+  height: 420px;
+}
+
+.ietrax-delivery-img {
+  float: left;
+  width: 45%;
+}
+
+.ietrax-delivery-title {
+  float: left;
+  text-align: left;
+  margin-left: 175px;
+}
+
+.ietrax-delivery-desc {
+  float: right;
+  text-align: left;
+  position: relative;
+  font-size: 15px;
+  box-sizing: content-box;
+  width: 45%;
+  height: 86%;
+  top: 20px;
+}

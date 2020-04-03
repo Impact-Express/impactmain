@@ -1,9 +1,7 @@
 /***********************************
     *? Business Quote Page Styles
 ***********************************/
-
 /* Login and form Section Styles */
-
 .quote-login {
   background: #F2ECEC;
   height: 500px;
@@ -11,7 +9,7 @@
 
 .create-account {
   background: #F2ECEC;
-  height: 800px;
+  height: 840px;
 }
 
 .caret-quote {
@@ -41,7 +39,6 @@
 }
 
 /* Login Box Styles */
-
 .login-box {
   width: 1390px;
   height: 450px;
@@ -95,10 +92,9 @@
 }
 
 /* Account Creation Form Box Styles */
-
 .create-account-box {
   width: 1390px;
-  height: 750px;
+  height: 780px;
   margin: auto;
   background: #fece2e;
 }
@@ -130,8 +126,6 @@
 .create-account-tcs-text {
   position: relative;
   margin: auto;
-  left: 40px;
-  top: 19px;
   font-size: 1em;
   font-weight: 600;
   color: #000;
@@ -156,7 +150,6 @@
 }
 
 /* Contact Form */
-
 .contact-form {
   height: 450px;
   background: #f1f1f1;
@@ -181,7 +174,6 @@
 }
 
 /* Form Input Styles */
-
 #quote-email-address {
   width: 61.7%;
 }
@@ -220,4 +212,3 @@
   left: 1093px;
   top: 57px;
 }
-

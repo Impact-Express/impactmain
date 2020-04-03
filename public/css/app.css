@@ -371,17 +371,11 @@ a:hover {
   text-transform: uppercase;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
 /* Button Styles ss */
-
 .button-main {
   border: none;
   text-transform: uppercase;
@@ -421,7 +415,6 @@ h6 {
 }
 
 /* Mobile Navigation */
-
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -487,7 +480,6 @@ h6 {
 }
 
 /* DHL Authorised Service Partner Strip*/
-
 .top-strip {
   width: 100%;
   height: 20px;
@@ -501,7 +493,6 @@ h6 {
 }
 
 /* Navigation Bar */
-
 .nav-logo-img {
   width: auto;
 }
@@ -511,7 +502,6 @@ h6 {
 }
 
 /* Main Pane Styles */
-
 .pane {
   display: inline-block;
   height: 300px;
@@ -530,18 +520,16 @@ h6 {
 }
 
 /* Personal Account Pane Text Styles */
-
 .pane-left {
-  background: url(/images/cat1.jpg?80922903bcf4359e65207a123b182102);
+  background: url("img/cat1.jpg");
   background-size: cover;
   -webkit-filter: grayscale(1) opacity(0.2);
   filter: greyscale(1) opacity(0.2);
 }
 
 /* Business Account Pane Styles */
-
 .pane-right {
-  background: url(/images/cat2.jpg?b87e0bf276295a6de3ba99a54016549b);
+  background: url("img/cat2.jpg");
   background-size: cover;
   -webkit-filter: grayscale(1) opacity(0.2);
   filter: greyscale(1) opacity(0.2);
@@ -567,14 +555,14 @@ h6 {
   }
 
   .pane-left {
-    background: url(/images/cat1.jpg?80922903bcf4359e65207a123b182102);
+    background: url("img/cat1.jpg");
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
     filter: greyscale(1) opacity(0.2);
   }
 
   .pane-right {
-    background: url(/images/cat2.jpg?b87e0bf276295a6de3ba99a54016549b);
+    background: url("img/cat2.jpg");
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
     filter: greyscale(1) opacity(0.2);
@@ -608,7 +596,6 @@ h6 {
     color: #2D3332;
   }
 }
-
 @media (min-width: 992px) {
   .float-left {
     float: left !important;
@@ -629,7 +616,6 @@ h6 {
   /***********************************
       *? HIDE BORGAR
   ***********************************/
-
   .hamburger {
     display: none;
   }
@@ -637,7 +623,6 @@ h6 {
   /***********************************************
       *? Top "Authorised Service Partner" Strip
   ************************************************/
-
   .top-strip {
     width: 100%;
     height: 20px;
@@ -652,9 +637,7 @@ h6 {
   /***********************************
       *? Navigation Bar Styles
   ***********************************/
-
   /* Reset */
-
   .main-nav {
     display: -webkit-box;
     display: flex;
@@ -691,7 +674,6 @@ h6 {
   }
 
   /* Mega Menu */
-
   .nav-dropdown button:hover + .mega-menu {
     display: block;
   }
@@ -703,7 +685,6 @@ h6 {
   }
 
   /* Columns */
-
   .column-xs {
     float: left;
     width: 15%;
@@ -750,7 +731,6 @@ h6 {
   }
 
   /* Dropdown button */
-
   .nav-dropdown .dropbtn {
     font-size: 16px;
     border: none;
@@ -768,7 +748,6 @@ h6 {
   /***********************************
       *? Navigation Bar
   ***********************************/
-
   .navbar-logo {
     height: 60px;
   }
@@ -776,7 +755,6 @@ h6 {
   /***********************************
       *? Account Panes Styles
   ***********************************/
-
   .account-pane-container {
     width: 100%;
     display: -webkit-box;
@@ -791,8 +769,8 @@ h6 {
   }
 
   .pane-left {
-    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(230, 230, 230, 0.47))), url(/images/personal-account.jpg?d346e671310bc4b7e8c6aa1840abdab2);
-    background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url(/images/personal-account.jpg?d346e671310bc4b7e8c6aa1840abdab2);
+    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(230, 230, 230, 0.47))), url("/img/personal-account.jpg");
+    background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url("/img/personal-account.jpg");
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
     filter: greyscale(1) opacity(0.2);
@@ -805,8 +783,8 @@ h6 {
   }
 
   .pane-right {
-    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(66, 66, 66, 0.47))), url(/images/business-account.jpg?31bd79ef30fbfa2be3b19825ef994770);
-    background: linear-gradient(to top, transparent, rgba(66, 66, 66, 0.47)), url(/images/business-account.jpg?31bd79ef30fbfa2be3b19825ef994770);
+    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(66, 66, 66, 0.47))), url("/img/business-account.jpg");
+    background: linear-gradient(to top, transparent, rgba(66, 66, 66, 0.47)), url("/img/business-account.jpg");
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
     filter: greyscale(1) opacity(0.2);
@@ -821,7 +799,6 @@ h6 {
   /***********************************
       *? Services Boxes Styles
   ***********************************/
-
   .service-box-container {
     width: 100%;
     display: -webkit-box;
@@ -881,7 +858,6 @@ h6 {
   /***********************************
       *? DHL Service Partner Styles
   ***********************************/
-
   .dhl-service-partner {
     background: #FECE00;
     position: relative;
@@ -935,7 +911,6 @@ h6 {
   /*****************************************
       *? Personal Account Pane Text Styles
   *****************************************/
-
   .personal-account {
     position: relative;
     top: 12em;
@@ -969,7 +944,6 @@ h6 {
   /*****************************************
       *? Business Account Pane Text Styles
   *****************************************/
-
   .business-account {
     position: relative;
     top: 12em;
@@ -1003,7 +977,6 @@ h6 {
   /*********************************
       *? About Us Section Styles
   *********************************/
-
   .about-us {
     background: #FFF;
     z-index: -1;
@@ -1092,7 +1065,6 @@ h6 {
   /************************
       *? Footer Styles
   *************************/
-
   .main-footer {
     height: 270px;
     background: #2d3332;
@@ -1110,4 +1082,3 @@ h6 {
     width: 75%;
   }
 }
-

@@ -373,12 +373,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -412,7 +407,6 @@ input[type=file] {
 }
 
 /* Button Styles */
-
 .button-main {
   cursor: pointer;
   border: none;
@@ -544,7 +538,6 @@ input[type=file] {
 /***********************************
     *? Top Bar Styles
 ***********************************/
-
 .topbar {
   display: -webkit-box;
   width: 100%;
@@ -605,7 +598,6 @@ input[type=file] {
 }
 
 /* Columns */
-
 .column-xs {
   float: left;
   width: 15%;
@@ -659,7 +651,6 @@ input[type=file] {
 /***********************************
 *? Dashboard Styling
 ***********************************/
-
 #Dashboard {
   padding: 20px 50px 0px 50px;
   margin-left: 0px;
@@ -732,21 +723,17 @@ input[type=file] {
 /************************
 //? Table Styles (GLOBAL)
 *************************/
-
 table {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
 }
 
-th,
-td {
+th, td {
   padding: 10px;
 }
 
-tbody,
-tr,
-td {
+tbody, tr, td {
   border: 1px solid #e4dddd;
 }
 
@@ -993,4 +980,3 @@ td {
   margin-bottom: 25px;
   margin-top: 5px;
 }
-

@@ -264,3 +264,134 @@ div:hover.hover-light-grey  {
     width: 125%;
     margin: 0;
 }
+
+// Main Services Page
+.services-container {
+    background: #F2ECEC;
+    padding: 60px;
+}
+.seperator {
+    margin-bottom: 20px;
+    padding: 11px;
+    border-bottom: 1px solid #00000021;
+}
+
+// Express Panel
+.express-delivery {
+    height: 420px;
+}
+.express-delivery-img {
+    float: left;
+    width: 45%;
+}
+.express-delivery-title {
+    float: left;
+    text-align: left;
+    margin-left: 175px;
+}
+.express-delivery-desc {
+    float: right;
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 45%;
+    height: 86%;
+    top: 20px;
+}
+
+// Economy Panel
+.economy-delivery {
+    height: 420px;
+}
+.economy-delivery-img {
+    float: right;
+    width: 45%;
+}
+.economy-delivery-title {
+    float: right;
+    text-align: right;
+    margin-right: 175px;
+}
+.economy-delivery-desc {
+    float: left;
+    text-align: right;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 45%;
+    height: 86%;
+    top: 20px;
+}
+
+// Domestic Panel
+.domestic-delivery {
+    height: 420px;
+}
+.domestic-delivery-img {
+    float: left;
+    width: 45%;
+}
+.domestic-delivery-title {
+    float: left;
+    text-align: left;
+    margin-left: 175px;
+}
+.domestic-delivery-desc {
+    float: right;
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 45%;
+    height: 86%;
+    top: 20px;
+}
+
+// Imports Panel
+.imports-delivery {
+    height: 420px;
+}
+.imports-delivery-img {
+    float: right;
+    width: 45%;
+}
+.imports-delivery-title {
+    float: right;
+    text-align: right;
+    margin-right: 175px;
+}
+.imports-delivery-desc {
+    float: left;
+    text-align: right;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 45%;
+    height: 86%;
+    top: 20px;
+}
+
+// IETrax Panel
+.ietrax-delivery {
+    height: 420px;
+}
+.ietrax-delivery-img {
+    float: left;
+    width: 45%;
+}
+.ietrax-delivery-title {
+    float: left;
+    text-align: left;
+    margin-left: 175px;
+}
+.ietrax-delivery-desc {
+    float: right;
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 45%;
+    height: 86%;
+    top: 20px;
+}
