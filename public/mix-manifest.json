@@ -1,0 +1,12 @@
+{
+    "/js/admin.js": "/js/admin.js",
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/admin.css": "/css/admin.css",
+    "/css/auth.css": "/css/auth.css",
+    "/css/forms.css": "/css/forms.css",
+    "/css/news.css": "/css/news.css",
+    "/css/errorpages.css": "/css/errorpages.css",
+    "/css/businessquote.css": "/css/businessquote.css",
+    "/css/services.css": "/css/services.css"
+}

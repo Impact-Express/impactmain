@@ -3,23 +3,16 @@
 ****************************/
 .flex-center {
   margin: auto;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   width: 1800px;
 }
 
 .flex {
   margin: auto;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
   width: 1800px;
 }
 
@@ -29,7 +22,6 @@
 }
 
 .service-information {
-  display: -webkit-box;
   display: flex;
   background: #d9d9d9;
 }
@@ -123,7 +115,7 @@ div:hover.hover-light-grey {
   width: 750px;
   height: 400px;
   margin-top: -220px;
-  background-image: url("/img/cat1.jpg");
+  background-image: url("img/cat1.jpg");
 }
 
 .economy-infogfx {
@@ -132,7 +124,7 @@ div:hover.hover-light-grey {
   width: 750px;
   height: 400px;
   margin-top: -220px;
-  background-image: url("/img/cat1.jpg");
+  background-image: url("img/cat1.jpg");
 }
 
 .overnight-infogfx {
@@ -141,7 +133,7 @@ div:hover.hover-light-grey {
   width: 750px;
   height: 400px;
   margin-top: -220px;
-  background-image: url("/img/cat1.jpg");
+  background-image: url("img/cat1.jpg");
 }
 
 .imports-infogfx {
@@ -150,7 +142,7 @@ div:hover.hover-light-grey {
   width: 750px;
   height: 400px;
   margin-top: -220px;
-  background-image: url("/img/cat1.jpg");
+  background-image: url("img/cat1.jpg");
 }
 
 /* Popular Destinations Classes */
@@ -163,10 +155,8 @@ div:hover.hover-light-grey {
 
 .destinations {
   padding-top: 25px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .destinations-title {
@@ -187,12 +177,10 @@ div:hover.hover-light-grey {
 }
 
 .destination:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .destination {
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -288,7 +276,6 @@ div:hover.hover-light-grey {
 }
 
 .right-side {
-  display: -webkit-inline-box;
   display: inline-flex;
   height: 215px;
   width: -webkit-fit-content;

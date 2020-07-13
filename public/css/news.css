@@ -22,7 +22,6 @@
   background: #F2ECEC;
   padding-top: 30px;
   padding-bottom: 30px;
-  display: -webkit-box;
   display: flex;
 }
 
@@ -81,7 +80,6 @@
 }
 
 .post-meta-group {
-  display: -webkit-box;
   display: flex;
   float: left;
   list-style: outside none none;
@@ -113,7 +111,6 @@
 }
 
 .pagination {
-  display: -webkit-box;
   display: flex;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -135,8 +132,7 @@
 }
 
 .page-link:hover {
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  transition-duration: 0.4s;
   border: 1px solid #F2ECEC;
   background-color: #34495E;
   color: #fff;

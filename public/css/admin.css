@@ -499,7 +499,6 @@ input[type=file] {
 }
 
 .pagination {
-  display: -webkit-box;
   display: flex;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -521,8 +520,7 @@ input[type=file] {
 }
 
 .page-link:hover {
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
+  transition-duration: 0.4s;
   border: 1px solid #F2ECEC;
   background-color: #34495E;
   color: #fff;
@@ -547,10 +545,8 @@ input[type=file] {
   width: 100%;
   height: 60px;
   background: #FECE00;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   box-shadow: 0 7px 4px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -563,7 +559,6 @@ input[type=file] {
 }
 
 .top-items {
-  display: -webkit-box;
   display: flex;
   list-style-type: none;
   margin-right: 44px;
@@ -658,11 +653,8 @@ input[type=file] {
 #Dashboard {
   padding: 20px 50px 0px 50px;
   margin-left: 0px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .card-body {
@@ -815,10 +807,8 @@ tbody, tr, td {
 }
 
 .publish-buttons {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 #new-post-title {

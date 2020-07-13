@@ -428,12 +428,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #2D3332;
   display: block;
   z-index: 999;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
+  transform: translateX(-100%);
   transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
 }
 
 .mobile-nav-items {
@@ -477,10 +473,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .open {
-  display: -webkit-box;
   display: flex;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 
 /* DHL Authorised Service Partner Strip*/
@@ -542,7 +536,6 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
   .account-pane-container {
     width: 100%;
-    display: -webkit-box;
     display: flex;
   }
 
@@ -574,7 +567,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .service-box-container {
     width: 100%;
-    display: -webkit-box;
     display: flex;
   }
 
@@ -643,15 +635,12 @@ h1, h2, h3, h4, h5, h6 {
   ***********************************/
   /* Reset */
   .main-nav {
-    display: -webkit-box;
     display: flex;
     width: 100%;
     height: 100px;
     background: white;
-    -webkit-box-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .nav-logo-img {
@@ -659,7 +648,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav-items {
-    display: -webkit-box;
     display: flex;
     list-style-type: none;
     margin-right: 44px;
@@ -761,7 +749,6 @@ h1, h2, h3, h4, h5, h6 {
   ***********************************/
   .account-pane-container {
     width: 100%;
-    display: -webkit-box;
     display: flex;
   }
 
@@ -773,7 +760,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .pane-left {
-    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(230, 230, 230, 0.47))), url("/img/personal-account.jpg");
     background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url("/img/personal-account.jpg");
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
@@ -787,7 +773,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .pane-right {
-    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(66, 66, 66, 0.47))), url("/img/business-account.jpg");
     background: linear-gradient(to top, transparent, rgba(66, 66, 66, 0.47)), url("/img/business-account.jpg");
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
@@ -805,7 +790,6 @@ h1, h2, h3, h4, h5, h6 {
   ***********************************/
   .service-box-container {
     width: 100%;
-    display: -webkit-box;
     display: flex;
   }
 
@@ -865,7 +849,6 @@ h1, h2, h3, h4, h5, h6 {
   .dhl-service-partner {
     background: #FECE00;
     position: relative;
-    display: -webkit-box;
     display: flex;
     height: 130px;
     width: 90%;
