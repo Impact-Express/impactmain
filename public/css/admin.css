@@ -381,6 +381,10 @@ input[type=file] {
   display: none;
 }
 
+.has-error {
+  color: red;
+}
+
 .label {
   display: inline;
   padding: 0.2em 0.6em 0.3em;

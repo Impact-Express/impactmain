@@ -46,7 +46,7 @@ class PostsController extends BackendController
         $data = $this->handleRequest($request);
 
         $request->user()->posts()->create($data);
-        return redirect(route('admin-posts'));
+        return redirect(route('admin-posts'))->with('message', 'The Post was created successfully!');
     }
 
     private function handleRequest($request)
@@ -104,9 +104,14 @@ class PostsController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Requests\PostRequest $request, $id)
     {
-        //
+        
+       $post = Post::findOrFail($id);
+       $data = $this->handleRequest($request);
+       $post->update($data);
+
+       return redirect(route('admin-posts'))->with('message', 'The Post was edited successfully!');
     }
 
     /**

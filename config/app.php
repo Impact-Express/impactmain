@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => (bool) env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -135,12 +135,11 @@ return [
     */
 
     'providers' => [
-        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
-        
+
         /*
          * Laravel Framework Service Providers...
          */
+        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -192,6 +191,7 @@ return [
     */
 
     'aliases' => [
+        
         'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
@@ -210,6 +210,7 @@ return [
         'File' => Illuminate\Support\Facades\File::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
+        'Http' => Illuminate\Support\Facades\Http::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
@@ -228,7 +229,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

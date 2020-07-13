@@ -22,65 +22,80 @@
                             <div class="box-header">
                                 <div class="pull-left">
                                    <div class="post-details">
-                                    {!! Form::model($post, ['method' => 'PUT', 'route' => ['posts.update', $post->slug], 'files' => TRUE, 'id' => 'post-form']) !!}
-                                    <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
-                                        {!! Form::label('Title') !!}
-                                        {!! Form::text('title', null , ['required', 'class' => 'form-text','id' => 'new-post-title','tabindex' => '1']) !!}
-                                        @if($errors->has('title'))
-                                            <span class="help-block">{{ $errors->first('title') }}</span>
-                                        @endif
+                                    <form action="{{ route('posts.update', $post->slug) }}" method="POST" enctype="multipart/form-data">
+                                           @method('PATCH')
+                                           @csrf
+
+                                            <div class="form-group @error('title') has-error @enderror">
+                                                <label for="Title">Title</label>
+                                                <input class="form-text @error('title') has-error @enderror" id="new-post-title" tabindex="1" name="title" type="text" value="{{ $post->title }}">
+
+                                                @error('title')
+                                                    <span class="help-block has-error">{{ $message }}</span>
+                                                    <br><br>
+                                                @enderror
+                                            </div>
+
+                                            <div class="form-group excerpt @error('excerpt') has-error @enderror">
+                                                <label for="Excerpt">Excerpt</label>
+                                                <textarea class="form-textarea @error('excerpt') has-error @enderror" id="new-post-excerpt" tabindex="3" name="excerpt" cols="50" rows="10">{{ $post->excerpt }}</textarea>
+
+                                                @error('excerpt')
+                                                    <span class="help-block has-error">{{ $message }}</span>
+                                                    <br><br>
+                                                @enderror
+                                            </div>
+
+                                            <div class="form-group @error('body') has-error @enderror">
+                                                <label for="Body">Body</label>
+                                                <textarea class="form-textarea @error('body') has-error @enderror" id="new-post-body" tabindex="4" name="body" cols="50" rows="10">{{ $post->body }}</textarea>
+
+                                                @error('body')
+                                                    <span class="help-block has-error">{{ $message }}</span>
+                                                    <br><br>
+                                                @enderror
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group {{ $errors->has('slug') ? 'has-error' : '' }}">
-                                        {!! Form::label('Slug') !!}
-                                        {!! Form::text('slug', null , ['required', 'class' => 'form-text','id' => 'new-post-slug','tabindex' => '2']) !!}
-                                        @if($errors->has('slug'))
-                                            <span class="help-block">{{ $errors->first('slug') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="form-group excerpt{{ $errors->has('excerpt') ? 'has-error' : '' }}">
-                                        {!! Form::label('Excerpt') !!}
-                                        {!! Form::textarea('excerpt', null , ['class' => 'form-textarea','id' => 'new-post-excerpt','tabindex' => '3']) !!}
-                                        @if($errors->has('excerpt'))
-                                            <span class="help-block">{{ $errors->first('excerpt') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="form-group {{ $errors->has('body') ? 'has-error' : '' }}">
-                                        {!! Form::label('Body') !!}
-                                        {!! Form::textarea('body', null , ['class' => 'form-textarea','id' => 'new-post-body','tabindex' => '4']) !!}
-                                        @if($errors->has('body'))
-                                            <span class="help-block">{{ $errors->first('body') }}</span>
-                                        @endif
-                                    </div>
-                                   </div>
-                                </div>
                                 <div class="pull-right">
                                     <div class="post-details-right">
-                                        <div class="form-group {{ $errors->has('published_at') ? 'has-error' : '' }}">
-                                            {!! Form::label('Publication Date') !!}
+                                        <div class="form-group @error('published_at') has-error @enderror">
+                                            <label for="Publication Date">Publication Date</label>
                                             <div class="post-publishdate">
-                                                {!! Form::text('published_at', NULL,['class' => 'form-text', 'id' => 'new-post-publishdate']) !!}
+                                                <input class="form-text @error('published_at') has-error @enderror" id="new-post-publishdate" name="published_at" type="text" value="{{ $post->published_at }}">
                                             </div>
                                             <hr>
                                             <div class="publish-buttons">
                                                 <a id="draft-button" class="button-white">Save Draft</a>
-                                                {!! Form::submit('Publish',['class' => 'button-main']) !!}
+                                                <input class="button-main" type="submit" value="Publish">
                                             </div>
-                                            @if($errors->has('published_at'))
-                                                <span class="help-block">{{ $errors->first('published_at') }}</span>
-                                            @endif
+                                            @error('published_at')
+                                                <span class="help-block has-error">{{ $message }}</span>
+                                                <br><br>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="post-details-right">
-                                        <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
-                                            {!! Form::label('category_id', 'Category') !!}
-                                            {!! Form::select('category_id', App\Category::pluck('title', 'id'), null , ['class' => 'form-text','id' => 'new-post-category','tabindex' => '6', 'placeholder' => 'Choose Category']) !!}
-                                            @if($errors->has('category_id'))
-                                                <span class="help-block">{{ $errors->first('category_id') }}</span>
-                                            @endif
+                                        <div class="form-group @error('category_id') has-error @enderror">
+                                            <label for="category_id">Category</label>
+                                            <select class="form-text" id="new-post-category" tabindex="6" name="category_id">
+                                                <option value="">Choose Category</option>
+                                                <option value="1">Uncategorized</option>
+                                                <option value="2">Web Design</option>
+                                                <option value="3" selected="selected">Web Programming</option>
+                                                <option value="4">Internet</option>
+                                                <option value="5">Social Marketing</option>
+                                                <option value="6">Photography</option>
+                                            </select>
+                                        
+                                            @error('category_id')
+                                                <span class="help-block has-error">{{ $message }}</span>
+                                                <br><br>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="post-details-right">
-                                        {!! Form::label('image', 'Feature Image') !!}
+                                        <label for="image">Feature Image</label>
                                             <div class="fileinput-new">
                                                 <img id="img-thumbnail" width="425" height="250" src="{{ ($post->image_thumb_url) ? $post->image_thumb_url : 'https://via.placeholder.com/425x250.png?text=No+Image' }}">
                                               </div>
@@ -89,14 +104,16 @@
                                                 <input type="file" class="button-image" name="image" tabindex="7" onchange="document.getElementById('img-thumbnail').src = window.URL.createObjectURL(this.files[0])">
                                               </label>
 
-                                            @if($errors->has('image'))
-                                                <span class="help-block">{{ $errors->first('image') }}</span>
-                                            @endif
-                                        </div>
+                                                @error('image')
+                                                <br><br>
+                                                    <span class="help-block has-error">{{ $message }}</span>
+                                                @enderror
                                     </div>
+                                    
                                 </div>
-                                {!! Form::close() !!}
                             </div>
+                        </form>
+                    </div>
                           <!-- /.box-header -->
                           <div class="box-body table-responsive">
 
@@ -116,9 +133,6 @@
             <li data-role='drawer-separator'></li> \
             <a style='overflow: hidden;' href='{{ route('admin-media') }}'><li data-role='drawer-item' style='height: 18px;'><i style='height: 18px;' class='fas fa-images'></i><span class='k-item-text' style='padding-left: 16px;'>Media</span></li></a> \
             <a style='overflow: hidden;' href='{{ route('admin-posts') }}'><li data-role='drawer-item' style='height: 18px; width: 18px;' class='k-state-selected'><i style='height: 18px; padding-left: 3px; padding-right: 2px;' class='fas fa-thumbtack'></i><span class='k-item-text' style='padding-left: 16px;'>Posts</span></li></a> \
-            <a style='overflow: hidden;' href='{{ route('admin-pages') }}'><li data-role='drawer-item' style='height: 18px;'><i style='height: 18px; padding-left: 3px;' class='fas fa-copy'></i><span class='k-item-text' style='padding-left: 16px;'>Pages</span></li></a> \
-            <li data-role='drawer-separator'></li> \
-            <a href='{{ route('admin-settings') }}'><li data-role='drawer-item' style='height: 18px;'><i style='height: 18px; padding-left: 3px;' class='fas fa-cog'></i><span class='k-item-text' style='padding-left: 16px;'>Settings</span></li></a> \
             <li data-role='drawer-separator'></li> \
             <a href='{{ route('home') }}'><li style='padding: 12px 16px; color: inherit; line-height: 1.5; display: flex; flex-direction: row; flex-wrap: nowrap; height: 18px;'><i style='height: 18px; padding-left: 3px;' class='fas fa-external-link-alt'></i><span class='k-item-text' style='padding-left: 16px; font-size: 12px; overflow: hidden;'>Back to the Main Site</span></li></a> \
             <li  style='padding: 12px 16px; color: inherit; line-height: 1.5; display: flex; flex-direction: row; flex-wrap: nowrap; height: 18px;'><i style='height: 18px; padding-left: 3px;' class='fas fa-info-circle'></i><span class='k-item-text' style='padding-left: 16px; font-size: 12px; overflow: hidden;'>Impact Express CMS System - v0.1</span></li> \

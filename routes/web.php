@@ -31,7 +31,7 @@ Route::post('/quote', 'QuotesController@send');
 
 
 // Authentication Routes...
-Auth::routes();
+    Auth::routes();
     
 // Backend Routes
     Route::resource('/admin/posts', 'Backend\PostsController');
@@ -41,8 +41,6 @@ Auth::routes();
         Route::get('/admin', 'Backend\HomeController@index')->name('admin');
         Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
         Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
-        Route::get('/admin/pages', 'Backend\HomeController@pages')->name('admin-pages');
-        Route::get('/admin/settings', 'Backend\HomeController@settings')->name('admin-settings');
     });
     
 // CMS Routes
@@ -50,4 +48,3 @@ Auth::routes();
     Route::get('/news/{post}', 'NewsController@show')->name('news-post');
     Route::get('/category/{category}', 'NewsController@category')->name('category');
     Route::get('/author/{author}', 'NewsController@author')->name('author');
-

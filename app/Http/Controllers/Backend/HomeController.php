@@ -28,12 +28,6 @@ class HomeController extends BackendController
         $postCount = Post::count();
         return view('admin.dashboard.posts', compact('posts', 'postCount'));
     }
-    public function pages()
-    {
-        $pages = Page::latest()->paginate($this->pagelimit);
-        $pageCount = Page::count();
-        return view('admin.dashboard.pages', compact('pages', 'pageCount'));
-    }
     public function settings()
     {
         return view('admin.dashboard.settings');

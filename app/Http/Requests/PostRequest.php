@@ -23,7 +23,7 @@ class PostRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        $rules = [
             'title'         => 'required',
             'slug'          => 'required|unique:posts',
             'body'          => 'required',
@@ -31,5 +31,7 @@ class PostRequest extends FormRequest
             'published_at'  => 'date_format:Y-m-d H:i:s',
             'image'         => 'mimes:jpg,jpeg,bmp,png'
         ];
+        return $rules;
+
     }
 }

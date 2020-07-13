@@ -15,12 +15,12 @@
     <div class="widget-body">
         <ul class="categories">
             @foreach ($categories as $category)
-            <a href="{{ route('category', $category->slug) }}">
-                <li class="category">
-                    <i class="fa fa-angle-right"></i> {{ $category->title }}
-                    <span class="badge pull-right">{{ $category->posts->count() }}</span>
-                </li>
-            </a>
+                <a href="{{ route('category', $category->slug) }}">
+                    <li class="category">
+                        <i class="fa fa-angle-right"></i> {{ $category->title }}
+                        <span class="badge pull-right">{{ $category->posts->count() }}</span>
+                    </li>
+                </a>
             @endforeach
         </ul>
     </div>
