@@ -384,6 +384,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px 25px;
   background: #FECE00;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .button-alt {
@@ -394,6 +395,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px 25px;
   background: #707070;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .button-white {
@@ -403,6 +405,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px 25px;
   background: #F2ECEC;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .button-square {
@@ -412,6 +415,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 10px;
   background: #FECE00;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Mobile Navigation */

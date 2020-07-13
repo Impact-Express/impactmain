@@ -2,7 +2,8 @@
 
 @section('title', 'Services')
 @section('css')
-<link href="{{ asset('css/services.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/services.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/forms.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -20,19 +21,20 @@
             <p>
                 Fully tracked Integrator based Global delivery solution.
             </p>
-            <p>
-                Full tracked Delivery to over 120 Countries.<br>
-                Parcel Tracking personalised tracking portal to reduce customer queries.<br>
-                Send direct notifications to customers.<br>
-                Site Integration - Seamless integration process, we can plug our system into your website and set you up without any fuss. Our smart shipping API's allows you to create, cancel and track parcel deliveries, add branding to customer tracking communication and much more.
-            </p>
-            <p>
-                USA - Next Day Delivery Service.<br>
-                Australia - 2 Working Days.<br>
-                Asia - 2 Working Days.<br>
-                Europe - Next Day, AM, for central Europe.<br>
+            <ul>
+                <li>Full tracked Delivery to over 120 Countries.</li>
+                <li>Parcel Tracking personalised tracking portal to reduce customer queries.</li>
+                <li>Send direct notifications to customers.</li>
+                <li>Site Integration - Seamless integration process, we can plug our system into your website and set you up without any fuss. 
+                    Our smart shipping API's allows you to create, cancel and track parcel deliveries, add branding to customer tracking communication and much more.</li>
+            </ul>
+            <ul>
+                <li>USA - Next Day Delivery Service.</li>
+                <li>Australia - 2 Working Days.</li>
+                <li>Asia - 2 Working Days.</li>
+                <li>Europe - Next Day, AM, for central Europe.</li>
                 *All transit times are subject to customs clearance.
-            </p>
+            </ul>
         </div>
     </section>
     <section class="economy-delivery seperator">
@@ -60,36 +62,31 @@
         </div>
     </section>
     <section class="domestic-delivery seperator">
-        <a class="domestic-delivery-img" href="services/express">
-            <img src="{{ asset('img/express-delivery-new.png') }}" alt="">
+        <a class="domestic-delivery-img" href="services/uk-overnight">
+            <img src="{{ asset('img/UK-overnight.png') }}" alt="">
         </a>
         <h2 class="domestic-delivery-title">
             <a href="">
-                EXPRESS - WORLDWIDE TRACKED DELIVERY
+                UK DOMESTIC - EXPRESS & ECONOMY
             </a>
         </h2>
         <div class="domestic-delivery-desc">
             <p>
-                Fully tracked Integrator based Global delivery solution.
+                Impact Express UK Overnight services guarantees delivery by the end of the next working day throughout the United Kingdom and Northern Ireland.<br><br>
+                We offer a high quality and dependable service that you can rely on, including:
             </p>
             <p>
-                Full tracked Delivery to over 120 Countries.<br>
-                Parcel Tracking personalised tracking portal to reduce customer queries.<br>
-                Send direct notifications to customers.<br>
-                Site Integration - Seamless integration process, we can plug our system into your website and set you up without any fuss. Our smart shipping API's allows you to create, cancel and track parcel deliveries, add branding to customer tracking communication and much more.
-            </p>
-            <p>
-                USA - Next Day Delivery Service.<br>
-                Australia - 2 Working Days.<br>
-                Asia - 2 Working Days.<br>
-                Europe - Next Day, AM, for central Europe.<br>
-                *All transit times are subject to customs clearance.
+                Time Sensitive Shipping.<br>
+                Third Party Collection Available.<br>
+                Real-Time Tracking Available.<br>
+                Special Pre-9AM and Pre-12AM Delivery Service Available.<br>
+                Packages can be dropped to our Heathrow Depot as late as 7:30PM for next day delivery.
             </p>
         </div>
     </section>
     <section class="imports-delivery seperator">
-        <a class="imports-delivery-img" href="services/economy">
-            <img src="{{ asset('img/economy-delivery.png') }}" alt="">
+        <a class="imports-delivery-img" href="services/worldwide-imports">
+            <img src="{{ asset('img/worldwide-imports.png') }}" alt="">
         </a>
         <h2 class="imports-delivery-title">
             <a href="">
@@ -101,8 +98,8 @@
         </div>
     </section>
     <section class="ietrax-delivery">
-        <a class="ietrax-delivery-img" href="services/express">
-            <img src="{{ asset('img/express-delivery-new.png') }}" alt="">
+        <a class="ietrax-delivery-img" href="services/ietrax">
+            <img src="{{ asset('img/worldwide-destinations.png') }}" alt="">
         </a>
         <h2 class="ietrax-delivery-title">
             <a href="">
@@ -113,19 +110,20 @@
             <p>
                 Fully tracked Integrator based Global delivery solution.
             </p>
-            <p>
-                Full tracked Delivery to over 120 Countries.<br>
-                Parcel Tracking personalised tracking portal to reduce customer queries.<br>
-                Send direct notifications to customers.<br>
-                Site Integration - Seamless integration process, we can plug our system into your website and set you up without any fuss. Our smart shipping API's allows you to create, cancel and track parcel deliveries, add branding to customer tracking communication and much more.
-            </p>
-            <p>
-                USA - Next Day Delivery Service.<br>
-                Australia - 2 Working Days.<br>
-                Asia - 2 Working Days.<br>
-                Europe - Next Day, AM, for central Europe.<br>
+            <ul>
+                <li>Full tracked Delivery to over 120 Countries.</li>
+                <li>Parcel Tracking personalised tracking portal to reduce customer queries.</li>
+                <li>Send direct notifications to customers.</li>
+                <li>Site Integration - Seamless integration process, we can plug our system into your website and set you up without any fuss. 
+                    Our smart shipping API's allows you to create, cancel and track parcel deliveries, add branding to customer tracking communication and much more.</li>
+            </ul>
+            <ul>
+                USA - Next Day Delivery Service.
+                Australia - 2 Working Days.
+                Asia - 2 Working Days.
+                Europe - Next Day, AM, for central Europe.
                 *All transit times are subject to customs clearance.
-            </p>
+            </ul>
         </div>
     </section>
 </div>
