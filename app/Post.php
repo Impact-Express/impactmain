@@ -15,12 +15,12 @@ class Post extends Model
     {
         return 'slug';
     }
-    public function author ()
+    public function author()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function category ($value='')
+    public function category($value='')
     {
         return $this->belongsTo(Category::class)->withDefault(['slug' => 'uncategorized']);
     }

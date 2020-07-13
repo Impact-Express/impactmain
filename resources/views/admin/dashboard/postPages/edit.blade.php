@@ -82,7 +82,7 @@
                                     <div class="post-details-right">
                                         {!! Form::label('image', 'Feature Image') !!}
                                             <div class="fileinput-new">
-                                                <img id="img-thumbnail" width="425" height="250" src="{{ ($post->image_thumb_url) ? $post->image_thumb_url : 'http://placehold.it/425x250&text=No+Image' }}">
+                                                <img id="img-thumbnail" width="425" height="250" src="{{ ($post->image_thumb_url) ? $post->image_thumb_url : 'https://via.placeholder.com/425x250.png?text=No+Image' }}">
                                               </div>
                                               <label class="button-image">
                                                   Choose Image
