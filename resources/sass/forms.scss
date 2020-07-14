@@ -36,8 +36,9 @@
     border: 1px solid #d6d6d6;
 }
 .form-checkbox > input{
-    position: absolute;
-    top: 445px;
+    position: relative;
+    top: 8px;
+    left: -7px;
     height: 25px;
     width: 25px;
     -webkit-appearance: none;

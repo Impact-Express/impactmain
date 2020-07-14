@@ -371,17 +371,11 @@ a:hover {
   text-transform: uppercase;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
 /* Button Styles ss */
-
 .button-main {
   border: none;
   text-transform: uppercase;
@@ -390,6 +384,7 @@ h6 {
   padding: 15px 25px;
   background: #FECE00;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .button-alt {
@@ -400,6 +395,7 @@ h6 {
   padding: 15px 25px;
   background: #707070;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .button-white {
@@ -409,6 +405,7 @@ h6 {
   padding: 15px 25px;
   background: #F2ECEC;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .button-square {
@@ -418,10 +415,10 @@ h6 {
   padding: 10px 10px;
   background: #FECE00;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Mobile Navigation */
-
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -431,12 +428,8 @@ h6 {
   color: #2D3332;
   display: block;
   z-index: 999;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
+  transform: translateX(-100%);
   transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
 }
 
 .mobile-nav-items {
@@ -480,14 +473,11 @@ h6 {
 }
 
 .open {
-  display: -webkit-box;
   display: flex;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 
 /* DHL Authorised Service Partner Strip*/
-
 .top-strip {
   width: 100%;
   height: 20px;
@@ -501,7 +491,6 @@ h6 {
 }
 
 /* Navigation Bar */
-
 .nav-logo-img {
   width: auto;
 }
@@ -511,7 +500,6 @@ h6 {
 }
 
 /* Main Pane Styles */
-
 .pane {
   display: inline-block;
   height: 300px;
@@ -530,18 +518,16 @@ h6 {
 }
 
 /* Personal Account Pane Text Styles */
-
 .pane-left {
-  background: url(/images/cat1.jpg?80922903bcf4359e65207a123b182102);
+  background: url("img/cat1.jpg");
   background-size: cover;
   -webkit-filter: grayscale(1) opacity(0.2);
   filter: greyscale(1) opacity(0.2);
 }
 
 /* Business Account Pane Styles */
-
 .pane-right {
-  background: url(/images/cat2.jpg?b87e0bf276295a6de3ba99a54016549b);
+  background: url("img/cat2.jpg");
   background-size: cover;
   -webkit-filter: grayscale(1) opacity(0.2);
   filter: greyscale(1) opacity(0.2);
@@ -550,7 +536,6 @@ h6 {
 @media (min-width: 768px) {
   .account-pane-container {
     width: 100%;
-    display: -webkit-box;
     display: flex;
   }
 
@@ -567,14 +552,14 @@ h6 {
   }
 
   .pane-left {
-    background: url(/images/cat1.jpg?80922903bcf4359e65207a123b182102);
+    background: url("img/cat1.jpg");
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
     filter: greyscale(1) opacity(0.2);
   }
 
   .pane-right {
-    background: url(/images/cat2.jpg?b87e0bf276295a6de3ba99a54016549b);
+    background: url("img/cat2.jpg");
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
     filter: greyscale(1) opacity(0.2);
@@ -582,7 +567,6 @@ h6 {
 
   .service-box-container {
     width: 100%;
-    display: -webkit-box;
     display: flex;
   }
 
@@ -608,7 +592,6 @@ h6 {
     color: #2D3332;
   }
 }
-
 @media (min-width: 992px) {
   .float-left {
     float: left !important;
@@ -629,7 +612,6 @@ h6 {
   /***********************************
       *? HIDE BORGAR
   ***********************************/
-
   .hamburger {
     display: none;
   }
@@ -637,7 +619,6 @@ h6 {
   /***********************************************
       *? Top "Authorised Service Partner" Strip
   ************************************************/
-
   .top-strip {
     width: 100%;
     height: 20px;
@@ -652,19 +633,14 @@ h6 {
   /***********************************
       *? Navigation Bar Styles
   ***********************************/
-
   /* Reset */
-
   .main-nav {
-    display: -webkit-box;
     display: flex;
     width: 100%;
     height: 100px;
     background: white;
-    -webkit-box-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .nav-logo-img {
@@ -672,7 +648,6 @@ h6 {
   }
 
   .nav-items {
-    display: -webkit-box;
     display: flex;
     list-style-type: none;
     margin-right: 44px;
@@ -691,7 +666,6 @@ h6 {
   }
 
   /* Mega Menu */
-
   .nav-dropdown button:hover + .mega-menu {
     display: block;
   }
@@ -703,7 +677,6 @@ h6 {
   }
 
   /* Columns */
-
   .column-xs {
     float: left;
     width: 15%;
@@ -750,7 +723,6 @@ h6 {
   }
 
   /* Dropdown button */
-
   .nav-dropdown .dropbtn {
     font-size: 16px;
     border: none;
@@ -768,7 +740,6 @@ h6 {
   /***********************************
       *? Navigation Bar
   ***********************************/
-
   .navbar-logo {
     height: 60px;
   }
@@ -776,10 +747,8 @@ h6 {
   /***********************************
       *? Account Panes Styles
   ***********************************/
-
   .account-pane-container {
     width: 100%;
-    display: -webkit-box;
     display: flex;
   }
 
@@ -791,8 +760,7 @@ h6 {
   }
 
   .pane-left {
-    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(230, 230, 230, 0.47))), url(/images/personal-account.jpg?d346e671310bc4b7e8c6aa1840abdab2);
-    background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url(/images/personal-account.jpg?d346e671310bc4b7e8c6aa1840abdab2);
+    background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url("/img/personal-account.jpg");
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
     filter: greyscale(1) opacity(0.2);
@@ -805,8 +773,7 @@ h6 {
   }
 
   .pane-right {
-    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(66, 66, 66, 0.47))), url(/images/business-account.jpg?31bd79ef30fbfa2be3b19825ef994770);
-    background: linear-gradient(to top, transparent, rgba(66, 66, 66, 0.47)), url(/images/business-account.jpg?31bd79ef30fbfa2be3b19825ef994770);
+    background: linear-gradient(to top, transparent, rgba(66, 66, 66, 0.47)), url("/img/business-account.jpg");
     background-size: cover;
     -webkit-filter: grayscale(1) opacity(0.2);
     filter: greyscale(1) opacity(0.2);
@@ -821,10 +788,8 @@ h6 {
   /***********************************
       *? Services Boxes Styles
   ***********************************/
-
   .service-box-container {
     width: 100%;
-    display: -webkit-box;
     display: flex;
   }
 
@@ -881,11 +846,9 @@ h6 {
   /***********************************
       *? DHL Service Partner Styles
   ***********************************/
-
   .dhl-service-partner {
     background: #FECE00;
     position: relative;
-    display: -webkit-box;
     display: flex;
     height: 130px;
     width: 90%;
@@ -935,7 +898,6 @@ h6 {
   /*****************************************
       *? Personal Account Pane Text Styles
   *****************************************/
-
   .personal-account {
     position: relative;
     top: 12em;
@@ -969,7 +931,6 @@ h6 {
   /*****************************************
       *? Business Account Pane Text Styles
   *****************************************/
-
   .business-account {
     position: relative;
     top: 12em;
@@ -1003,7 +964,6 @@ h6 {
   /*********************************
       *? About Us Section Styles
   *********************************/
-
   .about-us {
     background: #FFF;
     z-index: -1;
@@ -1092,7 +1052,6 @@ h6 {
   /************************
       *? Footer Styles
   *************************/
-
   .main-footer {
     height: 270px;
     background: #2d3332;
@@ -1110,4 +1069,3 @@ h6 {
     width: 75%;
   }
 }
-

@@ -24,6 +24,15 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
+input[type="file"] {
+    display: none;
+}
+
+//err message styles
+.has-error {
+    color: red;
+}
+
 
 //? Label Styles
 .label {
@@ -50,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Button Styles */
 .button-main {
+    cursor: pointer;
     border:none;
     text-transform: uppercase;
     text-decoration: none;
@@ -59,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
 }
 .button-alt {
+    cursor: pointer;
     border:none;
     text-transform: uppercase;
     text-decoration: none;
@@ -68,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
 }
 .button-white {
+    cursor: pointer;
     border:none;
     text-transform: uppercase;
     text-decoration: none;
@@ -76,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
 }
 .button-success {
+    cursor: pointer;
     border:none;
     text-transform: uppercase;
     text-decoration: none;
@@ -86,6 +99,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
 }
 .button-default {
+    cursor: pointer;
     border:1px solid;
     text-transform: uppercase;
     text-decoration: none;
@@ -96,6 +110,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #444;
 }
 .button-danger {
+    cursor: pointer;
     border: none;
     text-transform: uppercase;
     text-decoration: none;
@@ -106,12 +121,23 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 .button-square {
+    cursor: pointer;
     border:none;
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px 10px;
     background: #FECE00;
     border-radius: 5px;
+}
+
+.button-image {
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 25px;
+    background: #F2ECEC;
+    border-radius: 10px;
 }
 
 //? Pagination
@@ -284,11 +310,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 .pull-left {
     float: left;
-
+    width: 65%;
 }
 .pull-right {
     float: right;
+    width: 30%;
+    right: 40px;
+    position: relative;
     padding-bottom: 20px;
+    
 }
 .card-footer {
     height: 18px;
@@ -366,28 +396,156 @@ tbody, tr, td {
 
 //? New Post Form Styles
 .post-details {
-    width: 1000px;
+    width: 95.4%;
     padding: 20px;
-    border: 1px solid #d6d6d6;
-    box-shadow: 0px 0px 10px 3px #00000040;
+    border: 3px solid #d6d6d6;
+}
+.post-details-right {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 3px solid #d6d6d6;
+}
+.form-group.excerpt .CodeMirror{
+    height: 130px;
+    min-height: 130px;
+}
+.editor-toolbar {
+    margin-top: 5px;
+}
+.publish-buttons {
+    display: flex;
+    justify-content: space-between;
 }
 #new-post-title {
     width: 97%;
     border: 1px solid #d6d6d6;
+    text-transform: none;
 }
 #new-post-slug {
     width: 97%;
     border: 1px solid #d6d6d6;
+    text-transform: none;
 }
-#new-post-publishdate {
-    width: 97%;
+.k-datetimepicker {
+    width: 100%;
     border: 1px solid #d6d6d6;
+    text-transform: none;
 }
 #new-post-category {
     width: 100%;
     border: 1px solid #d6d6d6;
+    text-transform: none;
 }
 #new-post-image {
     margin-top: 5px;
     width: 100%;
+    text-transform: none;
+}
+#new-post-excerpt {
+    text-transform: none;
+}
+#new-post-body {
+    text-transform: none;
+}
+.excerpt {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.body {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+//? JqueryUI DatePicker Custom Styling
+.hasDatepicker {
+    width: 94%;
+    border: 1px solid #d6d6d6;
+}
+#ui-datepicker-div {
+    background: #F2ECEC;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 9px 0px #00000069;
+}
+.ui-datepicker-prev {
+    background: #d7d7d7;
+    border: 1px solid #a7a7a7;
+    padding: 5px;
+    border-radius: 7px;
+    margin-right: 8px;
+}
+.ui-datepicker-next {
+    background: #d7d7d7;
+    border: 1px solid #a7a7a7;
+    padding: 5px;
+    border-radius: 7px;
+}
+.ui_tpicker_unit_hide {
+    display: none;
+}
+.ui-timepicker-select {
+    width: 81%;
+}
+.ui_tpicker_time_label {
+    width: max-content;
+    float: left;
+}
+.ui_tpicker_time_input {
+    margin-left: 21px;
+}
+.ui_tpicker_time {
+    margin-bottom: 5px;
+}
+.ui_tpicker_hour {
+    margin-bottom: 5px;
+}
+.ui_tpicker_minute {
+    margin-bottom: 5px;
+}
+.ui_tpicker_second {
+    margin-bottom: 5px;
+}
+.ui_tpicker_hour_label {
+    width: max-content;
+    float: left;
+}
+.ui_tpicker_hour_slider {
+    margin-left: 21px;
+}
+.ui_tpicker_minute_label {
+    width: max-content;
+    float: left;
+}
+.ui_tpicker_minute_slider {
+    margin-left: 21px;
+}
+.ui_tpicker_second_label {
+    width: max-content;
+    float: left;
+}
+.ui_tpicker_second_slider {
+    margin-left: 21px;
+}
+.ui-datepicker-title {
+    padding-top: 15px;
+}
+.ui-datepicker-current {
+    background: #d7d7d7;
+    border: 1px solid #a7a7a7;
+    padding: 5px;
+    border-radius: 7px;
+    margin-right: 8px;
+}
+.fileinput-new {
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 425px;
+    height: 250px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+
+@media only screen and (min-width: 1302px) {
+
 }

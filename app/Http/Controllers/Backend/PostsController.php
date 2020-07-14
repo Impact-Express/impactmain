@@ -5,13 +5,14 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Post;
+use Intervention\Image\Facades\Image;
 
 class PostsController extends BackendController
 {
     public function __construct()
     {
         parent::__construct();
-        $this->uploadPath = public_path('img');
+        $this->uploadPath = public_path(config('cms.image.directory'));
     }
 
     /**
@@ -45,7 +46,7 @@ class PostsController extends BackendController
         $data = $this->handleRequest($request);
 
         $request->user()->posts()->create($data);
-        return redirect(route('admin-posts'));
+        return redirect(route('admin-posts'))->with('message', 'The Post was created successfully!');
     }
 
     private function handleRequest($request)
@@ -58,7 +59,16 @@ class PostsController extends BackendController
             $fileName = $image->getClientOriginalName();
             $destination = $this->uploadPath;
 
-            $image->move($destination, $fileName);
+            $uploadSuccess = $image->move($destination, $fileName);
+            if ($uploadSuccess)
+            {
+                $width      = config('cms.image.thumbnail.width');
+                $height     = config('cms.image.thumbnail.height');
+                $extension  = $image->getClientOriginalExtension();
+                $thumbnail  = str_replace(".{$extension}", "_thumb.{$extension}", $fileName);
+
+                Image::make($destination . '/' . $fileName )->resize($width, $height)->save($destination . '/' . $thumbnail);
+            }
 
             $data['image'] = $fileName;
         }
@@ -82,8 +92,9 @@ class PostsController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
+        return view('admin.dashboard.postPages.edit', compact('post'));
     }
 
     /**
@@ -93,9 +104,14 @@ class PostsController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Requests\PostRequest $request, $id)
     {
-        //
+        
+       $post = Post::findOrFail($id);
+       $data = $this->handleRequest($request);
+       $post->update($data);
+
+       return redirect(route('admin-posts'))->with('message', 'The Post was edited successfully!');
     }
 
     /**

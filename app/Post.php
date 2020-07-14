@@ -11,12 +11,16 @@ class Post extends Model
     protected $dates = [ 'published_at' ];
     protected $fillable = ['title','slug','excerpt','body','published_at','category_id','image'];
     
-    public function author ()
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+    public function author()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function category ($value='')
+    public function category($value='')
     {
         return $this->belongsTo(Category::class)->withDefault(['slug' => 'uncategorized']);
     }
@@ -32,8 +36,9 @@ class Post extends Model
 
         if (! is_null($this->image)) 
         {
-            $imagepath = public_path() . '/img/' . $this->image;
-            if (file_exists($imagepath)) $imageUrl = asset("img/" . $this->image);
+            $directory = config('cms.image.directory');
+            $imagepath = public_path() . "/{$directory}/" . $this->image;
+            if (file_exists($imagepath)) $imageUrl = asset("{$directory}/" . $this->image);
         }
         return $imageUrl;
     }
@@ -44,10 +49,11 @@ class Post extends Model
 
         if (! is_null($this->image))
         {
+            $directory = config('cms.image.directory');
             $ext = substr(strrchr($this->image, '.'), 1);
             $thumbnail = str_replace('.{ext}', '_thumb.{ext}', $this->image);
-            $imagepath = public_path() . '/img/' . $thumbnail;
-            if (file_exists($imagepath)) $imageUrl = asset("img/" . $thumbnail);
+            $imagepath = public_path() . "/{$directory}/" . $thumbnail;
+            if (file_exists($imagepath)) $imageUrl = asset("{$directory}/" . $thumbnail);
         }
         return $imageUrl;
     }

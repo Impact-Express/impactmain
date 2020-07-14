@@ -23,42 +23,15 @@ Route::post('/quote', 'QuotesController@send');
 
 
 // Services Main Route
-    Route::get('/services', 'ServicesController@index')->name('services');
-// Express
-    Route::get('/services/express', 'ServicesController@express')->name('express');
-    Route::post('/services/express', 'ServicesController@send');
-// Economy
-    Route::get('/services/economy', 'ServicesController@economy')->name('economy');
-    Route::post('/services/economy', 'ServicesController@send');
-// UK Overnight
-    Route::get('/services/ukovernight', 'ServicesController@overnight')->name('overnight');
-    Route::post('/services/ukovernight', 'ServicesController@send');
-// Imports
-    Route::get('/services/imports', 'ServicesController@imports')->name('imports');
-    Route::post('/services/imports', 'ServicesController@send');
-// Dangerous Goods
-    Route::get('/services/dangerous-goods', 'ServicesController@dangerousGoods')->name('dangerousgoods');
-    Route::post('/services/dangerous-goods', 'ServicesController@send');
-// DG Dry Ice
-    Route::get('/services/dangerous-goods/dry-ice', 'ServicesController@dangerousGoodsDryIce')->name('dgdryice');
-    Route::post('/services/dangerous-goods/dry-ice', 'ServicesController@send');
-// E-Commerce
-    Route::get('/services/ecommerce', 'ServicesController@ecommerce')->name('ecommerce');
-    Route::post('/services/ecommerce', 'ServicesController@send');
-// Fulfilment
-    Route::get('/services/fufilment', 'ServicesController@fufilment')->name('fufilment');
-    Route::post('/services/fufilment', 'ServicesController@send');
-// Mobile Services
-    Route::get('/services/mobile-services', 'ServicesController@mobileServices')->name('mobileservices');
-    Route::post('/services/mobile-services', 'ServicesController@send');
-
+    Route::resource('/services', 'ServicesController');
+    Route::get('/services/express', 'ServicesController@express');
 
 // Shipping Destinations Routes
-
+    Route::resource('/destinations', 'DestinationsController');
 
 
 // Authentication Routes...
-Auth::routes();
+    Auth::routes();
     
 // Backend Routes
     Route::resource('/admin/posts', 'Backend\PostsController');
@@ -68,8 +41,6 @@ Auth::routes();
         Route::get('/admin', 'Backend\HomeController@index')->name('admin');
         Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
         Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
-        Route::get('/admin/pages', 'Backend\HomeController@pages')->name('admin-pages');
-        Route::get('/admin/settings', 'Backend\HomeController@settings')->name('admin-settings');
     });
     
 // CMS Routes
@@ -77,4 +48,3 @@ Auth::routes();
     Route::get('/news/{post}', 'NewsController@show')->name('news-post');
     Route::get('/category/{category}', 'NewsController@category')->name('category');
     Route::get('/author/{author}', 'NewsController@author')->name('author');
-

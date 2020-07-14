@@ -16,11 +16,13 @@
         </div>
         <ul class="nav-items">
             <li class="nav-item">
+                <a class="nav-link" href="<?= route('quote.index'); ?>">Send My Parcel</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="<?= route('quote.index'); ?>">Track My Parcel</a>
             </li>
-             
             <li class="nav-dropdown">
-                <a class="nav-link" href="<?= route('services'); ?>">Shipping</a>
+                <a class="nav-link" href="<?= route('services.index'); ?>">Shipping</a>
             </li>
              
             <li class="nav-dropdown">
@@ -32,9 +34,6 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link button-main" href="<?= route('quote.index'); ?>">Get a Quote</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link button-main" href="<?= route('login'); ?>">Log in</a>
             </li>
         </ul>
     </nav>
