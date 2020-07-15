@@ -29,8 +29,24 @@ class ServicesController extends Controller
         return view ('customer.services.services');
     }
 
-    public function show (Page $page)
+    public function express (Page $page) 
     {
-        return view('customer.services.service', compact('page'));
+        return view('customer.services.express', compact('page'));
+    }
+    public function economy (Page $page) 
+    {
+        // View here... 
+    }
+    public function domestic (Page $page) 
+    {
+        // View here... 
+    }
+    public function imports (Page $page) 
+    {
+        // View here... 
+    }
+    public function ietrax (Page $page) 
+    {
+        // View here... 
     }
 }

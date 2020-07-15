@@ -104,7 +104,7 @@ class PostsController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Requests\PostRequest $request, $id)
+    public function update(Requests\EditRequest $request, $id)
     {
         
        $post = Post::findOrFail($id);

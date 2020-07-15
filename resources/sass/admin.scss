@@ -12,6 +12,10 @@ a {
 a:hover {
     text-decoration: none;
 }
+a:hover .sidebar-item {
+    text-decoration: none;
+    color: #cccccc;
+}
 .container {
     padding-top: 25px;
     margin-left: auto;
@@ -310,20 +314,21 @@ input[type="file"] {
 }
 .pull-left {
     float: left;
-    width: 65%;
+    width: 30%;
 }
 .pull-right {
     float: right;
-    width: 30%;
-    right: 40px;
     position: relative;
-    padding-bottom: 20px;
-    
+    padding-bottom: 20px; 
 }
 .card-footer {
     height: 18px;
     margin-top: 19px;
 
+}
+#main-content {
+    float: right;
+    width: 85%;
 }
 /************************
 //? Table Styles (GLOBAL)
@@ -358,7 +363,7 @@ tbody, tr, td {
 }
 #form-search-box {
     margin-right: 0px;
-    width: 69%;
+    width: 68%;
     border-radius: 15px;
     margin-bottom: 0;
     background-color: #F2ECEC;
@@ -433,7 +438,7 @@ tbody, tr, td {
     text-transform: none;
 }
 #new-post-category {
-    width: 100%;
+    width: 92%;
     border: 1px solid #d6d6d6;
     text-transform: none;
 }
@@ -543,6 +548,30 @@ tbody, tr, td {
     height: 250px;
     margin-bottom: 25px;
     margin-top: 5px;
+}
+
+// Sidebar Styling
+.sidebar {
+    display: inline-flex;
+    width: 15%;
+    min-height: 1167px;
+    background: #2d3332;
+    color: #f2f2f2;
+}
+.white {
+    color: #f2f2f2;
+}
+.sidebar-item {
+    height: 18px;
+    padding-bottom: 20px;
+}
+a .sidebar-item:hover {
+    background-color: rgba(242, 236, 236, 0.247);
+}
+.sidebar-text {
+    height: 18px;
+    padding-top: 10px;
+    padding-left: 5px;
 }
 
 

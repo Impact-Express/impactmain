@@ -3,10 +3,28 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
 class PostRequest extends FormRequest
 {
+    protected $rules = [
+        'title'         => 'required',
+        'slug'          => 'required|unique:posts',
+        'body'          => 'required',
+        'category_id'   => 'required',
+        'published_at'  => 'date_format:Y-m-d H:i:s',
+        'image'         => 'mimes:jpg,jpeg,bmp,png'
+    ];
+    protected $request_method;
+    protected $id;
+
+    public function __construct()
+    {
+        $this->request_method = strtoupper($request->method());
+
+        $segments = $request->segments();
+        $this->id = end($segments);
+    }
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -24,24 +42,6 @@ class PostRequest extends FormRequest
      */
     public function rules()
     {
-        $slug = $this->request->get("slug");
-        $rules = [
-            'title'         => 'required',
-            'slug'          => ['required', Rule::unique('posts')],
-            'body'          => 'required',
-            'category_id'   => 'required',
-            'published_at'  => 'date_format:Y-m-d H:i:s',
-            'image'         => 'mimes:jpg,jpeg,bmp,png'
-        ];
-
-        switch($this->method()){
-            case 'PUT':
-            case 'PATCH':
-                $rules['slug'] = ['required', Rule::unique('posts')->ignore($slug. 'slug')];
-            break;
-            }
-            dd($rules);
-        return $rules;
 
     }
 }

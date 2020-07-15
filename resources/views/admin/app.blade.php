@@ -42,9 +42,52 @@
             @csrf
         </form>
     </div>
-
-    <section id="container">
-        <main id="main-content">
+    <div class="sidebar">
+        <ul style="list-style-type: none;width: 100%;padding-inline-start: 0;margin-block-start: 0;">
+            <i class='fas fa-info-circle sidebar-text'></i><span class='k-item-text' style='padding-left: 16px; font-size: 11px; overflow: hidden;'>Impact Express CMS System - v0.1</span>
+            <li data-role='drawer-separator'><hr></li>
+            <a class="white" style='overflow: hidden;' href='{{ route('admin') }}'>
+                <li data-role='drawer-item' class='state-selected sidebar-item'>
+                    <i class='fas fa-tachometer-alt sidebar-text'></i>
+                    <span class='k-item-text' style='padding-left: 16px;'>Dashboard</span>
+                </li>
+            </a> 
+            <li data-role='drawer-separator'><hr></li> 
+            <a class="white" style="overflow: hidden;" href='{{ route('admin-media') }}'>
+                <li data-role='drawer-item' class="sidebar-item">
+                    <i class='fas fa-images sidebar-text'></i>
+                    <span class='k-item-text' style='padding-left: 16px;'>Media</span>
+                </li>
+            </a>
+            <a class="white" style='overflow: hidden;' href='{{ route('admin-posts') }}'>
+                <li data-role='drawer-item' class="sidebar-item">
+                    <i class='fas fa-thumbtack sidebar-text'></i>
+                    <span class='k-item-text' style='padding-left: 20px;'>Posts</span>
+                </li>
+            </a>
+            <a class="white" style='overflow: hidden;' href='{{ route('admin-categories') }}'>
+                <li data-role='drawer-item' class="sidebar-item">
+                    <i class="fas fa-copy sidebar-text"></i>
+                    <span class='k-item-text' style='padding-left: 20px;'>Categories</span>
+                </li>
+            </a>
+            <a class="white" style='overflow: hidden;' href='{{ route('admin-tags') }}'>
+                <li data-role='drawer-item' class="sidebar-item">
+                    <i class="fas fa-tags sidebar-text"></i>
+                    <span class='k-item-text' style='padding-left: 20px;'>Tags</span>
+                </li>
+            </a>
+            <li data-role='drawer-separator'><hr></li> 
+            <a class="white" href='{{ route('home') }}'>
+                <li class="sidebar-item">
+                    <i class='fas fa-external-link-alt sidebar-text'></i>
+                    <span class='k-item-text' style='padding-left: 16px; font-size: 12px; overflow: hidden;'>Back to the Main Site</span>
+                </li>
+            </a>
+      </ul>
+    </div>
+    <section id="main-content">
+        <main>
             @yield('content')
         </main>
     </section>

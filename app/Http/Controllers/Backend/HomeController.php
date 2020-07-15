@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Category;
 use App\Page;
 
 class HomeController extends BackendController
@@ -28,6 +29,12 @@ class HomeController extends BackendController
         $postCount = Post::count();
         return view('admin.dashboard.posts', compact('posts', 'postCount'));
     }
+    public function categories()
+    {
+        $categories = Category::all();
+        $categoryCount = Category::count();
+        return view('admin.dashboard.categories', compact('categories', 'categoryCount'));
+    }    
     public function settings()
     {
         return view('admin.dashboard.settings');

@@ -25,7 +25,7 @@
             </li>
              
             <li class="nav-dropdown">
-                <a class="nav-link" href="<?= route('services.index'); ?>">Shipping</a>
+                <a class="nav-link" href="<?= route('services-index'); ?>">Shipping</a>
             </li>
              
             <li class="nav-dropdown">

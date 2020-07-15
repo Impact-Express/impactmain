@@ -15,9 +15,58 @@
     width: 1800px;
 }
 .quote-box {
-    height: 700px;
+    height: 450px;
+    display: flex;
     background: #F2ECEC;
 }
+/* quick quote - START */
+.quick-quote {
+    display: flex;
+    padding: 10px;
+    overflow: auto;
+}
+.quick-quote .row {
+    margin: 0;
+}
+.quick-quote .col {
+    display: inline-block;
+}
+.quick-quote .country-select {
+    margin-right: 20px;
+}
+.quick-quote .weight-select {
+    margin-top: 10px;
+}
+.quick-quote .country-select select {
+    height: 30px;
+}
+.quick-quote .weight-select input {
+    height: 30px;
+}
+.quick-quote-box {
+    /* margin: 1em 0 1em 2em; */
+    padding: 0.5em 2em;
+    border: 1px solid #999;
+    background-color: #ffffff;
+    overflow: auto;
+}
+.q-quote {
+    display: inline;
+    /* margin: 10px; */
+}
+#q-row {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#q-col {
+    display: inline;
+}
+
+/* quick quote - END */
 .service-information {
     display: flex;
     background: #d9d9d9;
@@ -394,4 +443,14 @@ div:hover.hover-light-grey  {
     width: 45%;
     height: 86%;
     top: 20px;
+}
+.pull-left {
+    float: left;
+    width: 80%;
+    margin: auto;
+}
+.pull-right {
+    float: right;
+    position: relative;
+    padding-bottom: 20px; 
 }

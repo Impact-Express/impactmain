@@ -22,12 +22,18 @@ Route::resource('/quote', 'QuotesController');
 Route::post('/quote', 'QuotesController@send');
 
 
-// Services Main Route
-    Route::resource('/services', 'ServicesController');
-    Route::get('/services/express', 'ServicesController@express');
+// Services Routes
+    Route::get('/services', 'ServicesController@index')->name('services-index');
+    Route::get('/services/express', 'ServicesController@express')->name('express-service');
+    Route::get('/services/economy', 'ServicesController@economy')->name('economy-service');
+    Route::get('/services/domestic', 'ServicesController@domestic')->name('domestic-service');
+    Route::get('/services/imports', 'ServicesController@imports')->name('imports-service');
+    Route::get('/services/ietrax', 'ServicesController@ietrax')->name('ietrax-service');
+
+
 
 // Shipping Destinations Routes
-    Route::resource('/destinations', 'DestinationsController');
+    Route::get('/destinations', 'DestinationsController@index');
 
 
 // Authentication Routes...
@@ -35,12 +41,15 @@ Route::post('/quote', 'QuotesController@send');
     
 // Backend Routes
     Route::resource('/admin/posts', 'Backend\PostsController');
+    Route::resource('/admin/categories', 'Backend\CategoriesController');
 
 //Set Middleware to Auth
     Route::middleware(['auth'])->group( function () {
         Route::get('/admin', 'Backend\HomeController@index')->name('admin');
         Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
         Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
+        Route::get('/admin/categories', 'Backend\HomeController@categories')->name('admin-categories');
+        Route::get('/admin/tags', 'Backend\HomeController@tags')->name('admin-tags');
     });
     
 // CMS Routes

@@ -14,13 +14,13 @@
     <div id="toolbar"></div>
     <div id="drawer" data-role="drawer" class="k-widget k-drawer">
         <div class="drawer-content">
-            <h3 class="cms-title">Edit Post</h3>
+            <h3 class="cms-title">Editing Post: {{ $post->title }}</h3>
             <div id="Dashboard">
                 <div class="card-body card-posts">
                     <div class="col-xs-12">
                         <div class="box">
                             <div class="box-header">
-                                <div class="pull-left">
+                                <div class="pull-left" style="width: 65%;">
                                    <div class="post-details">
                                     <form action="{{ route('posts.update', $post->slug) }}" method="POST" enctype="multipart/form-data">
                                            @method('PATCH')
@@ -31,6 +31,16 @@
                                                 <input class="form-text @error('title') has-error @enderror" id="new-post-title" tabindex="1" name="title" type="text" value="{{ $post->title }}">
 
                                                 @error('title')
+                                                    <span class="help-block has-error">{{ $message }}</span>
+                                                    <br><br>
+                                                @enderror
+                                            </div>
+
+                                            <div class="form-group @error('slug') has-error @enderror">
+                                                <label for="Title">Slug</label>
+                                                <input class="form-text @error('slug') has-error @enderror" id="new-post-slug" tabindex="1" name="slug" type="text" value="{{ $post->slug }}">
+
+                                                @error('slug')
                                                     <span class="help-block has-error">{{ $message }}</span>
                                                     <br><br>
                                                 @enderror
@@ -57,7 +67,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                <div class="pull-right">
+                                <div class="pull-right" style="width: 30%; right: 40px;">
                                     <div class="post-details-right">
                                         <div class="form-group @error('published_at') has-error @enderror">
                                             <label for="Publication Date">Publication Date</label>
@@ -126,22 +136,6 @@
     </div>
 </div>
 <script>
-     $("#drawer").kendoDrawer({
-        template: "<ul>\
-            <li data-role='drawer-separator'></li> \
-            <a style='overflow: hidden;' href='{{ route('admin') }}'><li data-role='drawer-item' style='height: 18px;'><i style='height: 18px;' class='fas fa-tachometer-alt'></i><span class='k-item-text' style='padding-left: 16px;'>Dashboard</span></li></a> \
-            <li data-role='drawer-separator'></li> \
-            <a style='overflow: hidden;' href='{{ route('admin-media') }}'><li data-role='drawer-item' style='height: 18px;'><i style='height: 18px;' class='fas fa-images'></i><span class='k-item-text' style='padding-left: 16px;'>Media</span></li></a> \
-            <a style='overflow: hidden;' href='{{ route('admin-posts') }}'><li data-role='drawer-item' style='height: 18px; width: 18px;' class='k-state-selected'><i style='height: 18px; padding-left: 3px; padding-right: 2px;' class='fas fa-thumbtack'></i><span class='k-item-text' style='padding-left: 16px;'>Posts</span></li></a> \
-            <li data-role='drawer-separator'></li> \
-            <a href='{{ route('home') }}'><li style='padding: 12px 16px; color: inherit; line-height: 1.5; display: flex; flex-direction: row; flex-wrap: nowrap; height: 18px;'><i style='height: 18px; padding-left: 3px;' class='fas fa-external-link-alt'></i><span class='k-item-text' style='padding-left: 16px; font-size: 12px; overflow: hidden;'>Back to the Main Site</span></li></a> \
-            <li  style='padding: 12px 16px; color: inherit; line-height: 1.5; display: flex; flex-direction: row; flex-wrap: nowrap; height: 18px;'><i style='height: 18px; padding-left: 3px;' class='fas fa-info-circle'></i><span class='k-item-text' style='padding-left: 16px; font-size: 12px; overflow: hidden;'>Impact Express CMS System - v0.1</span></li> \
-      </ul>",
-        mode: "push",
-        mini: true,
-        position: 'left',
-        minHeight: 915,
-    });
     $('#new-post-title').on('blur', function() {
         var theTitle  = this.value.toLowerCase().trim(),
             slugInput = $('#new-post-slug'),
