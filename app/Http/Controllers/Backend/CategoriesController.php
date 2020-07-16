@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\Categories\CategoryRequest;
+use App\Http\Requests\Categories\EditCategoriesRequest;
 use App\Category;
 
 class CategoriesController extends BackendController
@@ -36,13 +38,8 @@ class CategoriesController extends BackendController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
-        $this->validate($request, [
-            'title' => 'required|unique:categories',
-            'slug' => 'required|unique:categories'
-        ]);
-
         Category::create([
             'title' => $request->title,
             'slug' => $request->slug
@@ -69,9 +66,9 @@ class CategoriesController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Category $category)
     {
-        //
+        return view('admin.dashboard.categoriesPages.create')->with('category', $category);
     }
 
     /**
@@ -81,9 +78,18 @@ class CategoriesController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EditCategoriesRequest $request, Category $category)
     {
-        //
+        $category->update(        [
+            'title' => $request->title,
+            'slug' => $request->slug
+        ]);
+
+        $category->save();
+
+        session()->flash('success', 'The Category was Updated Successfully!');
+
+        return redirect(route('admin-categories'));
     }
 
     /**
@@ -92,8 +98,12 @@ class CategoriesController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        session()->flash('success', 'The Category was Deleted Successfully!');
+        
+        return redirect(route('admin-categories'));
     }
 }

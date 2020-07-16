@@ -36,9 +36,14 @@
                                 <a title="Edit" class="button-default" href="{{ route('categories.edit', $category->slug) }}">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a title="Delete" class="button-danger" href="{{ route('categories.destroy', $category->slug) }}">
-                                    <i class="fa fa-times"></i>
-                                </a>
+                                <form action="/admin/categories/{{ $category->slug }}" method="post" style="display: inline">
+                                    @method('DELETE')
+                                    @csrf
+
+                                    <button title="Delete" class="button-danger" href="{{ route('categories.destroy', $category->slug) }}">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </form>
                             </td>
                             <td>{{ $category->title }}</td>
                         </tr>

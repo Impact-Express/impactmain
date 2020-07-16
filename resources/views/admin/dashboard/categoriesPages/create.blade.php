@@ -12,17 +12,20 @@
 @section('content')
 <div id="drawer" data-role="drawer" class="k-widget k-drawer">
     <div class="drawer-content">
-        <h3 class="cms-title">Add New Category</h3>
+        <h3 class="cms-title">{{ isset($category) ? 'Edit Category' : 'Add New Category' }}</h3>
         <div id="Dashboard">
             <div class="card-body card-posts">
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-header">
-                                <form action="{{ route('categories.store') }}" method="post">
+                                <form action="{{ isset($category) ? route('categories.update', $category->slug) : route('categories.store') }}" method="post">
                                     @csrf
+                                    @if (isset($category)) 
+                                        @method('PUT')
+                                    @endif
                                     <div class="form-group @error('title') has-error @enderror">
                                         <label for="title">Category Name</label>
-                                        <input type="text" name="title" id="new-category" class="form-text @error('title') has-error @enderror">
+                                        <input type="text" name="title" id="new-category" class="form-text @error('title') has-error @enderror" value="{{ isset($category) ? $category->title : '' }}">
                                         @error('title')
                                             <span class="help-block has-error">{{ $message }}</span>
                                             <br><br>
@@ -30,14 +33,14 @@
                                     </div>
                                     <div class="form-group @error('slug') has-error @enderror">
                                         <label for="slug">Category Slug</label>
-                                        <input type="text" name="slug" id="new-category-slug" class="form-text @error('slug') has-error @enderror">
+                                        <input type="text" name="slug" id="new-category-slug" class="form-text @error('slug') has-error @enderror" value="{{ isset($category) ? $category->slug : '' }}">
                                         @error('slug')
                                             <span class="help-block has-error">{{ $message }}</span>
                                             <br><br>
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <button class="button-success">Add Category</button>
+                                        <button class="button-success">{{ isset($category) ? 'Update Category' : 'Add Category' }}</button>
                                     </div>
                                 </form>
                         <!-- /.box-header -->
