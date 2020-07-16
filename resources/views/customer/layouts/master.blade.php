@@ -24,7 +24,9 @@
             <li class="nav-dropdown">
                 <a class="nav-link" href="<?= route('services-index'); ?>">Shipping</a>
             </li>
-             
+            <li class="nav-dropdown">
+                <a class="nav-link" href="<?= route('destinations'); ?>">Destinations</a>
+            </li>
             <li class="nav-dropdown">
                 <a class="nav-link" href="<?= route('news'); ?>">News & Events</a>
             </li>

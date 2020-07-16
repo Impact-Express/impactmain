@@ -677,7 +677,9 @@ input[type=file] {
 
 .card-posts {
   width: 100%;
-  padding: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
 }
 
 .dashboard-get-started {
@@ -722,6 +724,23 @@ input[type=file] {
 #main-content {
   float: right;
   width: 85%;
+}
+
+.card-title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.success-message {
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 150px;
+  left: 900px;
+  background: #6be0375e;
+  width: 21%;
 }
 
 /************************
@@ -865,6 +884,18 @@ tbody, tr, td {
 .body {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+#new-category {
+  width: 97%;
+  border: 1px solid #d6d6d6;
+  text-transform: none;
+}
+
+#new-category-slug {
+  width: 97%;
+  border: 1px solid #d6d6d6;
+  text-transform: none;
 }
 
 .hasDatepicker {

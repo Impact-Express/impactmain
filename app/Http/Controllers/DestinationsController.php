@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Page;
 class DestinationsController extends Controller
 {
     public function send (Request $request)
@@ -55,9 +55,31 @@ class DestinationsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Page $page, Request $request, $id)
     {
-        //
+        $slug = $request->path();
+        dd($slug);
+
+        switch ($slug) {
+            case 'destinations/USA':
+                return view('customer.destinations.USA', compact('page'));
+                break;
+            case 'destinations/canada':
+                return view('customer.destinations.CANADA', compact('page'));
+                break;
+            case 'destinations/france':
+                return view('customer.destinations.FRANCE', compact('page'));
+                break;
+            case 'destinations/germany':
+                return view('customer.destinations.CANADA', compact('page'));
+                break;
+            case 'destinations/italy':
+                return view('customer.destinations.CANADA', compact('page'));
+                break;
+            case 'destinations/spain':
+                return view('customer.destinations.CANADA', compact('page'));
+                break;
+        }
     }
 
     /**

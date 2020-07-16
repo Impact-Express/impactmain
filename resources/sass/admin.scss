@@ -293,7 +293,9 @@ input[type="file"] {
 }
 .card-posts {
     width: 100%;
-    padding: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
 }
 .dashboard-get-started {
     position: relative;
@@ -330,6 +332,20 @@ input[type="file"] {
     float: right;
     width: 85%;
 }
+.card-title {
+    width: fit-content;
+    margin: auto;
+}
+.success-message {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 150px;
+    left: 900px;
+    background: #6be0375e;
+    width: 21%;
+}
+
 /************************
 //? Table Styles (GLOBAL)
 *************************/
@@ -461,6 +477,19 @@ tbody, tr, td {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+//? New Category Styling
+#new-category {
+    width: 97%;
+    border: 1px solid #d6d6d6;
+    text-transform: none;
+}
+#new-category-slug {
+    width: 97%;
+    border: 1px solid #d6d6d6;
+    text-transform: none;
+}
+
 //? JqueryUI DatePicker Custom Styling
 .hasDatepicker {
     width: 94%;

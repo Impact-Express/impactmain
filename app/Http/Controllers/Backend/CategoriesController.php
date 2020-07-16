@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Category;
 
 class CategoriesController extends BackendController
 {
@@ -13,7 +15,9 @@ class CategoriesController extends BackendController
      */
     public function index()
     {
-        //
+        $categories = DB::table('categories')->paginate(8);
+        $categoryCount = DB::table('categories')->count();
+        return view('admin.dashboard.categories', ['categories' => $categories, 'categoryCount' => $categoryCount]);
     }
 
     /**
@@ -23,7 +27,7 @@ class CategoriesController extends BackendController
      */
     public function create()
     {
-        //
+        return view('admin.dashboard.categoriesPages.create');
     }
 
     /**
@@ -34,7 +38,18 @@ class CategoriesController extends BackendController
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|unique:categories',
+            'slug' => 'required|unique:categories'
+        ]);
+
+        Category::create([
+            'title' => $request->title,
+            'slug' => $request->slug
+        ]);
+
+        session()->flash('success', 'Category Created Successfully!');
+        return redirect(route('admin-categories'));
     }
 
     /**

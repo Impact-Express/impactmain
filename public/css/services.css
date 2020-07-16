@@ -17,19 +17,21 @@
 }
 
 .quote-box {
-  height: 450px;
-  display: flex;
-  background: #F2ECEC;
+  height: 540px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 88%;
+  background-image: url("/img/destinations/Canada-Country-Banner-v2-Impact-Express.jpg");
 }
 
 /* quick quote - START */
 .quick-quote {
   display: flex;
   padding: 10px;
-  overflow: auto;
 }
 
 .quick-quote .row {
+  display: block;
   margin: 0;
 }
 
@@ -53,12 +55,20 @@
   height: 30px;
 }
 
+.quotebox-bg {
+  border-style: solid;
+  border-width: 0 100px 173.2px 100px;
+  border-color: transparent transparent #ffffff transparent;
+}
+
 .quick-quote-box {
-  /* margin: 1em 0 1em 2em; */
-  padding: 0.5em 2em;
-  border: 1px solid #999;
-  background-color: #ffffff;
-  overflow: auto;
+  margin: 0;
+  padding: 0.5em 0.5em;
+  height: 280px;
+  width: 35%;
+  position: relative;
+  left: 120px;
+  bottom: -280px;
 }
 
 .q-quote {
@@ -67,16 +77,45 @@
 }
 
 #q-row {
+  text-align: center;
+  height: 64px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 32px;
   margin-bottom: 32px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
 }
 
 #q-col {
   display: inline;
+}
+
+.q-button-main {
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  background: #FECE00;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.q-button-alt {
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #F2ECEC;
+  padding: 10px 20px;
+  background: #707070;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.q-price {
+  float: right;
+  position: relative;
+  bottom: 75px;
+  right: 202px;
 }
 
 /* quick quote - END */
@@ -517,16 +556,4 @@ div:hover.hover-light-grey {
   width: 45%;
   height: 86%;
   top: 20px;
-}
-
-.pull-left {
-  float: left;
-  width: 80%;
-  margin: auto;
-}
-
-.pull-right {
-  float: right;
-  position: relative;
-  padding-bottom: 20px;
 }

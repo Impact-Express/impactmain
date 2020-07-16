@@ -26,7 +26,6 @@
     <script src="{{ asset('js/kendo.all.min.js') }}" ></script>
     <script src="{{ asset('js/admin.js') }}" ></script>
 </head>
-
 <body style="margin: 0;">
     <div id="toolbar" class="topbar">
         <div class="k-overflow-anchor k-button profile">
@@ -88,7 +87,20 @@
     </div>
     <section id="main-content">
         <main>
-            @yield('content')
+            <div class="grid">
+                <div id="drawer" data-role="drawer" class="k-widget k-drawer">
+                    <div class="drawer-content">
+                        @if (session()->has('success'))
+                        <div class="card-body success-message">
+                            <h5 class="card-title">
+                                {{ session()->get('success') }}
+                            </h5>
+                        </div>
+                    @endif
+                    @yield('content')
+                    </div>
+                </div>
+        </div>
         </main>
     </section>
 </body>

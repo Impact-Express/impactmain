@@ -24,16 +24,11 @@ Route::post('/quote', 'QuotesController@send');
 
 // Services Routes
     Route::get('/services', 'ServicesController@index')->name('services-index');
-    Route::get('/services/express', 'ServicesController@express')->name('express-service');
-    Route::get('/services/economy', 'ServicesController@economy')->name('economy-service');
-    Route::get('/services/domestic', 'ServicesController@domestic')->name('domestic-service');
-    Route::get('/services/imports', 'ServicesController@imports')->name('imports-service');
-    Route::get('/services/ietrax', 'ServicesController@ietrax')->name('ietrax-service');
-
-
+    Route::get('/services/{service}', 'ServicesController@show');
 
 // Shipping Destinations Routes
-    Route::get('/destinations', 'DestinationsController@index');
+    Route::get('/destinations', 'DestinationsController@index')->name('destinations');
+    Route::get('/destinations/{destination}', 'DestinationsController@show');
 
 
 // Authentication Routes...
@@ -48,7 +43,7 @@ Route::post('/quote', 'QuotesController@send');
         Route::get('/admin', 'Backend\HomeController@index')->name('admin');
         Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
         Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
-        Route::get('/admin/categories', 'Backend\HomeController@categories')->name('admin-categories');
+        Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
         Route::get('/admin/tags', 'Backend\HomeController@tags')->name('admin-tags');
     });
     
