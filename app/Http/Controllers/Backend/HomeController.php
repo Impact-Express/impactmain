@@ -39,4 +39,34 @@ class HomeController extends BackendController
     {
         return view('admin.dashboard.settings');
     }
+
+    /**
+     * Display all SoftDeleted (Trashed) Posts in the Database.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function trash()
+    {
+        $trashed = Post::onlyTrashed()->get();
+        $postCount = Post::onlyTrashed()->count();
+        return view('admin.dashboard.trash', compact('postCount'))->withPosts($trashed);
+    }
+
+        /**
+     * Eradicate the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $post = Post::withTrashed()->where('id', $id)->firstOrFail();
+        $post->forceDelete();
+
+        $postCount = Post::onlyTrashed()->count();
+        
+        session()->flash('success', 'Post Deleted Successfully!');
+        return redirect(view('admin.dashboard.trash', compact('postCount'))->withPosts($trashed));
+    }
 }

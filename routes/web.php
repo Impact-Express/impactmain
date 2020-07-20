@@ -40,6 +40,8 @@ Route::group(['prefix' => 'admin'], function () {
     
 // Backend Routes
     Route::resource('/admin/posts', 'Backend\PostsController');
+    Route::delete('/admin/trash/{id}', 'Backend\HomeController@destroy')->name('trash.eradicate');
+
     Route::resource('/admin/categories', 'Backend\CategoriesController');
 
 //Set Middleware to Auth

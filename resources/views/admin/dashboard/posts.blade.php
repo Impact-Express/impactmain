@@ -40,13 +40,13 @@
                                 @foreach ($posts as $post)
                                 <tr>
                                     <td width="85" height="35">
-                                        <a title="Edit" class="button-default" href="{{ route('posts.edit', $post->slug) }}">
+                                        <a title="Edit Post" class="button-default" href="{{ route('posts.edit', $post->slug) }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <form action="{{ route('posts.destroy', $post->slug) }}" method="POST" style="display: inline;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" title="Delete" class="button-danger">
+                                            <button type="submit" title="Trash Post" class="button-danger">
                                                 <i class="fa fa-times"></i>
                                             </button>
                                         </form>

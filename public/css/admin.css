@@ -483,6 +483,17 @@ input[type=file] {
   color: #F2ECEC;
 }
 
+.button-restore {
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  background-color: #00a65a;
+  color: #F2ECEC;
+}
+
 .button-square {
   cursor: pointer;
   border: none;

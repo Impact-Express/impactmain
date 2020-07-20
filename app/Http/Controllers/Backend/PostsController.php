@@ -104,7 +104,7 @@ class PostsController extends BackendController implements HasMedia
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified resource from Public Access.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
