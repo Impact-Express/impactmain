@@ -58,27 +58,59 @@ class DestinationsController extends Controller
     public function show(Page $page, Request $request, $id)
     {
         $slug = $request->path();
-        dd($slug);
+        // dd($slug);
+
 
         switch ($slug) {
             case 'destinations/USA':
-                return view('customer.destinations.USA', compact('page'));
+                $bannerImage = url('/storage/destinations/USA-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.USA', compact('page', 'bannerImage'));
                 break;
             case 'destinations/canada':
-                return view('customer.destinations.CANADA', compact('page'));
+                $bannerImage = url('/storage/destinations/Canada-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.CANADA', compact('page', 'bannerImage'));
                 break;
             case 'destinations/france':
-                return view('customer.destinations.FRANCE', compact('page'));
+                $bannerImage = url('/storage/destinations/France-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.FRANCE', compact('page', 'bannerImage'));
                 break;
             case 'destinations/germany':
-                return view('customer.destinations.CANADA', compact('page'));
+                $bannerImage = url('/storage/destinations/Germany-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.GERMANY', compact('page', 'bannerImage'));
                 break;
             case 'destinations/italy':
-                return view('customer.destinations.CANADA', compact('page'));
+                $bannerImage = url('/storage/destinations/Italy-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.ITALY', compact('page', 'bannerImage'));
                 break;
-            case 'destinations/spain':
-                return view('customer.destinations.CANADA', compact('page'));
+            case 'destinations/australia':
+                $bannerImage = url('/storage/destinations/Australia-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.AUSTRALIA', compact('page', 'bannerImage'));
                 break;
+            case 'destinations/sweden':
+                $bannerImage = url('/storage/destinations/Sweden-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.SWEDEN', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/hong-kong':
+                $bannerImage = url('/storage/destinations/Hong-Kong-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.HONG-KONG', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/japan':
+                $bannerImage = url('/storage/destinations/Japan-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.JAPAN', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/new-zealand':
+                $bannerImage = url('/storage/destinations/New-Zealand-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.NEW-ZEALAND', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/UAE':
+                $bannerImage = url('/storage/destinations/UAE-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.UAE', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/south-korea':
+                $bannerImage = url('/storage/destinations/South-Korea-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.SOUTH-KOREA', compact('page', 'bannerImage'));
+                break;
+
         }
     }
 

@@ -6,6 +6,11 @@
 @endsection
 
 @section('quotebox')
+<style>
+    .quote-box {
+        background-image: url(<?php echo $bannerImage; ?>);
+    }
+</style>
 <div class="quick-quote quick-quote-int">
     <div class="quick-quote-box">
         <p style="width: 40%;margin: auto;margin-block-start: 1em;margin-block-end: 1.1em;">

@@ -5,11 +5,14 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
+    use SoftDeletes;
+    
     protected $dates = [ 'published_at' ];
-    protected $fillable = ['title','slug','excerpt','body','published_at','category_id','image'];
+    protected $fillable = ['title','slug','excerpt','body','published_at','category_id','image', 'author_id'];
     
     public function getRouteKeyName()
     {
@@ -33,31 +36,15 @@ class Post extends Model
     public function getImageUrlAttribute ($value)
     {
         $imageUrl = "";
-
         if (! is_null($this->image)) 
         {
             $directory = config('cms.image.directory');
-            $imagepath = public_path() . "/{$directory}/" . $this->image;
-            if (file_exists($imagepath)) $imageUrl = asset("{$directory}/" . $this->image);
+            $imageUrl ="/{$directory}/" . Post::select('image')->where('id', $this->id)->pluck('image')[0];
         }
+        // dd($imageUrl);
         return $imageUrl;
     }
 
-    public function getImageThumbUrlAttribute ($value)
-    {
-        $imageUrl = "";
-
-        if (! is_null($this->image))
-        {
-            $directory = config('cms.image.directory');
-            $ext = substr(strrchr($this->image, '.'), 1);
-            $thumbnail = str_replace('.{ext}', '_thumb.{ext}', $this->image);
-            $imagepath = public_path() . "/{$directory}/" . $thumbnail;
-            if (file_exists($imagepath)) $imageUrl = asset("{$directory}/" . $thumbnail);
-        }
-        return $imageUrl;
-    }
-    
     public function getDateAttribute ($value)
     {
         return is_null($this->published_at) ? '' : $this->published_at->diffForHumans();

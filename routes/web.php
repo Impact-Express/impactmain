@@ -32,7 +32,11 @@ Route::post('/quote', 'QuotesController@send');
 
 
 // Authentication Routes...
+Route::group(['prefix' => 'admin'], function () {
+
     Auth::routes();
+
+});
     
 // Backend Routes
     Route::resource('/admin/posts', 'Backend\PostsController');
@@ -43,6 +47,7 @@ Route::post('/quote', 'QuotesController@send');
         Route::get('/admin', 'Backend\HomeController@index')->name('admin');
         Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
         Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
+        Route::get('/admin/trash', 'Backend\HomeController@trash')->name('admin-trash');
         Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
         Route::get('/admin/tags', 'Backend\HomeController@tags')->name('admin-tags');
     });

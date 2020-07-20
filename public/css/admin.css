@@ -350,7 +350,7 @@
   }
   body {
   font-family: "Play", sans-serif;
-  background: #f2f2f2;
+  background: #2d3332;
 }
 
 a {
@@ -808,7 +808,7 @@ tbody, tr, td {
 }
 
 .k-drawer {
-  min-height: 915px !important;
+  min-height: 1167px !important;
 }
 
 .post-details {
@@ -904,6 +904,10 @@ tbody, tr, td {
 }
 
 #ui-datepicker-div {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   background: #F2ECEC;
   padding: 15px;
   border-radius: 15px;

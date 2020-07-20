@@ -23,107 +23,103 @@
                                 <div class="pull-left" style="width: 65%;">
                                    <div class="post-details">
                                     <form action="{{ route('posts.update', $post->slug) }}" method="POST" enctype="multipart/form-data">
-                                           @method('PATCH')
-                                           @csrf
+                                                        @method('PATCH')
+                                                        @csrf
 
-                                            <div class="form-group @error('title') has-error @enderror">
-                                                <label for="Title">Title</label>
-                                                <input class="form-text @error('title') has-error @enderror" id="new-post-title" tabindex="1" name="title" type="text" value="{{ $post->title }}">
+                                                        <div class="form-group @error('title') has-error @enderror">
+                                                            <label for="Title">Title</label>
+                                                            <input class="form-text @error('title') has-error @enderror" id="new-post-title" tabindex="1" name="title" type="text" value="{{ $post->title }}">
 
-                                                @error('title')
-                                                    <span class="help-block has-error">{{ $message }}</span>
-                                                    <br><br>
-                                                @enderror
-                                            </div>
+                                                            @error('title')
+                                                                <span class="help-block has-error">{{ $message }}</span>
+                                                                <br><br>
+                                                            @enderror
+                                                        </div>
 
-                                            <div class="form-group @error('slug') has-error @enderror">
-                                                <label for="Title">Slug</label>
-                                                <input class="form-text @error('slug') has-error @enderror" id="new-post-slug" tabindex="1" name="slug" type="text" value="{{ $post->slug }}">
+                                                        <div class="form-group @error('slug') has-error @enderror">
+                                                            <label for="Title">Slug</label>
+                                                            <input class="form-text @error('slug') has-error @enderror" id="new-post-slug" tabindex="1" name="slug" type="text" value="{{ $post->slug }}">
 
-                                                @error('slug')
-                                                    <span class="help-block has-error">{{ $message }}</span>
-                                                    <br><br>
-                                                @enderror
-                                            </div>
+                                                            @error('slug')
+                                                                <span class="help-block has-error">{{ $message }}</span>
+                                                                <br><br>
+                                                            @enderror
+                                                        </div>
 
-                                            <div class="form-group excerpt @error('excerpt') has-error @enderror">
-                                                <label for="Excerpt">Excerpt</label>
-                                                <textarea class="form-textarea @error('excerpt') has-error @enderror" id="new-post-excerpt" tabindex="3" name="excerpt" cols="50" rows="10">{{ $post->excerpt }}</textarea>
+                                                        <div class="form-group excerpt @error('excerpt') has-error @enderror">
+                                                            <label for="Excerpt">Excerpt</label>
+                                                            <textarea class="form-textarea @error('excerpt') has-error @enderror" id="new-post-excerpt" tabindex="3" name="excerpt" cols="50" rows="10">{{ $post->excerpt }}</textarea>
 
-                                                @error('excerpt')
-                                                    <span class="help-block has-error">{{ $message }}</span>
-                                                    <br><br>
-                                                @enderror
-                                            </div>
+                                                            @error('excerpt')
+                                                                <span class="help-block has-error">{{ $message }}</span>
+                                                                <br><br>
+                                                            @enderror
+                                                        </div>
 
-                                            <div class="form-group @error('body') has-error @enderror">
-                                                <label for="Body">Body</label>
-                                                <textarea class="form-textarea @error('body') has-error @enderror" id="new-post-body" tabindex="4" name="body" cols="50" rows="10">{{ $post->body }}</textarea>
+                                                        <div class="form-group @error('body') has-error @enderror">
+                                                            <label for="Body">Body</label>
+                                                            <textarea class="form-textarea @error('body') has-error @enderror" id="new-post-body" tabindex="4" name="body" cols="50" rows="10">{{ $post->body }}</textarea>
 
-                                                @error('body')
-                                                    <span class="help-block has-error">{{ $message }}</span>
-                                                    <br><br>
-                                                @enderror
+                                                            @error('body')
+                                                                <span class="help-block has-error">{{ $message }}</span>
+                                                                <br><br>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <div class="pull-right" style="width: 30%; right: 40px;">
+                                                <div class="post-details-right">
+                                                    <div class="form-group @error('published_at') has-error @enderror">
+                                                        <label for="Publication Date">Publication Date</label>
+                                                        <div class="post-publishdate">
+                                                            <input class="form-text @error('published_at') has-error @enderror" id="new-post-publishdate" name="published_at" type="text" value="{{ $post->published_at }}">
+                                                        </div>
+                                                        <hr>
+                                                        <div class="publish-buttons">
+                                                            <a id="draft-button" class="button-white">Save Draft</a>
+                                                            <input class="button-main" type="submit" value="Publish">
+                                                        </div>
+                                                        @error('published_at')
+                                                            <span class="help-block has-error">{{ $message }}</span>
+                                                            <br><br>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                                <div class="post-details-right">
+                                                    <div class="form-group @error('category_id') has-error @enderror">
+                                                        <label for="category_id">Category</label>
+                                                        <select class="form-text" id="new-post-category" tabindex="6" name="category_id">
+                                                            {{$categories = \App\Category::all()}}
+                                                            @foreach ($categories as $category)
+                                                                <option value="{{$category->id}}">{{$category->title}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    
+                                                        @error('category_id')
+                                                            <span class="help-block has-error">{{ $message }}</span>
+                                                            <br><br>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                                <div class="post-details-right">
+                                                    <label for="image">Feature Image</label>
+                                                        <div class="fileinput-new">
+                                                            <img id="img-thumbnail" width="425" height="250" src="{{ ($post->image_url) ? $post->image_url : 'https://via.placeholder.com/425x250.png?text=No+Image' }}">
+                                                            </div>
+                                                            <label class="button-image">
+                                                                Choose Image
+                                                            <input type="file" class="button-image" name="image" tabindex="7" onchange="document.getElementById('img-thumbnail').src = window.URL.createObjectURL(this.files[0])">
+                                                            </label>
+
+                                                            @error('image')
+                                                            <br><br>
+                                                                <span class="help-block has-error">{{ $message }}</span>
+                                                            @enderror
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                <div class="pull-right" style="width: 30%; right: 40px;">
-                                    <div class="post-details-right">
-                                        <div class="form-group @error('published_at') has-error @enderror">
-                                            <label for="Publication Date">Publication Date</label>
-                                            <div class="post-publishdate">
-                                                <input class="form-text @error('published_at') has-error @enderror" id="new-post-publishdate" name="published_at" type="text" value="{{ $post->published_at }}">
-                                            </div>
-                                            <hr>
-                                            <div class="publish-buttons">
-                                                <a id="draft-button" class="button-white">Save Draft</a>
-                                                <input class="button-main" type="submit" value="Publish">
-                                            </div>
-                                            @error('published_at')
-                                                <span class="help-block has-error">{{ $message }}</span>
-                                                <br><br>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="post-details-right">
-                                        <div class="form-group @error('category_id') has-error @enderror">
-                                            <label for="category_id">Category</label>
-                                            <select class="form-text" id="new-post-category" tabindex="6" name="category_id">
-                                                <option value="">Choose Category</option>
-                                                <option value="1">Uncategorized</option>
-                                                <option value="2">Web Design</option>
-                                                <option value="3" selected="selected">Web Programming</option>
-                                                <option value="4">Internet</option>
-                                                <option value="5">Social Marketing</option>
-                                                <option value="6">Photography</option>
-                                            </select>
-                                        
-                                            @error('category_id')
-                                                <span class="help-block has-error">{{ $message }}</span>
-                                                <br><br>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="post-details-right">
-                                        <label for="image">Feature Image</label>
-                                            <div class="fileinput-new">
-                                                <img id="img-thumbnail" width="425" height="250" src="{{ ($post->image_thumb_url) ? $post->image_thumb_url : 'https://via.placeholder.com/425x250.png?text=No+Image' }}">
-                                              </div>
-                                              <label class="button-image">
-                                                  Choose Image
-                                                <input type="file" class="button-image" name="image" tabindex="7" onchange="document.getElementById('img-thumbnail').src = window.URL.createObjectURL(this.files[0])">
-                                              </label>
-
-                                                @error('image')
-                                                <br><br>
-                                                    <span class="help-block has-error">{{ $message }}</span>
-                                                @enderror
-                                    </div>
-                                    
+                                    </form>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
                           <!-- /.box-header -->
                           <div class="box-body table-responsive">
 

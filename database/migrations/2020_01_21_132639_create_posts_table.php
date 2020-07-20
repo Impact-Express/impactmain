@@ -22,7 +22,7 @@ class CreatePostsTable extends Migration
             $table->text('body');
             $table->string('image')->nullable();
             $table->timestamps();
-            $table->foreign('author_id')->references('id')->on('users')->onDelete('restrict');
+            $table->foreign('author_id')->references('id')->on('users')->onDelete('restrict')->nullable();
         });
     }
 

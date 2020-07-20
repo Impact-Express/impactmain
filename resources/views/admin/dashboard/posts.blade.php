@@ -43,9 +43,13 @@
                                         <a title="Edit" class="button-default" href="{{ route('posts.edit', $post->slug) }}">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a title="Delete" class="button-danger" href="{{ route('posts.destroy', $post->slug) }}">
-                                            <i class="fa fa-times"></i>
-                                        </a>
+                                        <form action="{{ route('posts.destroy', $post->slug) }}" method="POST" style="display: inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" title="Delete" class="button-danger">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </form>
                                     </td>
                                     <td>{{ $post->title }}</td>
                                     <td>{{ $post->author->name }}</td>
