@@ -3,12 +3,19 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\Posts\PostRequest;
 use App\Http\Requests;
 use App\Post;
+use App\Category;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Auth;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class PostsController extends BackendController
+class PostsController extends BackendController implements HasMedia
 {
+    use InteractsWithMedia;
+    
     public function __construct()
     {
         parent::__construct();
@@ -30,49 +37,36 @@ class PostsController extends BackendController
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Post $post)
+    public function create(Post $post, Category $category)
     {
-        return view('admin.dashboard.postPages.create', compact('post'));
+        return view('admin.dashboard.postPages.create', compact('post', 'category'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        $data = $this->handleRequest($request);
-
-        $request->user()->posts()->create($data);
-        return redirect(route('admin-posts'))->with('message', 'The Post was created successfully!');
-    }
-
-    private function handleRequest($request)
-    {
-        $data = $request->all();
-
-        if ($request->hasFile('image'))
-        {
-            $image = $request->file('image');
-            $fileName = $image->getClientOriginalName();
-            $destination = $this->uploadPath;
-
-            $uploadSuccess = $image->move($destination, $fileName);
-            if ($uploadSuccess)
-            {
-                $width      = config('cms.image.thumbnail.width');
-                $height     = config('cms.image.thumbnail.height');
-                $extension  = $image->getClientOriginalExtension();
-                $thumbnail  = str_replace(".{$extension}", "_thumb.{$extension}", $fileName);
-
-                Image::make($destination . '/' . $fileName )->resize($width, $height)->save($destination . '/' . $thumbnail);
-            }
-
-            $data['image'] = $fileName;
-        }
-        return $data;
+        $directory = config('cms.image.directory');
+        $image = $request->image->store('img');
+        $userid = (!Auth::guest()) ? Auth::user()->id : null ;
+        
+        Post::create([
+                'title'         => $request->title,
+                'slug'          => $request->slug,
+                'excerpt'       => $request->excerpt,
+                'body'          => $request->body,
+                'published_at'  => $request->published_at,
+                'category_id'   => $request->category_id,
+                'author_id'     => $userid,
+                'image'         => $image
+            ]);
+        
+        session()->flash('success', 'Post Created Successfully!');
+        return redirect(route('admin-posts'));
+        
     }
 
     /**
@@ -104,23 +98,21 @@ class PostsController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Requests\PostRequest $request, $id)
+    public function update($id)
     {
-        
-       $post = Post::findOrFail($id);
-       $data = $this->handleRequest($request);
-       $post->update($data);
-
-       return redirect(route('admin-posts'))->with('message', 'The Post was edited successfully!');
+        //
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified resource from Public Access.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
+        $post->delete();
+        session()->flash('success', 'Post Trashed Successfully!');
+        return redirect(route('admin-posts'));
     }
 }

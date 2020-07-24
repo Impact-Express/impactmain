@@ -29,8 +29,33 @@ class ServicesController extends Controller
         return view ('customer.services.services');
     }
 
-    public function show (Page $page)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Page $page, Request $request, $id)
     {
-        return view('customer.services.service', compact('page'));
+        $slug = $request->path();
+        // dd($slug);
+
+        switch ($slug) {
+            case 'services/express':
+                return view('customer.services.express', compact('page'));
+                break;
+            case 'services/economy':
+                return view('customer.services.economy', compact('page'));
+                break;
+            case 'services/domestic':
+                return view('customer.services.domestic', compact('page'));
+                break;
+            case 'services/imports':
+                return view('customer.services.imports', compact('page'));
+                break;
+            case 'services/ietrax':
+                return view('customer.destinations.ietrax', compact('page'));
+                break;
+        }
     }
 }

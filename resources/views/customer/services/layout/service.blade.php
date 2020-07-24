@@ -1,8 +1,8 @@
 @extends('customer.layouts.master')
 
 @section('content')
-    <div class="quote-box">
-        @yield('quotebox')
+    <div class="services-image">
+        @yield('service-image')
     </div>
     <div class="service-information">
         <div class="main-text">

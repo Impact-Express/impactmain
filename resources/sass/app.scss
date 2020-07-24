@@ -649,9 +649,70 @@ h1, h2, h3, h4, h5, h6 {
     .main-footer h4 {
         color: #e0e0e0;
     }
+    #main-footer .footer-links .list-group-item {
+        padding: 0 0 0px;
+        background-color: transparent;
+        border-color: transparent;
+    }
     .copyrights {
         border-left: 1px solid #4c5151;
         padding-left: 8px;
-        width: 75%;
+        width: 80%;
+    }
+    .socials ul {
+        display: block;
+        padding-inline-start: 0;
+    }
+    .socials li {
+        display: inline-block;
+    }
+    .socials ul li a {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 36px;
+        width: 36px;
+        height: 36px;
+        border-radius: 36px;
+        text-align: center;
+        vertical-align: bottom;
+        margin-left: 4px;
+        background-color: #444848;
+        color: #ddd;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+    .list-group, .footer-links {
+        padding: 0;
+        list-style-type: none;
+    }
+    #explore, .row {
+        display: flex;
+    }
+    .list-group-item a {
+        color: #999b9c;
+    }
+    .list-group-item a:hover {
+        color: #e6e6e6;
+    }
+    .explore-left {
+        width: fit-content;
+        padding-right: 60px;
+    }    
+    .explore-right {
+        width: fit-content;
+    }
+    .socials a {
+        color: #e6e6e6;
+    }
+    .socials a:hover {
+        color: #999b9c;
+    }
+    .font-awesome-credit {
+        padding-top: 10px;
+    }
+    .font-awesome-credit a {
+        color: #999b9c;
+    }
+    .font-awesome-credit a:hover {
+        color: #e6e6e6;
     }
 }

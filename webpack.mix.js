@@ -22,4 +22,5 @@ mix.js('resources/js/app.js', 'public/js/app.js')
     .sass('resources/sass/news.scss', 'public/css/news.css')
     .sass('resources/sass/errorpages.scss', 'public/css/errorpages.css')
     .sass('resources/sass/businessquote.scss', 'public/css/businessquote.css')
-    .sass('resources/sass/services.scss', 'public/css/services.css');
+    .sass('resources/sass/services.scss', 'public/css/services.css')
+    .sass('resources/sass/destinations.scss', 'public/css/destinations.css');

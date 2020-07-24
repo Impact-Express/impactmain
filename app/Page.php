@@ -23,26 +23,12 @@ class Page extends Model
     public function getImageUrlAttribute ($value)
     {
         $imageUrl = "";
-
         if (! is_null($this->image)) 
         {
-            $imagepath = public_path() . '/img/' . $this->image;
-            if (file_exists($imagepath)) $imageUrl = asset("img/" . $this->image);
+            $directory = config('cms.image.directory');
+            $imageUrl ="/{$directory}/" . Post::select('image')->where('id', $this->id)->pluck('image')[0];
         }
-        return $imageUrl;
-    }
-
-    public function getImageThumbUrlAttribute ($value)
-    {
-        $imageUrl = "";
-
-        if (! is_null($this->image))
-        {
-            $ext = substr(strrchr($this->image, '.'), 1);
-            $thumbnail = str_replace('.{ext}', '_thumb.{ext}', $this->image);
-            $imagepath = public_path() . '/img/' . $thumbnail;
-            if (file_exists($imagepath)) $imageUrl = asset("img/" . $thumbnail);
-        }
+        // dd($imageUrl);
         return $imageUrl;
     }
     

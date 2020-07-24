@@ -22,25 +22,36 @@ Route::resource('/quote', 'QuotesController');
 Route::post('/quote', 'QuotesController@send');
 
 
-// Services Main Route
-    Route::resource('/services', 'ServicesController');
-    Route::get('/services/express', 'ServicesController@express');
+// Services Routes
+    Route::get('/services', 'ServicesController@index')->name('services-index');
+    Route::get('/services/{service}', 'ServicesController@show');
 
 // Shipping Destinations Routes
-    Route::resource('/destinations', 'DestinationsController');
+    Route::get('/destinations', 'DestinationsController@index')->name('destinations');
+    Route::get('/destinations/{destination}', 'DestinationsController@show');
 
 
 // Authentication Routes...
+Route::group(['prefix' => 'admin'], function () {
+
     Auth::routes();
+
+});
     
 // Backend Routes
     Route::resource('/admin/posts', 'Backend\PostsController');
+    Route::delete('/admin/trash/{id}', 'Backend\HomeController@destroy')->name('trash.eradicate');
+
+    Route::resource('/admin/categories', 'Backend\CategoriesController');
 
 //Set Middleware to Auth
     Route::middleware(['auth'])->group( function () {
         Route::get('/admin', 'Backend\HomeController@index')->name('admin');
         Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
         Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
+        Route::get('/admin/trash', 'Backend\HomeController@trash')->name('admin-trash');
+        Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
+        Route::get('/admin/tags', 'Backend\HomeController@tags')->name('admin-tags');
     });
     
 // CMS Routes

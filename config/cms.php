@@ -11,7 +11,7 @@ return [
     |
     */
     'image' => [
-        'directory' => 'img',
+        'directory' => 'storage',
         'thumbnail' => [
             'width' => 250,
             'height' => 170,

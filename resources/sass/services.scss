@@ -15,9 +15,91 @@
     width: 1800px;
 }
 .quote-box {
-    height: 700px;
-    background: #F2ECEC;
+    height: 540px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 88%;
 }
+/* quick quote - START */
+.quick-quote {
+    display: flex;
+    padding: 10px;
+}
+.quick-quote .row {
+    display: block;
+    margin: 0;
+}
+.quick-quote .col {
+    display: inline-block;
+}
+.quick-quote .country-select {
+    margin-right: 20px;
+}
+.quick-quote .weight-select {
+    margin-top: 10px;
+}
+.quick-quote .country-select select {
+    height: 30px;
+}
+.quick-quote .weight-select input {
+    height: 30px;
+}
+.quotebox-bg {
+    border-style: solid;
+    border-width: 0 100px 173.2px 100px;
+    border-color: transparent transparent #ffffff transparent;
+}
+.quick-quote-box {
+    margin: 0;
+    padding: 0.5em 0.5em;
+    height: 280px;
+    width: 35%;
+    position: relative;
+    left: 120px;
+    bottom: -280px;
+}
+.q-quote {
+    display: inline;
+    /* margin: 10px; */
+}
+#q-row {
+    text-align: center;
+    height: 64px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+#q-col {
+    display: inline;
+}
+.q-button-main {
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: #FECE00;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.q-button-alt {
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F2ECEC;
+    padding: 10px 20px;
+    background: #707070;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.q-price {
+    float: right;
+    position: relative;
+    bottom: 75px;
+    right: 202px;
+}
+/* quick quote - END */
 .service-information {
     display: flex;
     background: #d9d9d9;
@@ -395,3 +477,4 @@ div:hover.hover-light-grey  {
     height: 86%;
     top: 20px;
 }
+
