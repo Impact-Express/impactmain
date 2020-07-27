@@ -1,5 +1,5 @@
 @extends('customer.destinations.layout.destination')
-@section('title', "Parcel Delivery and Shipping to Canada")
+@section('title', "Parcel Delivery and Shipping to the USA")
 @section('css')
 <link href="{{ asset('css/forms.css') }}" rel="stylesheet">
 <link href="{{ asset('css/services.css') }}" rel="stylesheet">
@@ -10,7 +10,8 @@
         background-image: url(<?php echo $bannerImage; ?>);
     }
 </style>
-<div class="quick-quote quick-quote-int">
+{{-- disabled for now, not sure how we will do this with the page layout yet. 
+    <div class="quick-quote quick-quote-int">
     <div class="quick-quote-box">
         <p style="width: 40%;margin: auto;margin-block-start: 1em;margin-block-end: 1.1em;">
             Send from any UK postcode
@@ -131,12 +132,12 @@
                 });
         </script>
     </div>
-</div>
+</div> --}}
 @endsection
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO USA</h1>
+    <h1 class="service-title">SHIPPING TO THE USA</h1>
     <div class="service-text">
         <br>
         With low-cost next-day shipping options, make Impact Express your first choice for fast and secure parcel delivery to the USA.

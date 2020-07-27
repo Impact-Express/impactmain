@@ -4,18 +4,15 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\Posts\PostRequest;
+use App\Http\Requests\Posts\UpdatePostRequest;
 use App\Http\Requests;
 use App\Post;
 use App\Category;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Auth;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
 
-class PostsController extends BackendController implements HasMedia
-{
-    use InteractsWithMedia;
-    
+class PostsController extends BackendController
+{    
     public function __construct()
     {
         parent::__construct();
@@ -86,9 +83,10 @@ class PostsController extends BackendController implements HasMedia
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        return view('admin.dashboard.postPages.edit', compact('post'));
+        $post = Post::find($id)->first();
+        return view('admin.dashboard.postPages.edit', compact('post'))->withPosts($post);
     }
 
     /**
@@ -98,9 +96,23 @@ class PostsController extends BackendController implements HasMedia
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(UpdatePostRequest $request ,Post $post)
     {
-        //
+        $data = $request->only(['title', 'slug', 'body', 'category_id', 'published_at']);
+
+        if ($request->hasFile('image')) 
+        {
+            $image = $request->image->store('img');
+
+            $post->deleteImage();
+
+            $data['image'] = $image;
+        }
+
+        $post->update($data);
+
+        session()->flash('success', 'Post Updated Successfully!');
+        return redirect(route('admin-posts'));
     }
 
     /**

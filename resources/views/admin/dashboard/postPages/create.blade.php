@@ -75,8 +75,9 @@
                                         </div>
                                         <hr>
                                         <div class="publish-buttons">
-                                            <a id="draft-button" class="button-white">Save Draft</a>
-                                            <input class="button-main" type="submit" value="Publish">
+                                        {{-- disabled while i work out why eloquent cant see Draft and Scheduled Posts
+                                            <a id="draft-button" class="button-white" style="">Save Draft</a> --}}
+                                        <input class="button-main" style="margin-left: auto;" type="submit" value="Publish">
                                         </div>
                                         @error('published_at')
                                             <span class="help-block has-error">{{ $message }}</span>

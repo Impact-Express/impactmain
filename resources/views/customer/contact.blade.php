@@ -23,7 +23,7 @@
         <div class="container" style="width: fit-content;">
             <div class="pull-left">
                 <h4 class="toUpper" style="margin:0;">Impact Express Ltd</h4>
-                <p>Unit 13 Blackthorne Crescent<br> Poyle, Berkshire<br> SL3 0QR</p>
+                <p>Unit 5 Britannia Industrial Estate<br> Poyle Rd, Colnbrook<br>Slough, SL3 0BH</p>
                 <p>Opening Hours </p>
                 <p>09:30am - 20:00pm </p>
                 <p>Monday - Friday</p>

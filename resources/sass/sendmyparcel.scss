@@ -1,0 +1,212 @@
+/***********************************
+    *? Send My Parcel Page Styles
+***********************************/
+/* Login and form Section Styles */
+.quote-login {
+    background: #F2ECEC;
+    height: 300px;
+}
+.form-control {
+    display: block;
+    width: 96%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #fff;
+    margin-bottom: 5px;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+input:focus {
+    outline: -webkit-focus-ring-color #777 1px !important;
+}
+.form-selectbox {
+    box-sizing: content-box;
+}
+.form-group-half {
+    width: 48%;
+    display: inline-table;
+}
+.create-account {
+    background: #F2ECEC;
+    height: 1020px;
+}
+.caret-quote {
+    position: relative;
+    width: 60px;
+    margin: auto;
+}
+.caret-quote:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 30px solid #FFFFFF;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+.caret-quote:after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 0;
+    border-top: 29px solid #FFFFFF;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+}
+/* Login Box Styles */
+.login-box {
+    width: 1390px;
+    height: 250px;
+    margin: auto;
+    background: #fece2e;
+}
+.login-box-title {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    font-size: 5em;
+    top: 80px;
+    font-weight: 100;
+    color: #FFF;
+}
+.login-box-title-bold {
+    font-weight: bold;
+}
+.login-box-text {
+    position: relative;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+    top: 90px;
+    font-size: 0.9em;
+    color: #000;
+}
+.login-text {
+    position: relative;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+    margin-right: 35%;
+    top: 200px;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #FFF;
+}
+.login-button {
+    position: relative;
+    text-align: center;
+    top: 4px;
+}
+/* Account Creation Form Box Styles */
+.create-account-box {
+    width: 1390px;
+    height: 970px;
+    margin: auto;
+    background: #fece2e;
+}
+.create-account-box-title {
+    position: relative;
+    width: 550px;
+    text-align: center;
+    margin: auto;
+    top: 60px;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #FFF;
+    text-transform: uppercase;
+}
+.create-account-box-text {
+    position: relative;
+    width: 600px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    top: 60px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #000;
+}
+.create-account-tcs-text {
+    position: relative;
+    margin: auto;
+    font-size: 1em;
+    font-weight: 600;
+    color: #000;
+}
+.create-account-tcs-link {
+    position: relative;
+    margin: auto;
+    font-size: 1em;
+    font-weight: 600;
+    color: #FFF;
+    text-decoration: none;
+}
+.create-account-form {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    top: 80px;
+}
+/* Contact Form */
+.contact-form {
+    height: 450px;
+    background: #f1f1f1;
+}
+.pull-left {
+    top: 550px;
+    right: 1200px;
+    float: left;
+    position: absolute;
+    width: fit-content;
+}
+.pull-right {
+    float: right;
+    position: relaative;
+    width: fit-content;
+}
+/* Form Input Styles */
+#quote-email-address {
+    width: 61.7%;
+}
+#quote-delivery-destinations {
+    width: 61.7%;
+}
+#quote-comments {
+    width: 95%;
+    height: 165px;
+    resize: none;
+}
+#contactMessage {
+    position: relative;
+    top: 25px;
+    left: 580px;
+    width: 650px;
+}
+#contactFullName {
+    position: relative;
+    top: 70px;
+    left: 248px;
+}
+#contactEmailAddr {
+    position: relative;
+    top: 70px;
+    left: -456px;
+}
+#form-btn {
+    position: relative;
+    left: 1093px;
+    top: 57px;
+}
+
+.alert {
+    position: relative;
+    width: 23%;
+    bottom: 28%;
+    right: 4.5%;
+}

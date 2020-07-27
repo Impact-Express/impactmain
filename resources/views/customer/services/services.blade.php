@@ -90,11 +90,27 @@
         </a>
         <h2 class="imports-delivery-title">
             <a href="">
-                Test
+                IMPORTS - WORLDWIDE IMPORT SERVICE
             </a>
         </h2>
         <div class="imports-delivery-desc">
-            Test
+           <p> We monitor the whole process for you from arranging the collection, 
+               tracking its journey and ensuring its sole delivery back to the UK 
+               usually by the end of the next working day.
+            </p>
+            <p>
+                Our Worldwide Import Service provides a tailor-made solution to ensuring 
+                your import and third country shipment delivery is completed with a minimal 
+                amount of fuss, the Import services include:
+            </p>
+            <ul>
+                <p>
+                    Your Labels will be sent via email as a PDF to be attached to the incoming parcel. <br>
+                    A Driver will be booked to collect the parcel. <br>
+                    Import service is a fully tracked DHL Service. <br>
+                    The Import service is available from over 220 countries worldwide.
+                </p>
+            </ul>
         </div>
     </section>
     <section class="ietrax-delivery">

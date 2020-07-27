@@ -11,7 +11,8 @@
         background-image: url(<?php echo $bannerImage; ?>);
     }
 </style>
-<div class="quick-quote quick-quote-int">
+{{-- disabled for now, not sure how we will do this with the page layout yet. 
+    <div class="quick-quote quick-quote-int">
     <div class="quick-quote-box">
         <p style="width: 40%;margin: auto;margin-block-start: 1em;margin-block-end: 1.1em;">
             Send from any UK postcode
@@ -132,7 +133,7 @@
                 });
         </script>
     </div>
-</div>
+</div> --}}
 @endsection
 
 @section('maintext')

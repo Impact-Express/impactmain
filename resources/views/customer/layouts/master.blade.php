@@ -16,7 +16,7 @@
         </div>
         <ul class="nav-items">
             <li class="nav-item">
-                <a class="nav-link" href="<?= route('quote.index'); ?>">Send My Parcel</a>
+                <a class="nav-link" href="<?= route('send-my-parcel'); ?>">Send My Parcel</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?= route('quote.index'); ?>">Track My Parcel</a>

@@ -42,7 +42,7 @@
     </div>
     <div class="sidebar">
         <ul style="list-style-type: none;width: 100%;padding-inline-start: 0;margin-block-start: 0;">
-            <i class='fas fa-info-circle sidebar-text'></i><span class='k-item-text' style='padding-left: 16px; font-size: 11px; overflow: hidden;'>Impact Express CMS System - v0.1</span>
+            <i class='fas fa-info-circle sidebar-text'></i><span class='k-item-text' style='padding-left: 16px; font-size: 11px; overflow: hidden;'>Impact Express CMS System - v1</span>
             <li data-role='drawer-separator'><hr></li>
             <a class="white" style='overflow: hidden;' href='{{ route('admin') }}'>
                 <li data-role='drawer-item' class='state-selected sidebar-item'>
@@ -50,19 +50,27 @@
                     <span class='k-item-text' style='padding-left: 16px;'>Dashboard</span>
                 </li>
             </a> 
-            <li data-role='drawer-separator'><hr></li> 
+            <li data-role='drawer-separator'><hr></li>
             <a class="white" style="overflow: hidden;" href='{{ route('admin-media') }}'>
                 <li data-role='drawer-item' class="sidebar-item">
                     <i class='fas fa-images sidebar-text'></i>
                     <span class='k-item-text' style='padding-left: 16px;'>Media</span>
                 </li>
             </a>
+            <li data-role='drawer-separator'><hr></li> 
             <a class="white" style='overflow: hidden;' href='{{ route('admin-posts') }}'>
                 <li data-role='drawer-item' class="sidebar-item">
                     <i class='fas fa-thumbtack sidebar-text'></i>
                     <span class='k-item-text' style='padding-left: 20px;'>Posts</span>
                 </li>
             </a>
+            <a class="white" style='overflow: hidden;' href='{{ route('admin-trash') }}'>
+                <li data-role='drawer-item' class="sidebar-item">
+                    <i class='fas fa-trash-alt sidebar-text'></i>
+                    <span class='k-item-text' style='padding-left: 20px;'>Trashed Posts</span>
+                </li>
+            </a>
+            <li data-role='drawer-separator'><hr></li> 
             <a class="white" style='overflow: hidden;' href='{{ route('admin-categories') }}'>
                 <li data-role='drawer-item' class="sidebar-item">
                     <i class="fas fa-copy sidebar-text"></i>
@@ -82,14 +90,6 @@
                     <span class='k-item-text' style='padding-left: 16px; font-size: 12px; overflow: hidden;'>Back to the Main Site</span>
                 </li>
             </a>
-      </ul>
-      <ul style="list-style-type: none;width: 100%;padding-inline-start: 0;margin-block-start: 0;position: absolute;top: 96%;">
-        <a class="white" style='overflow: hidden;' href='{{ route('admin-trash') }}'>
-            <li data-role='drawer-item' class="sidebar-item">
-                <i class='fas fa-trash-alt sidebar-text'></i>
-                <span class='k-item-text' style='padding-left: 20px;'>Trashed Posts</span>
-            </li>
-        </a>
       </ul>
     </div>
     <section id="main-content">

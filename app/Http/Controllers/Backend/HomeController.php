@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Post;
 use App\Category;
 use App\Page;
@@ -53,7 +54,7 @@ class HomeController extends BackendController
         return view('admin.dashboard.trash', compact('postCount'))->withPosts($trashed);
     }
 
-        /**
+    /**
      * Eradicate the specified resource from storage.
      *
      * @param  int  $id
@@ -61,12 +62,24 @@ class HomeController extends BackendController
      */
     public function destroy($id)
     {
-        $post = Post::withTrashed()->where('id', $id)->firstOrFail();
+        $post = Post::withTrashed()->where('id', $id)->first();
+        $post->deleteImage();
         $post->forceDelete();
-
-        $postCount = Post::onlyTrashed()->count();
-        
         session()->flash('success', 'Post Deleted Successfully!');
-        return redirect(view('admin.dashboard.trash', compact('postCount'))->withPosts($trashed));
+        return redirect(route('admin-trash'));
+    }
+
+    /**
+     * Restore the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function restore ($id) 
+    {
+        $post = Post::withTrashed()->where('id', $id)->first();
+        $post->restore();
+        session()->flash('success', 'Post Restored Successfully!');
+        return redirect(route('admin-trash'));
     }
 }
