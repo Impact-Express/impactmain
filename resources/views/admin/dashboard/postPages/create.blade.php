@@ -2,10 +2,12 @@
 @section('title', 'New Post')
 @section('css')
     <link href="{{asset('css/simplemde.min.css')}}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css rel="stylesheet">
 @endsection
 @section('js')
 <script src="{{ asset('js/simplemde.min.js') }}" ></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js" ></script>
 @endsection
@@ -100,6 +102,20 @@
                                             <br><br>
                                         @enderror
                                     </div>
+                                    <div class="form-group @error('tag_id') has-error @enderror">
+                                        <label for="tag_id">Tags</label>
+                                        <select class="form-text" id="new-post-tag" tabindex="7" name="tag_id" multiple="multiple">
+                                            {{$tags = \App\Tag::all()}}
+                                            @foreach ($tags as $tag)
+                                                <option value="{{$tag->id}}">{{$tag->title}}</option>
+                                            @endforeach
+                                        </select>
+                                    
+                                        @error('tag_id')
+                                            <span class="help-block has-error">{{ $message }}</span>
+                                            <br><br>
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="post-details-right">
                                     <label for="image">Feature Image</label>
@@ -108,7 +124,7 @@
                                             </div>
                                             <label class="button-image">
                                                 Choose Image
-                                            <input type="file" class="button-image" name="image" id="image" tabindex="7" onchange="document.getElementById('img-thumbnail').src = window.URL.createObjectURL(this.files[0])">
+                                            <input type="file" class="button-image" name="image" id="image" tabindex="8" onchange="document.getElementById('img-thumbnail').src = window.URL.createObjectURL(this.files[0])">
                                             </label>
 
                                             @error('image')
@@ -132,41 +148,43 @@
     </div>
 </div>
 <script>
-    $('#new-post-title').on('blur', function() {
-        var theTitle  = this.value.toLowerCase().trim(),
-            slugInput = $('#new-post-slug'),
-            theSlug   = theTitle.replace(/&/g, '-and-')
-                                .replace(/[^a-z0-9-]+/g, '-')
-                                .replace(/\-\-+/g, '-')
-                                .replace(/^-+|-+$/g, '');
+        $('#new-post-tag').select2();
 
-        slugInput.val(theSlug)
-    });
-    $("#new-post-publishdate").datetimepicker({
-        dateFormat: 'yy-mm-dd',
-        timeFormat: 'HH:mm:ss',
-        controlType: 'select',
-        oneLine: true,
-        showHour: true,
-        showMinute: true,
-        showSecond: true,
-        showMillisec: false,
-        showMicrosec: false,
-    });
-    var simplemde1 = new SimpleMDE({ 
-        element: $('#new-post-excerpt')[0],
-        autofocus: false
-    });
-    var simplemde2 = new SimpleMDE({ 
-        element: $('#new-post-body')[0],
-        autofocus: false
-    });
+        $('#new-post-title').on('blur', function() {
+            var theTitle  = this.value.toLowerCase().trim(),
+                slugInput = $('#new-post-slug'),
+                theSlug   = theTitle.replace(/&/g, '-and-')
+                                    .replace(/[^a-z0-9-]+/g, '-')
+                                    .replace(/\-\-+/g, '-')
+                                    .replace(/^-+|-+$/g, '');
 
-    $('#draft-button').click(function(e) {
-        e.preventDefault();
-        $('#new-post-publishdate').val("");
-        $('#post-form').submit();
-    });
+            slugInput.val(theSlug)
+        });
+        $("#new-post-publishdate").datetimepicker({
+            dateFormat: 'yy-mm-dd',
+            timeFormat: 'HH:mm:ss',
+            controlType: 'select',
+            oneLine: true,
+            showHour: true,
+            showMinute: true,
+            showSecond: true,
+            showMillisec: false,
+            showMicrosec: false,
+        });
+        var simplemde1 = new SimpleMDE({ 
+            element: $('#new-post-excerpt')[0],
+            autofocus: false
+        });
+        var simplemde2 = new SimpleMDE({ 
+            element: $('#new-post-body')[0],
+            autofocus: false
+        });
+
+        $('#draft-button').click(function(e) {
+            e.preventDefault();
+            $('#new-post-publishdate').val("");
+            $('#post-form').submit();
+        });
 </script>
 @endsection
 

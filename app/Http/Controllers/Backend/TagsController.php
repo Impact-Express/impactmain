@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Http\Requests\Categories\CategoryRequest;
-use App\Http\Requests\Categories\EditCategoriesRequest;
-use App\Category;
+use App\Http\Requests\Tags\TagRequest;
+use App\Http\Requests\Tags\EditTagsRequest;
+use App\Tag;
 
-class CategoriesController extends BackendController
+class TagsController extends BackendController
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +17,9 @@ class CategoriesController extends BackendController
      */
     public function index()
     {
-        $categories = Category::paginate(8);
-        $categoryCount = DB::table('categories')->count();
-        return view('admin.dashboard.categories', ['categories' => $categories, 'categoryCount' => $categoryCount]);
+        $tags = Tag::paginate(8);
+        $tagCount = DB::table('tags')->count();
+        return view('admin.dashboard.tags', ['tags' => $tags, 'tagCount' => $tagCount]);
     }
 
     /**
@@ -29,7 +29,7 @@ class CategoriesController extends BackendController
      */
     public function create()
     {
-        return view('admin.dashboard.categoriesPages.create');
+        return view('admin.dashboard.tagsPages.create');
     }
 
     /**
@@ -38,15 +38,15 @@ class CategoriesController extends BackendController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CategoryRequest $request)
+    public function store(TagRequest $request)
     {
-        Category::create([
+        Tag::create([
             'title' => $request->title,
             'slug' => $request->slug
         ]);
-
-        session()->flash('success', 'Category Created Successfully!');
-        return redirect(route('admin-categories'));
+        
+        session()->flash('success', 'Tag Created Successfully!');
+        return redirect(route('admin-tags'));
     }
 
     /**
@@ -66,9 +66,9 @@ class CategoriesController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(Tag $tag)
     {
-        return view('admin.dashboard.categoriesPages.create')->with('category', $category);
+        return view('admin.dashboard.tagsPages.create')->with('tag', $tag);
     }
 
     /**
@@ -78,18 +78,18 @@ class CategoriesController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(EditCategoriesRequest $request, Category $category)
+    public function update(EditTagsRequest $request, Tag $tag)
     {
-        $category->update(        [
+        $tag->update(        [
             'title' => $request->title,
             'slug' => $request->slug
         ]);
 
-        $category->save();
+        $tag->save();
 
-        session()->flash('success', 'The Category was Updated Successfully!');
+        session()->flash('success', 'The Tag was Updated Successfully!');
 
-        return redirect(route('admin-categories'));
+        return redirect(route('admin-tags'));
     }
 
     /**
@@ -98,12 +98,12 @@ class CategoriesController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(Tag $tag)
     {
-        $category->delete();
+        $tag->delete();
 
-        session()->flash('success', 'The Category was Deleted Successfully!');
+        session()->flash('success', 'The Tag was Deleted Successfully!');
         
-        return redirect(route('admin-categories'));
+        return redirect(route('admin-tags'));
     }
 }

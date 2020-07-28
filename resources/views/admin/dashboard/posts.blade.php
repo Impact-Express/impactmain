@@ -57,7 +57,7 @@
                                         </td>
                                         <td>{{ $post->title }}</td>
                                         <td>{{ $post->author->name }}</td>
-                                        <td>{{ $post->category->title}}</td>
+                                        <td>{{ $post->category->title }}</td>
                                         <td><abbr title="{{ $post->dateFormatted(true) }}">{{ $post->dateFormatted() }}</abbr> | {!! $post->publicationlabel() !!}</td>
                                     </tr>
                                     @endforeach
@@ -73,7 +73,7 @@
                                     </div>
                                 </div>
                                 @else
-                                    <h3 style="text-align: center;position: relative;top: 15px;right: 190px;height: 70px;">No Posts Yet</h3>
+                                    <h3 style="text-align: center; position: relative; top: -8px; right: -660px; height: 70px; width: fit-content;">No Posts Yet</h3>
                                 @endif
                             </div>
                         </div>

@@ -17,6 +17,7 @@ class PostsController extends BackendController
     {
         parent::__construct();
         $this->uploadPath = public_path(config('cms.image.directory'));
+        $this->middleware('verifyCategoriesCount')->only(['create', 'store']);
     }
 
     /**
@@ -47,10 +48,13 @@ class PostsController extends BackendController
     public function store(PostRequest $request)
     {
         $directory = config('cms.image.directory');
-        $image = $request->image->store('img');
         $userid = (!Auth::guest()) ? Auth::user()->id : null ;
         
-        Post::create([
+        if ($request->hasFile('image')) 
+        {
+            $image = $request->image->store('img');
+
+            Post::create([
                 'title'         => $request->title,
                 'slug'          => $request->slug,
                 'excerpt'       => $request->excerpt,
@@ -59,6 +63,16 @@ class PostsController extends BackendController
                 'category_id'   => $request->category_id,
                 'author_id'     => $userid,
                 'image'         => $image
+            ]);
+        }
+        Post::create([
+                'title'         => $request->title,
+                'slug'          => $request->slug,
+                'excerpt'       => $request->excerpt,
+                'body'          => $request->body,
+                'published_at'  => $request->published_at,
+                'category_id'   => $request->category_id,
+                'author_id'     => $userid,
             ]);
         
         session()->flash('success', 'Post Created Successfully!');

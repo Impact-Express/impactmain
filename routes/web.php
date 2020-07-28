@@ -52,6 +52,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::put('/admin/trash/{id}', 'Backend\HomeController@restore')->name('trash.restore');
 
     Route::resource('/admin/categories', 'Backend\CategoriesController');
+    Route::resource('/admin/tags', 'Backend\TagsController');
 
 //Set Middleware to Auth
     Route::middleware(['auth'])->group( function () {
@@ -59,7 +60,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
         Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
         Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
-        Route::get('/admin/tags', 'Backend\HomeController@tags')->name('admin-tags');
+        Route::get('/admin/tags', 'Backend\TagsController@index')->name('admin-tags');
     });
     
 // CMS Routes

@@ -27,6 +27,7 @@
                             <tr>
                             <th>Action</th>
                             <th>Category</th>
+                            <th>Post Count</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,6 +47,7 @@
                                 </form>
                             </td>
                             <td>{{ $category->title }}</td>
+                            <td>{{ $category->posts->count() }}</td>
                         </tr>
                         @endforeach
                         </tbody>
