@@ -8,6 +8,7 @@ use App\Http\Requests\Posts\UpdatePostRequest;
 use App\Http\Requests;
 use App\Post;
 use App\Category;
+use App\Tag;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,7 +38,7 @@ class PostsController extends BackendController
      */
     public function create(Post $post, Category $category)
     {
-        return view('admin.dashboard.postPages.create', compact('post', 'category'));
+        return view('admin.dashboard.postPages.create', compact('post', 'category'))->with('tags', Tag::all());
     }
     /**
      * Store a newly created resource in storage.
@@ -47,14 +48,15 @@ class PostsController extends BackendController
      */
     public function store(PostRequest $request)
     {
-        $directory = config('cms.image.directory');
+        // dd($request);
+
         $userid = (!Auth::guest()) ? Auth::user()->id : null ;
         
         if ($request->hasFile('image')) 
         {
             $image = $request->image->store('img');
 
-            Post::create([
+           Post::create([
                 'title'         => $request->title,
                 'slug'          => $request->slug,
                 'excerpt'       => $request->excerpt,
@@ -65,16 +67,30 @@ class PostsController extends BackendController
                 'image'         => $image
             ]);
         }
+        if (isset($request->tag_id)) {
+           
+            $post = Post::create([
+                'title'         => $request->title,
+                'slug'          => $request->slug,
+                'excerpt'       => $request->excerpt,
+                'body'          => $request->body,
+                'published_at'  => $request->published_at,
+                'author_id'     => $userid,
+                'category_id'   => $request->category_id,
+            ]);
+            $post->tags()->attach($request->tag_id);
+        }
+
         Post::create([
                 'title'         => $request->title,
                 'slug'          => $request->slug,
                 'excerpt'       => $request->excerpt,
                 'body'          => $request->body,
                 'published_at'  => $request->published_at,
-                'category_id'   => $request->category_id,
                 'author_id'     => $userid,
+                'category_id'   => $request->category_id,
             ]);
-        
+
         session()->flash('success', 'Post Created Successfully!');
         return redirect(route('admin-posts'));
         
@@ -97,10 +113,11 @@ class PostsController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        $post = Post::find($id)->first();
-        return view('admin.dashboard.postPages.edit', compact('post'))->withPosts($post);
+        dd($slug);
+        $post = Post::where('slug', $slug)->firstOrFail();
+        return view('admin.dashboard.postPages.edit', compact('post'))->withPosts($post)->with('tags', Tag::all());
     }
 
     /**

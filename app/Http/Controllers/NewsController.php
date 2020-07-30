@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Post;
 use App\Category;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
@@ -27,6 +28,13 @@ class NewsController extends Controller
         $authorName = $author->name;
         $posts = $author->posts()->with('category')->latestFirst()->published()->simplePaginate(4);
         return view('customer.news.index', compact('posts', 'authorName'));
+    }
+
+    public function tags(Tag $tag)
+    {
+        $tagName = $tag->title;
+        $posts = $tag->posts()->with('tag')->latestFirst()->published()->simplePaginate(4);
+        return view('customer.news.index', compact('posts', 'tagName'));
     }
 
     public function show (Post $post)

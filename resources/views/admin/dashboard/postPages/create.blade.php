@@ -24,7 +24,7 @@
                             <div class="box-header">
                                 <div class="pull-left" style="width: 65%;">
                                    <div class="post-details">
-                                    <form action="{{ route('posts.store', $post->slug) }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('posts.store', $post->slug) }}" id="post-form" method="POST" enctype="multipart/form-data">
                                         @csrf
 
                                         <div class="form-group @error('title') has-error @enderror">
@@ -77,9 +77,7 @@
                                         </div>
                                         <hr>
                                         <div class="publish-buttons">
-                                        {{-- disabled while i work out why eloquent cant see Draft and Scheduled Posts
-                                            <a id="draft-button" class="button-white" style="">Save Draft</a> --}}
-                                        <input class="button-main" style="margin-left: auto;" type="submit" value="Publish">
+                                            <input class="button-main" style="margin-left: auto;" type="submit" value="Publish">
                                         </div>
                                         @error('published_at')
                                             <span class="help-block has-error">{{ $message }}</span>
@@ -104,7 +102,7 @@
                                     </div>
                                     <div class="form-group @error('tag_id') has-error @enderror">
                                         <label for="tag_id">Tags</label>
-                                        <select class="form-text" id="new-post-tag" tabindex="7" name="tag_id" multiple="multiple">
+                                        <select class="form-text" id="new-post-tag" tabindex="7" name="tag_id[]" multiple="multiple">
                                             {{$tags = \App\Tag::all()}}
                                             @foreach ($tags as $tag)
                                                 <option value="{{$tag->id}}">{{$tag->title}}</option>
@@ -178,12 +176,6 @@
         var simplemde2 = new SimpleMDE({ 
             element: $('#new-post-body')[0],
             autofocus: false
-        });
-
-        $('#draft-button').click(function(e) {
-            e.preventDefault();
-            $('#new-post-publishdate').val("");
-            $('#post-form').submit();
         });
 </script>
 @endsection

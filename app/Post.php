@@ -13,7 +13,10 @@ class Post extends Model
     use SoftDeletes;
 
     protected $dates = [ 'published_at' ];
-    protected $fillable = ['title','slug','excerpt','body','published_at','category_id','image', 'author_id'];
+    protected $fillable = ['title','slug','excerpt','body','published_at','category_id', 'image', 'author_id', 'tag_id'];
+    protected  $primaryKey = 'slug';
+    public $incrementing = false;
+    public $keyType = 'string';
 
      /**
      * Sets the Default Key.
@@ -30,12 +33,15 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 
     public function category($value='')
     {
         return $this->belongsTo(Category::class)->withDefault(['slug' => 'uncategorized']);
     }
-
 
     public function setPublishedAtAttribute($value)
     {

@@ -44,7 +44,7 @@ Route::group(['prefix' => 'admin'], function () {
     
 // Backend Routes
     Route::resource('/admin/posts', 'Backend\PostsController');
-    Route::match(['put', 'patch'], '/admin/posts/{id}', 'Backend\PostsController@update')->name('posts-update');
+    Route::match(['put', 'patch'], '/admin/posts/{id}/edit', 'Backend\PostsController@update')->name('posts-update');
     Route::get('/admin/posts/{id}/edit', 'Backend\PostsController@edit')->name('posts-edit');
 
     Route::get('/admin/trash', 'Backend\HomeController@trash')->name('admin-trash');
@@ -67,4 +67,5 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/news', 'NewsController@index')->name('news');
     Route::get('/news/{post}', 'NewsController@show')->name('news-post');
     Route::get('/category/{category}', 'NewsController@category')->name('category');
+    Route::get('/tag/{id}', 'NewsController@tags')->name('tag');
     Route::get('/author/{author}', 'NewsController@author')->name('author');
