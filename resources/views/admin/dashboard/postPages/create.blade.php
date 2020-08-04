@@ -100,12 +100,12 @@
                                             <br><br>
                                         @enderror
                                     </div>
-                                    <div class="form-group @error('tag_id') has-error @enderror">
-                                        <label for="tag_id">Tags</label>
-                                        <select class="form-text" id="new-post-tag" tabindex="7" name="tag_id[]" multiple="multiple">
+                                    <div class="form-group @error('tag_slug') has-error @enderror">
+                                        <label for="tag_slug">Tags</label>
+                                        <select class="form-text" id="new-post-tag" tabindex="7" name="tag_slug[]" multiple="multiple">
                                             {{$tags = \App\Tag::all()}}
                                             @foreach ($tags as $tag)
-                                                <option value="{{$tag->id}}">{{$tag->title}}</option>
+                                                <option value="{{$tag->slug}}">{{$tag->title}}</option>
                                             @endforeach
                                         </select>
                                     

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Post;
 use App\Category;
 use App\Page;
+use App\Tag;
 
 class HomeController extends BackendController
 {
@@ -26,7 +27,7 @@ class HomeController extends BackendController
     }
     public function posts()
     {
-        $posts = Post::with('category', 'author')->latest()->paginate($this->pagelimit);
+        $posts = Post::with('category', 'author', 'tags')->latest()->paginate($this->pagelimit);
         $postCount = Post::count();
         return view('admin.dashboard.posts', compact('posts', 'postCount'));
     }

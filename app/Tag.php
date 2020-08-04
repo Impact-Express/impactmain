@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     protected $fillable = ['title', 'slug'];
+    protected  $primaryKey = 'slug';
+    public $incrementing = false;
+    public $keyType = 'string';
 
     public function posts()
     {

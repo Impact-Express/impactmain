@@ -355,6 +355,7 @@
 a {
   text-decoration: none;
   color: black;
+  font-family: "Play", sans-serif;
 }
 
 a:hover {

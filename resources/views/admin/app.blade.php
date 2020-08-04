@@ -27,9 +27,10 @@
     <script src="{{ asset('js/admin.js') }}" ></script>
 </head>
 <body style="margin: 0;">
-    <div id="toolbar" class="topbar">
+    <div class="topbar">
+        <h3 style="margin: auto; margin-left: 3%;">Impact Express</h3>
         <div class="k-overflow-anchor k-button profile">
-            <a  href="{{ route('logout') }}"
+            <a style="margin: auto;" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                 <h4>{{ __('Logout') }}</h4>
@@ -51,13 +52,6 @@
                 </li>
             </a> 
             <li data-role='drawer-separator'><hr></li>
-            <a class="white" style="overflow: hidden;" href='{{ route('admin-media') }}'>
-                <li data-role='drawer-item' class="sidebar-item">
-                    <i class='fas fa-images sidebar-text'></i>
-                    <span class='k-item-text' style='padding-left: 16px;'>Media</span>
-                </li>
-            </a>
-            <li data-role='drawer-separator'><hr></li> 
             <a class="white" style='overflow: hidden;' href='{{ route('admin-posts') }}'>
                 <li data-role='drawer-item' class="sidebar-item">
                     <i class='fas fa-thumbtack sidebar-text'></i>
@@ -119,12 +113,12 @@
     </section>
 </body>
 <script type="text/javascript">
-        $("#toolbar").kendoToolBar({
-                    items: [
-                        { type: "button", icon: "menu", attributes: { "class": "k-flat" }, click: toggleDrawer},
-                        { template: "<h3 style='margin-left: 20px;'>Impact Express</h3>"},
-                    ]
-                });
+        // $("#toolbar").kendoToolBar({
+        //             items: [
+        //                 { type: "button", icon: "menu", attributes: { "class": "k-flat" }, click: toggleDrawer},
+        //                 { template: ""},
+        //             ]
+        //         });
 
         function toggleDrawer() {
             var drawerInstance = $("#drawer").data().kendoDrawer;

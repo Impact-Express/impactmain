@@ -19,6 +19,11 @@
                     <p>Author: <strong>{{ $authorName }}</strong><p>
                 </div>
             @endif
+            @if (isset($tagName))
+            <div class="alert info-alert">
+                <p>Tag: <strong>{{ $tagName }}</strong><p>
+            </div>
+        @endif
             @foreach ($posts as $post)
                 @include('customer.news.partials.post')
             @endforeach

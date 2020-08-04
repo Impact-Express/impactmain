@@ -3,7 +3,7 @@
 
 @section('content')
     <h3 class="cms-title">Dashboard</h3>
-    <div id="Dashboard">
+    <div id="Dashboard" style="height: 600px;">
         <div class="card-body card-dashboard">
             <h1>Impact Express CMS Dashboard</h1>
             <h3>Logged in as: {{ Auth::user()->name }}</h3>

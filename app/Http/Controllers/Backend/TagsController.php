@@ -100,6 +100,12 @@ class TagsController extends BackendController
      */
     public function destroy(Tag $tag)
     {
+        if ($tag->posts->count() > 0)
+        {
+            session()->flash('warning', 'Tag cannot be deleted as it has posts associated under it.');
+            return redirect()->back();
+        }
+
         $tag->delete();
 
         session()->flash('success', 'The Tag was Deleted Successfully!');

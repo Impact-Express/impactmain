@@ -36,6 +36,7 @@
                                         <th>Title</th>
                                         <th>Author</th>
                                         <th>Category</th>
+                                        <th>Tags</th>
                                         <th>Date</th>
                                       </tr>
                                   </thead>
@@ -58,6 +59,11 @@
                                         <td>{{ $post->title }}</td>
                                         <td>{{ $post->author->name }}</td>
                                         <td>{{ $post->category->title }}</td>
+                                        <td>
+                                            @foreach ($post->tags as $tag)
+                                                <span class="tag-badge">{{ $tag->title }}</span>
+                                            @endforeach
+                                        </td>
                                         <td><abbr title="{{ $post->dateFormatted(true) }}">{{ $post->dateFormatted() }}</abbr> | {!! $post->publicationlabel() !!}</td>
                                     </tr>
                                     @endforeach

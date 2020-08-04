@@ -30,13 +30,6 @@ class NewsController extends Controller
         return view('customer.news.index', compact('posts', 'authorName'));
     }
 
-    public function tags(Tag $tag)
-    {
-        $tagName = $tag->title;
-        $posts = $tag->posts()->with('tag')->latestFirst()->published()->simplePaginate(4);
-        return view('customer.news.index', compact('posts', 'tagName'));
-    }
-
     public function show (Post $post)
     {
         $post->increment('view_count', 1);

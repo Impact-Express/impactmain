@@ -2,10 +2,12 @@
 @section('title', 'Edit Post')
 @section('css')
     <link href="{{asset('css/simplemde.min.css')}}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css rel="stylesheet">
 @endsection
 @section('js')
 <script src="{{ asset('js/simplemde.min.js') }}" ></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js" ></script>
 @endsection
@@ -89,7 +91,7 @@
                                                 <div class="post-details-right">
                                                     <div class="form-group @error('category_id') has-error @enderror">
                                                         <label for="category_id">Category</label>
-                                                        <select class="form-text" id="new-post-category" tabindex="6" name="category_id">
+                                                        <select class="form-text" id="new-post-category" tabindex="6" name="category_id" value="{{ $post->category_id }}">
                                                             {{$categories = \App\Category::all()}}
                                                             @foreach ($categories as $category)
                                                                 <option value="{{$category->id}}">{{$category->title}}</option>
@@ -97,6 +99,20 @@
                                                         </select>
                                                     
                                                         @error('category_id')
+                                                            <span class="help-block has-error">{{ $message }}</span>
+                                                            <br><br>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="form-group @error('tag_slug') has-error @enderror">
+                                                        <label for="tag_slug">Tags</label>
+                                                        <select class="form-text" id="new-post-tag" tabindex="7" name="tag_slug[]" multiple="multiple" value="{{ $post->tag_slug }}">
+                                                            {{$tags = \App\Tag::all()}}
+                                                            @foreach ($tags as $tag)
+                                                                <option value="{{$tag->slug}}">{{$tag->title}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    
+                                                        @error('tag_id')
                                                             <span class="help-block has-error">{{ $message }}</span>
                                                             <br><br>
                                                         @enderror
@@ -132,36 +148,38 @@
         </div>
     </div>
 </div>
-<script>
-    $('#new-post-title').on('blur', function() {
-        var theTitle  = this.value.toLowerCase().trim(),
-            slugInput = $('#new-post-slug'),
-            theSlug   = theTitle.replace(/&/g, '-and-')
-                                .replace(/[^a-z0-9-]+/g, '-')
-                                .replace(/\-\-+/g, '-')
-                                .replace(/^-+|-+$/g, '');
+    <script>
+        $('#new-post-tag').select2();
 
-        slugInput.val(theSlug)
-    });
-    $("#new-post-publishdate").datetimepicker({
-        dateFormat: 'yy-mm-dd',
-        timeFormat: 'HH:mm:ss',
-        controlType: 'select',
-        oneLine: true,
-        showHour: true,
-        showMinute: true,
-        showSecond: true,
-        showMillisec: false,
-        showMicrosec: false,
-    });
-    var simplemde1 = new SimpleMDE({ 
-        element: $('#new-post-excerpt')[0],
-        autofocus: false
-    });
-    var simplemde2 = new SimpleMDE({ 
-        element: $('#new-post-body')[0],
-        autofocus: false
-    });
-</script>
+        $('#new-post-title').on('blur', function() {
+            var theTitle  = this.value.toLowerCase().trim(),
+                slugInput = $('#new-post-slug'),
+                theSlug   = theTitle.replace(/&/g, '-and-')
+                                    .replace(/[^a-z0-9-]+/g, '-')
+                                    .replace(/\-\-+/g, '-')
+                                    .replace(/^-+|-+$/g, '');
+
+            slugInput.val(theSlug)
+        });
+        $("#new-post-publishdate").datetimepicker({
+            dateFormat: 'yy-mm-dd',
+            timeFormat: 'HH:mm:ss',
+            controlType: 'select',
+            oneLine: true,
+            showHour: true,
+            showMinute: true,
+            showSecond: true,
+            showMillisec: false,
+            showMicrosec: false,
+        });
+        var simplemde1 = new SimpleMDE({ 
+            element: $('#new-post-excerpt')[0],
+            autofocus: false
+        });
+        var simplemde2 = new SimpleMDE({ 
+            element: $('#new-post-body')[0],
+            autofocus: false
+        });
+    </script>
 @endsection
 
