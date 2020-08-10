@@ -8,7 +8,7 @@
                 <div class="box">
                     <div class="box-header">
                         <div class="pull-left">
-                            <a id="add-button" title="Add New" class="button-success" href="#">Register New user</a>
+                            <a id="add-button" title="Add New" class="button-success" href="{{ route('admin-register-user') }}">Register New user</a>
                         </div>
                         <div class="pull-right">
                             <form class="search-form" action="" method="post">
@@ -30,15 +30,13 @@
                             <th>Username</th>
                             <th>Email Address</th>
                             <th>User Role</th>
+                            <th>Admin/Writer Status</th>
                             </tr>
                         </thead>
                         <tbody>
                         @foreach ($users as $user)
                         <tr>
                             <td width="85" height="35">
-                                <a title="Edit" class="button-default" href="{{ route('admin-profile', $user->slug) }}">
-                                    <i class="fa fa-edit"></i>
-                                </a>
                                 <form action="#" method="post" style="display: inline">
                                     @method('DELETE')
                                     @csrf
@@ -52,6 +50,12 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->role }}</td>
+                            @if ($user->isAdmin())
+                            <form action="{{ route('admin-users-makeWriter', $user->slug) }}" method="post">
+                                @csrf
+                                <td><button href="" class="button-success" style="padding: 7px 10px; border-radius: 6px;">Make Writer</button></td>
+                            </form>
+                            @endif
                             @if (!$user->isAdmin())
                             <form action="{{ route('admin-users-makeAdmin', $user->slug) }}" method="post">
                                 @csrf

@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'slug', 'email', 'password', 'bio'
     ];
 
     /**
@@ -33,6 +33,7 @@ class User extends Authenticatable
     {
         return $this->bio ? Markdown::convertToHtml(e($this->bio)) : NULL;
     }
+    
     /**
      * The attributes that should be cast to native types.
      *
@@ -41,10 +42,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
     public function posts ()
     {
         return $this->hasMany(Post::class, 'author_id');
     }
+
     public function gravatar()
     {
         $email = "$this->email";
@@ -53,10 +56,12 @@ class User extends Authenticatable
         
         return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
     }
+    
     public function getRouteKeyName()
     {
         return 'slug';
     }
+    
     public function isAdmin ()
     {
         return $this->role === 'admin';
