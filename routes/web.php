@@ -61,8 +61,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/admin/users/{user}/profile', 'Backend\UsersController@profile')->name('admin-profile');
 
     Route::middleware(['auth', 'admin'])->group(function () {
-        Route::put('/admin/users/{user}/profile', 'Backend\UsersController@edit')->name('admin-edit-profile');
+        Route::put('/admin/users/{user}/profile/edit', 'Backend\UsersController@update')->name('admin-edit-profile');
         Route::get('/admin/users', 'Backend\UsersController@index')->name('admin-users');
+        Route::get('/admin/users/register', 'Backend\UsersController@register')->name('admin-registration');
+        Route::post('/admin/users/register', 'Auth\RegisterController@create')->name('admin-register-user');
         Route::post('/admin/users/{user}/make-admin', 'Backend\UsersController@makeAdmin')->name('admin-users-makeAdmin');
     });
 

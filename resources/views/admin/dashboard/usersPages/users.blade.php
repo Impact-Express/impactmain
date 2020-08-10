@@ -8,7 +8,7 @@
                 <div class="box">
                     <div class="box-header">
                         <div class="pull-left">
-                            <a id="add-button" title="Add New" class="button-success" href="#">Register New user</a>
+                            <a id="add-button" title="Add New" class="button-success" href="{{ route('admin-register-user') }}">Register New user</a>
                         </div>
                         <div class="pull-right">
                             <form class="search-form" action="" method="post">
@@ -36,9 +36,6 @@
                         @foreach ($users as $user)
                         <tr>
                             <td width="85" height="35">
-                                <a title="Edit" class="button-default" href="{{ route('admin-profile', $user->slug) }}">
-                                    <i class="fa fa-edit"></i>
-                                </a>
                                 <form action="#" method="post" style="display: inline">
                                     @method('DELETE')
                                     @csrf
