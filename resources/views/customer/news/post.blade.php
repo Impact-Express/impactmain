@@ -18,7 +18,12 @@
                         <ul class="post-meta-group">
                             <li><i class="fas fa-user"><span class="post-author"><a href="{{ route('author', $post->author->slug) }}">{{ $post->author->name }}</a></span></i></li>
                             <li><i class="far fa-clock"><span class="post-date"><time>{{ $post->date }}</time></span></i></li>
-                            <li><i class="fas fa-tags"><span class="post-date"><a href="{{ route('author', $post->category->slug) }}">{{ $post->category->title }}</a></span></i></li>
+                            <li><i class="fas fa-tags">
+                                @foreach ($post->tags as $tag)
+                                    <span class="post-tag"><a href="{{ route('tag', $tag->slug) }}">{{ $tag->title }}</a></span>
+                                @endforeach
+                            </i></li>
+ 
                         </ul>
                     </div>
 

@@ -4,22 +4,21 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\Posts\PostRequest;
+use App\Http\Requests\Posts\UpdatePostRequest;
 use App\Http\Requests;
 use App\Post;
 use App\Category;
+use App\Tag;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Auth;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
 
-class PostsController extends BackendController implements HasMedia
-{
-    use InteractsWithMedia;
-    
+class PostsController extends BackendController
+{    
     public function __construct()
     {
         parent::__construct();
         $this->uploadPath = public_path(config('cms.image.directory'));
+        $this->middleware('verifyCategoriesCount')->only(['create', 'store']);
     }
 
     /**
@@ -37,9 +36,9 @@ class PostsController extends BackendController implements HasMedia
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Post $post, Category $category)
+    public function create(Post $post, Category $category, Tag $tag)
     {
-        return view('admin.dashboard.postPages.create', compact('post', 'category'));
+        return view('admin.dashboard.postPages.create', compact('post', 'category', 'tag'));
     }
     /**
      * Store a newly created resource in storage.
@@ -49,11 +48,15 @@ class PostsController extends BackendController implements HasMedia
      */
     public function store(PostRequest $request)
     {
-        $directory = config('cms.image.directory');
-        $image = $request->image->store('img');
+        // dd($request);
+
         $userid = (!Auth::guest()) ? Auth::user()->id : null ;
         
-        Post::create([
+        if ($request->hasFile('image')) 
+        {
+            $image = $request->image->store('img');
+
+           $post = Post::create([
                 'title'         => $request->title,
                 'slug'          => $request->slug,
                 'excerpt'       => $request->excerpt,
@@ -63,7 +66,21 @@ class PostsController extends BackendController implements HasMedia
                 'author_id'     => $userid,
                 'image'         => $image
             ]);
+            $post->tags()->attach($request->tag_slug);
+        }
         
+        $post = Post::create([
+            'title'         => $request->title,
+            'slug'          => $request->slug,
+            'excerpt'       => $request->excerpt,
+            'body'          => $request->body,
+            'published_at'  => $request->published_at,
+            'author_id'     => $userid,
+            'category_id'   => $request->category_id,
+        ]);            
+        $post->tags()->attach($request->tag_slug);
+            
+
         session()->flash('success', 'Post Created Successfully!');
         return redirect(route('admin-posts'));
         
@@ -86,9 +103,9 @@ class PostsController extends BackendController implements HasMedia
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(Post $post, Tag $tag)
     {
-        return view('admin.dashboard.postPages.edit', compact('post'));
+        return view('admin.dashboard.postPages.edit', compact('post'))->withPosts($post);
     }
 
     /**
@@ -98,9 +115,23 @@ class PostsController extends BackendController implements HasMedia
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(UpdatePostRequest $request ,Post $post)
     {
-        //
+        $data = $request->only(['title', 'slug', 'body', 'category_id', 'tag_slug', 'updated_at']);
+
+        if ($request->hasFile('image')) 
+        {
+            $image = $request->image->store('img');
+
+            $post->deleteImage();
+
+            $data['image'] = $image;
+        }
+        $post->tags()->attach($request->tag_slug);
+        $post->update($data);
+
+        session()->flash('success', 'Post Updated Successfully!');
+        return redirect(route('admin-posts'));
     }
 
     /**

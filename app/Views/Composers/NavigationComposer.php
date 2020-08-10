@@ -4,12 +4,14 @@
     use Illuminate\View\View;
     use App\Category;
     use App\Post;
+use App\Tag;
 
-    class NavigationComposer
+class NavigationComposer
     {
         public function compose(View $view)
         {
             $this->composeCategories($view);
+            $this->composeTags($view);
             $this->composePopularPosts($view);
         }
 
@@ -20,6 +22,13 @@
                 $query->published();
             }])->orderBy('title', 'asc')->get();
             $view->with('categories', $categories);
+        }
+
+        //? Tags Composer
+        public function composeTags (View $view)
+        {
+            $tags = Tag::pluck('slug');
+            $view->with('tags', $tags);
         }
 
         //? Popular Posts Composer

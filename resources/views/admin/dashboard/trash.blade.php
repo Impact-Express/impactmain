@@ -1,5 +1,5 @@
 @extends('admin.app')
-@section('title', 'Posts')
+@section('title', 'Trashed Posts')
 @section('content')
 <div class="grid">
     <div id="toolbar"></div>
@@ -38,9 +38,13 @@
                                   @foreach ($posts as $post)
                                   <tr>
                                       <td width="85" height="35">
-                                          <a title="Restore Post" class="button-restore" href="{{ route('posts.edit', $post->slug) }}">
-                                              <i class="fa fa-trash-restore" style="width: 8px;"></i>
-                                          </a>
+                                            <form action="{{ route('trash.restore', $post->id) }}" method="post" style="display: inline;">
+                                                @csrf
+                                                @method('PUT')
+                                                <button title="Restore Post" class="button-restore">
+                                                    <i class="fa fa-trash-restore"></i>
+                                                </button>
+                                            </form>
                                           <form action="{{ route('trash.eradicate', $post->id) }}" method="POST" style="display: inline;">
                                               @csrf
                                               @method('DELETE')
@@ -68,7 +72,6 @@
                                 <h3 style="text-align: center">No Trashed Posts!</h3>
                             @endif
                           </div>
-                            
                         </div>
                       </div>
                 </div>

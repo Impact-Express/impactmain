@@ -18,8 +18,12 @@
 Route::get('/', 'PagesController@home')->name('home');
 Route::get('/contact', 'PagesController@contactUs')->name('contact');
 Route::post('/contact', 'PagesController@send');
-Route::resource('/quote', 'QuotesController');
+
+Route::get('/quote', 'QuotesController@index')->name('quote.index');
 Route::post('/quote', 'QuotesController@send');
+
+Route::get('/send-my-parcel','ParcelController@index')->name('send-my-parcel');
+Route::post('/send-my-parcel','ParcelController@send')->name('email-parcel-details');
 
 
 // Services Routes
@@ -40,22 +44,32 @@ Route::group(['prefix' => 'admin'], function () {
     
 // Backend Routes
     Route::resource('/admin/posts', 'Backend\PostsController');
+    Route::match(['put', 'patch'], '/admin/posts/{id}/edit', 'Backend\PostsController@update')->name('posts-update');
+    Route::get('/admin/posts/{id}/edit', 'Backend\PostsController@edit')->name('posts-edit');
+
+    Route::get('/admin/trash', 'Backend\HomeController@trash')->name('admin-trash');
     Route::delete('/admin/trash/{id}', 'Backend\HomeController@destroy')->name('trash.eradicate');
+    Route::put('/admin/trash/{id}', 'Backend\HomeController@restore')->name('trash.restore');
 
     Route::resource('/admin/categories', 'Backend\CategoriesController');
+    Route::resource('/admin/tags', 'Backend\TagsController');
 
-//Set Middleware to Auth
-    Route::middleware(['auth'])->group( function () {
-        Route::get('/admin', 'Backend\HomeController@index')->name('admin');
-        Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
-        Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
-        Route::get('/admin/trash', 'Backend\HomeController@trash')->name('admin-trash');
-        Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
-        Route::get('/admin/tags', 'Backend\HomeController@tags')->name('admin-tags');
+    Route::get('/admin', 'Backend\HomeController@index')->name('admin');
+    Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
+    Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
+    Route::get('/admin/tags', 'Backend\TagsController@index')->name('admin-tags');
+    Route::get('/admin/users/{user}/profile', 'Backend\UsersController@profile')->name('admin-profile');
+
+    Route::middleware(['auth', 'admin'])->group(function () {
+        Route::put('/admin/users/{user}/profile', 'Backend\UsersController@edit')->name('admin-edit-profile');
+        Route::get('/admin/users', 'Backend\UsersController@index')->name('admin-users');
+        Route::post('/admin/users/{user}/make-admin', 'Backend\UsersController@makeAdmin')->name('admin-users-makeAdmin');
     });
+
     
 // CMS Routes
     Route::get('/news', 'NewsController@index')->name('news');
     Route::get('/news/{post}', 'NewsController@show')->name('news-post');
     Route::get('/category/{category}', 'NewsController@category')->name('category');
+    Route::get('/tags/{tag}', 'TagsController@index')->name('tag');
     Route::get('/author/{author}', 'NewsController@author')->name('author');

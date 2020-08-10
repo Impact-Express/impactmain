@@ -18,7 +18,24 @@
                 <a href="{{ route('category', $category->slug) }}">
                     <li class="category">
                         <i class="fa fa-angle-right"></i> {{ $category->title }}
-                        <span class="badge pull-right">{{ $category->posts->count() }}</span>
+                        <span class="badge" style="float: right; position: relative; bottom:3px;">{{ $category->posts->count() }}</span>
+                    </li>
+                </a>
+            @endforeach
+        </ul>
+    </div>
+</div>
+
+<div class="widget">
+    <div class="widget-heading">
+        <h4>Tags</h4>
+    </div>
+    <div class="widget-body">
+        <ul class="categories">
+            @foreach ($tags as $tag)
+               <a href="/tags/{{ $tag }}">
+                    <li class="category">
+                        <i class="fa fa-angle-right"></i> {{ $tag }}
                     </li>
                 </a>
             @endforeach

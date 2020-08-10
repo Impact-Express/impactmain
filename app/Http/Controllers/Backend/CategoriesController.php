@@ -17,7 +17,7 @@ class CategoriesController extends BackendController
      */
     public function index()
     {
-        $categories = DB::table('categories')->paginate(8);
+        $categories = Category::paginate(8);
         $categoryCount = DB::table('categories')->count();
         return view('admin.dashboard.categories', ['categories' => $categories, 'categoryCount' => $categoryCount]);
     }
@@ -100,6 +100,12 @@ class CategoriesController extends BackendController
      */
     public function destroy(Category $category)
     {
+        if ($category->posts->count() > 0)
+        {
+            session()->flash('warning', 'Category cannot be deleted as it has posts categorized under it.');
+            return redirect()->back();
+        }
+
         $category->delete();
 
         session()->flash('success', 'The Category was Deleted Successfully!');

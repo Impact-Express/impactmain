@@ -27,9 +27,10 @@
     <script src="{{ asset('js/admin.js') }}" ></script>
 </head>
 <body style="margin: 0;">
-    <div id="toolbar" class="topbar">
+    <div class="topbar">
+        <h3 style="margin: auto; margin-left: 3%;">Impact Express</h3>
         <div class="k-overflow-anchor k-button profile">
-            <a  href="{{ route('logout') }}"
+            <a style="margin: auto;" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                 <h4>{{ __('Logout') }}</h4>
@@ -42,7 +43,7 @@
     </div>
     <div class="sidebar">
         <ul style="list-style-type: none;width: 100%;padding-inline-start: 0;margin-block-start: 0;">
-            <i class='fas fa-info-circle sidebar-text'></i><span class='k-item-text' style='padding-left: 16px; font-size: 11px; overflow: hidden;'>Impact Express CMS System - v0.1</span>
+            <i class='fas fa-info-circle sidebar-text'></i><span class='k-item-text' style='padding-left: 16px; font-size: 11px; overflow: hidden;'>Impact Express CMS System - v1</span>
             <li data-role='drawer-separator'><hr></li>
             <a class="white" style='overflow: hidden;' href='{{ route('admin') }}'>
                 <li data-role='drawer-item' class='state-selected sidebar-item'>
@@ -50,19 +51,20 @@
                     <span class='k-item-text' style='padding-left: 16px;'>Dashboard</span>
                 </li>
             </a> 
-            <li data-role='drawer-separator'><hr></li> 
-            <a class="white" style="overflow: hidden;" href='{{ route('admin-media') }}'>
-                <li data-role='drawer-item' class="sidebar-item">
-                    <i class='fas fa-images sidebar-text'></i>
-                    <span class='k-item-text' style='padding-left: 16px;'>Media</span>
-                </li>
-            </a>
+            <li data-role='drawer-separator'><hr></li>
             <a class="white" style='overflow: hidden;' href='{{ route('admin-posts') }}'>
                 <li data-role='drawer-item' class="sidebar-item">
                     <i class='fas fa-thumbtack sidebar-text'></i>
                     <span class='k-item-text' style='padding-left: 20px;'>Posts</span>
                 </li>
             </a>
+            <a class="white" style='overflow: hidden;' href='{{ route('admin-trash') }}'>
+                <li data-role='drawer-item' class="sidebar-item">
+                    <i class='fas fa-trash-alt sidebar-text'></i>
+                    <span class='k-item-text' style='padding-left: 20px;'>Trashed Posts</span>
+                </li>
+            </a>
+            <li data-role='drawer-separator'><hr></li> 
             <a class="white" style='overflow: hidden;' href='{{ route('admin-categories') }}'>
                 <li data-role='drawer-item' class="sidebar-item">
                     <i class="fas fa-copy sidebar-text"></i>
@@ -75,6 +77,21 @@
                     <span class='k-item-text' style='padding-left: 20px;'>Tags</span>
                 </li>
             </a>
+            @if (auth()->user()->isAdmin())
+            <li data-role='drawer-separator'><hr></li>
+            <a class="white" style='overflow: hidden;' href='{{route('admin-users')}}'>
+                <li data-role='drawer-item' class="sidebar-item">
+                    <i class="fas fa-user sidebar-text"></i>
+                    <span class='k-item-text' style='padding-left: 20px;'>Users</span>
+                </li>
+            </a>
+            @endif
+            <a class="white" style='overflow: hidden;' href='{{route('admin-profile', auth()->user()->slug)}}'>
+                <li data-role='drawer-item' class="sidebar-item">
+                    <i class="fas fa-user sidebar-text"></i>
+                    <span class='k-item-text' style='padding-left: 20px;'>User Profile</span>
+                </li>
+            </a>
             <li data-role='drawer-separator'><hr></li> 
             <a class="white" href='{{ route('home') }}'>
                 <li class="sidebar-item">
@@ -82,14 +99,6 @@
                     <span class='k-item-text' style='padding-left: 16px; font-size: 12px; overflow: hidden;'>Back to the Main Site</span>
                 </li>
             </a>
-      </ul>
-      <ul style="list-style-type: none;width: 100%;padding-inline-start: 0;margin-block-start: 0;position: absolute;top: 96%;">
-        <a class="white" style='overflow: hidden;' href='{{ route('admin-trash') }}'>
-            <li data-role='drawer-item' class="sidebar-item">
-                <i class='fas fa-trash-alt sidebar-text'></i>
-                <span class='k-item-text' style='padding-left: 20px;'>Trashed Posts</span>
-            </li>
-        </a>
       </ul>
     </div>
     <section id="main-content">
@@ -103,7 +112,14 @@
                                 {{ session()->get('success') }}
                             </h5>
                         </div>
-                    @endif
+                        @endif
+                        @if (session()->has('warning'))
+                        <div class="card-body warning-message">
+                            <h5 class="card-title">
+                                {{ session()->get('warning') }}
+                            </h5>
+                        </div>
+                        @endif
                     @yield('content')
                     </div>
                 </div>
@@ -112,13 +128,6 @@
     </section>
 </body>
 <script type="text/javascript">
-        $("#toolbar").kendoToolBar({
-                    items: [
-                        { type: "button", icon: "menu", attributes: { "class": "k-flat" }, click: toggleDrawer},
-                        { template: "<h3 style='margin-left: 20px;'>Impact Express</h3>"},
-                    ]
-                });
-
         function toggleDrawer() {
             var drawerInstance = $("#drawer").data().kendoDrawer;
             var drawerContainer = drawerInstance.drawerContainer;
