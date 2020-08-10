@@ -30,6 +30,7 @@
                             <th>Username</th>
                             <th>Email Address</th>
                             <th>User Role</th>
+                            <th>Admin/Writer Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,6 +50,12 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->role }}</td>
+                            @if ($user->isAdmin())
+                            <form action="{{ route('admin-users-makeWriter', $user->slug) }}" method="post">
+                                @csrf
+                                <td><button href="" class="button-success" style="padding: 7px 10px; border-radius: 6px;">Make Writer</button></td>
+                            </form>
+                            @endif
                             @if (!$user->isAdmin())
                             <form action="{{ route('admin-users-makeAdmin', $user->slug) }}" method="post">
                                 @csrf

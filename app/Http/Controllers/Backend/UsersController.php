@@ -46,4 +46,15 @@ class UsersController extends Controller
 
         return redirect(route('admin-users'));
     }
+
+    public function makeWriter (User $user)
+    {
+        $user->role = 'writer';
+
+        $user->save();
+
+        session()->flash('success', 'User Made Writer Successfully');
+
+        return redirect(route('admin-users'));
+    }
 }
