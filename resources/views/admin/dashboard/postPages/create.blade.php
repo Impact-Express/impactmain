@@ -28,7 +28,7 @@
                                         @csrf
 
                                         <div class="form-group @error('title') has-error @enderror">
-                                            <label for="Title">Title</label>
+                                            <label for="title">Title</label>
                                             <input class="form-text @error('title') has-error @enderror" id="new-post-title" tabindex="1" name="title" type="text" value="{{ $post->title }}">
 
                                             @error('title')
@@ -38,7 +38,7 @@
                                         </div>
 
                                         <div class="form-group @error('slug') has-error @enderror">
-                                            <label for="Title">Slug</label>
+                                            <label for="slug">Slug</label>
                                             <input class="form-text @error('slug') has-error @enderror" id="new-post-slug" tabindex="1" name="slug" type="text" value="{{ $post->slug }}">
 
                                             @error('slug')
@@ -68,76 +68,73 @@
                                         </div>
                                     </div>
                                 </div>
-                            <div class="pull-right" style="width: 30%; right: 40px;">
-                                <div class="post-details-right">
-                                    <div class="form-group @error('published_at') has-error @enderror">
-                                        <label for="Publication Date">Publication Date</label>
-                                        <div class="post-publishdate">
-                                            <input class="form-text @error('published_at') has-error @enderror" id="new-post-publishdate" name="published_at" type="text" value="{{ $post->published_at }}">
-                                        </div>
-                                        <hr>
-                                        <div class="publish-buttons">
-                                            <input class="button-main" style="margin-left: auto;" type="submit" value="Publish">
-                                        </div>
-                                        @error('published_at')
-                                            <span class="help-block has-error">{{ $message }}</span>
-                                            <br><br>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="post-details-right">
-                                    <div class="form-group @error('category_id') has-error @enderror">
-                                        <label for="category_id">Category</label>
-                                        <select class="form-text" id="new-post-category" tabindex="6" name="category_id">
-                                            {{$categories = \App\Category::all()}}
-                                            @foreach ($categories as $category)
-                                                <option value="{{$category->id}}">{{$category->title}}</option>
-                                            @endforeach
-                                        </select>
-                                    
-                                        @error('category_id')
-                                            <span class="help-block has-error">{{ $message }}</span>
-                                            <br><br>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group @error('tag_slug') has-error @enderror">
-                                        <label for="tag_slug">Tags</label>
-                                        <select class="form-text" id="new-post-tag" tabindex="7" name="tag_slug[]" multiple="multiple">
-                                            {{$tags = \App\Tag::all()}}
-                                            @foreach ($tags as $tag)
-                                                <option value="{{$tag->slug}}">{{$tag->title}}</option>
-                                            @endforeach
-                                        </select>
-                                    
-                                        @error('tag_id')
-                                            <span class="help-block has-error">{{ $message }}</span>
-                                            <br><br>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="post-details-right">
-                                    <label for="image">Feature Image</label>
-                                        <div class="fileinput-new">
-                                            <img id="img-thumbnail" width="425" height="250" src="{{ ($post->image_url) ? $post->image_url : 'https://via.placeholder.com/425x250.png?text=No+Image' }}">
+                                <div class="pull-right" style="width: 30%; right: 40px;">
+                                    <div class="post-details-right">
+                                        <div class="form-group @error('published_at') has-error @enderror">
+                                            <label for="Publication Date">Publication Date</label>
+                                            <div class="post-publishdate">
+                                                <input class="form-text @error('published_at') has-error @enderror" id="new-post-publishdate" name="published_at" type="text" value="{{ $post->published_at }}">
                                             </div>
-                                            <label class="button-image">
-                                                Choose Image
-                                            <input type="file" class="button-image" name="image" id="image" tabindex="8" onchange="document.getElementById('img-thumbnail').src = window.URL.createObjectURL(this.files[0])">
-                                            </label>
-
-                                            @error('image')
-                                            <br><br>
+                                            <hr>
+                                            <div class="publish-buttons">
+                                                <input class="button-main" style="margin-left: auto;" type="submit" value="Publish">
+                                            </div>
+                                            @error('published_at')
                                                 <span class="help-block has-error">{{ $message }}</span>
+                                                <br><br>
                                             @enderror
-                                            </div>
                                         </div>
                                     </div>
-                                </form>                               
-                            </div>
-                            <!-- /.box-header -->
-                            <div class="box-body table-responsive">
+                                    <div class="post-details-right">
+                                        <div class="form-group @error('category_id') has-error @enderror">
+                                            <label for="category_id">Category</label>
+                                            <select class="form-text" id="new-post-category" tabindex="6" name="category_id">
+                                                {{$categories = \App\Category::all()}}
+                                                @foreach ($categories as $category)
+                                                    <option value="{{$category->id}}">{{$category->title}}</option>
+                                                @endforeach
+                                            </select>
+                                        
+                                            @error('category_id')
+                                                <span class="help-block has-error">{{ $message }}</span>
+                                                <br><br>
+                                            @enderror
+                                        </div>
+                                        <div class="form-group @error('tag_slug') has-error @enderror">
+                                            <label for="tag_slug">Tags</label>
+                                            <select class="form-text" id="new-post-tag" tabindex="7" name="tag_slug[]" multiple="multiple">
+                                                {{$tags = \App\Tag::all()}}
+                                                @foreach ($tags as $tag)
+                                                    <option value="{{$tag->slug}}">{{$tag->title}}</option>
+                                                @endforeach
+                                            </select>
+                                        
+                                            @error('tag_id')
+                                                <span class="help-block has-error">{{ $message }}</span>
+                                                <br><br>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="post-details-right">
+                                        <label for="image">Feature Image</label>
+                                            <div class="fileinput-new">
+                                                <img id="img-thumbnail" width="425" height="250" src="{{ ($post->image_url) ? $post->image_url : 'https://via.placeholder.com/425x250.png?text=No+Image' }}">
+                                                </div>
+                                                <label class="button-image">
+                                                    Choose Image
+                                                <input type="file" class="button-image" name="image" id="image" tabindex="8" onchange="document.getElementById('img-thumbnail').src = window.URL.createObjectURL(this.files[0])">
+                                                </label>
 
-                            </div>
+                                                @error('image')
+                                                <br><br>
+                                                    <span class="help-block has-error">{{ $message }}</span>
+                                                @enderror
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>                               
+                                </div>
+                            <!-- /.box-header -->
                         </div> 
                     </div>
                 </div>

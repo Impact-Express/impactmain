@@ -18,7 +18,7 @@
                 <a href="{{ route('category', $category->slug) }}">
                     <li class="category">
                         <i class="fa fa-angle-right"></i> {{ $category->title }}
-                        <span class="badge pull-right">{{ $category->posts->count() }}</span>
+                        <span class="badge" style="float: right; position: relative; bottom:3px;">{{ $category->posts->count() }}</span>
                     </li>
                 </a>
             @endforeach

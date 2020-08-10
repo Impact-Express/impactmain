@@ -1,14 +1,6 @@
 @extends('admin.app')
 @section('title', isset($tag) ? 'Edit Tag' : 'New Tag')
-@section('css')
-    <link href="{{asset('css/simplemde.min.css')}}" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css rel="stylesheet">
-@endsection
-@section('js')
-<script src="{{ asset('js/simplemde.min.js') }}" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js" ></script>
-@endsection
+
 @section('content')
 <div id="drawer" data-role="drawer" class="k-widget k-drawer">
     <div class="drawer-content">

@@ -54,14 +54,18 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('/admin/categories', 'Backend\CategoriesController');
     Route::resource('/admin/tags', 'Backend\TagsController');
 
-//Set Middleware to Auth
-    Route::middleware(['auth'])->group( function () {
-        Route::get('/admin', 'Backend\HomeController@index')->name('admin');
-        // Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
-        Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
-        Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
-        Route::get('/admin/tags', 'Backend\TagsController@index')->name('admin-tags');
+    Route::get('/admin', 'Backend\HomeController@index')->name('admin');
+    Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
+    Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
+    Route::get('/admin/tags', 'Backend\TagsController@index')->name('admin-tags');
+    Route::get('/admin/users/{user}/profile', 'Backend\UsersController@profile')->name('admin-profile');
+
+    Route::middleware(['auth', 'admin'])->group(function () {
+        Route::put('/admin/users/{user}/profile', 'Backend\UsersController@edit')->name('admin-edit-profile');
+        Route::get('/admin/users', 'Backend\UsersController@index')->name('admin-users');
+        Route::post('/admin/users/{user}/make-admin', 'Backend\UsersController@makeAdmin')->name('admin-users-makeAdmin');
     });
+
     
 // CMS Routes
     Route::get('/news', 'NewsController@index')->name('news');

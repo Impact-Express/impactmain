@@ -77,6 +77,21 @@
                     <span class='k-item-text' style='padding-left: 20px;'>Tags</span>
                 </li>
             </a>
+            @if (auth()->user()->isAdmin())
+            <li data-role='drawer-separator'><hr></li>
+            <a class="white" style='overflow: hidden;' href='{{route('admin-users')}}'>
+                <li data-role='drawer-item' class="sidebar-item">
+                    <i class="fas fa-user sidebar-text"></i>
+                    <span class='k-item-text' style='padding-left: 20px;'>Users</span>
+                </li>
+            </a>
+            @endif
+            <a class="white" style='overflow: hidden;' href='{{route('admin-profile', auth()->user()->slug)}}'>
+                <li data-role='drawer-item' class="sidebar-item">
+                    <i class="fas fa-user sidebar-text"></i>
+                    <span class='k-item-text' style='padding-left: 20px;'>User Profile</span>
+                </li>
+            </a>
             <li data-role='drawer-separator'><hr></li> 
             <a class="white" href='{{ route('home') }}'>
                 <li class="sidebar-item">
@@ -113,13 +128,6 @@
     </section>
 </body>
 <script type="text/javascript">
-        // $("#toolbar").kendoToolBar({
-        //             items: [
-        //                 { type: "button", icon: "menu", attributes: { "class": "k-flat" }, click: toggleDrawer},
-        //                 { template: ""},
-        //             ]
-        //         });
-
         function toggleDrawer() {
             var drawerInstance = $("#drawer").data().kendoDrawer;
             var drawerContainer = drawerInstance.drawerContainer;

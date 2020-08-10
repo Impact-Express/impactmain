@@ -4,6 +4,18 @@
 @section('css')
     <link href="{{asset('css/forms.css')}}" rel="stylesheet">
     <link href="{{asset('css/businessquote.css')}}" rel="stylesheet">
+    <style>
+        #contactEmailAddr {
+            position: relative;
+            top: 48px;
+            left: -478px;
+        }
+        #contactFullName {
+            position: relative;
+            top: 48px;
+            left: 228px;
+        }
+        </style>
 @endsection
 
 @section('content')
@@ -11,7 +23,6 @@
         <div class="mapouter">
             <div class="gmap_canvas">
                 <iframe width="1903" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Impact%20Express%20Wholesale%20Ltd.&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                <a href="https://www.embedgooglemap.net/blog/purevpn-coupon/"></a>
             </div>
             <style>
                 .mapouter{position:relative;text-align:right;height:400px;width:100%;}
