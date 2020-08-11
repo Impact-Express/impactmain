@@ -28,6 +28,33 @@
                                                 <br><br>
                                             @enderror
                                         </div>
+                                        
+                                        <div class="form-group @error('emailAddress') has-error @enderror">
+                                            <label for="email">Email Address</label>
+                                            <input type="email" name="email" id="edit-user-displayName" class="form-text @error('emailAddress') has-error @enderror" value="{{ $user->email }}">
+                                            @error('emailAddress')
+                                                <span class="help-block has-error">{{ $message }}</span>
+                                                <br><br>
+                                            @enderror
+                                        </div>
+                                        
+                                        <div class="form-group @error('currentpass') has-error @enderror">
+                                            <label for="currentpass">Current Password</label>
+                                            <input type="password" name="currentpass" id="edit-user-displayName" class="form-text @error('currentpass') has-error @enderror">
+                                            @error('currentpass')
+                                                <span class="help-block has-error">{{ $message }}</span>
+                                                <br><br>
+                                            @enderror
+                                        </div>
+
+                                        <div class="form-group @error('password') has-error @enderror">
+                                            <label for="password">New Password</label>
+                                            <input type="password" name="password" id="edit-user-displayName" class="form-text @error('password') has-error @enderror">
+                                            @error('password')
+                                                <span class="help-block has-error">{{ $message }}</span>
+                                                <br><br>
+                                            @enderror
+                                        </div>
 
                                         <div class="form-group @error('bio') has-error @enderror">
                                             <label for="bio">User Bio</label>

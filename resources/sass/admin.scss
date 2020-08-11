@@ -309,8 +309,12 @@ input[type="file"] {
     padding-top: 20px;
 }
 .dashboard-get-started {
-    position: relative;
-    top: 41%;
+    position: absolute;
+    top: 60%;
+}
+.dashboard-recent-posts {
+    position: absolute;
+    top: 66%;
 }
 .profile {
     z-index: 50;

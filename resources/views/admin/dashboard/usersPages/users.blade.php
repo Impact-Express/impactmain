@@ -37,10 +37,15 @@
                         @foreach ($users as $user)
                         <tr>
                             <td width="85" height="35">
+                                <form action="{{ route('admin-profile', $user->slug) }}" method="get" style="display: inline">
+                                    @csrf
+                                    <button title="Delete" class="button-default">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+
                                 <form action="#" method="post" style="display: inline">
                                     @method('DELETE')
                                     @csrf
-
                                     <button title="Delete" class="button-danger">
                                         <i class="fa fa-times"></i>
                                     </button>
@@ -50,12 +55,19 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->role }}</td>
-                            @if ($user->isAdmin())
+                            @if ($user == Auth::user())
+                                <td>Cannot Remove Admin <br>From Yourself!</td>
+                            @endif
+                            @if ($user != Auth::user() && $user->isAdmin())
+                            
                             <form action="{{ route('admin-users-makeWriter', $user->slug) }}" method="post">
                                 @csrf
                                 <td><button href="" class="button-success" style="padding: 7px 10px; border-radius: 6px;">Make Writer</button></td>
                             </form>
                             @endif
+
+
+
                             @if (!$user->isAdmin())
                             <form action="{{ route('admin-users-makeAdmin', $user->slug) }}" method="post">
                                 @csrf

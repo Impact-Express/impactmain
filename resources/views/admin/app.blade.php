@@ -29,17 +29,15 @@
 <body style="margin: 0;">
     <div class="topbar">
         <h3 style="margin: auto; margin-left: 3%;">Impact Express</h3>
-        <div class="k-overflow-anchor k-button profile">
-            <a style="margin: auto;" href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
+        <div class="k-overflow-anchor profile">
+            <button class="k-button" style="margin: auto;" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <h4>{{ __('Logout') }}</h4>
-            </a>
+            </button>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
         </div>
         </div>
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-        </form>
     </div>
     <div class="sidebar">
         <ul style="list-style-type: none;width: 100%;padding-inline-start: 0;margin-block-start: 0;">

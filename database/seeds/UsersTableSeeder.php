@@ -17,29 +17,13 @@ class UsersTableSeeder extends Seeder
         //Generate Default Users In Database
         DB::table('users')->insert([
             [
-                'name'      => 'Cameron Miller',
-                'slug'      => 'cameron-miller',
-                'email'     => 'cameron@impactexpress.co.uk',
+                'name'      => 'Administrator Account',
+                'slug'      => 'administrator',
+                'email'     => 'admin@impactexpress.co.uk',
                 'role'      => 'admin',
-                'password'  => bcrypt('12345678'),
-                'bio'       => 'Web Developer and cool guy',
+                'password'  => bcrypt('Impact5710%%'),
+                'bio'       => '',
             ],
-            [
-                'name'      => 'Richard Bailey',
-                'slug'      => 'richard-bailey',
-                'email'     => 'richard@impactexpress.co.uk',
-                'role'      => 'admin',
-                'password'  => bcrypt('12345678'),
-                'bio'       => 'Lead Web Developer and cooler guy',
-            ],
-            [
-                'name'      => 'Neil Miller',
-                'slug'      => 'neil-miller',
-                'email'     => 'neil@impactexpress.co.uk',
-                'role'      => 'admin',
-                'password'  => bcrypt('12345678'),
-                'bio'       => 'M.D of the Company',
-            ]
         ]);
     }
 }
