@@ -18,6 +18,7 @@
         </div>
         <div class="card-body card-dashboard">
             <h2>Recent Posts</h2>
+            @if ($recentPosts->count() > 0)
             <ul>
                 @foreach ($recentPosts as $post)
                 <li style="list-style-type: none;">
@@ -32,7 +33,12 @@
                 <br>
                 @endforeach
             </ul>
-            <a type="button" class="button-main" href="{{ route('admin-posts') }}">View All Posts</a>
+            @else
+                <h3 style="text-align: center; position: relative; top: 3px; height: 70px; width: fit-content;">No Posts Yet.</h3>
+            @endif
+            <div class="dashboard-recent-posts">
+                <a type="button" class="button-main" href="{{ route('admin-posts') }}">View All Posts</a>
+            </div>
         </div>
     </div>
 @endsection

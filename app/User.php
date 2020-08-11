@@ -51,10 +51,9 @@ class User extends Authenticatable
     public function gravatar()
     {
         $email = "$this->email";
-        $default = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Missing_avatar.svg/600px-Missing_avatar.svg.png";
         $size = 450;
         
-        return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+        return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=identicon" . "&s=" . $size;
     }
     
     public function getRouteKeyName()
