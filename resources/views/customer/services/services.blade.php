@@ -6,6 +6,10 @@
     <link href="{{ asset('css/forms.css') }}" rel="stylesheet">
 @endsection
 
+@section('service-image')
+<img src="{{ asset('img/express-delivery-new.png') }}" alt="">
+@endsection
+
 @section('content')
 <div class="container-fluid services-container">
     <section class="express-delivery seperator">
@@ -34,7 +38,7 @@
                 <li>Asia - 2 Working Days.</li>
                 <li>Europe - Next Day, AM, for central Europe.</li>
                 *All transit times are subject to customs clearance.
-            </ul>
+            </ul>y
         </div>
     </section>
     <section class="economy-delivery seperator">
