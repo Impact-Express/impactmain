@@ -30,6 +30,9 @@ Route::post('/send-my-parcel','ParcelController@send')->name('email-parcel-detai
     Route::get('/services', 'ServicesController@index')->name('services-index');
     Route::get('/services/{service}', 'ServicesController@show');
 
+    Route::get('/services/imports/import-request', 'ServicesController@importRequests')->name('import-requests');;
+    Route::post('/services/imports/import-request', 'ServicesController@sendImportRequest')->name('email-import-request');;
+
 // Shipping Destinations Routes
     Route::get('/destinations', 'DestinationsController@index')->name('destinations');
     Route::get('/destinations/{destination}', 'DestinationsController@show');

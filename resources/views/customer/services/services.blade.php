@@ -6,10 +6,6 @@
     <link href="{{ asset('css/forms.css') }}" rel="stylesheet">
 @endsection
 
-@section('service-image')
-<img src="{{ asset('img/express-delivery-new.png') }}" alt="">
-@endsection
-
 @section('content')
 <div class="container-fluid services-container">
     <section class="express-delivery seperator">
@@ -38,7 +34,7 @@
                 <li>Asia - 2 Working Days.</li>
                 <li>Europe - Next Day, AM, for central Europe.</li>
                 *All transit times are subject to customs clearance.
-            </ul>y
+            </ul>
         </div>
     </section>
     <section class="economy-delivery seperator">
@@ -88,7 +84,7 @@
             </p>
         </div>
     </section>
-    <section class="imports-delivery seperator">
+    <section class="imports-delivery">
         <a class="imports-delivery-img" href="services/worldwide-imports">
             <img src="{{ asset('img/worldwide-imports.png') }}" alt="">
         </a>
@@ -117,7 +113,7 @@
             </ul>
         </div>
     </section>
-    <section class="ietrax-delivery">
+    {{-- <section class="ietrax-delivery">
         <a class="ietrax-delivery-img" href="services/ietrax">
             <img src="{{ asset('img/worldwide-destinations.png') }}" alt="">
         </a>
@@ -145,7 +141,7 @@
                 *All transit times are subject to customs clearance.
             </ul>
         </div>
-    </section>
+    </section> --}}
 </div>
     @include('customer.services.partials.consultation-pane')
 @endsection

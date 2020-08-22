@@ -16,7 +16,7 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO NEW ZEALAND</h1>
     <div class="service-text">
         <br>
         Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.

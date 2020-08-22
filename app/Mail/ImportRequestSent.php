@@ -7,10 +7,10 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class QuoteSent extends Mailable
+class ImportRequestSent extends Mailable
 {
     use Queueable, SerializesModels;
-    public $data;
+
     /**
      * Create a new message instance.
      *
@@ -28,9 +28,9 @@ class QuoteSent extends Mailable
      */
     public function build()
     {
-        return $this->subject('Quote Request Received From: ')
-                    ->from('testmail@codecameron.dev', 'Cameron\'s Testing Email')
-                    ->view('customer.emails.quote-sent')
+        return $this->subject('Import Request Email Received From: '. $this->data['requestorCompanyName'])
+                    ->from('testmail@codecameron.dev', 'Impact Express')
+                    ->view('customer.emails.sendMyParcel-sent')
                     ->with('data', $this->data);
     }
-}            
+}
