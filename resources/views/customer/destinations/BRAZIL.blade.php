@@ -1,5 +1,5 @@
 @extends('customer.destinations.layout.destination')
-@section('title', "Parcel Delivery and Shipping to the USA")
+@section('title', "Parcel Delivery and Shipping to Brazil")
 @section('css')
 <link href="{{ asset('css/forms.css') }}" rel="stylesheet">
 <link href="{{ asset('css/services.css') }}" rel="stylesheet">
@@ -15,55 +15,48 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO THE USA</h1>
+    <h1 class="service-title">SHIPPING TO BRAZIL</h1>
     <div class="service-text">
         <br>
-        With low-cost next-day shipping options, make Impact Express your first choice for fast and secure parcel delivery to the USA.
+        Being the largest country of South America with a population of 211 million people, Brazil has a powerful economy and a rich culture. 
+        With stunning landscapes and an array of exotic wildlife, it’s no surprise that Brazil is very popular with both British tourists and homemakers.
         <br><br>
-        As the largest English-speaking country in the world, it’s no surprise thousands of parcels are delivered to the United States from the UK each day.
-        <br><br>
-        At some points, the USA spans almost 3,000 miles from east to west coast (100 times the greatest longitudinal distance in the UK) but with the help 
-        of our trustworthy partner couriers, we can guarantee next day delivery anywhere in the country.
-        <br><br>
-        Whether you’re posting for business or personal reasons; to New York, Los Angeles or Washington, we can cater for all your UK to US shipping needs.
+        Brazil receives thousands of parcels from the UK every month, making it a high-demand delivery destination. For affordable parcel delivery to Brazil, 
+        choose Impact Express. We offer competitive rates alongside a high-quality service, to ensure your parcel arrives safely at its destination without 
+        leaving you out of pocket.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">SHIPPING TO BRAZIL: OUR SERVICES</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        At <b>Impact Express</b>, we offer a variety of reliable and efficient courier services. Our authorised service partner DHL handles all our shipments; 
+        with a wide selection of trusted international carriers, you can relax knowing your parcel is in safe hands.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
-        <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
+        How we handle your shipment will be outlined to you at the time of payment and will depend on whether you have a business or personal account.
+        We offer both express and economy delivery options in order to provide all our customers with a range of quick, easy and affordable postal solutions.
         <br><br>
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
+        <h2 class="service-title">HOW TO PREPARE YOUR PARCEL FOR SHIPPING TO BRAZIL</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+            To give your parcel the best chance at arriving safely, make sure to package your parcel carefully and securely. 
+            International parcels travel huge distances during transit, so you’ll need to take great care when preparing your 
+            parcel for shipment (particularly if your items are fragile). If you’re unsure how to safely wrap your parcel, make 
+            sure to follow our simple packaging guide.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
+            Once you have filled out all the relevant information, we will provide you with a print-at-home label. Please make sure 
+            this is firmly stuck to the outside of you box in a visible position. It’s always wise to include another copy of the address 
+            inside your parcel and a return address, just in case the shipping label becomes dislodged in transit
         </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
+        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND A PACKAGE TO BRAZIL FROM THE UK?</h2>
         <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
+            The cost of shipping from the UK to Brazil will vary depending on the size and weight of your parcel. To get a free quote today, 
+            please input the dimensions of your parcel(s) into our <a href="{{ route('quote.index') }}">instant quote generator.</a>
             <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
-        </div>
-        <h2 class="service-title">THINGS TO REMEMBER…</h2>
-        <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
+            The speed of delivery that you require will also affect the final cost. Our courier service can get your parcel to its destination 
+            in as little as 24 hours, although these services are more costly. If your shipment is not time-sensitive, you can opt for our 
+            cheaper economy shipping service.
         </div>
     </div>
 @endsection
@@ -71,58 +64,31 @@
 <div class="tab">
     <div class="container flex-center">
         <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
     </div>
     <div class="container flex">
         <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
+            <br>
+            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SENDING TO BRAZIL?</h2>
             <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
+                All goods sent internationally are subject to customs taxes and duties. Such shipments will require accompanying documentation, specifying the contents of the parcel and its estimated value.
+            </p>
+            <p>
+                Fortunately, this information will be filled out online when creating the shipping data, removing the need for paper customs invoices and speeding up the clearance process.
+            </p>
+            <h2 class="toUpper">ARE THERE ANY PROHIBITED ITEMS?</h2>         
+            <p>
+                There are multiple items which are not allowed to be imported into Brazil. These include but are not limited to:
             </p>
             <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
+                <li>Explosives;</li>
+                <li>Toxic and infectious substances;</li>
+                <li>Corrosive substances;</li>
+                <li>Obscene and indecent articles;</li>
+                <li>Living creatures and dead animals.</li>
             </ul>
             <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
-
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
-            </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
-            <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                For a more detailed list of Brazil’s prohibited items, please refer to the Brazil Post website or contact Brazilian customs directly. 
+                As couriers, we also have a prohibited items list of our own. Please refer to this list before you prepare your parcel for shipping.
             </p>
         </div>
     </div>

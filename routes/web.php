@@ -11,7 +11,8 @@
 |
 */
 
-    use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\InformationController;
+use Illuminate\Support\Facades\Mail;
     use Illuminate\Support\Facades\Route;
 
 // Main Navigation Routes
@@ -22,6 +23,7 @@ Route::post('/contact', 'PagesController@send');
 Route::get('/quote', 'QuotesController@index')->name('quote.index');
 Route::post('/quote', 'QuotesController@send');
 
+Route::get('/track-parcel','ParcelController@track')->name('track-parcel');
 Route::get('/send-my-parcel','ParcelController@index')->name('send-my-parcel');
 Route::post('/send-my-parcel','ParcelController@send')->name('email-parcel-details');
 
@@ -29,6 +31,7 @@ Route::post('/send-my-parcel','ParcelController@send')->name('email-parcel-detai
 // Services Routes
     Route::get('/services', 'ServicesController@index')->name('services-index');
     Route::get('/services/{service}', 'ServicesController@show');
+    Route::get('/services/dangerous-goods/dry-ice', 'ServicesController@dryIce');
 
     Route::get('/services/imports/import-request', 'ServicesController@importRequests')->name('import-requests');;
     Route::post('/services/imports/import-request', 'ServicesController@sendImportRequest')->name('email-import-request');;
@@ -36,6 +39,9 @@ Route::post('/send-my-parcel','ParcelController@send')->name('email-parcel-detai
 // Shipping Destinations Routes
     Route::get('/destinations', 'DestinationsController@index')->name('destinations');
     Route::get('/destinations/{destination}', 'DestinationsController@show');
+
+// Information Pages Routes
+    Route::get('/information/{info}', 'InformationController@show');
 
 
 // Authentication Routes...

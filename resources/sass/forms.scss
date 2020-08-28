@@ -145,3 +145,110 @@
 .closebtn:hover {
     color: black;
 }
+
+
+// Accordion Styling
+.accordion {
+    min-width: 360px;
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 0%;
+  
+    .inner {
+        padding: 0.3em 1.5em;
+        overflow: hidden;
+        display: none;
+        list-style-type: none;
+    
+      
+        &.show {
+          /*display: block;*/
+        }
+        .inner-footer {
+            padding: 10px 15px;
+            background-color: #cacaca;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+    }
+
+    li {
+        margin: .5em 0;
+
+      
+        a.toggle {
+            width: 100%;
+            display: block;
+            padding: .75em;
+            border-radius: 0.15em;
+            text-align: center;
+            font-weight: 800;
+            font-size: 18px;
+            transition: background .3s ease;
+          
+            &:hover {
+                background: #f3c600;
+            }
+        }
+    }
+}
+.accordion-parent {
+    background: #FECE00;
+    color: #222;
+}
+.accordion-button {
+    display: block;
+    background: #FECE00;
+    color: #222;
+    padding: 15px;
+    border-radius: 2px;
+    width: 100%;
+    font-weight: 800;
+    text-align: center;
+}
+.toggle.accordion-parent.collapsed::after {
+    content: '\f063';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+}
+.toggle.accordion-parent::after {
+    color: #000;
+    content: '\f063';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    float: right;
+}
+
+.accordion-child {
+    background-color: #cacaca;
+    color: #222;
+}
+a.toggle:hover.accordion-child {
+    background: #b8b8b8 !important;
+}
+.toggle.accordion-child.collapsed::after {
+    content: '\f063';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+}
+.toggle.accordion-child::after {
+    color: #000;
+    content: '\f063';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    float: right;
+}

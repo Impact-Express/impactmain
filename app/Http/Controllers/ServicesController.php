@@ -56,10 +56,28 @@ class ServicesController extends Controller
                 return view('customer.services.imports', compact('page'));
                 break;
             case 'services/ietrax':
-                return view('customer.destinations.ietrax', compact('page'));
+                return view('customer.services.ietrax', compact('page'));
+                break;
+            case 'services/dangerous-goods':
+                return view('customer.services.dangerous-goods', compact('page'));
+                break;
+            case 'services/e-commerce':
+                return view('customer.services.e-commerce', compact('page'));
+                break;
+            case 'services/fulfilment-services':
+                return view('customer.services.fulfilment', compact('page'));
+                break;
+            case 'services/mobile-phone-services':
+                return view('customer.services.mobile-phone-services', compact('page'));
                 break;
         }
     }
+    public function dryIce (Page $page)
+    {
+        return view('customer.services.dry-ice', compact('page'));
+    }
+
+
     public function importRequests (Page $page)
     {
 

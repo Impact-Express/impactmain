@@ -1,5 +1,5 @@
 @extends('customer.destinations.layout.destination')
-@section('title', "Parcel Delivery and Shipping to the USA")
+@section('title', "Parcel Delivery and Shipping to Australia")
 @section('css')
 <link href="{{ asset('css/forms.css') }}" rel="stylesheet">
 <link href="{{ asset('css/services.css') }}" rel="stylesheet">
@@ -15,117 +15,65 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO THE USA</h1>
+    <h1 class="service-title">SHIPPING TO AUSTRALIA</h1>
     <div class="service-text">
         <br>
-        With low-cost next-day shipping options, make Impact Express your first choice for fast and secure parcel delivery to the USA.
+        With courier links across the country, at Impact Express we offer fast and reliable shipping to Australia for a wide variety of parcels. 
+        Whether you’re sending important documents or large packages, you can count on us.
         <br><br>
-        As the largest English-speaking country in the world, it’s no surprise thousands of parcels are delivered to the United States from the UK each day.
+        With a large British expat community, Australia receives hundreds of parcels from the UK each day, destined for bustling cities such as Melbourne and Sydney, 
+        as well as more remote locations. Despite being on the other side of the world from the UK and being one of the globe’s largest land masses, 
+        shipping to Australia can be both fast and affordable.
         <br><br>
-        At some points, the USA spans almost 3,000 miles from east to west coast (100 times the greatest longitudinal distance in the UK) but with the help 
-        of our trustworthy partner couriers, we can guarantee next day delivery anywhere in the country.
-        <br><br>
-        Whether you’re posting for business or personal reasons; to New York, Los Angeles or Washington, we can cater for all your UK to US shipping needs.
+        Whether you’re posting to a travelling family member, or for business reasons, make Impact Express your first choice for shipping to Australia.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">SHIPPING TO AUSTRALIA: HOW WE WORK</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        We provide standard shipping services to most Australian towns and cities. If you are sending to a more remote location, <a style="color: #646464;" href="{{ route('contact') }}">get in touch</a> with our team directly.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
+        We offer a variety of convenient dispatch options, including local drop off and courier pick up. The allocated courier for this service will depend on whether you are a ‘business’ or ‘personal’ customer, with each option made clear upon checkout.
         <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
+        Once your parcel has arrived to us, it will be collected by DHL, who act as our courier partner for all international shipping. DHL will handle the remainder of your parcel’s journey to Australia, ensuring fast and reliable delivery.
         <br><br>
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
+        <h2 class="service-title">HOW TO PACKAGE A PARCEL FOR INTERNATIONAL SHIPPING</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+            No matter the destination, all parcels should be securely packaged. Although our couriers will always handle your goods with the utmost care, 
+            proper packaging will prevent any breakages in transit.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
-        </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
-        <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
+            Always use a strong outer container/material and secure your parcel using proper parcel tape. In order to prevent damage, 
+            ensure that loose items are properly padded with a protective material such as bubble wrap.
             <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
+            A printable address label will be provided when you finalise your shipping. This must be clearly affixed to the front of your parcel to ensure prompt delivery
         </div>
-        <h2 class="service-title">THINGS TO REMEMBER…</h2>
+        <h2 class="service-title">AUSTRALIAN CUSTOMS RESTRICTIONS</h2>
         <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
+            When posting internationally, you must always check the destination country’s customs regulations. If your parcel contains regulated or prohibited items, 
+            it risks not being delivered.
+            <br><br>
+            Australian customs states that the following items are prohibited:
+            <ul>
+                <li>Perfumes</li>
+                <li>Alcohol over 24% ABV</li>
+                <li>Goods bearing an image of the Australian state or territory flag.</li>
+            </ul>
+            Please note that the above items are just a sample of prohibited goods – for full list please refer to Australian Border Force.
+        </div>
+        <h2 class="service-title">SHIPPING TO AUSTRALIA FEES</h2>
+        <div class="service-text">
+            Despite the long journey, shipping to Australia is not as expensive as you may think. At Impact Express we pride ourselves on offering highly competitive international shipping rates.
+            <br><br>
+            The cost of sending a parcel to Australia will vary depending on the weight of your parcel, and the type of service you require. Please use our <a style="color: #646464;" href="{{ route('quote.index') }}">online quote tool</a> for an exact shipping cost.
+            <br><br>
         </div>
     </div>
 @endsection
 @section('faq')
-<div class="tab">
-    <div class="container flex-center">
-        <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
-    </div>
-    <div class="container flex">
-        <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
-            <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
-            </p>
-            <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
-            </ul>
-            <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
-
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
-            </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
-            <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-        </div>
-    </div>
+<div class="tab" style="height: 100px;">
 </div>
 @endsection
 @section('destinations-boxes')

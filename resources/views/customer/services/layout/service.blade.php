@@ -4,6 +4,14 @@
     <div class="services-image">
         @yield('service-image')
     </div>
+    
+    @if (Request::is('information/service-level-agreement-and-surcharges'))
+    <div class="service-information">
+        @yield('sla-surcharges-panel')
+    </div>
+    @endif
+
+    @if (Request::is('information/*'))
     <div class="service-information">
         <div class="main-text">
             @yield('maintext')
@@ -12,6 +20,19 @@
             @yield('maintext-right')
         </div>
     </div>
+    @endif
+
+    @if (Request::is('services/*'))
+    <div class="service-information">
+        <div class="main-text">
+            @yield('maintext')
+        </div>
+        <div class="main-text">
+            @yield('maintext-right')
+        </div>
+    </div>
+    @endif
+
     <div class="service-faq">
         @yield('faq')
     </div>
