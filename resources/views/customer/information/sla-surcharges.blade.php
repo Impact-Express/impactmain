@@ -1,5 +1,5 @@
 @extends('customer.services.layout.service')
-@section('title', "Montly Fuel Surcharge")
+@section('title', "Service Level Agreement and Surcharges ". date('Y'))
 @section('css')
 <link href="{{ asset('css/forms.css') }}" rel="stylesheet">
 <link href="{{ asset('css/services.css') }}" rel="stylesheet">
@@ -18,7 +18,7 @@
 
 @section('sla-surcharges-panel')
 <div class="container" style="width: 1226px;">
-    <h2 class="service-title" style="width: max-content;margin-left: 0;">Service Level Agreement and Surcharges Information | Effective 1st Jan <?= date('Y') ?></h2>
+    <h2 class="service-title" style="width: max-content;margin-left: 0;">Service Level Agreement and Surcharges Information | Effective 1st Jan {{ date('Y') }}</h2>
 
     <ul class="accordion">
         <li>
@@ -286,11 +286,12 @@
                     <a href="#" class="toggle accordion-child collapsed">RESTRICTED DESTINATION SURCHARGE</a>
                     <div class="inner">
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus placerat fringilla. Duis a elit et dolor laoreet volutpat. Aliquam ultrices mauris id mattis imperdiet. Aenean cursus ultrices justo et varius. Suspendisse aliquam orci id dui dapibus
-                        blandit. In hac habitasse platea dictumst. Sed risus velit, pellentesque eu enim ac, ultricies pretium felis.
+                            Covers the exceptional handling required to service destinations that are subject to trade restrictions imposed by the United Nations Security Council.
+                            The charge applies to outbound non document shipments to Central Africa, Ivory Coast, Dem Rep of Congo, Eritrea, Iran, Iraq, North Korea, Libya, Somalia, South Sudan*, Syria* and Yemen.
                         </p>
                         <div class="inner-footer">
-                            Price Per Shipment: Asdf
+                            Price Per Shipment: £22.00*
+                            * Both Charges will apply Per Shipment.
                         </div>
                     </div>
                 </li>
@@ -298,11 +299,12 @@
                     <a href="#" class="toggle accordion-child collapsed">ELEVATED RISK SURCHARGE</a>
                     <div class="inner">
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus placerat fringilla. Duis a elit et dolor laoreet volutpat. Aliquam ultrices mauris id mattis imperdiet. Aenean cursus ultrices justo et varius. Suspendisse aliquam orci id dui dapibus
-                        blandit. In hac habitasse platea dictumst. Sed risus velit, pellentesque eu enim ac, ultricies pretium felis.
+                            Covers additional security measures for handling outbound and inboud shipments in countries that are in continuous threat of war, civil unrest or threats of terrorism.
+                            The charge is currently in place for outbound, inbound and 3rd country for Afghanistan*, Burundi, Iraq*, Libya, Syria*, Mali, Niger and Yemen.
                         </p>
                         <div class="inner-footer">
-                            Price Per Shipment: Asdf
+                            Price Per Shipment: £15.00*
+                            * Both Charges will apply Per Shipment.
                         </div>
                     </div>
                 </li>
@@ -310,11 +312,12 @@
                     <a href="#" class="toggle accordion-child collapsed">EXPORTER VALIDATION SURCHARGE</a>
                     <div class="inner">
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus placerat fringilla. Duis a elit et dolor laoreet volutpat. Aliquam ultrices mauris id mattis imperdiet. Aenean cursus ultrices justo et varius. Suspendisse aliquam orci id dui dapibus
-                        blandit. In hac habitasse platea dictumst. Sed risus velit, pellentesque eu enim ac, ultricies pretium felis.
+                            Exporter Validation surcharges apply when shipping to a country that is subject to trade restrictions imposed by national legislation such as the EEAS or OFAC. 
+                            The charge is for outbound non-docs only to: Afghanistan*, South Sudan, Belarus, Myanmar, Zimbabwe and Lebanon.
                         </p>
                         <div class="inner-footer">
-                            Price Per Shipment: Asdf
+                            Price Per Shipment: £22.00*
+                            * Both Charges will apply Per Shipment.
                         </div>
                     </div>
                 </li>

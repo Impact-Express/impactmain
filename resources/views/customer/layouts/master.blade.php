@@ -92,6 +92,15 @@
                         <a href="/information/packaging-guide">Packaging Guide</a>
                     </li>
                     <li>
+                        <a href="/information/opening-hours">Opening Hours</a>
+                    </li>
+                    <li>
+                        <a href="/information/gdpr-policy">GDPR Policy</a>
+                    </li>
+                    <li>
+                        <a href="/information/careers">Work With Us</a>
+                    </li>
+                    <li>
                         <a href="/information/impact-express-rate-increase-2020">Impact Express Rate Increase 2020</a>
                     </li>
                     <li>

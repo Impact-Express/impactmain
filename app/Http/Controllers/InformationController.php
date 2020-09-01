@@ -44,7 +44,16 @@ class InformationController extends Controller
             case 'information/packaging-guide':
                 return view('customer.information.packaging-guide', compact('page'));
                 break;
-            case 'information/impact-express-rate-increase':
+            case 'information/opening-hours':
+                return view('customer.information.opening-hours', compact('page'));
+                break;
+            case 'information/gdpr-policy':
+                return view('customer.information.gdpr-policy', compact('page'));
+                break;
+            case 'information/careers':
+                return view('customer.information.careers', compact('page'));
+                break;
+            case 'information/impact-express-rate-increase-2020':
                 return view('customer.information.rate-increases', compact('page'));
                 break;
             case 'information/general-sanctions-warranty-and-indemnity-letter':

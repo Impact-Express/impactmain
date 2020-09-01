@@ -10,6 +10,36 @@
         @yield('sla-surcharges-panel')
     </div>
     @endif
+    @if (Request::is('information/remote-area-surcharges'))
+    <div class="service-information">
+        @yield('ras-surcharges-panel')
+    </div>
+    @endif
+    @if (Request::is('information/prohibited-items'))
+    <div class="service-information">
+        @yield('prohibited-panel')
+    </div>
+    @endif
+    @if (Request::is('information/impact-express-rate-increase-2020'))
+    <div class="service-information">
+        @yield('rate-increase-panel')
+    </div>
+    @endif
+    @if (Request::is('information/general-sanctions-warranty-and-indemnity-letter'))
+    <div class="service-information">
+        @yield('indemnity-panel')
+    </div>
+    @endif
+    @if (Request::is('information/opening-hours'))
+    <div class="service-information">
+        @yield('opening-hours-panel')
+    </div>
+    @endif
+    @if (Request::is('information/gdpr-policy'))
+    <div class="service-information">
+        @yield('gdpr-panel')
+    </div>
+    @endif
 
     @if (Request::is('information/*'))
     <div class="service-information">
