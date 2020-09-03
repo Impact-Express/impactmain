@@ -857,11 +857,6 @@ tbody, tr, td {
   border: 3px solid #d6d6d6;
 }
 
-.form-group.excerpt {
-  height: 130px;
-  min-height: 130px;
-}
-
 .editor-toolbar {
   margin-top: 5px;
 }
@@ -913,10 +908,18 @@ tbody, tr, td {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+.excerpt .CodeMirror {
+  height: 130px;
+  min-height: 130px;
+}
 
 .body {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.body .CodeMirror {
+  height: 200px;
+  min-height: 200px;
 }
 
 #new-category {

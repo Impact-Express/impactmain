@@ -3,7 +3,7 @@ body {
 }
 
 .destinations-container {
-  width: 58%;
+  width: 75%;
   max-width: 1700px;
   margin-left: auto;
   margin-right: auto;
@@ -67,4 +67,12 @@ body {
 
 .row {
   display: inline-flex;
+}
+
+.country-img {
+  transition: 0.35s;
+}
+
+.country-img:hover {
+  transform: scale(1.1);
 }

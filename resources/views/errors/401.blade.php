@@ -4,6 +4,7 @@
 
 @section('css')
     <link href="{{asset('css/errorpages.css')}}" rel="stylesheet">
+    <link href="{{asset('css/forms.css')}}" rel="stylesheet">
 @endsection
 
 @section('content')

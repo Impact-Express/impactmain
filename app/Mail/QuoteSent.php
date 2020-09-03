@@ -30,7 +30,7 @@ class QuoteSent extends Mailable
     {
         return $this->subject('Quote Request Received From: ')
                     ->from('testmail@codecameron.dev', 'Cameron\'s Testing Email')
-                    ->view('emails.quote-sent')
+                    ->view('customer.emails.quote-sent')
                     ->with('data', $this->data);
     }
 }            

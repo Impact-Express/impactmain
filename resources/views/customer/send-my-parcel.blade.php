@@ -13,6 +13,9 @@
                 <h3 class="login-box-title">
                         <b class="login-box-title-bold">Send My Parcel</b>
                 </h3>
+                <p class="login-box-text">
+                    To send a parcel, complete the form below. A member of our team will contact you during working hours to complete the booking, take payment and issue the shipping labels.
+                </p>
             </div>
     </section>
     <section class="create-account">
@@ -72,6 +75,23 @@
             <strong>{{ $message }}</strong>
         </div>
     @endif
+    </section>
+    <section class="quote-login">
+            <div class="login-box" style="height: 260px;">
+                <h3 class="login-box-title">
+                        <b class="login-box-title-bold" style="position:relative; top: -70px; font-size: 4.5rem;">What Happens Next?</b>
+                </h3>
+                <h3 class="login-box-text" style="display:inline-block; text-align:unset; position: relative; font-size: 1em; width: 600px; top: 20px; left:70px;">
+                    Once you have completed the booking screen above, we will call you back to complete payment for the booking, email your labels and arrange collection or drop off of your parcel.
+                    <br><br>
+                    Collections: You will be required to print off two labels and one customs invoice, if you do not have access to a printer we can arrange a label free collection at an additional cost of £12.50 + vat (for a single item upto 20kg).
+                </h3>
+                <h3 class="login-box-text" style="display:inline-block; text-align:unset; position: relative; font-size: 1em; width: 600px; top: 20px; right:-120px;">
+                    Drop off: You can drop your parcel to your local Parcelshop, you will need to print two labels.
+                    <br><br>
+                    Whilst the shipment is in transit we will email you tracking updates until the shipment is delivered. Once this booking is completed your account will be open and you will be free to send as many parcels as you wish through the online booking portal.
+                </h3>
+            </div>
     </section>
 
 @endsection

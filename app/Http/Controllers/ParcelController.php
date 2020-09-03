@@ -19,6 +19,16 @@ class ParcelController extends Controller
         return view('customer.send-my-parcel');
     }
 
+    /**
+     * Track the Progress of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function track ()
+    {
+        return view('customer.track-my-parcel');
+    }
+
    /**
      *     Send an Email to the Recipient
      *    
