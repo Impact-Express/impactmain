@@ -58,7 +58,7 @@
                                                             @enderror
                                                         </div>
 
-                                                        <div class="form-group @error('body') has-error @enderror">
+                                                        <div class="form-group body @error('body') has-error @enderror">
                                                             <label for="Body">Body</label>
                                                             <textarea class="form-textarea @error('body') has-error @enderror" id="new-post-body" tabindex="4" name="body" cols="50" rows="10">{{ $post->body }}</textarea>
 

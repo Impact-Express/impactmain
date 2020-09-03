@@ -13,8 +13,8 @@
         <div class="pane-left">
                 <div class="personal-account">
                     <h1 class="personal-title">personal</h1>
-                    <h3 class="personal-subtitle">Lorem ipsum dolor sit amet, consectetu</h3>
-                    <a href="#" class="personal-button button-alt">Send Parcel</a>
+                    <h3 class="personal-subtitle">Send a Parcel with us today!</h3>
+                    <a href="https://personal.impactexpress.co.uk" class="personal-button button-alt">Send Parcel</a>
                 </div>
             </div>
         </span>
@@ -22,8 +22,8 @@
             <div class="pane-right">
                 <div class="business-account">
                     <h1 class="business-title">business</h1>
-                    <h3 class="business-subtitle">Lorem ipsum dolor sit amet, consectetu</h3>
-                    <a href="#" class="business-button button-white">Create Account</a>
+                    <h3 class="business-subtitle">Send Parcels Daily? Sign up for a Business Account!</h3>
+                    <a href="business.impactexpress.co.uk" class="business-button button-white">Create Account</a>
                 </div>
             </div>
         </span>    

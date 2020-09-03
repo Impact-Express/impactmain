@@ -67,7 +67,6 @@
 <div class="tab">
     <div class="container flex-center">
         <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
     </div>
     <div class="container flex">
         <div id="FAQs" class="tabcontent" style="display:none;">
@@ -96,29 +95,6 @@
                 <br><br>
                 It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
                 with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
             </p>
         </div>
     </div>

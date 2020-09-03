@@ -16,113 +16,81 @@
 @section('maintext')
 <div class="container">
     <h1 class="service-title">SHIPPING TO THE USA</h1>
-    <div class="service-text">
-        <br>
+    <p class="service-text">
         With low-cost next-day shipping options, make Impact Express your first choice for fast and secure parcel delivery to the USA.
-        <br><br>
+    </p>
+    <p class="service-text">
         As the largest English-speaking country in the world, it’s no surprise thousands of parcels are delivered to the United States from the UK each day.
-        <br><br>
+    </p>
+    <p class="service-text">
         At some points, the USA spans almost 3,000 miles from east to west coast (100 times the greatest longitudinal distance in the UK) but with the help 
         of our trustworthy partner couriers, we can guarantee next day delivery anywhere in the country.
-        <br><br>
-        Whether you’re posting for business or personal reasons; to New York, Los Angeles or Washington, we can cater for all your UK to US shipping needs.
-    </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    </p>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
-        <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
-        <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
-        <br><br>
+        Whether you’re posting for business or personal reasons; to New York, Los Angeles or Washington, we can cater for all your UK to US shipping needs.
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
-        <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
-            <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
-        </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
-        <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
-            <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
-        </div>
-        <h2 class="service-title">THINGS TO REMEMBER…</h2>
-        <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
-        </div>
+        <h2 class="service-title">SHIPPING TO USA: OUR SERVICES</h2>
+        <p class="service-text">
+            Our shipping services are designed with your convenience in mind, ensuring both speedy and safe delivery. We offer express shipping to America via 
+            our courier partners, which guarantees delivery on the next working day – perfect for sending those last-minute Christmas and birthday gifts.
+        </p>
+        <p class="service-text">
+            For non-urgent parcels, we also offer standard shipping to America, with delivery in 1 – 2 business days. Whether you opt for express or standard 
+            shipping, all parcels can be tracked on their journey to the US via our simple online tracking tool.
+        </p>
+        <p class="service-text">
+            Your parcel will begin its journey to the USA in one of several ways. Depending on whether you are a ‘business’ or ‘personal’ customer, you can 
+            either arrange for your parcel to be picked up by one of our partnered couriers, or to drop it off at a designated spot. All dispatch options will 
+            be available to you at the point of booking.
+        </p>
+        <h2 class="service-title">PACKAGING A PARCEL TO SHIP TO AMERICA: WHAT YOU NEED TO KNOW</h2>
+        <p class="service-text">
+            As with all overseas shipping, parcels sent to the USA must be securely packaged. Although the utmost care is taken to protect your goods, 
+            we’d always recommend wrapping the contents of your parcel in protective packaging such as bubble wrap to prevent damage.
+        </p>
+        <p class="service-text">
+            Using a sturdy outer container is also advisable. Complete the wrapping of your parcel with sturdy adhesive tape in order to prevent it 
+            opening in transit.
+        </p>
+        <p class="service-text">
+            We will provide you with a printable label, which must be securely affixed to the front of your package, with the address completely visible. 
+            For more advice on wrapping your parcel and label placement, please see our guide to parcel packaging.
+        </p>
+        <br><br>
     </div>
 @endsection
 @section('faq')
 <div class="tab">
     <div class="container flex-center">
         <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
     </div>
     <div class="container flex">
         <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
+            <h2>USA CUSTOMS RESTRICTIONS</h2>
             <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
+                As a destination outside of the E.U., parcels sent to the United States of America are subject to duties and taxes. Customs will hold 
+                all goods and prevent delivery until the necessary payment is made.
+            </p>
+            <p>
+                The USA also operates strict regulations on what goods can be imported into the country. Prohibited/restricted items include:
             </p>
             <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
+                <li>Designer items, such as clothing, shoes or accessories</li>
+                <li>Real animal fur</li>
+                <li>Food and beverages</li>
             </ul>
-            <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
-
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
+            <p >
+                Before planning a delivery to the USA with Impact Express, please ensure your parcel does not contain any restricted goods. 
+                US Customs and Border Protection (CBP) will be able to provide a complete list of prohibited items.
             </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
+            <h2>COST OF SHIPPING TO THE USA</h2>
             <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                We are proud to offer competitive shipping from the UK to the United States. The delivery cost will depend on both the weight of your parcel, 
+                as well as delivery window. For an accurate estimate of delivery costs, please head to our <a href="{{ route('quote.index') }}">automatic quote tool</a>.
             </p>
         </div>
     </div>

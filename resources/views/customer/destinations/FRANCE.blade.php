@@ -16,50 +16,61 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO FRANCE</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
+        We offer cheap, fast and reliable parcel shipping to France using reputable courier companies, with services designed with your convenience in mind.
         <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        As a hub of art, music, politics and finance, it is unsurprising that hundreds of parcels and packages are shipped to France every day. With holidaymakers 
+        lured to the sunny southern coast, and culture vultures drawn to the historic capital of Paris, France has it all.
+        <br><br>
+        At Impact Express we offer competitive shipping rates to anywhere in the country, with next-day delivery options available. 
+        Whether you’re posting to Paris, Lyon, Marseille or Nice, we are here to help.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">SHIPPING TO FRANCE: OUR SERVICES</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        We offer multiple services for shipping to France, including Express and Standard Delivery, depending on our desired delivery window.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
+        Using Impact Express for shipping is simple. Depending on the type of account you have with us (business or personal) you can either drop your parcel off at a 
+        designated point, or arrange for it to be picked up.
         <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
+        From here, our partnered courier company will escort your parcel safely on its journey to France – whether its headed to the bustling capital of 
+        Paris or the Mediterranean French Riviera!
         <br><br>
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
+        <h2 class="service-title">PARCEL PACKAGING FOR SHIPPING TO FRANCE</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+            Wherever your parcel is being sent, proper packaging is essential. Although our couriers will take the utmost care, 
+            we’d always recommend paying extra attention to prevent damage or breakage in transit.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
-        </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
-        <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
+            Ensure that your parcel is safely and securely wrapped, using a strong outer container, secure parcel tape and padding for inner contents.
             <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
+            Potential delivery delays can also be avoided by ensuring that the print-at-home label we provide is securely and clearly affixed to the 
+            largest side of the parcel, to help your courier get it to where it needs to be.
+            <br><br>
+            We’d also always recommend including a return address – just in case.
         </div>
-        <h2 class="service-title">THINGS TO REMEMBER…</h2>
+        <h2 class="service-title">FRENCH CUSTOMS RESTRICTIONS</h2>
         <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
+            As with the rest of Europe and beyond, France is subject to strict customs regulations, restricting what you can bring in and out of the country – including via post.
+            <br><br>
+            French authorities place restriction and limitations on many goods, including:
+            <ul class="service-list">
+                <li>Alcoholic beverages</li>
+                <li>Fresh and dried foods</li>
+                <li>Currency</li>
+                <li>Tobacco</li>
+            </ul>
+            <br><br>
+            For a full list of goods and products banned for shipping with Impact Express, please see our <a href="/information/prohibited-items">restricted items section</a>.
+            <br><br>
+            Following Brexit, posting to Europe from the UK has changed slightly. However, to avoid any customs concerns or delays upon arrival, you can add all necessary customs 
+            information when creating your shipping profile online.
+            <br><br>
         </div>
     </div>
 @endsection
@@ -67,58 +78,24 @@
 <div class="tab">
     <div class="container flex-center">
         <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
     </div>
     <div class="container flex">
         <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
-            <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
-            </p>
-            <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
-            </ul>
-            <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
+            
 
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
-            </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
+
+
+
+
+            <h2 class="toUpper">HOW MUCH DOES POSTING TO FRANCE COST?</h2>
             <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                Despite being just over the channel, you will find that shipping to France and the rest of mainland Europe incurs higher fees than domestic shipping. Luckily, at Impact Express we are proud to offer the cheapest postage rates available.
             </p>
             <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                The cost of your shipping will vary depending on the weight and size of your parcel, as well as your chosen delivery service. Please use our <a href="{{ route('quote.index') }}">online quote tool</a> for an accurate shipping cost.
             </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
             <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                If you are posting items of value, we also offer insurance options for an extra fee.
             </p>
         </div>
     </div>

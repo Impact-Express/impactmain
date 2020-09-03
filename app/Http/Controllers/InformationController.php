@@ -7,18 +7,9 @@ use App\Page;
 
 class InformationController extends Controller
 {
-    
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Page $page, Request $request, $id)
+    public function pages (Page $page, Request $request)
     {
         $slug = $request->path();
-        // dd($slug);
-
         switch ($slug) {
             case 'information/coronavirus':
                 return view('customer.information.coronavirus', compact('page'));
@@ -60,5 +51,18 @@ class InformationController extends Controller
                 return view('customer.information.indemnity-letter', compact('page'));
                 break;
         }
+    }
+
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show()
+    {
+        $pages = Page::all();
+        return view('customer.information.page', compact('pages'));
     }
 }

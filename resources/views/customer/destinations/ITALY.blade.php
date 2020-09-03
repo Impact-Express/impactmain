@@ -16,16 +16,17 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO ITALY</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
+        We offer fast, competitive, and secure courier services to Italy. Our offering includes delivery to all major cities and regions, as well as a choice of different delivery speeds to suit your requirements.
         <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        One of our close European neighbours, Italy has a rich culture and heritage. It includes the iconic Colosseum of bustling Rome, the colourful Mediterranean coastlines, the art and serenity of Florence 
+        and the world famous shopping and fashion of Milan.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">SHIPPING TO ITALY: OUR SERVICES</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        Our Italian shipping options include Express Delivery (next day) for main destinations, and Economy Delivery for non-time sensitive or heavier packages (two to six working days).
         <br><br>
         Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
         <br><br>

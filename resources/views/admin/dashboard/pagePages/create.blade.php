@@ -24,42 +24,30 @@
                             <div class="box-header">
                                 <div class="pull-left" style="width: 65%;">
                                    <div class="post-details">
-                                    <form action="{{ route('posts.store', $post->slug) }}" id="post-form" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('pages.store', $page->slug) }}" id="post-form" method="POST" enctype="multipart/form-data">
                                         @csrf
 
                                         <div class="form-group @error('title') has-error @enderror">
                                             <label for="title">Title</label>
-                                            <input class="form-text @error('title') has-error @enderror" id="new-post-title" tabindex="1" name="title" type="text" value="{{ $post->title }}">
+                                            <input class="form-text @error('title') has-error @enderror" id="new-post-title" tabindex="1" name="title" type="text" value="{{ $page->title }}">
 
                                             @error('title')
                                                 <span class="help-block has-error">{{ $message }}</span>
                                                 <br><br>
                                             @enderror
                                         </div>
-
                                         <div class="form-group @error('slug') has-error @enderror">
                                             <label for="slug">Slug</label>
-                                            <input class="form-text @error('slug') has-error @enderror" id="new-post-slug" tabindex="1" name="slug" type="text" value="{{ $post->slug }}">
+                                            <input class="form-text @error('slug') has-error @enderror" id="new-post-slug" tabindex="1" name="slug" type="text" value="{{ $page->slug }}">
 
                                             @error('slug')
                                                 <span class="help-block has-error">{{ $message }}</span>
                                                 <br><br>
                                             @enderror
                                         </div>
-
-                                        <div class="form-group excerpt @error('excerpt') has-error @enderror">
-                                            <label for="Excerpt">Excerpt</label>
-                                            <textarea class="form-textarea @error('excerpt') has-error @enderror" id="new-post-excerpt" tabindex="3" name="excerpt" cols="50" rows="10">{{ $post->excerpt }}</textarea>
-
-                                            @error('excerpt')
-                                                <span class="help-block has-error">{{ $message }}</span>
-                                                <br><br>
-                                            @enderror
-                                        </div>
-
-                                        <div class="form-group body @error('body') has-error @enderror">
+                                        <div class="form-group @error('body') has-error @enderror">
                                             <label for="Body">Body</label>
-                                            <textarea class="form-textarea @error('body') has-error @enderror" id="new-post-body" tabindex="4" name="body" cols="50" rows="10">{{ $post->body }}</textarea>
+                                            <textarea class="form-textarea @error('body') has-error @enderror" id="new-page-body" tabindex="4" name="body" cols="50" rows="10">{{ $page->body }}</textarea>
 
                                             @error('body')
                                                 <span class="help-block has-error">{{ $message }}</span>
@@ -73,7 +61,7 @@
                                         <div class="form-group @error('published_at') has-error @enderror">
                                             <label for="Publication Date">Publication Date</label>
                                             <div class="post-publishdate">
-                                                <input class="form-text @error('published_at') has-error @enderror" id="new-post-publishdate" name="published_at" type="text" value="{{ $post->published_at }}">
+                                                <input class="form-text @error('published_at') has-error @enderror" id="new-page-publishdate" name="published_at" type="text" value="{{ $page->published_at }}">
                                             </div>
                                             <hr>
                                             <div class="publish-buttons">
@@ -86,39 +74,9 @@
                                         </div>
                                     </div>
                                     <div class="post-details-right">
-                                        <div class="form-group @error('category_id') has-error @enderror">
-                                            <label for="category_id">Category</label>
-                                            <select class="form-text" id="new-post-category" tabindex="6" name="category_id">
-                                                {{$categories = \App\Category::all()}}
-                                                @foreach ($categories as $category)
-                                                    <option value="{{$category->id}}">{{$category->title}}</option>
-                                                @endforeach
-                                            </select>
-                                        
-                                            @error('category_id')
-                                                <span class="help-block has-error">{{ $message }}</span>
-                                                <br><br>
-                                            @enderror
-                                        </div>
-                                        <div class="form-group @error('tag_slug') has-error @enderror">
-                                            <label for="tag_slug">Tags</label>
-                                            <select class="form-text" id="new-post-tag" tabindex="7" name="tag_slug[]" multiple="multiple">
-                                                {{$tags = \App\Tag::all()}}
-                                                @foreach ($tags as $tag)
-                                                    <option value="{{$tag->slug}}">{{$tag->title}}</option>
-                                                @endforeach
-                                            </select>
-                                        
-                                            @error('tag_id')
-                                                <span class="help-block has-error">{{ $message }}</span>
-                                                <br><br>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="post-details-right">
                                         <label for="image">Feature Image</label>
                                             <div class="fileinput-new">
-                                                <img id="img-thumbnail" width="425" height="250" src="{{ ($post->image_url) ? $post->image_url : 'https://via.placeholder.com/425x250.png?text=No+Image' }}">
+                                                <img id="img-thumbnail" width="425" height="250" src="{{ ($page->image_url) ? $page->image_url : 'https://via.placeholder.com/425x250.png?text=No+Image' }}">
                                                 </div>
                                                 <label class="button-image">
                                                     Choose Image
@@ -143,19 +101,7 @@
     </div>
 </div>
 <script>
-        $('#new-post-tag').select2();
-
-        $('#new-post-title').on('blur', function() {
-            var theTitle  = this.value.toLowerCase().trim(),
-                slugInput = $('#new-post-slug'),
-                theSlug   = theTitle.replace(/&/g, '-and-')
-                                    .replace(/[^a-z0-9-]+/g, '-')
-                                    .replace(/\-\-+/g, '-')
-                                    .replace(/^-+|-+$/g, '');
-
-            slugInput.val(theSlug)
-        });
-        $("#new-post-publishdate").datetimepicker({
+        $("#new-page-publishdate").datetimepicker({
             dateFormat: 'yy-mm-dd',
             timeFormat: 'HH:mm:ss',
             controlType: 'select',
@@ -166,12 +112,8 @@
             showMillisec: false,
             showMicrosec: false,
         });
-        var simplemde1 = new SimpleMDE({ 
-            element: $('#new-post-excerpt')[0],
-            autofocus: false
-        });
-        var simplemde2 = new SimpleMDE({ 
-            element: $('#new-post-body')[0],
+        var simplemde = new SimpleMDE({ 
+            element: $('#new-page-body')[0],
             autofocus: false
         });
 </script>

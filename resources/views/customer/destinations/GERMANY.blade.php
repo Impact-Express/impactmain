@@ -16,50 +16,53 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO GERMANY</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
+        Being the most heavily populated country within the EU, Germany is a hotspot for parcel deliveries from the UK and beyond. Working with DHL, 
+        Impact Express provide speedy and affordable shipping to locations across Germany, including Berlin, Munich and Hamburg.
         <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        As a centre for global business, as well as boasting a rich cultural history, Germany attracts a huge number of British visitors. Offering both 
+        business shipments and personal posting options, we ship a wide variety of parcels, with both express and standard delivery available.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">SHIPPING TO GERMANY: OUR SERVICES</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        We are committed to offering convenient shipping to destinations in Europe and beyond. When posting to Germany, you will have several dispatch 
+        options depending on whether you are a ‘business’ or ‘personal’ customer.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
-        <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
-        <br><br>
+        These options include parcel pick up from a location of your choosing or drop off at a designated service point. All parcel dispatch choices 
+        will be made clear when creating your shipment.
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
+        <h2 class="service-title">HOW TO PACKAGE A PARCEL TO SEND TO GERMANY</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+            When shipping to Germany, you must ensure that your parcel is properly packaged to prevent damage in transit. Use a sturdy outer material, 
+            such as a cardboard box or reinforced envelope and make sure any lose items are wrapped in protective material.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
+            In order to ensure your parcel arrives at its destination promptly, affix the address label clearly on the largest side. Whilst a package 
+            going missing is very rare, we’d always recommend including a return address.
         </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
+        <h2 class="service-title">GERMAN CUSTOMS RESTRICTIONS</h2>
         <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
+            Customers are often concerned about sending parcels within the EU in the current post-Brexit climate. Luckily, at Impact Express we ensure 
+            that the hard work is done for you: customs information is created during checkout, preventing any delays or extra charges upon delivery.
             <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
-        </div>
-        <h2 class="service-title">THINGS TO REMEMBER…</h2>
-        <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
+            As with all international shipping, you must make yourself aware of goods restrictions before you ship a package to Germany. Items that 
+            are prohibited from entering German territory include, but are not limited to:
+            <ul class="service-text">
+                <li>Jewellery and precious metals/stones with a value of over £4,000</li>
+                <li>Coins / medals</li>
+                <li>Video games</li>
+                <li>Lithium batteries</li>
+            </ul>
+            <br><br>
+            For a full list of prohibited and restricted items, you should refer to the German customs regulations, as well as Impact Express’s 
+            <a href="/information/prohibited-items">prohibited item list</a>. Please note that if you are shipping edible goods to Germany, they should be 
+            sent in their original packaging.
+            <br><br>
         </div>
     </div>
 @endsection
@@ -67,58 +70,13 @@
 <div class="tab">
     <div class="container flex-center">
         <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
     </div>
     <div class="container flex">
         <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
+            <h2 class="toUpper">HOW MUCH DOES IT COST TO SEND A PARCEL TO GERMANY?</h2>
             <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
-            </p>
-            <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
-            </ul>
-            <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
-
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
-            </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
-            <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                The cost of shipping to Germany will vary, depending on the weight and size of your package, as well as the service you choose, with express 
+                delivery incurring a higher fee. To get an exact price, please use our <a href="{{ route('quote.index') }}">online quote tool</a>.
             </p>
         </div>
     </div>
