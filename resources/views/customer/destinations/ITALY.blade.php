@@ -19,107 +19,71 @@
     <h1 class="service-title">SHIPPING TO ITALY</h1>
     <div class="service-text">
         <br>
-        We offer fast, competitive, and secure courier services to Italy. Our offering includes delivery to all major cities and regions, as well as a choice of different delivery speeds to suit your requirements.
+        We offer fast, competitive, and secure courier services to Italy. Our offering includes delivery to all major cities and regions, 
+        as well as a choice of different delivery speeds to suit your requirements.
         <br><br>
-        One of our close European neighbours, Italy has a rich culture and heritage. It includes the iconic Colosseum of bustling Rome, the colourful Mediterranean coastlines, the art and serenity of Florence 
+        One of our close European neighbours, Italy has a rich culture and heritage. It includes the iconic Colosseum of bustling Rome, 
+        the colourful Mediterranean coastlines, the art and serenity of Florence 
         and the world famous shopping and fashion of Milan.
     </div>
     <h2 class="service-title">SHIPPING TO ITALY: OUR SERVICES</h2>
     <p class="service-text">
-        Our Italian shipping options include Express Delivery (next day) for main destinations, and Economy Delivery for non-time sensitive or heavier packages (two to six working days).
+        Our Italian shipping options include Express Delivery (next day) for main destinations, and Economy Delivery for non-time sensitive 
+        or heavier packages (two to six working days).
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
+        Depending on whether you have a ‘business’ or ‘personal’ account, we can either arrange collection of your parcel from you, or you 
+        can drop it off at a designated place. Just choose the delivery service that best meets your requirements and we’ll do the rest.
         <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
+        Wherever you’re shipping your parcel to Lake Como in the north, the Alpine ski resorts, or the stunning region of Puglia in the 
+        south east, all parcels can be tracked on their journey with our online tracking tool.
         <br><br>
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
+        <h2 class="service-title">PARCEL PACKAGING FOR SHIPPING TO ITALY</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+            We always recommend you package your parcel carefully when sending overseas. We will do our utmost to ensure your parcel is treated 
+            with care, but you should pay attention to both the internal and external packaging. Wrap and secure items with suitable padding, 
+            bubble wrap and tape internally, and then choose a strong outer packaging.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
+            Amongst other things, Italian customs place restrictions on the some of the following goods:
+            <ul class="service-list">
+                <li>Certain liquids and foodstuffs</li>
+                <li>Certain toiletries</li>
+                <li>Tobacco</li>
+                <li>Antiques (works of art and fine art whose value exceeds 5,000 GBP)</li>
+            </ul>
+            See our <a href="/information/prohibited-items">full list of prohibited items</a>, or contact Italian Customs.
+            <br><br>
+            As a result of Brexit, the UK’s status has changed. In order to avoid any delays or complications at customs, simply add all relevant 
+            customs information when setting up your online profile with us and we will handle the rest.
+            <br><br>
         </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
+        <h2 class="service-title">ITALIAN CUSTOMS RESTRICTIONS</h2>
         <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
+            As always, when shipping overseas, you should check custom requirements and restrictions carefully before sending. Customs clearance 
+            is currently not needed for shipments from the UK to Italy, though there will still be security checks.
             <br><br>
             The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
             it will be more expensive than standard delivery.
         </div>
-        <h2 class="service-title">THINGS TO REMEMBER…</h2>
-        <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
-        </div>
+        <br><br>
     </div>
 @endsection
 @section('faq')
 <div class="tab">
     <div class="container flex-center">
         <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
     </div>
     <div class="container flex">
         <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
+            <h2 class="toUpper">HOW MUCH DOES IT COST TO SHIP TO ITALY?</h2>         
             <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
-            </p>
-            <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
-            </ul>
-            <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
-
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
-            </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
-            <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                The exact cost will depend on the size, weight and nature of the parcel you are shipping, and the delivery service that 
+                you choose. Please use our <a href="{{ route('quote.index') }}">Online Quote Tool</a> or contact us direct so that we can 
+                provide you with an accurate quote. We’re confident that you’ll find our rates to all Italian destinations offer good value.
             </p>
         </div>
     </div>

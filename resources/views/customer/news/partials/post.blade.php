@@ -3,7 +3,7 @@
         <img class="post-image" src="{{ $post->image_url }}">
         @endif
         <a href="{{ route('news-post', $post->slug) }}">
-            <h1 class="post-title">{{ $post->title }}</h1>
+            <h1 class="post-title">{!! $post->title !!}</h1>
         </a>
         <div class="post-subtitle">{!! $post->excerpt_html !!}</div>
         <div class="post-meta">
@@ -13,7 +13,7 @@
                     <li><i class="far fa-clock"><span class="post-date"><time>{{ $post->date }}</time></span></i></li>
                     <li><i class="fas fa-tags">
                         @foreach ($post->tags as $tag)
-                            <span class="post-tag"><a href="{{ route('tag', $tag->slug) }}">{{ $tag->title }}</a></span>
+                            <span class="post-tag"><a href="{{ route('tag', $tag->slug) }}">{!! $tag->title !!}</a></span>
                         @endforeach
                     </i></li>
                 </ul>

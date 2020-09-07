@@ -99,7 +99,7 @@ class DestinationsController extends Controller
                 return view('customer.destinations.HONG-KONG', compact('page', 'bannerImage'));
                 break;
             case 'destinations/japan':
-                $bannerImage = url('/storage/destinations/Japan-Country-Banner-v2-Impact-Express.jpg');
+                $bannerImage = url('storage/destinations/Japan---Country-Banner-v2---Impact-Express.jpg');
                 return view('customer.destinations.JAPAN', compact('page', 'bannerImage'));
                 break;
             case 'destinations/new-zealand':
