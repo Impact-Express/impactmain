@@ -82,11 +82,8 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::get('/admin', 'Backend\HomeController@index')->name('admin');
     Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
-<<<<<<< HEAD
     Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
-=======
     Route::get('/admin/pages', 'Backend\HomeController@pages')->name('admin-pages');
->>>>>>> 366d673028e1c0401b63a1cf885cd3c8fa131809
     Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
     Route::get('/admin/tags', 'Backend\TagsController@index')->name('admin-tags');
     Route::get('/admin/users/{user}/profile', 'Backend\UsersController@profile')->name('admin-profile');
