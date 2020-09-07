@@ -48,7 +48,14 @@
                     <i class='fas fa-tachometer-alt sidebar-text'></i>
                     <span class='k-item-text' style='padding-left: 16px;'>Dashboard</span>
                 </li>
-            </a> 
+            </a>
+            <li data-role='drawer-separator'><hr></li>
+            <a class="white" style='overflow: hidden;' href='{{ route('admin-media') }}'>
+                <li data-role='drawer-item' class="sidebar-item">
+                    <i class='fas fa-thumbtack sidebar-text'></i>
+                    <span class='k-item-text' style='padding-left: 20px;'>Media</span>
+                </li>
+            </a>
             <li data-role='drawer-separator'><hr></li>
             <a class="white" style='overflow: hidden;' href='{{ route('admin-posts') }}'>
                 <li data-role='drawer-item' class="sidebar-item">
