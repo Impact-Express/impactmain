@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ConsultationSent;
 use Illuminate\Http\Request;
 use App\Page;
+
 class DestinationsController extends Controller
 {
     public function send (Request $request)
@@ -95,7 +99,7 @@ class DestinationsController extends Controller
                 return view('customer.destinations.HONG-KONG', compact('page', 'bannerImage'));
                 break;
             case 'destinations/japan':
-                $bannerImage = url('/storage/destinations/Japan-Country-Banner-v2-Impact-Express.jpg');
+                $bannerImage = url('storage/destinations/Japan---Country-Banner-v2---Impact-Express.jpg');
                 return view('customer.destinations.JAPAN', compact('page', 'bannerImage'));
                 break;
             case 'destinations/new-zealand':
@@ -110,7 +114,10 @@ class DestinationsController extends Controller
                 $bannerImage = url('/storage/destinations/South-Korea-Country-Banner-v2-Impact-Express.jpg');
                 return view('customer.destinations.SOUTH-KOREA', compact('page', 'bannerImage'));
                 break;
-
+            case 'destinations/brazil':
+                $bannerImage = url('/storage/destinations/Brazil-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.brazil', compact('page', 'bannerImage'));
+                break;
         }
     }
 

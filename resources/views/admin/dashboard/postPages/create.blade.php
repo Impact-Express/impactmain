@@ -10,6 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js" ></script>
+<script src="https://cdn.tiny.cloud/1/6hlb8mosjceg0l6b7av3p3z398fzmjbfztjaz2o701adva25/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 @endsection
 @section('content')
 <div class="grid">
@@ -57,7 +58,7 @@
                                             @enderror
                                         </div>
 
-                                        <div class="form-group @error('body') has-error @enderror">
+                                        <div class="form-group body @error('body') has-error @enderror">
                                             <label for="Body">Body</label>
                                             <textarea class="form-textarea @error('body') has-error @enderror" id="new-post-body" tabindex="4" name="body" cols="50" rows="10">{{ $post->body }}</textarea>
 
@@ -142,6 +143,7 @@
         </div>
     </div>
 </div>
+
 <script>
         $('#new-post-tag').select2();
 
@@ -166,13 +168,33 @@
             showMillisec: false,
             showMicrosec: false,
         });
-        var simplemde1 = new SimpleMDE({ 
-            element: $('#new-post-excerpt')[0],
-            autofocus: false
+
+        tinymce.init({
+            selector: '#new-post-excerpt',
+            inline: false,
+            menubar: false,
+            toolbar: 'undo redo'
         });
-        var simplemde2 = new SimpleMDE({ 
-            element: $('#new-post-body')[0],
-            autofocus: false
+    
+        tinymce.init({
+            selector: '#new-post-body',
+            inline: false,
+            plugins: ['media image anchor imagetools textpattern link'],
+            textpattern_patterns: [
+                {start: '*', end: '*', format: 'italic'},
+                {start: '**', end: '**', format: 'bold'},
+                {start: '#', format: 'h1'},
+                {start: '##', format: 'h2'},
+                {start: '###', format: 'h3'},
+                {start: '####', format: 'h4'},
+                {start: '#####', format: 'h5'},
+                {start: '######', format: 'h6'},
+                {start: '1. ', cmd: 'InsertOrderedList'},
+                {start: '* ', cmd: 'InsertUnorderedList'},
+                {start: '- ', cmd: 'InsertUnorderedList' }
+            ],
+            image_advtab: true ,
+            toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link unlink anchor | responsivefilemanager | media image |'
         });
 </script>
 @endsection

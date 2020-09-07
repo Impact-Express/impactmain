@@ -11,7 +11,8 @@
 |
 */
 
-    use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\InformationController;
+use Illuminate\Support\Facades\Mail;
     use Illuminate\Support\Facades\Route;
 
 // Main Navigation Routes
@@ -29,10 +30,31 @@ Route::post('/send-my-parcel','ParcelController@send')->name('email-parcel-detai
 // Services Routes
     Route::get('/services', 'ServicesController@index')->name('services-index');
     Route::get('/services/{service}', 'ServicesController@show');
+    Route::get('/services/dangerous-goods/dry-ice', 'ServicesController@dryIce');
+
+    Route::get('/services/imports/import-request', 'ServicesController@importRequests')->name('import-requests');;
+    Route::post('/services/imports/import-request', 'ServicesController@sendImportRequest')->name('email-import-request');;
 
 // Shipping Destinations Routes
     Route::get('/destinations', 'DestinationsController@index')->name('destinations');
     Route::get('/destinations/{destination}', 'DestinationsController@show');
+
+// Information Pages Routes
+    Route::get('/information/coronavirus',                                      'InformationController@pages');
+    Route::get('/information/monthly-fuel-surcharge',                           'InformationController@pages');
+    Route::get('/information/service-level-agreement-and-surcharges',           'InformationController@pages');
+    Route::get('/information/remote-area-surcharges',                           'InformationController@pages');
+    Route::get('/information/denied-parties',                                   'InformationController@pages');
+    Route::get('/information/dangerous-goods',                                  'InformationController@pages');
+    Route::get('/information/prohibited-items',                                 'InformationController@pages');
+    Route::get('/information/packaging-guide',                                  'InformationController@pages');
+    Route::get('/information/opening-hours',                                    'InformationController@pages');
+    Route::get('/information/gdpr-policy',                                      'InformationController@pages');
+    Route::get('/information/careers',                                          'InformationController@pages');
+    Route::get('/information/impact-express-rate-increase-2020',                'InformationController@pages');
+    Route::get('/information/general-sanctions-warranty-and-indemnity-letter',  'InformationController@pages');
+
+    Route::get('/information/{info}', 'InformationController@show');
 
 
 // Authentication Routes...
@@ -47,6 +69,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::match(['put', 'patch'], '/admin/posts/{id}/edit', 'Backend\PostsController@update')->name('posts-update');
     Route::get('/admin/posts/{id}/edit', 'Backend\PostsController@edit')->name('posts-edit');
 
+    Route::resource('/admin/pages', 'Backend\PagesController');
+    Route::match(['put', 'patch'], '/admin/pages/{id}/edit', 'Backend\PagesController@update')->name('pages-update');
+    Route::get('/admin/pages/{id}/edit', 'Backend\PagesController@edit')->name('pages-edit');
+
     Route::get('/admin/trash', 'Backend\HomeController@trash')->name('admin-trash');
     Route::delete('/admin/trash/{id}', 'Backend\HomeController@destroy')->name('trash.eradicate');
     Route::put('/admin/trash/{id}', 'Backend\HomeController@restore')->name('trash.restore');
@@ -56,6 +82,7 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::get('/admin', 'Backend\HomeController@index')->name('admin');
     Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
+    Route::get('/admin/pages', 'Backend\HomeController@pages')->name('admin-pages');
     Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
     Route::get('/admin/tags', 'Backend\TagsController@index')->name('admin-tags');
     Route::get('/admin/users/{user}/profile', 'Backend\UsersController@profile')->name('admin-profile');

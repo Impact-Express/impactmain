@@ -9,15 +9,11 @@ use GrahamCampbell\Markdown\Facades\Markdown;
 class Page extends Model
 {
     protected $dates = [ 'published_at' ];
+    protected $fillable = ['title','slug','body','published_at', 'image', 'author_id'];
     
     public function author ()
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function category ($value='')
-    {
-        return $this->belongsTo(Category::class)->withDefault(['slug' => 'uncategorized']);
     }
 
     public function getImageUrlAttribute ($value)
@@ -42,10 +38,6 @@ class Page extends Model
         return $this->body ? Markdown::convertToHtml(e($this->body)) : NULL;
     }
 
-    public function getExcerptHtmlAttribute ($value)
-    {
-        return $this->excerpt ? Markdown::convertToHtml(e($this->excerpt)) : NULL;
-    }
     public function dateFormatted($showTimes = false)
     {
         $format = 'd/m/Y';
@@ -61,19 +53,5 @@ class Page extends Model
         } else {
             return '<span class="label label-success">Published</span>';
         }
-    }
-    public function scopeLatestFirst ($query)
-    {
-        return $query->orderBy('created_at','desc');
-    }
-
-    public function scopePopular ($query)
-    {
-        return $query->orderBy('view_count','desc');
-    }
-
-    public function scopePublished($query)
-    {
-        return $query->where("published_at", "<=", Carbon::now());
     }
 }

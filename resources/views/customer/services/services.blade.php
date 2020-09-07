@@ -84,7 +84,7 @@
             </p>
         </div>
     </section>
-    <section class="imports-delivery seperator">
+    <section class="imports-delivery">
         <a class="imports-delivery-img" href="services/worldwide-imports">
             <img src="{{ asset('img/worldwide-imports.png') }}" alt="">
         </a>
@@ -113,7 +113,7 @@
             </ul>
         </div>
     </section>
-    <section class="ietrax-delivery">
+    {{-- <section class="ietrax-delivery">
         <a class="ietrax-delivery-img" href="services/ietrax">
             <img src="{{ asset('img/worldwide-destinations.png') }}" alt="">
         </a>
@@ -141,7 +141,7 @@
                 *All transit times are subject to customs clearance.
             </ul>
         </div>
-    </section>
+    </section> --}}
 </div>
     @include('customer.services.partials.consultation-pane')
 @endsection
