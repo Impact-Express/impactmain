@@ -459,10 +459,6 @@ tbody, tr, td {
     margin-bottom: 20px;
     border: 3px solid #d6d6d6;
 }
-.form-group.excerpt {
-    height: 130px;
-    min-height: 130px;
-}
 .editor-toolbar {
     margin-top: 5px;
 }
@@ -501,13 +497,22 @@ tbody, tr, td {
 #new-post-body {
     text-transform: none;
 }
+
 .excerpt {
     margin-top: 15px;
     margin-bottom: 15px;
+    .CodeMirror {
+        height: 130px;
+        min-height: 130px;
+    }
 }
 .body {
     margin-top: 15px;
     margin-bottom: 15px;
+    .CodeMirror {
+        height: 200px;
+        min-height: 200px;
+    }
 }
 
 //? New Category Styling

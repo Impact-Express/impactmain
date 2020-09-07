@@ -54,9 +54,7 @@ class PostsController extends BackendController
         
         if ($request->hasFile('image')) 
         {
-            $image = $request->image->store('img');
-
-           $post = Post::create([
+            $post = Post::create([
                 'title'         => $request->title,
                 'slug'          => $request->slug,
                 'excerpt'       => $request->excerpt,
@@ -64,9 +62,10 @@ class PostsController extends BackendController
                 'published_at'  => $request->published_at,
                 'category_id'   => $request->category_id,
                 'author_id'     => $userid,
-                'image'         => $image
             ]);
             $post->tags()->attach($request->tag_slug);
+            $post->addMediaFromRequest('image')->toMediaCollection('images');
+            dd($post);
         }
         
         $post = Post::create([

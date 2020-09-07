@@ -176,9 +176,8 @@ div:hover.hover-light-grey  {
     float: right;
     background-size: cover;
     width: 750px;
-    height: 400px;
+    height: 280px;
     margin-top: -220px;
-    background-image: url('img/cat1.jpg');
 }
 .economy-infogfx {
     float: right;
@@ -186,7 +185,6 @@ div:hover.hover-light-grey  {
     width: 750px;
     height: 400px;
     margin-top: -220px;
-    background-image: url('img/cat1.jpg');
 }
 .overnight-infogfx {
     float: right;
@@ -194,7 +192,6 @@ div:hover.hover-light-grey  {
     width: 750px;
     height: 400px;
     margin-top: -220px;
-    background-image: url('img/cat1.jpg');
 }
 .imports-infogfx {
     float: right;
@@ -202,7 +199,6 @@ div:hover.hover-light-grey  {
     width: 750px;
     height: 400px;
     margin-top: -220px;
-    background-image: url('img/cat1.jpg');
 }
 
 /* Popular Destinations Classes */
@@ -237,32 +233,36 @@ div:hover.hover-light-grey  {
     transition: all .2s ease-in-out;
 }
 .destination1 {
-    background-image: url(/img/cat1.jpg);
+    background-image: url(/storage/destinations/thumbs/Country-Thumbnail---USA---Impact-Express.jpg);
     background-size: cover;
+    background-position: center;
     width: fit-content;
     border-radius: 5px;
     width: 220px;
     height: 220px;
 }
 .destination2 {
-    background-image: url(/img/cat2.jpg);
+    background-image: url(/storage/destinations/thumbs/Country-Thumbnail---Germany---Impact-Express.jpg);
     background-size: cover;
+    background-position: center;
     width: fit-content;
     border-radius: 5px;
     width: 220px;
     height: 220px;
 }
 .destination3 {
-    background-image: url(/img/cat1.jpg);
+    background-image: url(/storage/destinations/thumbs/Country-Thumbnail---France---Impact-Express.jpg);
     background-size: cover;
+    background-position: center;
     width: fit-content;
     border-radius: 5px;
     width: 220px;
     height: 220px;
 }
 .destination4 {
-    background-image: url(/img/cat2.jpg);
+    background-image: url(/storage/destinations/thumbs/Country-Thumbnail---Canada---Impact-Express.jpg);
     background-size: cover;
+    background-position: center;
     width: fit-content;
     border-radius: 5px;
     width: 220px;

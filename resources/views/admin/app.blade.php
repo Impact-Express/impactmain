@@ -39,6 +39,7 @@
         </div>
         </div>
     </div>
+<<<<<<< HEAD
     <div class="sidebar">
         <ul style="list-style-type: none;width: 100%;padding-inline-start: 0;margin-block-start: 0;">
             <i class='fas fa-info-circle sidebar-text'></i><span class='k-item-text' style='padding-left: 16px; font-size: 11px; overflow: hidden;'>Impact Express CMS System - v1</span>
@@ -106,25 +107,17 @@
             </a>
       </ul>
     </div>
+=======
+
+    <x-admin-nav />
+
+>>>>>>> 366d673028e1c0401b63a1cf885cd3c8fa131809
     <section id="main-content">
         <main>
             <div class="grid">
                 <div id="drawer" data-role="drawer" class="k-widget k-drawer">
                     <div class="drawer-content">
-                        @if (session()->has('success'))
-                        <div class="card-body success-message">
-                            <h5 class="card-title">
-                                {{ session()->get('success') }}
-                            </h5>
-                        </div>
-                        @endif
-                        @if (session()->has('warning'))
-                        <div class="card-body warning-message">
-                            <h5 class="card-title">
-                                {{ session()->get('warning') }}
-                            </h5>
-                        </div>
-                        @endif
+                       <x-admin-alerts />
                     @yield('content')
                     </div>
                 </div>

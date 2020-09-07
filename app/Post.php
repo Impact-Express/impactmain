@@ -3,14 +3,16 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Carbon\Carbon;
-use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 
-class Post extends Model
+class Post extends Model implements HasMedia
 {
     use SoftDeletes;
+    use InteractsWithMedia;
 
     protected $dates = [ 'published_at' ];
     protected $fillable = ['title','slug','excerpt','body','published_at','category_id', 'image', 'author_id', 'tag_id'];
@@ -77,13 +79,13 @@ class Post extends Model
     
     public function getBodyHtmlAttribute ($value)
     {
-        return $this->body ? Markdown::convertToHtml(e($this->body)) : NULL;
+        return $this->body ? html_entity_decode($this->body) : NULL;
     }
 
     
     public function getExcerptHtmlAttribute ($value)
     {
-        return $this->excerpt ? Markdown::convertToHtml(e($this->excerpt)) : NULL;
+        return $this->excerpt ? html_entity_decode($this->excerpt) : NULL;
     }
 
 

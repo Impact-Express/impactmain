@@ -3,121 +3,128 @@
         <div class="row">
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/USA"><img src="/img/USA-2.png" alt="Shipping to the United States of America"></a>
+                    <a href="/destinations/USA"><img src="\storage\destinations\thumbs\Country-Thumbnail---USA---Impact-Express.jpg" alt="Shipping to the United States of America"></a>
                 </div>
             </div>
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/canada"><img src="/img/canada-2.png" alt="Shipping to Canada"></a>
+                    <a href="/destinations/canada"><img src="\storage\destinations\thumbs\Country-Thumbnail---Canada---Impact-Express.jpg" alt="Shipping to Canada"></a>
                 </div>
             </div>
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/france"><img src="/img/france-2.png" alt="Shipping to France"></a>
+                    <a href="/destinations/france"><img src="\storage\destinations\thumbs\Country-Thumbnail---France---Impact-Express.jpg" alt="Shipping to France"></a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/germany"><img src="/img/germany-2.png" alt="Shipping to Germany"></a>
+                    <a href="/destinations/germany"><img src="\storage\destinations\thumbs\Country-Thumbnail---Germany---Impact-Express.jpg" alt="Shipping to Germany"></a>
                 </div>
             </div>
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/italy"><img src="/img/italy-2.png" alt="Shipping to Italy"></a>
+                    <a href="/destinations/italy"><img src="\storage\destinations\thumbs\Country-Thumbnail---Italy---Impact-Express.jpg" alt="Shipping to Italy"></a>
                 </div>
             </div>
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/spain"><img src="/img/spain-2.png" alt="Shipping to Spain"></a>
+                    <a href="/destinations/australia"><img src="\storage\destinations\thumbs\Country-Thumbnail---Australia---Impact-Express.jpg" alt="Shipping to Australia"></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4 country-box">
+                <div class="country-img">
+                    <a href="/destinations/japan"><img src="\storage\destinations\thumbs\Country-Thumbnail---Japan---Impact-Express.jpg" alt="Shipping to Japan"></a>
+                </div>
+            </div>
+            <div class="col-md-4 country-box">
+                <div class="country-img">
+                    <a href="/destinations/new-zealand"><img src="\storage\destinations\thumbs\Country-Thumbnail---NEw-Zealand---Impact-Express.jpg" alt="Shipping to New Zealand"></a>
+                </div>
+            </div>
+            <div class="col-md-4 country-box">
+                <div class="country-img">
+                    <a href="/destinations/sweden"><img src="\storage\destinations\thumbs\Country-Thumbnail---Sweden---Impact-Express.jpg" alt="Shipping to Sweden"></a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/australia"><img src="/img/aus-2.png" alt="Shipping to Australia"></a>
+                    <a href="/destinations/pakistan"><img src="\storage\destinations\thumbs\Country-Thumbnail---Pakistan---Impact-Express.jpg" alt="Shipping to Pakistan"></a>
                 </div>
             </div>
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/sweden"><img src="/img/sweden-2.png" alt="Shipping to Sweden"></a>
+                    <a href="/destinations/south-korea"><img src="\storage\destinations\thumbs\Country-Thumbnail---South-Korea---Impact-Express.jpg" alt="Shipping to South Korea"></a>
                 </div>
             </div>
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/hong-kong"><img src="/img/hong-kong-2.png" alt="Shipping to Hong Kong"></a>
+                    <a href="/destinations/thailand"><img src="\storage\destinations\thumbs\Country-Thumbnail---Thailand---Impact-Express.jpg" alt="Shipping to Thailand"></a>
                 </div>
             </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 country-box">
+                <div class="country-img">
+                    <a href="/destinations/china"><img src="\storage\destinations\thumbs\Country-Thumbnail---China---Impact-Express.jpg" alt="Shipping to China"></a>
+                </div>
+            </div>
+            <div class="col-md-4 country-box">
+                <div class="country-img">
+                    <a href="/destinations/portugal"><img src="\storage\destinations\thumbs\Country-Thumbnail---Portugal---Impact-Express.jpg" alt="Shipping to Portugal"></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 country-box">
+                <div class="country-img">
+                    <a href="/destinations/india"><img src="\storage\destinations\thumbs\Country-Thumbnail---India---Impact-Express.jpg" alt="Shipping to India"></a>
+                </div>
+            </div>
+
         </div>
         <div class="row">
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/japan"><img src="/img/japan-2.png" alt="Shipping to Japan"></a>
+                    <a href="/destinations/mexico"><img src="\storage\destinations\thumbs\Country-Thumbnail---Mexico---Impact-Express.jpg" alt="Shipping to Mexico"></a>
                 </div>
             </div>
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/new-zealand"><img src="/img/NZ-2.png" alt="Shipping to New Zealand"></a>
+                    <a href="/destinations/brazil"><img src="\storage\destinations\thumbs\Country-Thumbnail---Brazil---Impact-Express.jpg" alt="Shipping to Brazil"></a>
                 </div>
             </div>
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/UAE"><img src="/img/uae-2.png" alt="Shipping to the UAE"></a>
+                    <a href="/destinations/south-africa"><img src="\storage\destinations\thumbs\Country-Thumbnail---South-Africa---Impact-Express.jpg" alt="Shipping to South Africa"></a>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4 country-box">
-                <div class="country-img">
-                    <a href="/destinations/south-korea"><img src="/img/south-korea.png" alt="Shipping to South Korea"></a>
-                </div>
-            </div>
-            <div class="col-md-4 country-box">
-                <div class="country-img">
-                    <a href="/destinations/thailand"><img src="/img/thailand-2.png" alt="Shipping to Thailand"></a>
-                </div>
-            </div>
-            <div class="col-md-4 country-box">
-                <div class="country-img">
-                    <a href="/destinations/pakistan"><img src="/img/pakistan-2.png" alt="Shipping to Pakistan"></a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 country-box">
-                <div class="country-img">
-                    <a href="/destinations/china"><img src="/img/china-2.png" alt="Shipping to China"></a>
-                </div>
-            </div>
-            <div class="col-md-4 country-box">
-                <div class="country-img">
-                    <a href="/destinations/portugal"><img src="/img/portugal-2.png" alt="Shipping to Portugal"></a>
-                </div>
-            </div>
-            <div class="col-md-4 country-box">
-                <div class="country-img">
-                    <a href="/destinations/india"><img src="/img/india-2.png" alt="Shipping to India"></a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 country-box">
-                <div class="country-img">
-                    <a href="/destinations/mexico"><img src="/img/mexico-2.png" alt="Shipping to Mexico"></a>
-                </div>
-            </div>
-            <div class="col-md-4 country-box">
-                <div class="country-img">
-                    <a href="/destinations/brazil"><img src="/img/brazil-2.png" alt="Shipping to Brazil"></a>
-                </div>
-            </div>
+
+        {{-- <div class="row">
             <div class="col-md-4 country-box">
                 <div class="country-img">
                     <a href="/destinations/south-africa"><img src="/img/south-africa-2.png" alt="Shipping to South Africa"></a>
                 </div>
+            </div> <div class="col-md-4 country-box">
+                <div class="country-img">
+                    <a href="/destinations/south-africa"><img src="/img/south-africa-2.png" alt="Shipping to South Africa"></a>
+                </div>
+            </div> <div class="col-md-4 country-box">
+                <div class="country-img">
+                    <a href="/destinations/south-africa"><img src="/img/south-africa-2.png" alt="Shipping to South Africa"></a>
+                </div>
+            </div> <div class="col-md-4 country-box">
+                <div class="country-img">
+                    <a href="/destinations/south-africa"><img src="/img/south-africa-2.png" alt="Shipping to South Africa"></a>
+                </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>

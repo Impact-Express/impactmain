@@ -210,9 +210,8 @@ div:hover.hover-light-grey {
   float: right;
   background-size: cover;
   width: 750px;
-  height: 400px;
+  height: 280px;
   margin-top: -220px;
-  background-image: url("img/cat1.jpg");
 }
 
 .economy-infogfx {
@@ -221,7 +220,6 @@ div:hover.hover-light-grey {
   width: 750px;
   height: 400px;
   margin-top: -220px;
-  background-image: url("img/cat1.jpg");
 }
 
 .overnight-infogfx {
@@ -230,7 +228,6 @@ div:hover.hover-light-grey {
   width: 750px;
   height: 400px;
   margin-top: -220px;
-  background-image: url("img/cat1.jpg");
 }
 
 .imports-infogfx {
@@ -239,7 +236,6 @@ div:hover.hover-light-grey {
   width: 750px;
   height: 400px;
   margin-top: -220px;
-  background-image: url("img/cat1.jpg");
 }
 
 /* Popular Destinations Classes */
@@ -282,8 +278,9 @@ div:hover.hover-light-grey {
 }
 
 .destination1 {
-  background-image: url(/img/cat1.jpg);
+  background-image: url(/storage/destinations/thumbs/Country-Thumbnail---USA---Impact-Express.jpg);
   background-size: cover;
+  background-position: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -293,8 +290,9 @@ div:hover.hover-light-grey {
 }
 
 .destination2 {
-  background-image: url(/img/cat2.jpg);
+  background-image: url(/storage/destinations/thumbs/Country-Thumbnail---Germany---Impact-Express.jpg);
   background-size: cover;
+  background-position: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -304,8 +302,9 @@ div:hover.hover-light-grey {
 }
 
 .destination3 {
-  background-image: url(/img/cat1.jpg);
+  background-image: url(/storage/destinations/thumbs/Country-Thumbnail---France---Impact-Express.jpg);
   background-size: cover;
+  background-position: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -315,8 +314,9 @@ div:hover.hover-light-grey {
 }
 
 .destination4 {
-  background-image: url(/img/cat2.jpg);
+  background-image: url(/storage/destinations/thumbs/Country-Thumbnail---Canada---Impact-Express.jpg);
   background-size: cover;
+  background-position: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
