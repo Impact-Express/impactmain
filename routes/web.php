@@ -103,6 +103,7 @@ Route::group(['prefix' => 'admin'], function () {
     
 // CMS Routes
     Route::get('/news', 'NewsController@index')->name('news');
+    Route::get('/news/search', 'NewsController@search')->name('news-search');
     Route::get('/news/{post}', 'NewsController@show')->name('news-post');
     Route::get('/category/{category}', 'NewsController@category')->name('category');
     Route::get('/tags/{tag}', 'TagsController@index')->name('tag');

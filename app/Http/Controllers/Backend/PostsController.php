@@ -65,7 +65,6 @@ class PostsController extends BackendController
             ]);
             $post->tags()->attach($request->tag_slug);
             $post->addMediaFromRequest('image')->toMediaCollection('images');
-            dd($post);
         }
         
         $post = Post::create([

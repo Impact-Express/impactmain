@@ -23,14 +23,6 @@
 
                                     <form action="{{ route('admin-register-user') }}" id="post-form" method="POST" enctype="multipart/form-data">
                                         @csrf
-                                        <div class="form-group @error('userName') has-error @enderror">
-                                            <label for="slug">Username</label>
-                                            <input type="text" name="slug" id="edit-user-slug" class="form-text @error('userName') has-error @enderror">
-                                            @error('userName')
-                                                <span class="help-block has-error">{{ $message }}</span>
-                                                <br><br>
-                                            @enderror
-                                        </div>
                                         <div class="form-group @error('displayName') has-error @enderror">
                                             <label for="name">Display Name</label>
                                             <input type="text" name="name" id="edit-user-displayName" class="form-text @error('name') has-error @enderror">
@@ -39,7 +31,14 @@
                                                 <br><br>
                                             @enderror
                                         </div>
-                                        
+                                        <div class="form-group @error('userName') has-error @enderror">
+                                            <label for="slug">Username</label>
+                                            <input type="text" name="slug" id="edit-user-slug" class="form-text @error('userName') has-error @enderror">
+                                            @error('userName')
+                                                <span class="help-block has-error">{{ $message }}</span>
+                                                <br><br>
+                                            @enderror
+                                        </div>
                                         <div class="form-group @error('emailAddress') has-error @enderror">
                                             <label for="email">Email Address (Used for Login)</label>
                                             <input type="email" name="email" id="edit-user-displayName" class="form-text @error('emailAddress') has-error @enderror">

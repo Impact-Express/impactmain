@@ -35,4 +35,11 @@ class NewsController extends Controller
         $post->increment('view_count', 1);
         return view('customer.news.post', compact('post'));
     }
+
+    public function search()
+    {
+        $searchText = $_GET['query'];
+        $posts = Post::search($searchText)->paginate(4);
+        return view('customer.news.index', compact('posts', 'searchText'));
+    }
 }

@@ -12,18 +12,6 @@
                         <div class="box"> 
                           <div class="box-body table-responsive">
                             @if ($postCount > 0)
-                            <div class="box-header">
-                                <div class="pull-right">
-                                    <form class="search-form" action="" method="post">
-                                        @csrf
-                                        <input type="text" class="form-text" id="form-search-box" placeholder="Search for...">
-                                            <button class="form-search-btn" type="submit">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                    </form>
-                                </div>
-                            </div>
-                          <!-- /.box-header -->
                             <table class="table table-bordered table-condesed">
                                 <thead>
                                     <tr>

@@ -8,11 +8,13 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
+use Laravel\Scout\Searchable;
 
 class Post extends Model implements HasMedia
 {
     use SoftDeletes;
     use InteractsWithMedia;
+    use Searchable;
 
     protected $dates = [ 'published_at' ];
     protected $fillable = ['title','slug','excerpt','body','published_at','category_id', 'image', 'author_id', 'tag_id'];
@@ -110,6 +112,17 @@ class Post extends Model implements HasMedia
             return '<span class="label label-success">Published</span>';
         }
     }
+
+
+     /**
+     * Allow Posts to Be Searched through an index.
+     *
+     */
+    public function searchableAs()
+    {
+        return 'posts';
+    }
+
 
      /**
      * Sorts Posts by latest Post First
