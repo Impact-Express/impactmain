@@ -1,7 +1,6 @@
 <div class="search-widget">
-    <form class="search-form" action="" method="post">
-        @csrf
-        <input type="text" class="form-text" id="form-search-box" placeholder="Search for...">
+    <form class="search-form" action="/news/search" method="get">
+        <input type="text" name="query" class="form-text" id="form-search-box" placeholder="Search for...">
             <button class="form-search-btn" type="submit">
                 <i class="fa fa-search"></i>
             </button>

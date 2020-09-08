@@ -6,26 +6,46 @@
     <div id="drawer">
         <div class="drawer-content">
             <div id="Dashboard">
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                <div class="card-body card-posts">
+                    <div class="box">
+                        <div class="box-header">
+                            <div class="pull-left" style="padding-bottom: 20px;">
+                                <label for="image" class="button-image">Upload Image <input type="file" class="button-image" name="image" id="image" tabindex="8"></label>
+                            </div>
+                            <div class="pull-right">
+                                <form class="search-form" action="" method="post">
+                                    @csrf
+                                    <input type="text" class="form-text" id="form-search-box" placeholder="Search for...">
+                                        <button class="form-search-btn" type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                </form>
+                            </div>
+                          <!-- /.box-header -->
                         </div>
-                    @endif
-                    You are logged in!
+                        <!-- /.box-header -->
+                        <div class="box-body table-responsive">
+                        <table class="table table-bordered table-condesed">
+                            <thead>
+                                <tr>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <div class="card-footer clearfix">
+                            <div class="pull-left">
+                            </div>
+                            <div class="pull-right">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div id="Media" class="hidden">
-            you're on
-            </div>
-            <div id="Posts" class="hidden">
-                a rock
-            </div>
-            <div id="Pages" class="hidden">
-                floating in space
-            </div>
-            <div id="Settings" class="hidden">
-                Pretty cool huh?
             </div>
         </div>
     </div>

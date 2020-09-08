@@ -82,6 +82,7 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::get('/admin', 'Backend\HomeController@index')->name('admin');
     Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
+    Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
     Route::get('/admin/pages', 'Backend\HomeController@pages')->name('admin-pages');
     Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
     Route::get('/admin/tags', 'Backend\TagsController@index')->name('admin-tags');
@@ -102,6 +103,7 @@ Route::group(['prefix' => 'admin'], function () {
     
 // CMS Routes
     Route::get('/news', 'NewsController@index')->name('news');
+    Route::get('/news/search', 'NewsController@search')->name('news-search');
     Route::get('/news/{post}', 'NewsController@show')->name('news-post');
     Route::get('/category/{category}', 'NewsController@category')->name('category');
     Route::get('/tags/{tag}', 'TagsController@index')->name('tag');

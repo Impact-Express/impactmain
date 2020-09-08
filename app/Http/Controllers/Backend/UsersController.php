@@ -13,7 +13,8 @@ class UsersController extends Controller
 {
     public function index ()
     {
-        return view('admin.dashboard.usersPages.users')->with('users', User::all());
+        $userid = 1;
+        return view('admin.dashboard.usersPages.users', compact('userid'))->with('users', User::all());
     }
     
     public function register (User $user)
@@ -58,6 +59,11 @@ class UsersController extends Controller
     {
         if ($user == Auth::user()) {
             session()->flash('warning', 'You cannot remove Admin From your own account!');
+    
+            return redirect(route('admin-users'));
+        } elseif ($user == User::find(1)) 
+        {
+            session()->flash('warning', 'You cannot remove Admin from the Administrator Account!');
     
             return redirect(route('admin-users'));
         }

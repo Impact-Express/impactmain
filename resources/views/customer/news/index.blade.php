@@ -23,7 +23,12 @@
             <div class="alert info-alert">
                 <p>Tag: <strong>{{ $tagName }}</strong><p>
             </div>
-        @endif
+            @endif
+            @if (isset($searchText))
+            <div class="alert info-alert">
+                <p>Search Query: <strong>{{ $searchText }}</strong><p>
+            </div>
+            @endif
             @foreach ($posts as $post)
                 @include('customer.news.partials.post')
             @endforeach

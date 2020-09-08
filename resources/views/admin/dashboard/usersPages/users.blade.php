@@ -7,17 +7,8 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <div class="pull-left">
+                        <div class="pull-left" style="padding-bottom: 40px;">
                             <a id="add-button" title="Add New" class="button-success" href="{{ route('admin-register-user') }}">Register New user</a>
-                        </div>
-                        <div class="pull-right">
-                            <form class="search-form" action="" method="post">
-                                @csrf
-                                <input type="text" class="form-text" id="form-search-box" placeholder="Search for...">
-                                    <button class="form-search-btn" type="submit">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                            </form>
                         </div>
                     </div>
                     <!-- /.box-header -->
@@ -28,9 +19,10 @@
                             <th>Action</th>
                             <th>Avatar</th>
                             <th>Username</th>
+                            <th>Display Name</th>
                             <th>Email Address</th>
                             <th>User Role</th>
-                            <th>Admin/Writer Status</th>
+                            <th>Admin / Writer Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,13 +44,17 @@
                                 </form>
                             </td>
                             <td><img src="{{ $user->gravatar() }}" style="border-radius: 50%" width="80" height="80"></td>
+                            <td>{{ $user->slug }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->role }}</td>
                             @if ($user == Auth::user())
                                 <td>Cannot Remove Admin <br>From Yourself!</td>
                             @endif
-                            @if ($user != Auth::user() && $user->isAdmin())
+                            @if ($user->id == $userid)
+                                <td>Cannot Remove Admin <br>From The Administrator!</td>  
+                            @endif
+                            @if ($user != Auth::user() && $user->id != $userid && $user->isAdmin())
                             
                             <form action="{{ route('admin-users-makeWriter', $user->slug) }}" method="post">
                                 @csrf

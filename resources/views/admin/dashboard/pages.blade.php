@@ -12,23 +12,11 @@
                         <div class="box">
                             <div class="box-body table-responsive">
                                 <div class="box-header">
-                                    <div class="pull-left">
+                                    <div class="pull-left" style="padding-bottom: 40px;">
                                         <a id="add-button" title="Add New" class="button-success" href="{{ route('pages.create') }}"><i class="fa fa-plus-circle"></i> Add New</a>
                                     </div>
                               <!-- /.box-header -->
                                 @if ($pageCount > 0)
-                                <div class="box-header">
-                                    <div class="pull-right">
-                                        <form class="search-form" action="" method="post">
-                                            @csrf
-                                            <input type="text" class="form-text" id="form-search-box" placeholder="Search for...">
-                                                <button class="form-search-btn" type="submit">
-                                                    <i class="fa fa-search"></i>
-                                                </button>
-                                        </form>
-                                    </div>
-                                </div>
-                              <!-- /.box-header -->
                                 <table class="table table-bordered table-condesed">
                                   <thead>
                                       <tr>

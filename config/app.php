@@ -139,7 +139,6 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -166,6 +165,9 @@ return [
         /*
          * Package Service Providers...
          */
+        TeamTNT\Scout\TNTSearchScoutServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
+        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
 
         /*
          * Application Service Providers...
