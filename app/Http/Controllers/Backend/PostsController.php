@@ -54,32 +54,33 @@ class PostsController extends BackendController
         
         if ($request->hasFile('image')) 
         {
-            $post = Post::create([
-                'title'         => $request->title,
-                'slug'          => $request->slug,
-                'excerpt'       => $request->excerpt,
-                'body'          => $request->body,
-                'published_at'  => $request->published_at,
-                'category_id'   => $request->category_id,
-                'author_id'     => $userid,
-            ]);
+            $post = new Post;
+                $post->title         = $request->title;
+                $post->slug          = $request->slug;
+                $post->excerpt       = $request->excerpt;
+                $post->body          = $request->body;
+                $post->published_at  = $request->published_at;
+                $post->category_id   = $request->category_id;
+                $post->author_id     = $userid;
+                $post->image         = $request->image;
+
+                $post->tags()->attach($request->tag_slug);
+                $post->save();
+
+        } else {
+            $post = new Post;
+            $post->title         = $request->title;
+            $post->slug          = $request->slug;
+            $post->excerpt       = $request->excerpt;
+            $post->body          = $request->body;
+            $post->published_at  = $request->published_at;
+            $post->category_id   = $request->category_id;
+            $post->author_id     = $userid;
+
             $post->tags()->attach($request->tag_slug);
-            $post->addMediaFromRequest('image')->toMediaCollection('images');
-            $post->searchable();
+            $post->save();  
         }
         
-        $post = Post::create([
-            'title'         => $request->title,
-            'slug'          => $request->slug,
-            'excerpt'       => $request->excerpt,
-            'body'          => $request->body,
-            'published_at'  => $request->published_at,
-            'author_id'     => $userid,
-            'category_id'   => $request->category_id,
-        ]);            
-        $post->tags()->attach($request->tag_slug);
-        $post->searchable();  
-
         session()->flash('success', 'Post Created Successfully!');
         return redirect(route('admin-posts'));
         

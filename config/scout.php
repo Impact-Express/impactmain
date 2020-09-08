@@ -113,7 +113,7 @@ return [
     */
     'tntsearch' => [
         'storage'  => storage_path(),
-        'fuzziness' => env('SCOUT_TNT_FUZZINESS', false),
+        'fuzziness' => env('TNTSEARCH_FUZZINESS', false),
 	    'fuzzy' => [
 	        'prefix_length' => 2,
 	        'max_expansions' => 50,
