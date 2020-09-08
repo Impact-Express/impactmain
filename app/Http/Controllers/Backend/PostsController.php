@@ -62,10 +62,10 @@ class PostsController extends BackendController
                 'published_at'  => $request->published_at,
                 'category_id'   => $request->category_id,
                 'author_id'     => $userid,
-            ])->searchable();
+            ]);
             $post->tags()->attach($request->tag_slug);
             $post->addMediaFromRequest('image')->toMediaCollection('images');
-
+            $post->searchable();
         }
         
         $post = Post::create([
@@ -76,9 +76,9 @@ class PostsController extends BackendController
             'published_at'  => $request->published_at,
             'author_id'     => $userid,
             'category_id'   => $request->category_id,
-        ])->searchable();            
+        ]);            
         $post->tags()->attach($request->tag_slug);
-            
+        $post->searchable();  
 
         session()->flash('success', 'Post Created Successfully!');
         return redirect(route('admin-posts'));
