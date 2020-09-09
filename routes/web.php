@@ -90,10 +90,13 @@ Route::post('/send-my-parcel','ParcelController@send')->name('email-parcel-detai
     Route::resource('/admin/categories', 'Backend\CategoriesController');
     Route::resource('/admin/tags', 'Backend\TagsController');
 
+    //Resource Route for Media
+    Route::resource('/admin/media', 'Backend\MediaController');
+
+
     // Main Backend Navigation Routes
     Route::get('/admin', 'Backend\HomeController@index')->name('admin');
     Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
-    Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
     Route::get('/admin/pages', 'Backend\HomeController@pages')->name('admin-pages');
     Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
     Route::get('/admin/tags', 'Backend\TagsController@index')->name('admin-tags');

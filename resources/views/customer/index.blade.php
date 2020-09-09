@@ -10,22 +10,21 @@
 <section id="account-pane">
     <div class="account-pane-container">
     <span class="pane personal">
-        <div class="pane-left">
-                <div class="personal-account">
-                    <h1 class="personal-title">personal</h1>
-                    <h3 class="personal-subtitle">Send a Parcel with us today!</h3>
-                    <a href="https://personal.impactexpress.co.uk" class="personal-button button-alt">Send Parcel</a>
-                </div>
-            </div>
+        <div class="pane-left"></div>
+        <div class="personal-account">
+            <h1 class="personal-title">personal</h1>
+            <h3 class="personal-subtitle">Send a Parcel with us today!</h3>
+            <a href="https://personal.impactexpress.co.uk" class="personal-button button-alt">Send Parcel</a>
+        </div>
         </span>
         <span class="pane business">
-            <div class="pane-right">
-                <div class="business-account">
-                    <h1 class="business-title">business</h1>
-                    <h3 class="business-subtitle">Send Parcels Daily? Sign up for a Business Account!</h3>
-                    <a href="business.impactexpress.co.uk" class="business-button button-white">Create Account</a>
-                </div>
+            <div class="pane-right"></div>
+            <div class="business-account">
+                <h1 class="business-title">business</h1>
+                <h3 class="business-subtitle">Send Parcels Daily? Sign up for a Business Account!</h3>
+                <a href="https://business.impactexpress.co.uk" class="business-button button-white">Create Account</a>
             </div>
+
         </span>    
     </div>
 </section>

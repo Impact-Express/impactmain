@@ -10,12 +10,20 @@
                     <div class="box">
                         <div class="box-header">
                             <div class="pull-left" style="padding-bottom: 20px;">
-                                <label for="image" class="button-image">Upload Image <input type="file" class="button-image" name="image" id="image" tabindex="8"></label>
+                                <form action="{{ route('media.store') }}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    <label>
+                                        <span>Upload Media</span>
+                                        <label for="name" class="button-image">Browse...</label>
+                                        <input type="file" class="button-image" name="name" id="name" tabindex="8">
+                                    </label>
+                                    <input type="submit" value="Upload">
+                                </form>
                             </div>
                             <div class="pull-right">
                                 <form class="search-form" action="" method="post">
                                     @csrf
-                                    <input type="text" class="form-text" id="form-search-box" placeholder="Search for...">
+                                    <input type="text" name="query" class="form-text" id="form-search-box" placeholder="Search for...">
                                         <button class="form-search-btn" type="submit">
                                             <i class="fa fa-search"></i>
                                         </button>
