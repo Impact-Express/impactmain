@@ -21,10 +21,6 @@ class HomeController extends BackendController
     {
         return view('admin.dashboard.index');
     }
-    public function media()
-    {
-        return view('admin.dashboard.media');
-    }
     public function posts()
     {
         $posts = Post::with('category', 'author', 'tags')->latest()->paginate($this->pagelimit);

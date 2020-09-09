@@ -12,6 +12,7 @@
 */
 
 use App\Http\Controllers\InformationController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
     use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,9 @@ Route::post('/send-my-parcel','ParcelController@send')->name('email-parcel-detai
     Route::get('/destinations/{destination}', 'DestinationsController@show');
 
 // Information Pages Routes
+
+    //Static Information Routes, 
+    //will soon refactor into the wildcard route once i get the page creation down.
     Route::get('/information/coronavirus',                                      'InformationController@pages');
     Route::get('/information/monthly-fuel-surcharge',                           'InformationController@pages');
     Route::get('/information/service-level-agreement-and-surcharges',           'InformationController@pages');
@@ -54,40 +58,51 @@ Route::post('/send-my-parcel','ParcelController@send')->name('email-parcel-detai
     Route::get('/information/impact-express-rate-increase-2020',                'InformationController@pages');
     Route::get('/information/general-sanctions-warranty-and-indemnity-letter',  'InformationController@pages');
 
+    //Show the Information Pages
     Route::get('/information/{info}', 'InformationController@show');
 
 
 // Authentication Routes...
-Route::group(['prefix' => 'admin'], function () {
+    Route::group(['prefix' => 'admin'], function () {
 
-    Auth::routes();
+        Auth::routes();
 
-});
+    });
     
 // Backend Routes
+
+    // Blog Posts Routes
     Route::resource('/admin/posts', 'Backend\PostsController');
     Route::match(['put', 'patch'], '/admin/posts/{id}/edit', 'Backend\PostsController@update')->name('posts-update');
     Route::get('/admin/posts/{id}/edit', 'Backend\PostsController@edit')->name('posts-edit');
 
+    // Page Routes
     Route::resource('/admin/pages', 'Backend\PagesController');
     Route::match(['put', 'patch'], '/admin/pages/{id}/edit', 'Backend\PagesController@update')->name('pages-update');
     Route::get('/admin/pages/{id}/edit', 'Backend\PagesController@edit')->name('pages-edit');
 
+    // 'SoftDeletes' Routes for Hard Deleting
     Route::get('/admin/trash', 'Backend\HomeController@trash')->name('admin-trash');
     Route::delete('/admin/trash/{id}', 'Backend\HomeController@destroy')->name('trash.eradicate');
     Route::put('/admin/trash/{id}', 'Backend\HomeController@restore')->name('trash.restore');
 
+    // Resource Routes for Categories and Tags
     Route::resource('/admin/categories', 'Backend\CategoriesController');
     Route::resource('/admin/tags', 'Backend\TagsController');
 
+    //Resource Route for Media
+    Route::resource('/admin/media', 'Backend\MediaController');
+
+
+    // Main Backend Navigation Routes
     Route::get('/admin', 'Backend\HomeController@index')->name('admin');
     Route::get('/admin/posts', 'Backend\HomeController@posts')->name('admin-posts');
-    Route::get('/admin/media', 'Backend\HomeController@media')->name('admin-media');
     Route::get('/admin/pages', 'Backend\HomeController@pages')->name('admin-pages');
     Route::get('/admin/categories', 'Backend\CategoriesController@index')->name('admin-categories');
     Route::get('/admin/tags', 'Backend\TagsController@index')->name('admin-tags');
     Route::get('/admin/users/{user}/profile', 'Backend\UsersController@profile')->name('admin-profile');
 
+    // Middleware to make sure all users accessing the users route are authenticated to do so
     Route::middleware(['auth', 'admin'])->group(function () {
         Route::get('/admin/users', 'Backend\UsersController@index')->name('admin-users');
 

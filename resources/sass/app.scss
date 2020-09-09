@@ -169,27 +169,29 @@ h1, h2, h3, h4, h5, h6 {
 .pane-left {
     background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url("/img/personal-account.jpg");
     background-size: cover;
-    -webkit-filter: grayscale(1) opacity(.2);
-    filter:greyscale(1) opacity(.2);
+    -webkit-filter:none;
+    filter:none;
+    transition: 0.2s;
     height: 100%;
 }
 .pane-left:hover {
-    -webkit-filter:none;
-    filter:none;
+    -webkit-filter: grayscale(1) opacity(0.5);
+    filter:greyscale(1) opacity(0.5);
 }
 
 
 /* Business Account Pane Styles */
 .pane-right {
-    background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url("/img/business-account.jpg");
+    background: linear-gradient(to top, transparent, rgba(141, 141, 141, 0.47)), url("/img/business-account.jpg");
     background-size: cover;
-    -webkit-filter: grayscale(1) opacity(.2);
-    filter:greyscale(1) opacity(.2);
+    -webkit-filter:none;
+    filter:none;
+    transition: 0.2s;
     height: 100%;
 }
 .pane-right:hover {
-    -webkit-filter:none;
-    filter:none;
+    -webkit-filter: grayscale(1) opacity(0.5);
+    filter:greyscale(1) opacity(0.5);
 }
 
 @media (min-width: 768px) {
@@ -210,18 +212,32 @@ h1, h2, h3, h4, h5, h6 {
         filter:none;
     }
 
+    /* Personal Account Pane Text Styles */
     .pane-left {
-        background:url('img/cat1.jpg');
+        background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url("/img/personal-account.jpg");
         background-size: cover;
-        -webkit-filter: grayscale(1) opacity(.2);
-        filter:greyscale(1) opacity(.2);
+        -webkit-filter:none;
+        filter:none;
+        transition: 0.2s;
+        height: 100%;
+    }
+    .pane-left:hover {
+        -webkit-filter: grayscale(1) opacity(0.5);
+        filter:greyscale(1) opacity(0.5);
     }
 
+    /* Business Account Pane Styles */
     .pane-right {
-        background:url('img/cat2.jpg');
+        background: linear-gradient(to top, transparent, rgba(141, 141, 141, 0.47)), url("/img/business-account.jpg");
         background-size: cover;
-        -webkit-filter: grayscale(1) opacity(.2);
-        filter:greyscale(1) opacity(.2);
+        -webkit-filter:none;
+        filter:none;
+        transition: 0.2ms;
+        height: 100%;
+    }
+    .pane-right:hover {
+        -webkit-filter: grayscale(1) opacity(0.5);
+        filter:greyscale(1) opacity(0.5);
     }
 
     .service-box-container {
@@ -463,27 +479,32 @@ h1, h2, h3, h4, h5, h6 {
         width:50%;
         background:#F2ECEC;
     }
+    /* Personal Account Pane Text Styles */
     .pane-left {
         background: linear-gradient(to top, transparent, rgba(230, 230, 230, 0.47)), url("/img/personal-account.jpg");
         background-size: cover;
-        -webkit-filter: grayscale(1) opacity(.2);
-        filter:greyscale(1) opacity(.2);
+        -webkit-filter:none;
+        filter:none;
+        transition: 0.2s;
         height: 100%;
     }
     .pane-left:hover {
+        -webkit-filter: grayscale(1) opacity(0.5);
+        filter:greyscale(1) opacity(0.5);
+    }
+
+    /* Business Account Pane Styles */
+    .pane-right {
+        background: linear-gradient(to top, transparent, rgba(141, 141, 141, 0.47)), url("/img/business-account.jpg");
+        background-size: cover;
         -webkit-filter:none;
         filter:none;
-    }
-    .pane-right {
-        background: linear-gradient(to top, transparent, rgba(66, 66, 66, 0.47)), url("/img/business-account.jpg");
-        background-size: cover;
-        -webkit-filter: grayscale(1) opacity(.2);
-        filter:greyscale(1) opacity(.2);
+        transition: 0.2s;
         height: 100%;
     }
     .pane-right:hover {
-        -webkit-filter:none;
-        filter:none;
+        -webkit-filter: grayscale(1) opacity(0.5);
+        filter:greyscale(1) opacity(0.5);
     }
 
 /***********************************
@@ -580,7 +601,7 @@ h1, h2, h3, h4, h5, h6 {
 *****************************************/
     .personal-account {
         position: relative;
-        top: 12em;
+        top: -22em;
         margin: auto;
         width: fit-content;
     }
@@ -608,7 +629,7 @@ h1, h2, h3, h4, h5, h6 {
 *****************************************/
     .business-account {
         position: relative;
-        top: 12em;
+        top: -22em;
         margin: auto;
         width: fit-content;
     }
@@ -616,14 +637,14 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
         font-size: 5rem;
         font-weight: 600;
-        color: #F2ECEC;
+        color: #fff;
         margin: 0;
     }
     .business-subtitle {
         text-align: center;
         font-size: 1rem;
         margin: 0;
-        color: #F2ECEC;
+        color: #fff;
     }
     .business-button {
         position: relative;
