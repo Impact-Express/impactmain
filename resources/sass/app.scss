@@ -240,22 +240,252 @@ h1, h2, h3, h4, h5, h6 {
         filter:greyscale(1) opacity(0.5);
     }
 
-    .service-box-container {
-        width:100%;
+
+/*****************************************
+    *? Personal Account Pane Text Styles
+*****************************************/
+    .personal-account {
+        position: relative;
+        top: -16em;
+        margin: auto;
+        width: fit-content;
+    }
+    .personal-title {
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 100;
+        color: #707070;
+        margin: 0;
+    }
+    .personal-subtitle {
+        text-align: center;
+        font-size: .9rem;
+        margin: 0;
+        color: #707070;
+    }
+    .personal-button {
+        position: relative;
+        top: 3em;
+        left: 3em;
+    }
+
+/*****************************************
+    *? Business Account Pane Text Styles
+*****************************************/
+    .business-account {
+        position: relative;
+        top: -16em;
+        margin: auto;
+        width: fit-content;
+    }
+    .business-title {
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 600;
+        color: #fff;
+        margin: 0;
+    }
+    .business-subtitle {
+        text-align: center;
+        font-size: .9rem;
+        margin: 0;
+        color: #fff;
+    }
+    .business-button {
+        position: relative;
+        top: 3em;
+        left: 4.5em;
+    }
+
+/***********************************
+    *? Services Boxes Styles
+***********************************/
+.service-box-container {
+    width:100%;
+    display:flex;
+}
+.service-box {
+    width:100%;
+    height:300px;
+}
+.service-box-odd {
+    background: #E3E3E3;
+    border: 1px solid #a1a1a1;
+}
+.service-box-even {
+    background: #D3CFCF;
+    border: 1px solid #a1a1a1;
+}
+.service-box-img {
+    width: fit-content;
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: #FECE00;
+    border: 3px solid #FFFFFF;
+}
+.service-img {
+    margin: 8px;
+    display: block;
+}
+.service-box-title {
+    width: fit-content;
+    padding-top: 10px;
+    margin: auto;
+}
+.service-box-excerpt {
+    width: 86%;
+    padding-top: 10px;
+    margin: auto;
+}
+#service-section {
+    height: 340px;
+}
+.service-section-pc {
+    display: none;
+}
+.service-section-tablet {
+    display: block;
+}
+
+/***********************************
+    *? DHL Service Partner Styles
+***********************************/
+.dhl-service-partner {
+    background: #FECE00;
+    position: relative;
+    display: flex;
+    height: 130px;
+    width: 100%;
+    margin: auto;
+    bottom: 15px;
+    box-shadow: 0 2px 11px 3px rgba(0, 0, 0, 0.19);
+}
+.dhl-srv-logo {
+    width: 15em;
+    padding: 20px 343px;
+}
+.dhl-srv-logo-text {
+    position: relative;
+    width: fit-content;
+    font-size: 1.6em;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: 30.5%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.dhl-srv-logo-text-bold {
+    font-size: 1em;
+    font-weight: bold;
+}
+.partnership-title {
+    width: fit-content;
+    font-size: 1.5em;
+    margin: 15px 0px 10px 10px;
+}
+.partnership-text {
+    width: 705px;
+    font-size: 1em;
+    margin: 10px 0px 24px 10px;
+}
+
+/*********************************
+    *? About Us Section Styles
+*********************************/
+.about-us {
+    background: #FFF;
+    z-index: -1;
+    height: 500px;
+}
+.about-us-title {
+    font-size: 5em;
+    margin: auto;
+    margin-left: 41%;
+    width: fit-content;
+    position: relative;
+    top: 150px;
+    font-weight: 100;
+}
+.about-us-text {
+    position: relative;
+    width: 83%;
+    margin: auto;
+    font-size: 1.2em;
+    top: 192px;
+}
+.about-arrow {
+    width: fit-content;
+    margin: auto;
+    top: 160px;
+}
+.caret {
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+.caret:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 20px solid #000000;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+.caret:after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 0;
+    border-top: 19px solid #000000;
+    border-left: 19px solid transparent;
+    border-right: 19px solid transparent;
+}
+.caret-sm {
+    position: relative;
+    right: 6px;
+}
+.caret-sm:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 7px solid #000000;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+.caret-sm:after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 0;
+    border-top: 6px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+
+
+    .main-nav {
         display:flex;
-    }
-
-    .service-box {
-        width:25%;
-        height:180px;
-    }
-
-    .service-box-odd {
-        background: #E3E3E3;
-    }
-
-    .service-box-even {
-        background: #D3CFCF;
+        width:100%;
+        height:100px;
+        background:white;
+        align-items: center;
+        justify-content: space-between;
+        //box-shadow: 0 7px 4px 0 rgba(0, 0, 0, 0.19);
+        // padding:0 10%;
+        > ul {
+            grid-auto-flow: column;
+        
+            > li {
+            margin: 0 0.5rem;
+            }
+        }
     }
     .mobile-nav {
         position: fixed;
@@ -520,9 +750,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     .service-box-odd {
         background: #E3E3E3;
+        border:0;
     }
     .service-box-even {
         background: #D3CFCF;
+        border:0;
     }
     .service-box-img {
         width: fit-content;
@@ -551,6 +783,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     #service-section {
         height: 340px;
+    }
+    .service-section-tablet {
+        display: none;
+    }
+    .service-section-pc {
+        display: block;
     }
 
 /***********************************

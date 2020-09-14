@@ -29,7 +29,7 @@
     </div>
 </section>
 
-<section id="service-section">
+<section id="service-section" class="service-section-pc">
     <div class="service-box-container">
         <div class="service-box service-box-odd">
             <div class="service-box-img">
@@ -98,7 +98,80 @@
                 <b class="dhl-srv-logo-text-bold">DHL </b>Authorised Service Partner
             </h3>
         </div>
-</div>
+    </div>
+</section>
+<section id="service-section" class="service-section-tablet">
+    <div class="service-box-container">
+        <div class="service-box service-box-odd">
+            <div class="service-box-img">
+                <img class="service-img" src="img/services-web.png" alt="">
+            </div>
+            <h3 class="service-box-title">
+                Wholesale Courier Services
+            </h3>
+            <p class="service-box-excerpt">
+                At Impact Express we provide integrator based wholesale courier services to the logistics industry.
+                We are an extension to your business offering a link to integrators to complete your deliveries with 
+                the best in class fully tracked services
+            </p>
+        </div>
+        <div class="service-box service-box-even">
+            <div class="service-box-img">
+            <img class="service-img" src="img/services-page.png" alt="">
+            </div>
+            <h3 class="service-box-title">
+                Online Booking Portal
+            </h3>
+            <p class="service-box-excerpt">
+                Our intuitive delivery portal available to all customers, easily compare services and products on 
+                offer from Impact Express via our chosen carrier services. You can book shipments, print carrier 
+                labels, customs paperwork, manage tracking and deliveries.
+            </p>
+        </div>
+    </div>
+    <div class="service-box-container">
+        <div class="service-box service-box-odd">
+            <div class="service-box-img">
+                <img class="service-img" src="img/services-target.png" alt="">
+            </div>
+            <h3 class="service-box-title">
+                Lithium Batteries and Dangerous Goods
+            </h3>
+            <p class="service-box-excerpt">
+                As a Dangerous Goods Certified Carrier we have the knowledge and clearance to send your items containing 
+                lithium batteries, mobile phones and other dangerous goods across our worldwide network.
+            </p>
+        </div>
+        <div class="service-box service-box-even">
+            <div class="service-box-img">
+                <img class="service-img" src="img/services-direction.png" alt="">
+            </div>
+            <h3 class="service-box-title">
+                International Express & Economy Delivery Solutions
+            </h3>
+            <p class="service-box-excerpt">
+                Express worldwide, European Economy and UK Overnight integrator based courier services. Connection 
+                to worldwide delivery to over 220 countries, with a wide range of express parcel and package services, 
+                from documents, small and large parcels or pallets.
+            </p>
+        </div>
+    </div>
+    <div class="dhl-service-partner">
+        <div style="margin:auto;">
+            <h3 class="partnership-title">Our Partnership</h3>
+            <p class="partnership-text">
+                We are pleased to be an authorised sale partner with DHL. We offer access to DHL’s Express and Economy Select 
+                services for UK, European and Worldwide fully tracked delivery services available from our LHR warehouse, DHL 
+                depots, DHL Services points or for collection from your office
+            </p>
+        </div>
+        <div style="width: 54%;">
+            <img class="dhl-srv-logo" src="img/dhl-logo.png" alt="DHL Authorised Service Partner">
+            <h3 class="dhl-srv-logo-text">
+                <b class="dhl-srv-logo-text-bold">DHL </b>Authorised Service Partner
+            </h3>
+        </div>
+    </div>
 </section>
 
 <section class="about-us" id="about-us">

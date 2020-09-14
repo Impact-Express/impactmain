@@ -5,9 +5,9 @@
 <div class="news">
     <div class="container leftside">
         <article class="post">
-            @if ($post->image_url)
+            @if ($images)
                 <div class="post-image">
-                    <img class="post-image" src="{{ $post->image_url }}" alt="{{ $post->title }}">
+                    <img class="post-image" src="{{ $images }}">
                 </div>
             @endif
             <div class="post-item-body">

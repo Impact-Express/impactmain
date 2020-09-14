@@ -68,6 +68,16 @@ class Post extends Model implements HasMedia
         return $imageUrl;
     }
 
+    /**
+     * Define the Media Collection for all Post Images to use
+     *
+     */
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('postImages');
+    }
+
+
 
      /**
      * Gets the Published Date and Returns it in a human readable format
