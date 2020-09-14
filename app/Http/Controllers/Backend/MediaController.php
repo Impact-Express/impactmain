@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Media;
+use App\MediaBrowser as Media;
 use Illuminate\Http\Request;
 
 class MediaController extends Controller
@@ -15,7 +15,9 @@ class MediaController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard.media');
+        $media = new Media;
+        $uploads = $media->getMedia();
+        return view('admin.dashboard.media', compact('media', 'uploads'));
     }
 
     /**
@@ -38,10 +40,12 @@ class MediaController extends Controller
     {
         
 
-        dd($request->all());
-        $media = Media::create($request->all())
-        ->addMedia(storage_path($request->name))
-        ->toMediaCollection('media');
+        
+
+        $media = new Media;
+        $media->addMediaFromRequest('name')->toMediaCollection('uploads');
+
+        dd($media);
 
         // return redirect()->back();
     }

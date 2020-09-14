@@ -39,10 +39,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                                @foreach ($uploads as $upload)
+                                <tr>
+                                <td>{{$upload}}</td>
+                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                         </div>

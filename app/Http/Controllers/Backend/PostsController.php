@@ -40,6 +40,7 @@ class PostsController extends BackendController
     {
         return view('admin.dashboard.postPages.create', compact('post', 'category', 'tag'));
     }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -62,7 +63,10 @@ class PostsController extends BackendController
                 $post->published_at  = $request->published_at;
                 $post->category_id   = $request->category_id;
                 $post->author_id     = $userid;
-                $post->image         = $request->image;
+
+                $post->addMediaFromRequest('image')->toMediaCollection('postImages', 'upload');
+                $post->image = $request->image;
+                // dd($post);
 
                 $post->tags()->attach($request->tag_slug);
                 $post->save();
@@ -84,6 +88,28 @@ class PostsController extends BackendController
         session()->flash('success', 'Post Created Successfully!');
         return redirect(route('admin-posts'));
         
+    }
+        /**
+     * Handle an ImageRequest for uploading images to a post.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    private function handleRequest($request)
+    {
+       $data = $request->all();
+
+       if ($request->hasFile('image')) 
+       {
+          $image = $request->file('image');
+          $fileName = $image->getClientOriginalName();
+          $destination = $this->uploadPath;
+
+          $image->move($destination, $fileName);
+          $data['image'] = $fileName;
+
+          return $data;
+       }
     }
 
     /**

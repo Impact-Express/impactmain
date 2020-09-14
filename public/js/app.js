@@ -19372,12 +19372,7 @@ for (i = 0; i < close.length; i++) {
   };
 }
 
-document.getElementById('faqs').addEventListener('click', function () {
-  openTab(event, 'FAQs');
-});
-document.getElementById('guides').addEventListener('click', function () {
-  openTab(event, 'Guides');
-});
+$('#faqs').click(openTab(event, 'FAQs'));
 
 function openTab(evt, tabName) {
   // Declare all variables
