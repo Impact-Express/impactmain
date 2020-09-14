@@ -358,37 +358,38 @@ h1, h2, h3, h4, h5, h6 {
     background: #FECE00;
     position: relative;
     display: flex;
-    height: 130px;
+    height: 170px;
     width: 100%;
     margin: auto;
     bottom: 15px;
     box-shadow: 0 2px 11px 3px rgba(0, 0, 0, 0.19);
 }
 .dhl-srv-logo {
+    display: block;
     width: 15em;
-    padding: 20px 343px;
+    margin: auto;
+    padding: 20px 2.5%;
 }
 .dhl-srv-logo-text {
     position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     font-size: 1.6em;
     font-weight: 100;
-    margin-left: auto;
-    margin-right: 30.5%;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: auto;
 }
 .dhl-srv-logo-text-bold {
     font-size: 1em;
     font-weight: bold;
 }
 .partnership-title {
-    width: fit-content;
+    width: 98%;
     font-size: 1.5em;
     margin: 15px 0px 10px 10px;
 }
 .partnership-text {
-    width: 705px;
+    width: 98%;
     font-size: 1em;
     margin: 10px 0px 24px 10px;
 }
@@ -397,6 +398,8 @@ h1, h2, h3, h4, h5, h6 {
     *? About Us Section Styles
 *********************************/
 .about-us {
+    position: relative;
+    top: 17em;
     background: #FFF;
     z-index: -1;
     height: 500px;
@@ -404,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-us-title {
     font-size: 5em;
     margin: auto;
-    margin-left: 41%;
+    margin-left: 36%;
     width: fit-content;
     position: relative;
     top: 150px;
@@ -412,7 +415,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .about-us-text {
     position: relative;
-    width: 83%;
+    width: 92%;
     margin: auto;
     font-size: 1.2em;
     top: 192px;
@@ -468,7 +471,125 @@ h1, h2, h3, h4, h5, h6 {
     border-right: 6px solid transparent;
 }
 
-
+/************************
+    *? Footer Styles
+*************************/
+.main-footer {
+    height: 270px;
+    background: #2d3332;
+    color: #999b9c;
+    padding: 64px 0;
+    position: relative;
+    top: 17em;
+}
+.main-footer h4 {
+    color: #e0e0e0;
+}
+#main-footer .footer-links .list-group-item {
+    padding: 0 0 0px;
+    background-color: transparent;
+    border-color: transparent;
+}
+.copyrights {
+    border-left: 1px solid #4c5151;
+    padding-left: 8px;
+    width: 80%;
+}
+.socials ul {
+    display: block;
+    padding-inline-start: 0;
+}
+.socials li {
+    display: inline-block;
+}
+.socials ul li a {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    text-align: center;
+    vertical-align: bottom;
+    margin-left: 4px;
+    background-color: #444848;
+    color: #ddd;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+.list-group, .footer-links {
+    padding: 0;
+    list-style-type: none;
+}
+#explore, .row {
+    display: flex;
+}
+.list-group-item a {
+    color: #999b9c;
+}
+.list-group-item a:hover {
+    color: #e6e6e6;
+}
+.explore-left {
+    width: fit-content;
+    padding-right: 30px;
+}    
+.explore-right {
+    width: fit-content;
+}
+.socials a {
+    color: #e6e6e6;
+}
+.socials a:hover {
+    color: #999b9c;
+}
+.font-awesome-credit {
+    padding-top: 10px;
+}
+.font-awesome-credit a {
+    color: #999b9c;
+}
+.font-awesome-credit a:hover {
+    color: #e6e6e6;
+}
+/* Columns */
+.column-xs {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    height: fit-content;
+}
+.column-sm {
+    float: left;
+    width: 21%;
+    padding: 13px;
+    height: fit-content;
+}
+.column-md {
+float: left;
+width: 28%;
+padding: 10px;
+height: fit-content;
+}
+.column-lg {
+float: left;
+width: 44%;
+padding: 10px;
+height: fit-content;
+}
+.column-xl {
+float: left;
+width: 60%;
+padding: 10px;
+height: fit-content;
+}
+.form-email-footer {
+    padding: 6px 12px;
+    background-color: #2d3332;
+    border: 1px solid #666869;
+    border-right: 0;
+    width: 100%;
+    color: #e0e0e0;
+}
 
     .main-nav {
         display:flex;
@@ -894,6 +1015,7 @@ h1, h2, h3, h4, h5, h6 {
     *? About Us Section Styles
 *********************************/
     .about-us {
+        top: 0;
         background: #FFF;
         z-index: -1;
         height: 500px;

@@ -157,7 +157,7 @@
         </div>
     </div>
     <div class="dhl-service-partner">
-        <div style="margin:auto;">
+        <div style="margin:auto; width:54%;">
             <h3 class="partnership-title">Our Partnership</h3>
             <p class="partnership-text">
                 We are pleased to be an authorised sale partner with DHL. We offer access to DHL’s Express and Economy Select 
