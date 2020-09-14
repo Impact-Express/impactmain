@@ -4,7 +4,7 @@
             <h4>Subscribe</h4>
             <form action="//impactexpress.us2.list-manage.com/subscribe/post?u=4d790aba1fda36ef88d81225e&amp;id=4f5fd23105" method="post">
                 <div class="form-group">
-                    <div class="input-group">
+                    <div class="input-group" style="width: 100%;">
                         <input type="text" class="form-email-footer" name="EMAIL" id="i-subscribe-email" placeholder="E-mail">
                         <input type="hidden" value="Subscribe" name="subscribe">
                         <button class="form-email-footer-link">
@@ -15,7 +15,7 @@
                 </div>
             </form>
         </div>
-        <div class="column-md">
+        <div class="column-sm">
            <h4>Explore</h4>
             <div id="explore" class="row">
                 <div class="explore-left">
