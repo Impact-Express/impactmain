@@ -6,13 +6,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 1800px;
+    width: 100%;
 }
 .flex {
     margin: auto;
     display: flex;
     flex-direction: row;
-    width: 1800px;
+    width: 95%;
 }
 .quote-box {
     height: 540px;
@@ -132,7 +132,7 @@
 .service-text {
     margin-left: 5%;
     margin-bottom: 0;
-    width: 810px;
+    width: 94%;
 }
 .service-list {
     padding-left: 100px;
@@ -170,14 +170,12 @@ div:hover.hover-light-grey  {
 /* Infographic Classes to style the images as needed */
 .service-infogfx-text {
     margin-left: 2.7%;
-    width: fit-content;
+    width: 90%;
 }
 .express-infogfx {
     float: right;
     background-size: cover;
-    width: 750px;
-    height: 280px;
-    margin-top: -220px;
+    width: 75%;
 }
 .economy-infogfx {
     float: right;
@@ -279,7 +277,325 @@ div:hover.hover-light-grey  {
     padding-top: 70px;
     padding-bottom: 50px;
     padding-left: 100px;
+    height: 100%;
+}
+.req-consultation-pc {
+ display: none;
+}
+.req-consultation-mobile {
+    display: block;
+}
+.consultation_title {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.consultation_desc {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.1;
+    color: inherit;
+    margin-bottom: 15px;
+}
+.left-side {
+    margin-right: 80px;
+    padding-right: 50px;
+    width: 710px;
+}
+.right-side {
+    display: inline-flex;
+    height: 100%;
+    width: fit-content;
+    position: relative;
+}
+.tel-no {
+    display: inline;
+    margin-left: 5px;
+    font-family: play;
+    font-weight: 300;
+    font-size: 18px;
+    vertical-align: middle;
+}
+.office-email {
+    display: inline;
+    margin-left: 5px;
+    font-family: play;
+    font-weight: 300;
+    font-size: 18px;
+    vertical-align: middle;
+}
+#consultation-email-address {
+    width: 125%;
+    margin-bottom: 10px;
+}
+#consultation-contact-name {
+    width: 125%;
+    margin-bottom: 10px;
+}
+#consultation-tel-no {
+    width: 125%;
+    margin: 0;
+}
+
+// Main Services Page
+.services-container {
+    background: #F2ECEC;
+    padding: 60px;
+}
+.seperator {
+    margin-bottom: 20px;
+    padding: 11px;
+    border-bottom: 1px solid #00000021;
+}
+
+// Express Panel
+.express-delivery {
+    height: 100%;
+}
+.express-delivery-img {
+    width: 100%;
+}
+.express-delivery-title {
+    width: 100%;
+}
+.express-delivery-desc {
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 100%;
+    height: 86%;
+    top: 20px;
+}
+
+// Economy Panel
+.economy-delivery {
+    width: 100%;
+}
+.economy-delivery-img {
+    width: 100%;
+}
+.economy-delivery-title {
+    width: 100%;
+}
+.economy-delivery-desc {
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 100%;
+    height: 86%;
+    top: 20px;
+}
+
+// Domestic Panel
+.domestic-delivery {
+    width: 100%;
+}
+.domestic-delivery-img {
+    width: 100%;
+}
+.domestic-delivery-title {
+    width: 100%;
+}
+.domestic-delivery-desc {
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 100%;
+    height: 86%;
+    top: 20px;
+}
+
+// Imports Panel
+.imports-delivery {
+    width: 100%;
+}
+.imports-delivery-img {
+    width: 100%;
+}
+.imports-delivery-title {
+    width: 100%;
+}
+.imports-delivery-desc {
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 100%;
+    height: 86%;
+    top: 20px;
+}
+
+// IETrax Panel
+.ietrax-delivery {
+    width: 100%;
+}
+.ietrax-delivery-img {
+    width: 100%;
+}
+.ietrax-delivery-title {
+    width: 100%;
+}
+.ietrax-delivery-desc {
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 100%;
+    height: 86%;
+    top: 20px;
+}
+.main-footer {
+    top:0;
+}
+@media (min-width: 1375px) {
+    // Express Panel
+.express-delivery {
+    height: 420px;
+}
+.express-delivery-img {
+    float: left;
+    width: 45%;
+}
+.express-delivery-title {
+    float: left;
+    text-align: left;
+    margin-left: 175px;
+    width: fit-content;
+}
+.express-delivery-desc {
+    float: right;
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 45%;
+    height: 86%;
+    top: 20px;
+}
+
+// Economy Panel
+.economy-delivery {
+    height: 420px;
+}
+.economy-delivery-img {
+    float: right;
+    width: 45%;
+}
+.economy-delivery-title {
+    float: right;
+    text-align: right;
+    margin-right: 175px;
+    margin-left: 0;
+    width: fit-content;
+}
+.economy-delivery-desc {
+    float: left;
+    text-align: right;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 45%;
+    height: 86%;
+    top: 20px;
+}
+
+// Domestic Panel
+.domestic-delivery {
+    height: 420px;
+}
+.domestic-delivery-img {
+    float: left;
+    width: 45%;
+}
+.domestic-delivery-title {
+    float: left;
+    text-align: left;
+    margin-left: 175px;
+    width: fit-content;
+}
+.domestic-delivery-desc {
+    float: right;
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 45%;
+    height: 86%;
+    top: 20px;
+}
+
+// Imports Panel
+.imports-delivery {
+    height: 420px;
+}
+.imports-delivery-img {
+    float: right;
+    width: 45%;
+}
+.imports-delivery-title {
+    float: right;
+    text-align: right;
+    margin-right: 175px;
+    width: fit-content;
+}
+.imports-delivery-desc {
+    float: left;
+    text-align: right;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 45%;
+    height: 86%;
+    top: 20px;
+}
+
+// IETrax Panel
+.ietrax-delivery {
+    height: 420px;
+}
+.ietrax-delivery-img {
+    float: left;
+    width: 45%;
+}
+.ietrax-delivery-title {
+    float: left;
+    text-align: left;
+    margin-left: 175px;
+    width: fit-content;
+}
+.ietrax-delivery-desc {
+    float: right;
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 45%;
+    height: 86%;
+    top: 20px;
+}
+
+/* Request Consultation Partial */
+.button-left {
+    float: left !important;
+}
+.req-consultation {
+    background-color: #7c7287;
+    color: #000;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    padding-left: 100px;
     height: 280px;
+}
+.req-consultation-pc {
+    display: block;
+}
+.req-consultation-mobile {
+    display: none;
 }
 .consultation_title {
     text-transform: uppercase;
@@ -346,135 +662,4 @@ div:hover.hover-light-grey  {
     width: 125%;
     margin: 0;
 }
-
-// Main Services Page
-.services-container {
-    background: #F2ECEC;
-    padding: 60px;
 }
-.seperator {
-    margin-bottom: 20px;
-    padding: 11px;
-    border-bottom: 1px solid #00000021;
-}
-
-// Express Panel
-.express-delivery {
-    height: 420px;
-}
-.express-delivery-img {
-    float: left;
-    width: 45%;
-}
-.express-delivery-title {
-    float: left;
-    text-align: left;
-    margin-left: 175px;
-}
-.express-delivery-desc {
-    float: right;
-    text-align: left;
-    position: relative;
-    font-size: 15px;
-    box-sizing: content-box;
-    width: 45%;
-    height: 86%;
-    top: 20px;
-}
-
-// Economy Panel
-.economy-delivery {
-    height: 420px;
-}
-.economy-delivery-img {
-    float: right;
-    width: 45%;
-}
-.economy-delivery-title {
-    float: right;
-    text-align: right;
-    margin-right: 175px;
-}
-.economy-delivery-desc {
-    float: left;
-    text-align: right;
-    position: relative;
-    font-size: 15px;
-    box-sizing: content-box;
-    width: 45%;
-    height: 86%;
-    top: 20px;
-}
-
-// Domestic Panel
-.domestic-delivery {
-    height: 420px;
-}
-.domestic-delivery-img {
-    float: left;
-    width: 45%;
-}
-.domestic-delivery-title {
-    float: left;
-    text-align: left;
-    margin-left: 175px;
-}
-.domestic-delivery-desc {
-    float: right;
-    text-align: left;
-    position: relative;
-    font-size: 15px;
-    box-sizing: content-box;
-    width: 45%;
-    height: 86%;
-    top: 20px;
-}
-
-// Imports Panel
-.imports-delivery {
-    height: 420px;
-}
-.imports-delivery-img {
-    float: right;
-    width: 45%;
-}
-.imports-delivery-title {
-    float: right;
-    text-align: right;
-    margin-right: 175px;
-}
-.imports-delivery-desc {
-    float: left;
-    text-align: right;
-    position: relative;
-    font-size: 15px;
-    box-sizing: content-box;
-    width: 45%;
-    height: 86%;
-    top: 20px;
-}
-
-// IETrax Panel
-.ietrax-delivery {
-    height: 420px;
-}
-.ietrax-delivery-img {
-    float: left;
-    width: 45%;
-}
-.ietrax-delivery-title {
-    float: left;
-    text-align: left;
-    margin-left: 175px;
-}
-.ietrax-delivery-desc {
-    float: right;
-    text-align: left;
-    position: relative;
-    font-size: 15px;
-    box-sizing: content-box;
-    width: 45%;
-    height: 86%;
-    top: 20px;
-}
-

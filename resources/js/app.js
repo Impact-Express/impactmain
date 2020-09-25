@@ -9,6 +9,7 @@ class App {
 App.prototype.mobileNav = function() {
     let hamburgerButton = document.querySelector('.hamburger');
     let mobileNav = document.querySelector('.mobile-nav');
+    let exitmenu = document.querySelector('.closemenu');
     let html = document.querySelector('body');
 
     function openMobile() {
@@ -20,7 +21,7 @@ App.prototype.mobileNav = function() {
     }
 
     hamburgerButton.addEventListener('click', openMobile);
-    mobileNav.addEventListener('click', closeMobile);
+    exitmenu.addEventListener('click', closeMobile);
 };
 new App();
 
@@ -57,3 +58,20 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " bottombar-active";
 }
+
+
+$('.toggle').trigger(function(e) {
+    e.preventDefault();
+
+  var $this = $(this);
+
+  if ($this.next().hasClass('show')) {
+      $this.next().removeClass('show');
+      $this.next().slideUp(350);
+  } else {
+      $this.parent().parent().find('li .inner').removeClass('show');
+      $this.parent().parent().find('li .inner').slideUp(350);
+      $this.next().toggleClass('show');
+      $this.next().slideToggle(350);
+  }
+});
