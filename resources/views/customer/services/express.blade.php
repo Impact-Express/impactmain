@@ -40,7 +40,7 @@
     </ul>
     <p class="service-text">*All transit times are subject to customs clearance</p>
 
-    <h2 class="service-infogfx-text" style="margin-top: 100px;">How It Works - <br>Personal Customers</h2>
+    <h2 class="service-title" style="margin-top: 100px;">How It Works - Personal Customers</h2>
     <div class="express-infogfx" style="margin-top: -100px;">
         <ul class="service-list">
             <li>Get a Quote and Select Send a Parcel and Register or Login.</li>

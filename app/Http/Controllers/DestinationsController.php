@@ -116,7 +116,35 @@ class DestinationsController extends Controller
                 break;
             case 'destinations/brazil':
                 $bannerImage = url('/storage/destinations/Brazil-Country-Banner-v2-Impact-Express.jpg');
-                return view('customer.destinations.brazil', compact('page', 'bannerImage'));
+                return view('customer.destinations.BRAZIL', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/pakistan':
+                $bannerImage = url('/storage/destinations/UAE-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.PAKISTAN', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/thailand':
+                $bannerImage = url('/storage/destinations/South-Korea-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.THAILAND', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/china':
+                $bannerImage = url('/storage/destinations/China-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.CHINA', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/portugal':
+                $bannerImage = url('/storage/destinations/UAE-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.PORTUGAL', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/india':
+                $bannerImage = url('/storage/destinations/South-Korea-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.INDIA', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/mexico':
+                $bannerImage = url('/storage/destinations/China-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.MEXICO', compact('page', 'bannerImage'));
+                break;
+            case 'destinations/south-africa':
+                $bannerImage = url('/storage/destinations/China-Country-Banner-v2-Impact-Express.jpg');
+                return view('customer.destinations.SOUTH-AFRICA', compact('page', 'bannerImage'));
                 break;
         }
     }

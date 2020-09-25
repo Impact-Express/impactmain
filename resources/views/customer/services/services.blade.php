@@ -10,7 +10,7 @@
 <div class="container-fluid services-container">
     <section class="express-delivery seperator">
         <a class="express-delivery-img" href="services/express">
-            <img src="{{ asset('img/express-delivery-new.png') }}" alt="">
+            <img style="width:100%;" src="{{ asset('img/express-delivery-new.png') }}" alt="">
         </a>
         <h2 class="express-delivery-title">
             <a href="">
@@ -39,7 +39,7 @@
     </section>
     <section class="economy-delivery seperator">
         <a class="economy-delivery-img" href="services/economy">
-            <img src="{{ asset('img/economy-delivery.png') }}" alt="">
+            <img style="width:100%;" src="{{ asset('img/economy-delivery.png') }}" alt="">
         </a>
         <h2 class="economy-delivery-title">
             <a href="">
@@ -63,7 +63,7 @@
     </section>
     <section class="domestic-delivery seperator">
         <a class="domestic-delivery-img" href="services/uk-overnight">
-            <img src="{{ asset('img/UK-overnight.png') }}" alt="">
+            <img style="width:100%;" src="{{ asset('img/UK-overnight.png') }}" alt="">
         </a>
         <h2 class="domestic-delivery-title">
             <a href="">
@@ -86,7 +86,7 @@
     </section>
     <section class="imports-delivery">
         <a class="imports-delivery-img" href="services/worldwide-imports">
-            <img src="{{ asset('img/worldwide-imports.png') }}" alt="">
+            <img style="width:100%;" src="{{ asset('img/worldwide-imports.png') }}" alt="">
         </a>
         <h2 class="imports-delivery-title">
             <a href="">

@@ -100,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
     // width:100%;
     padding: 10px 20px 10px 20px;
     display: table-cell;
-    width: inherit;
+    width: 10%;
     margin-left: -4px;
     white-space: nowrap;
     border-bottom: 0.5px solid #2D3332;
@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav-img {
     padding: 10px 20px 10px 20px;
     display: table-cell;
-    width: inherit;
+    width: 50%;
     margin-left: -4px;
     white-space: nowrap;
 }
@@ -617,7 +617,7 @@ height: fit-content;
         color: #2D3332;
     }
 }
-@media (min-width: 1520px) {
+@media (min-width: 1375px) {
     .float-left {
         float: left !important;
     }
@@ -1097,6 +1097,7 @@ height: fit-content;
         background: #2d3332;
         color: #999b9c;
         padding: 64px 0;
+        top:0;
     }
     .main-footer h4 {
         color: #e0e0e0;
