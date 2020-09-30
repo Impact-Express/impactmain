@@ -65,7 +65,7 @@ class PostsController extends BackendController
                 $post->author_id     = $userid;
 
                 $post->addMediaFromRequest('image')->toMediaCollection('postImages', 'upload');
-                $post->image = $request->image;
+                $post->image = $request->image->store('img');
                 // dd($post);
 
                 $post->tags()->attach($request->tag_slug);

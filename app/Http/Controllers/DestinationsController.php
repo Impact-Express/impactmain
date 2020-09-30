@@ -91,7 +91,7 @@ class DestinationsController extends Controller
                 return view('customer.destinations.AUSTRALIA', compact('page', 'bannerImage'));
                 break;
             case 'destinations/sweden':
-                $bannerImage = url('/storage/destinations/Sweden-Country-Banner-v2-Impact-Express.jpg');
+                $bannerImage = url('/storage/destinations/Sweden---Country-Banner-v2---Impact-Express.jpg');
                 return view('customer.destinations.SWEDEN', compact('page', 'bannerImage'));
                 break;
             case 'destinations/hong-kong':
@@ -111,7 +111,7 @@ class DestinationsController extends Controller
                 return view('customer.destinations.UAE', compact('page', 'bannerImage'));
                 break;
             case 'destinations/south-korea':
-                $bannerImage = url('/storage/destinations/South-Korea-Country-Banner-v2-Impact-Express.jpg');
+                $bannerImage = url('/storage/destinations/SK---Country-Banner-v2---Impact-Express.jpg');
                 return view('customer.destinations.SOUTH-KOREA', compact('page', 'bannerImage'));
                 break;
             case 'destinations/brazil':
@@ -119,11 +119,11 @@ class DestinationsController extends Controller
                 return view('customer.destinations.BRAZIL', compact('page', 'bannerImage'));
                 break;
             case 'destinations/pakistan':
-                $bannerImage = url('/storage/destinations/UAE-Country-Banner-v2-Impact-Express.jpg');
+                $bannerImage = url('/storage/destinations/Pakistan---Country-Banner-v2---Impact-Express.jpg');
                 return view('customer.destinations.PAKISTAN', compact('page', 'bannerImage'));
                 break;
             case 'destinations/thailand':
-                $bannerImage = url('/storage/destinations/South-Korea-Country-Banner-v2-Impact-Express.jpg');
+                $bannerImage = url('/storage/destinations/Thailand-Country-Banner-v2-Impact-Express.jpg');
                 return view('customer.destinations.THAILAND', compact('page', 'bannerImage'));
                 break;
             case 'destinations/china':

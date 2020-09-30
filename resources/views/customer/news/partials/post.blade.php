@@ -1,7 +1,7 @@
 <div class="post">
-        @if ($post->image_url)
-        <img class="post-image" src="{{ $post->image_url }}">
-        @endif
+    @if ($post->imageUrl)
+        <img class="post-image" src="{{ $post->imageUrl}}">
+    @endif
         <a href="{{ route('news-post', $post->slug) }}">
             <h1 class="post-title">{!! $post->title !!}</h1>
         </a>

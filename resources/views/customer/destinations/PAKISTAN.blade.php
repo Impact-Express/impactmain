@@ -16,112 +16,61 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO PAKISTAN</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
+        Pakistan has it all: a rich history, stunning landscapes and impressive architecture. The capital, Islamabad, sits at the foot of the beautiful Himalayan mountain range. Karachi, the nation’s largest city and economic centre, looks out over the Arabian Sea to the south.
         <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        International trade is a core feature of the Pakistani economy; it is a country with which the UK has many financial and political ties. As a result, Pakistan is a popular destination for exports of all types.
+        <br><br>
+        Whether you are sending your package to Lahore in the Punjab, or Quetta – the ‘Fruit Basket of Pakistan’ – Impact Express can offer fast and affordable shipping
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">OUR COURIER SERVICES</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        Impact Express is an experienced provider of shipping services to Pakistan. These include two-day express delivery to major Pakistani destinations. A standard option is also provided for less urgent deliveries, or packages of a heavier weight.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
+        Depending on the type of account you have with us (business or personal) we either provide a drop-off service for your parcel at a designated point, or arrange for it to be collected from you.
         <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
+        All our services come with tracking information provided. For items of value, we offer additional insurance. Whatever it is you need to mail, and wherever it is destined, we will ensure your package arrives safe and sound.
         <br><br>
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
+        <h2 class="service-title">PARCEL PACKAGING FOR SHIPPING TO PAKISTAN</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+            While we do everything in our power to ensure your parcel arrives undamaged, international parcels always require careful packaging.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
+            Always ensure your parcel is securely fastened with robust packaging and is clearly labelled. If the contents are fragile or present a leakage risk, 
+            you should consider secure containers and extra padding. We recommend including a returns label, just in case.
         </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
+        <h2 class="service-title">HOW MUCH DOES POSTING TO PAKISTAN COST?</h2>
         <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
+            The price of shipping your parcel will vary depending on several factors, including the size of your parcel and the service you choose.
             <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
+            Getting a competitive quote is quick and easy. Call us now or use the Instant Quote tool on our website.
         </div>
-        <h2 class="service-title">THINGS TO REMEMBER…</h2>
+        <h2 class="service-title">PAKISTAN CUSTOMS RESTRICTIONS</h2>
         <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
+            Pakistan has strict rules about what you can and cannot import into the country. You should always check these rules carefully before sending a parcel.
+            <br><br>
+            Pakistani authorities have placed regulations and limitations on many goods, including:
+            <ul>
+                <li>Translations of the holy Qur’an that do not include any Arabic text</li>
+                <li>Obscene or pornographic material</li>
+                <li>Fireworks and other explosives</li>
+                <li>Alcohol and some brewing equipment</li>
+                <li>Firearms and ammunition</li>
+                <li>Some electrical items</li>
+            </ul>
+            This is not an exhaustive list. For full details of banned goods and products, please see our restricted items section.
+            <br><br>
         </div>
     </div>
 @endsection
 @section('faq')
-<div class="tab">
-    <div class="container flex-center">
-        <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
-    </div>
-    <div class="container flex">
-        <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
-            <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
-            </p>
-            <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
-            </ul>
-            <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
-
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
-            </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
-            <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-        </div>
-    </div>
+<div class="tab" style="height: 100px">
 </div>
 @endsection
 @section('destinations-boxes')

@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 use Laravel\Scout\Searchable;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Post extends Model implements HasMedia
 {
@@ -167,5 +169,13 @@ class Post extends Model implements HasMedia
      */
     public function deleteImage () {
         Storage::delete($this->image);
+    }
+
+        /**
+     * Get all of the user's images.
+     */
+    public function media (): MorphMany
+    {
+        return $this->morphMany(Media::class, 'model');
     }
 }
