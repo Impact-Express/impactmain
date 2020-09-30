@@ -16,23 +16,20 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO SWEDEN</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
+        As one of the largest, richest countries in Europe, Sweden is a big trading partner with the UK. Sweden’s import and export trade with the UK amounts to around £8 billion, a large portion of which is eCommerce.
         <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        With such a high volume of parcels being delivered to Sweden every year, you’ll want to choose a courier that ensures yours arrives safely. For cheap parcel delivery to Sweden, choose <b>Impact Express</b>. 
+        Arranging postage to Sweden is easy with our range of express and economy parcel delivery services.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">SHIPPING TO SWEDEN: OUR SERVICES</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        At Impact Express, we offer our customers an unrivalled delivery service. With a number of convenient dispatch options, we can guarantee our customers will receive a quick and efficient parcel delivery service.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
-        <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
-        <br><br>
+        The dispatch options will be outlined to you when you fill out your shipment form and will depend on whether you have a ‘business’ or ‘personal’ account with us. Once we have received your parcel, our authorised 
+        service partner DHL will handle the security of your parcel, ensuring it has a safe arrival at its destination.
     </p>
 </div>
 @endsection
@@ -40,26 +37,15 @@
     <div class="container">
         <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
-            <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
+            To ensure the contents of your parcel arrives in one piece, please make sure to package your items properly. Always use a sturdy cardboard box or a reinforced envelope for smaller items, with protective materials (such as bubble wrap or polystyrene chips) 
+            to stop your items being knocked about while in-transit. For full, detailed instructions, please refer to our packaging guide.
         </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
+        <h2 class="service-title">HOW MUCH DOES IT COST TO SHIP TO SWEDEN?</h2>
         <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
+            The cost of shipping a parcel from the UK to Sweden will depend on several factors. The most influential being the size and weight of your parcel. Most courier sites will ask you to provide the measurements of your parcel, in order to provide you with an accurate quote. To get a free quote today, please use our instant quote generator.
             <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
-        </div>
-        <h2 class="service-title">THINGS TO REMEMBER…</h2>
-        <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
+            The speed of arrival you require will also affect the final cost of shipment. If you require express delivery, you will have to pay slightly more than economy delivery services. Always remember to compare prices across a range of sites in order to get the best price possible.
+            <br><br>
         </div>
     </div>
 @endsection
@@ -67,58 +53,26 @@
 <div class="tab">
     <div class="container flex-center">
         <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
     </div>
     <div class="container flex">
         <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
+            <h2 class="toUpper">WILL I HAVE TO FILL OUT A CUSTOMS INVOICE?</h2>
             <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
+                As the UK is no longer a member of the European Union, you will have to fill out a customs invoice when creating your shipment data. With Impact Express, we make every effort to ensure the shipping process is as simple as possible. We allow our customers to fill out such information online, removing the need for any physical paperwork and eliminating the chances of delays and extra charges.
             </p>
-            <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
-            </ul>
+            <h2 class="toUpper">ARE THERE ANY ITEMS THAT I CAN’T SEND TO SWEDEN?</h2>         
             <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
-
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
-            </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
-            <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                As with most EU countries, there are strict import regulations regarding what is allowed in and out of the country. For Sweden, prohibited items include but are not limited to:
+                <ul>
+                    <li>Meat, milk and any items thereof from non-EU countries</li>
+                    <li>Products of species protected under the Washington Convention (CITES), including tortoise shell, reptile skin and coral</li>
+                </ul>
+                <p>
+                    Always remember to check the countries full prohibited items list or if you’re still unsure, contact HM Revenue and Customs. It’s always best to check your courier’s prohibited items list too, as some couriers refuse to carry items which are considered ‘dangerous’.
+                </p>
+                <p>
+                    For a full list of goods and products banned for shipping with Impact Express, please see our <a href="/information/prohibited-items">restricted items section.</a>
+                </p>
             </p>
         </div>
     </div>

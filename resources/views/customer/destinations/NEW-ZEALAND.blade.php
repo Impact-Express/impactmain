@@ -19,106 +19,78 @@
     <h1 class="service-title">SHIPPING TO NEW ZEALAND</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
+        With stunning landscapes and a temperate climate, New Zealand is extremely popular among British tourists and homemakers. It’s no surprise that thousands of parcels are sent from the UK to New Zealand every year.
         <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        Sending a package to the other side of the world can be a daunting prospect. Luckily, with our affordable and efficient shipping service, you can send parcels from the UK to New Zealand without a worry.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">WHICH SERVICES CAN WE OFFER YOU?</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        Here at Impact Express, customer satisfaction is at the heart of what we do. We operate an economical and reliable shipping service, working closely with DHL to provide you with a premium shipping experience.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
+        We offer a variety of drop-off and collection options, to make the shipping process as simple and pain-free as possible. The dispatch options will be outlined to you at the time of booking and will depend on whether you have a ‘business’ or ‘personal’ account.
         <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
+        Once your parcel is in our possession, DHL will ensure that your shipment is safely handled and arrives promptly at your chosen destination.
         <br><br>
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
-        <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+        <h2 class="service-title">PACKAGING A PARCEL FOR DELIVERY TO NEW ZEALAND?</h2>
+        <p class="service-text">
+            To ensure that your parcel arrives safely in New Zealand, always make sure you package your parcel safely and securely. If you’re unsure about the best way to do this,
+             take a look at our <a href="/information/packaging-guide">packaging guide</a>.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
-        </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
-        <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
+            When addressing your parcel, be aware that New Zealand uses a unique addressing system which requires you to differentiate between street, rural locality and PO Box. 
+            Check you’re doing this correctly to ensure your mail reaches its destination. New Zealand Post provides a handy addressing guide if you need assistance.
             <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
-        </div>
+            Once you have filled out the address, we will send you a print-at-home label. Make sure your address label is firmly stuck onto the outside of the box and always tuck
+             a secondary address label inside the box, just in case your label becomes loose during the shipping process.
+        </p>
+        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND A PARCEL FROM THE UK TO NEW ZEALAND?</h2>
+        <p class="service-text">
+            Our international courier service is renowned for offering competitive shipping rates. 
+            We aim to offer all our customers the best possible prices when shipping from the UK to New Zealand.
+            <br><br>
+            The cost of shipment depends on the size and weight of your parcel. For an instant quote, you’ll need 
+            to provide the measurements of your package and the timeframe within which you’d like the recipient to receive it.
+        </p>
         <h2 class="service-title">THINGS TO REMEMBER…</h2>
-        <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
-        </div>
+        <p class="service-text">
+            Please provide both your contact number as well as the recipient’s, to ensure you can both be contacted throughout the shipment process.
+            <br><br>
+            For more information or to discover more about our services, please do not hesitate to <a href="{{ route('contact') }}">contact us</a>.
+            <br><br>
+        </p>
     </div>
 @endsection
 @section('faq')
 <div class="tab">
     <div class="container flex-center">
         <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
     </div>
     <div class="container flex">
         <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
+            <h2 class="toUpper">SHIPPING TO NEW ZEALAND: WHAT ITEMS CAN I SEND?</h2>
             <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
+                It is your responsibility as a sender to check whether an item is prohibited or restricted. Before you send your parcel, 
+                it’s always best to refer to the prohibited and restricted items list. Some of the high-profile items include:
             </p>
             <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
+                <li>Flammable liquids and solids;</li>
+                <li>Valuables, including bank cards, passports and collectables;</li>
+                <li>Furs and skins (untreated);</li>
+                <li>Indecent goods.</li>
             </ul>
             <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
-
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
+                If you’re unsure whether your item is contraband, you can submit a query to New Zealand Post’s National Contact Centre
             </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
+            <h2 class="toUpper">NEW ZEALAND’S CUSTOMS RESTRICTIONS?</h2>         
             <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
+                You will need to complete a customs form when sending goods internationally. You will also be required to pay duties and taxes on any parcels sent to New Zealand.
                 <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                It’s always best to check the latest customs advice on the web before sending goods to New Zealand. Duty rates, taxes and customs laws are constantly changing,
+                 so it’s best to be aware of the regulations and charges you may face before you ship.
             </p>
         </div>
     </div>

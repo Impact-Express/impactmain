@@ -7,10 +7,11 @@ use App\Post;
 use App\Category;
 use App\Tag;
 use Illuminate\Http\Request;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class NewsController extends Controller
 {
-    public function index()
+    public function index(Post $post)
     {
         $posts = Post::with('author')->latestFirst()->published()->simplePaginate(4);
         return view('customer.news.index', compact('posts'));
@@ -32,7 +33,7 @@ class NewsController extends Controller
 
     public function show (Post $post)
     {
-        $post->increment('view_count', 1);
+        $post->increment('view_count');
         $images = $post->getFirstMediaUrl('postImages');
         return view('customer.news.post', compact('post', 'images'));
     }

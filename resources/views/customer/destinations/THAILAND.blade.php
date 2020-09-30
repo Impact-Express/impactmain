@@ -16,18 +16,19 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO THAILAND</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
-        <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        Located in South-East-Asia, Thailand is full to the brim with elaborate temples, ancient ruins and beautiful beaches. Known as “The Land of Smiles”, 
+        it’s no surprise that Thailand is awash with tourists from all over the globe and one of the top delivery destinations in the world. Whether you’re 
+        dispatching to Bangkok, Phuket or Chiang Mai, you’ll want to feel secure in the knowledge that your package will arrive safely at your chosen destination. 
+        Here at Impact Express, we provide trustworthy and reliable shipping to Thailand, giving you one less thing to worry about.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">WHAT SERVICES CAN WE OFFER YOU?</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        Shipping your package to Thailand is a simple affair when you choose Impact Express. We offer our clients a variety of convenient dispatch options, depending on if you have a ‘business’ or ‘personal’ account with us. These options will be made clear to you at the time of booking.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
+        Once we have received your parcel, our authorised service partner DHL will handle your shipment, ensuring it safely arrives at your chosen destination.
         <br><br>
         DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
         <br><br>

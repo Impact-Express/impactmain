@@ -16,50 +16,55 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO SOUTH KOREA</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
+        With its fascinating combination of ancient traditions, stunning landscapes, recent industrialisation and modern K-pop music, South Korea’s cultural and economic influence is thriving. 
+        It’s no surprise then that South Korea also has a booming import and export industry. As a result, it is also a common destination for parcel deliveries from the UK.
         <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        Whether you’re mailing a package to the capital city of Seoul in the north, the port city of Busan in the east, or the bustling southern city of Kwangju, 
+        Impact Express can guarantee fast and competitive delivery.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">OUR COURIER SERVICES TO SOUTH KOREA</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        We offer attractive shipping rates for all our dispatch options. These include two-day delivery to larger destinations, and standard delivery options for less urgent or heavier packages.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
+        Shipping to more remote corners of South Korea is also possible. If you need a parcel to reach that backpacker or research student in the mountains, it’s no problem for us.
         <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
+        Depending on whether you’re sending your parcel as a business or an individual, your item will either be collected from you, or picked up from a drop -off point at a location convenient to you.
         <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
+        For complete peace of mind, you will be able to track your parcel on its journey across the world to its destination in South Korea.
         <br><br>
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
+        <h2 class="service-title">PARCEL PACKAGING FOR SHIPPING TO SOUTH KOREA</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+            Making sure your parcel is properly packaged is an essential part of ensuring it arrives undamaged and on time. You should always consider using both internal wrapping, such as bubble wrap, and strong external wrapping such as a secure container.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
+            Label your package clearly. Include the sender’s address as well as the destination address, and specify the contents of the parcel. Consider including a second copy of these details inside your parcel: this will serve as a backup, should the external label be damaged in transit.
         </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
+        <h2 class="service-title">HOW MUCH DOES POSTING TO SOUTH KOREA COST?</h2>
         <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
+            The cost of shipping your parcel will depend on several factors. These include:
+            <ul>
+                <li>the size of your parcel</li>
+                <li>the service you require</li>
+                <li>the intended destination</li>
+                <li>any international fuel surcharges</li>
+            </ul>
+            It is quick and easy to get a competitive quote: call us direct, or use the quote tool above.
             <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
+            If you are posting items of value, we also offer insurance options for an additional fee.
         </div>
         <h2 class="service-title">THINGS TO REMEMBER…</h2>
         <div class="service-text">
             Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
             It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
             just in case we are unable to deliver your parcel.
+            <br><br>
         </div>
     </div>
 @endsection
@@ -67,58 +72,28 @@
 <div class="tab">
     <div class="container flex-center">
         <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
     </div>
     <div class="container flex">
         <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
+            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO SOUTH KOREA?</h2>
             <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
+                As with most overseas destinations, South Korea has strict rules about what you can send into the country. You should always check first to ensure the contents of your parcel are neither prohibited nor restricted.
+            </p>
+            <p>
+                South Korea has restrictions on the import of the following items: 
             </p>
             <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
+                <li>weaponry and firearms;</li>
+                <li>chemicals;</li>
+                <li>eavesdropping equipment;</li>
+                <li>several different drugs.</li>
+                <li>counterfeit items</li>
+                <li>endangered species of wild flora and fauna</li>
             </ul>
             <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
+                This is not an exclusive list. Some items will also be liable to inspection by customs officials.
 
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
-            </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
-            <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                For full details of banned goods and products, please see our restricted items section
             </p>
         </div>
     </div>
