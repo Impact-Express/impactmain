@@ -4,19 +4,27 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\MediaBrowser as Media;
+use App\Post;
 use Illuminate\Http\Request;
+use Spatie\MediaLibrary\HasMedia;
 
-class MediaController extends Controller
+class MediaController extends BackendController
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->uploadPath = public_path(config('upload'));
+    }
+
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Media $media)
     {
-        $media = new Media;
-        $uploads = $media->getMedia();
+        $uploads = $media->nameUrl;
         return view('admin.dashboard.media', compact('media', 'uploads'));
     }
 
@@ -38,16 +46,13 @@ class MediaController extends Controller
      */
     public function store(Request $request)
     {
-        
-
-        
-
         $media = new Media;
-        $media->addMediaFromRequest('name')->toMediaCollection('uploads');
+        $media->name = $request->name->store('upload');
+        $media->addMediaFromRequest('name')->toMediaCollection('uploads', 'upload');
+        $media->save();
+        // dd($media);
 
-        dd($media);
-
-        // return redirect()->back();
+        return redirect()->back();
     }
 
     /**
@@ -93,5 +98,28 @@ class MediaController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Handle an ImageRequest for uploading images to a post.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    private function handleRequest($request)
+    {
+       $data = $request->all();
+
+       if ($request->hasFile('name')) 
+       {
+          $name = $request->file('name');
+          $fileName = $name->getClientOriginalName();
+          $destination = $this->uploadPath;
+
+          $name->move($destination, $fileName);
+          $data['name'] = $fileName;
+
+          return $data;
+       }
     }
 }

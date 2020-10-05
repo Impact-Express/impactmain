@@ -39,11 +39,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($uploads as $upload)
                                 <tr>
-                                <td>{{$upload}}</td>
+                                    @foreach ((array)$media->nameUrl as $file)
+                                    <td><img src="{{ $file }}" alt=""></td>
+                                    @endforeach
                                 </tr>
-                                @endforeach
                             </tbody>
                         </table>
                         </div>

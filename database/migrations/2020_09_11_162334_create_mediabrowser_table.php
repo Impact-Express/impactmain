@@ -13,8 +13,10 @@ class CreateMediabrowserTable extends Migration
      */
     public function up()
     {
-        Schema::create('mediabrowser', function (Blueprint $table) {
+        Schema::create('media_browsers', function (Blueprint $table) {
             $table->id();
+            $table->string('filename')->nullable();
+            $table->string('file_path')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateMediabrowserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mediabrowser');
+        Schema::dropIfExists('media_browsers');
     }
 }

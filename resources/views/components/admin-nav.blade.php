@@ -17,13 +17,14 @@
                     </li>
                 </a>  
         --}}
+        {{-- TODO----Finish up Media Browser, Currently can upload but not sure how to get everything to show in the view 
         <li data-role='drawer-separator'><hr></li>
         <a class="white" style='overflow: hidden;' href='{{ route('media.index') }}'>
             <li data-role='drawer-item' class="sidebar-item">
                 <i class="fas fa-images sidebar-text"></i>
                 <span class='k-item-text' style='padding-left: 20px;'>Media</span>
             </li>
-        </a>
+        </a> --}}
         <li data-role='drawer-separator'><hr></li>
         <a class="white" style='overflow: hidden;' href='{{ route('admin-posts') }}'>
             <li data-role='drawer-item' class="sidebar-item">

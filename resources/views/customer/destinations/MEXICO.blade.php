@@ -16,50 +16,38 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO MEXICO</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
+        The country of Mexico, sitting at the most southerly point of North America, is the third-largest nation in Latin America. Mexico has the largest Spanish speaking population in the world and is renowned for its long stretches of sandy beaches, beautiful coastal resorts and vibrant cities.
         <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        Mexico has a thriving economy and a two-way trade agreement with the UK, resulting in millions of parcels being sent from the UK to Mexico every year. At Impact Express, we offer competitive shipping rates to anywhere from Mexico City to Hermosillo.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">SHIPPING TO MEXICO: HOW WE WORK</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        At Impact Express, we specialise in international delivery and always aim to get your parcel to its destination as quickly as possible. Our authorised service partner DHL has a whole host of reliable couriers who will take great care of your parcel, ensuring it arrives safely at its destination.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
-        <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
-        <br><br>
+        When you fill out your shipment form, the dispatch options will be outlined to you. These options will vary depending on whether you have a ‘business’ or ‘personal’ account with us.
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
+        <h2 class="service-title">HOW TO PREPARE YOUR PARCEL FOR SHIPMENT TO MEXICO</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+            To give your parcel the best chance of arriving safely, we recommend you follow our simple packaging guide when preparing your parcel for shipment. Parcels travelling from the UK to Mexico will cover some serious mileage and will be passed through many hands, so it’s best to be extra careful when packaging your parcel.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
+            Make sure to attach your print-at-home label securely to the outside of the box in a visible position. Although the chances or your parcel being lost are very low, it’s always wise to tuck a return address inside the parcel just in case the main address label become dislodged during shipment.
         </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
+        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL FROM THE UK TO MEXICO?</h2>
         <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
+            The cost of sending a parcel to Mexico will vary depending on the size and weight of your package. Generally, the larger and heavier your package the more it will cost to send.
             <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
+            The timeframe in which you’d like your parcel to arrive will also affect the final cost. Next-day and express delivery will be more expensive than a standard or economy delivery option. To get a cost estimate, please use our free instant quote generator.
         </div>
-        <h2 class="service-title">THINGS TO REMEMBER…</h2>
+        <h2 class="service-title">MEXICAN CUSTOMS RESTRICTIONS</h2>
         <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
+            Mexico has strict import restrictions in place, which are much more rigid than most other countries. All parcels will be inspected by customs at the border, so you’ll need to make sure you’ve filled out the necessary information to accompany your parcel.
         </div>
     </div>
 @endsection

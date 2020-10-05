@@ -16,44 +16,39 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO INDIA</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
+        One of the largest and most densely populated countries in the world, India stretches from the Himalayas to the golden beaches of Goa, the tropical landscapes of Kerala and the bustling Bay of Bengal.
         <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        Famous for its passionate love of cricket, rich history and spirituality, and fascinating architecture, India is a country of vibrancy and colour. In recent years, the subcontinent has become synonymous with technological innovation and commerce, with a booming import industry and rising demand for industrial and consumer goods.
+        <br><br>
+        Impact Express is helping to play a part in this economic renaissance by offering reliable shipping services to India.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">SHIPPING TO INDIA: OUR SERVICES</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        Our courier services to India are all fully tracked. We provide the choice of two-day express delivery or an economy service for larger or less urgent shipping.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
+        We’ve made our shipping service convenient and easy to use. Depending on whether you have a ‘business’ or ‘personal’ account, we can either collect your parcel from you, or arrange for you to drop it at a designated spot.
         <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
+        You’ll also enjoy use of your own personalised tracking portal. This will provide notifications of your parcel’s progress, whether you’re shipping to the famous pink city of Jaipur or one of India’s many beautiful palaces and temples.
         <br><br>
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
+        <h2 class="service-title">PARCEL PACKAGING FOR SHIPPING TO INDIA</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+            We pride ourselves on taking great care of your parcel or package, but it is important that you ensure your item is securely packaged to prevent damage or loss.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
+            Consider using bubble wrap or other materials to protect the item. Then ensure that it is securely contained in outer packaging, sealed with strong tape.
+            <br><br>
+            We will provide an address label, which you should complete clearly and attach to the outside. We always recommend including a return address.
         </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
+        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO INDIA?</h2>
         <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
-            <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
+            Our shipping and delivery services are very competitive. However, the exact cost of shipping to India will depend on the size, weight and nature of the parcel, as well as the delivery service you choose. For an accurate quote, please use our instant quote tool or contact us direct.
         </div>
         <h2 class="service-title">THINGS TO REMEMBER…</h2>
         <div class="service-text">
@@ -67,58 +62,34 @@
 <div class="tab">
     <div class="container flex-center">
         <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
     </div>
     <div class="container flex">
         <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
+            <h2 class="toUpper">INDIAN IMPORTATION RESTRICTIONS</h2>
             <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
+                There are certain items which you cannot ship to India, such as:
             </p>
             <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
+                <li>pornographic and obscene materials;</li>
+                <li>ivory;</li>
+                <li>narcotics;</li>
+                <li>counterfeit items;</li>
+                <li>antiquities</li>
+                <li>certain wildlife products</li>
+                <li>certain aero models</li>
             </ul>
             <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
-
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
+                There are also some restrictions and specific requirements for select items. These include:
             </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
+            <ul>
+                <li>firearms</li>
+                <li>certain wildlife and plants</li>
+                <li>family planning items</li>
+                <li>radio transmitters</li>
+                <li>certain electronics, including phones</li>
+            </ul>
             <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                It is important to check the exact nature of your parcel against Indian import regulations. Failing to do so could result in your parcel being detained, delayed, or even destroyed by officials.
             </p>
         </div>
     </div>

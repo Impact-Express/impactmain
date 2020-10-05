@@ -91,7 +91,8 @@ Route::post('/send-my-parcel','ParcelController@send')->name('email-parcel-detai
     Route::resource('/admin/tags', 'Backend\TagsController');
 
     //Resource Route for Media
-    Route::resource('/admin/media', 'Backend\MediaController');
+    // Disabled for now, still working on getting this to work similar to Wordpress' Media Uploader/Browser
+    // Route::resource('/admin/media', 'Backend\MediaController');
 
 
     // Main Backend Navigation Routes

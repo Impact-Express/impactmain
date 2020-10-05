@@ -30,96 +30,61 @@
         <br><br>
         Once we have received your parcel, our authorised service partner DHL will handle your shipment, ensuring it safely arrives at your chosen destination.
         <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
+        We offer an affordable economy service as well as an express service to Thailand for time-sensitive shipments. Whatever your needs, we hope to be able to provide you with a solution that is quick, easy and affordable.
         <br><br>
     </p>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
+        <h2 class="service-title">SHIPPING TO THAILAND FROM THE UK: HOW MUCH WILL IT COST?</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+            We’ll endeavour to offer you the best shipping rates from the UK to anywhere in Thailand. By using our instant quote generator, you’ll be able to gain an accurate estimate of the cost of shipment.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
-        </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
-        <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
-            <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
+            All you’ll need to provide is the weight and size of your parcel, as well as the time frame in which you’d like the recipient to receive their parcel. 
         </div>
         <h2 class="service-title">THINGS TO REMEMBER…</h2>
         <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
+            Always make sure to package your goods carefully and securely to ensure they arrive safely at your chosen destination. If you’re unsure how to package a parcel, check out our easy-to-follow packaging guide.
+            <br><br>
+            Finally, please provide a contact number for both the sender and the receiver. This way, if we need to contact you or the recipient regarding the shipment, we’ll be able to resolve the issue quickly and easily
         </div>
     </div>
 @endsection
 @section('faq')
-<div class="tab">
+<div class="tab" style="height: 100%;">
     <div class="container flex-center">
         <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
     </div>
     <div class="container flex">
         <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
+            <h2 class="toUpper">HOW SHOULD I ADDRESS MY PARCEL FOR DELIVERY TO THAILAND?</h2>
             <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
+                There are a few differences between how you address your parcel to Thailand compared to how we format addresses in the UK. Thailand homes three administrative divisions: province, districts and sub-districts. When addressing your parcel to Thailand, make sure to write these clearly and in the correct format.
+            </p>
+            <img style="border-radius: 22px;" src="{{ url('/storage/destinations/Thailand---Address-Format.jpg') }}" alt="Thailand Address Formatting Guide">
+            <br><br>
+            <h2 class="toUpper">SHIPPING TO THAILAND: WHICH ITEMS CAN I SEND?</h2>         
+            <p>
+                The Thai Customs Department regulates the importation and exportation of goods coming into and exiting Thailand. There are a variety of items prohibited from entering the country, including:
             </p>
             <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
+                <li>Obscene objects, literature or pictures;</li>
+                <li>Pornographic materials;</li>
+                <li>Goods with an improper Thai flag design;</li>
+                <li>Narcotics;</li>
+                <li>Fake currency, bonds or coins.</li>
             </ul>
             <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
-
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
-            </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
-            <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                If you want to double-check whether your item is safe to post, contact Thai customs or check online to clarify.
             </p>
             <br>
-            <h2 class="toUpper">Guide 2</h2>
+            <h2 class="toUpper">DO I NEED TO DEAL WITH CUSTOMS WHEN SENDING FROM THE UK TO THAILAND?</h2>         
             <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+                You will need to complete customs forms when sending goods to outside of the EU. You will also have to pay duties and taxes on any parcels sent to Thailand from the UK.
+            </p>
+            <p>
+                It’s always best to check the latest customs advice on the web, before sending goods to Thailand. Duty rates, taxes and Thai customs laws are constantly changing, so it’s best to be aware of the charges you will face before shipment
             </p>
         </div>
     </div>

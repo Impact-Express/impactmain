@@ -43,7 +43,7 @@
             </div>
             <div class="col-md-4 country-box">
                 <div class="country-img">
-                    <a href="/destinations/new-zealand"><img src="\storage\destinations\thumbs\Country-Thumbnail---NEw-Zealand---Impact-Express.jpg" alt="Shipping to New Zealand"></a>
+                    <a href="/destinations/new-zealand"><img src="\storage\destinations\thumbs\Country-Thumbnail---New-Zealand---Impact-Express.jpg" alt="Shipping to New Zealand"></a>
                 </div>
             </div>
             <div class="col-md-4 country-box">

@@ -16,22 +16,24 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO PORTUGAL</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
+        Offering competitively cheap rates and impressively quick delivery speeds, Impact Express is the ideal courier for shipping to Portugal, Europe and beyond.
         <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        As a country with an inspiringly rich culture and history, alongside a more than agreeable climate, Portugal has become home to a considerable number of expats looking for a taste of the Mediterranean lifestyle.
+        <br><br>
+        As a result of the influx of British nationals residing in sunny Portugal, the country receives a significant number of parcels from the UK. Working with DHL, Impact Express guarantee speedy delivery, alongside premium security.
+        <br><br>
+        Whether you’re sending packages to the Algarve or Lisbon, posting parcels to Portugal has never been easier.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">SHIPPING TO PORTUGAL: OUR SERVICES</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        At Impact Express, we have a variety of drop off and collection options available to you, to ensure your package gets to its destination in Portugal both quickly and safely.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
+        Our dispatch options will vary depending on whether you have a ‘business’ or ‘personal’ account with us, with all options presented at the time of booking.
         <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
+        Whichever your preferred dispatch method, once we have received your parcel the rest of its onwards journey to Portugal will be handled by DHL, who act as our authorised courier partners.
         <br><br>
     </p>
 </div>

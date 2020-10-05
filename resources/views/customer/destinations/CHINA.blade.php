@@ -16,112 +16,66 @@
 
 @section('maintext')
 <div class="container">
-    <h1 class="service-title">SHIPPING TO CANADA</h1>
+    <h1 class="service-title">SHIPPING TO CHINA</h1>
     <div class="service-text">
         <br>
-        Famous for its friendly population, high quality of life and varied climate, Canada is a high-demand delivery destination that is visited by millions of tourists every year. However, being the second-largest country by area in the world, shipping to Canada’s rural locations can be tricky.
+        Recognised as one of the largest and fastest growing economies in the world, we offer affordable, fast, and reliable parcel shipping and courier services to China.
         <br><br>
-        At Impact Express, our reliable couriers have years of experience in serving remote areas and can get your parcel to its destination safely and in good time.
+        With a population of more than 1.4 billion, over the last decade China has developed a diverse and vibrant economy that includes manufacturing, technology, tourism, and energy, making China the second largest importer of goods in the world.
+        <br><br>
+        With a rich cultural heritage, vast and beautiful landscapes, and some of the world’s most modern and impressive skyscrapers, being able to ship quickly and securely to China is now essential for many businesses and individuals.
+        <br><br>
+        Wherever you need to ship to in China, we offer affordable and competitive rates. A two-day delivery option is available, depending on the specific destination.
     </div>
-    <h2 class="service-title">SHIPPING TO CANADA: OUR SERVICES</h2>
+    <h2 class="service-title">SHIPPING TO CHINA: OUR SERVICES</h2>
     <p class="service-text">
-        We have a variety of convenient dispatch options for our customers. The type of service we can offer you will be outlined at the time of payment and will depend on whether you have a ‘business’ or ‘personal’ account with us.
+        We’ve designed our courier services to China with flexibility and convenience in mind. Impact Express offers different shipping options, including Express Delivery (two working days) for main destinations, and Economy Delivery for non-time sensitive or heavier packages.
         <br><br>
-        Our authorised service partner DHL specialises in express international delivery. If you are pressed for time, DHL will be able to get your shipment to its destination within 2-4 days.
+        Sending a parcel of package to China with us is easy. Depending on whether you have a ‘business’ or ‘personal’ account, we can either arrange collection of your parcel from you, or you can drop it off at a designated location.
         <br><br>
-        DHL will also provide you with a tracking number so that you can be sure exactly where your parcel is at all times. You can stay up to date with your parcel’s movements by text, phone or online, depending on which is the most convenient for you.
-        <br><br>
-        We offer competitive international shipping rates so that you can sure be that you’ll receive the best price possible for a reliable and efficient service.
+        All parcels can be tracked on their journey with our online tracking tool. It will provide you with confidence and peace of mind: whether you’re shipping to the capital, Beijing, the coastal city of Tianjin in the north east, the famous and dynamic city of Shanghai in the east, or the quieter regions of the west and south.
         <br><br>
     </p>
+    <h2 class="service-title">PARCEL PACKAGING FOR SHIPPING TO CHINA</h2>
+    <div class="service-text">
+        We take a great deal of care with all packages shipped by us. Nonetheless, when shipping overseas, it’s always important to ensure your item is properly and securely packaged to prevent damage in transit.
+        <br><br>
+        Ensure the contents are carefully wrapped inside the parcel with bubble wrap, padding and secure tape. Then ensure that the outer packaging is robust and firmly secured with suitable tape. Make sure the label we have provided you with is properly and clearly completed, and then securely attached. We also recommend including a return address.
+    </div>
+    <br><br>
 </div>
 @endsection
 @section('maintext-right')
     <div class="container">
-        <h2 class="service-title">PREPARING YOUR PARCEL FOR SHIPMENT</h2>
+        <h2 class="service-title">CHINESE CUSTOMS RESTRICTIONS</h2>
         <div class="service-text">
-            Make sure to pack your goods properly before shipment to ensure they have a safe arrival. 
-            If you’re unsure how to package a parcel appropriately, you can follow our simple packaging guide.
+            As with all countries, China has its own customs regulations and restrictions in respect of any imports, even via courier. Failure to comply with these may result in your parcel being delayed, returned or even destroyed.
             <br><br>
-            It’s also important to check that your parcel is correctly addressed before you send it off. 
-            Make sure to pay close attention when filling out the address, so that we can provide you with an accurate print-at-home label. 
-            Please stick your label firmly to the outside of the box in a visible location.
+            China has placed restrictions on the importation of:
+            <ul class="service-list">
+                <li>Alcohol</li>
+                <li>Country currency</li>
+                <li>Tobacco</li>
+                <li>Gold and silver products</li>
+            </ul>
+            <br>
+            China also prohibits the importation of a number of items including:
+            <ul class="service-list">
+                <li>Weapons, ammunition and explosives</li>
+                <li>Counterfeit items (currencies, securities, etc.)</li>
+                <li>Audio or video materials (from CDs, video, computer programs, etc.)</li>
+                <li>Sick animals or plants, and rare animals or plants</li>
+            </ul>
+            Before planning a delivery to China with Impact Express, please ensure your parcel does not contain any restricted goods. Check with the Chinese Customs Authority. For a full list of prohibited items, please see our <a href="/information/prohibited-items">Restricted Items section.</a>
         </div>
-        <h2 class="service-title">HOW MUCH WILL IT COST TO SEND MY PARCEL TO CANADA?</h2>
+        <h2 class="service-title">HOW MUCH DOES IT COST TO SHIP TO CHINA?</h2>
         <div class="service-text">
-            The cost of shipping a parcel from the UK to Canada will depend on the size and weight of your parcel. 
-            To get an estimate of how much your parcel will cost to ship, input the dimensions of your parcel into our instant quote generator.
-            <br><br>
-            The timeframe in which you’d like your parcel to arrive will also affect the final cost. If you require express delivery, 
-            it will be more expensive than standard delivery.
-        </div>
-        <h2 class="service-title">THINGS TO REMEMBER…</h2>
-        <div class="service-text">
-            Please include the full contact details (phone number, email and full address) of the recipient within your parcel. 
-            It’s safest to tuck this inside the parcel itself so that it can’t get lost. It’s also wise to provide a return address, 
-            just in case we are unable to deliver your parcel.
+            We’re pleased to be able to offer highly competitive shipping rates to China. How much it costs will depend on the size, weight and nature of the parcel you are shipping, and the delivery service that you choose. Please use our Online Quote Tool or contact us direct so that we can provide you with an accurate quote.
         </div>
     </div>
 @endsection
 @section('faq')
-<div class="tab">
-    <div class="container flex-center">
-        <button class="tablink hover-light-grey bottombar" id="faqs" href="javascript:void(0)">FAQ's</button>
-        <button class="tablink hover-light-grey bottombar" id="guides" href="javascript:void(0)">Guides</button>
-    </div>
-    <div class="container flex">
-        <div id="FAQs" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">WHICH ITEMS CAN I SEND TO CANADA?</h2>
-            <p>
-                Like most countries, Canada has strict import restrictions in place to prevent counterfeit items from entering the country. Prohibited items include:
-            </p>
-            <ul>
-                <li>Obscene or pornographic material;</li>
-                <li>Anything crafted in prison;</li>
-                <li>Firearms;</li>
-                <li>Flammable materials.</li>
-            </ul>
-            <p>
-                If you’re unsure whether your item is considered contraband, you can submit an inquiry or check Canada Post’s websites where you can find a full list of prohibited items.
-
-                At Impact Express, we also have a list of prohibited items that we will not ship. Please also refer to our full list of prohibited items before preparing your parcel for shipment.
-            </p>
-            <h2 class="toUpper">ARE THERE ANY CUSTOMS RESTRICTIONS WHEN SHIPPING TO CANADA?</h2>         
-            <p>
-                All international parcels sent to Canada will be checked by customs to check if any duty or tax should be added to your shipment. 
-                For this reason, we will need to know the approximate value of your parcel along with its contents so that the correct duties and taxes can be applied.
-                <br><br>
-                You will enter this information online when creating the shipping data, removing the need for a paper customs invoices and allowing customs to start the 
-                clearance process as soon as possible.
-                <br><br>
-                It’s always best to check the latest customs advice on the web before you send your parcel, as they are ever subject to change and you can prepare yourself 
-                with any extra charges you may face.
-            </p>
-        </div>
-        <div id="Guides" class="tabcontent" style="display:none;">
-            <h2 class="toUpper">Guide 1</h2>
-            <p>Lorem Ipsum</p>
-            <p>YLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.</p>
-            <br>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-            <br>
-            <h2 class="toUpper">Guide 2</h2>
-            <p>
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-                Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-            </p>
-        </div>
-    </div>
+<div class="tab" style="height: 100px">
 </div>
 @endsection
 @section('destinations-boxes')

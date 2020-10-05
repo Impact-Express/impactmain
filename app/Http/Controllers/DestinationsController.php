@@ -131,15 +131,15 @@ class DestinationsController extends Controller
                 return view('customer.destinations.CHINA', compact('page', 'bannerImage'));
                 break;
             case 'destinations/portugal':
-                $bannerImage = url('/storage/destinations/UAE-Country-Banner-v2-Impact-Express.jpg');
+                $bannerImage = url('/storage/destinations/Portugal-Country-Banner-v2-Impact-Express.jpg');
                 return view('customer.destinations.PORTUGAL', compact('page', 'bannerImage'));
                 break;
             case 'destinations/india':
-                $bannerImage = url('/storage/destinations/South-Korea-Country-Banner-v2-Impact-Express.jpg');
+                $bannerImage = url('/storage/destinations/India---Country-Banner-v2---Impact-Express.jpg');
                 return view('customer.destinations.INDIA', compact('page', 'bannerImage'));
                 break;
             case 'destinations/mexico':
-                $bannerImage = url('/storage/destinations/China-Country-Banner-v2-Impact-Express.jpg');
+                $bannerImage = url('/storage/destinations/Mexico-Country-Banner-v2-Impact-Express.jpg');
                 return view('customer.destinations.MEXICO', compact('page', 'bannerImage'));
                 break;
             case 'destinations/south-africa':

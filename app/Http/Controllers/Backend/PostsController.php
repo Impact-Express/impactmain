@@ -89,7 +89,7 @@ class PostsController extends BackendController
         return redirect(route('admin-posts'));
         
     }
-        /**
+    /**
      * Handle an ImageRequest for uploading images to a post.
      *
      * @param  \Illuminate\Http\Request  $request
